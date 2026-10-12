@@ -88,7 +88,7 @@ export function routerInstability(input: DiagnosisInput): Finding | null {
   }
   if (suspectedOnly > 0) {
     parts.push(
-      `Laut Windows-Ereignisprotokoll gab es ${suspectedOnly === 1 ? 'einen vermuteten Router-Neustart' : `${suspectedOnly} vermutete Router-Neustarts`} ` +
+      `Laut ${input.os === 'macos' ? 'Link-Überwachung' : 'Windows-Ereignisprotokoll'} gab es ${suspectedOnly === 1 ? 'einen vermuteten Router-Neustart' : `${suspectedOnly} vermutete Router-Neustarts`} ` +
         '(LAN und WLAN gleichzeitig weg, Internet erst nach Minuten wieder da).',
     );
   }

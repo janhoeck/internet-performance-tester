@@ -47,8 +47,9 @@ export function wlanFailover(input: DiagnosisInput): Finding | null {
 
   const confidence = known.length >= 3 && byDrops ? 'high' : 'medium';
   const parts: string[] = [];
-  if (byDrops) parts.push(`Bei ${withFailover.length} von ${known.length} Abbrüchen hat Windows innerhalb von 5 s auf WLAN umgeschaltet und später zurück.`);
-  else parts.push(`Windows hat im Zeitraum ${switches.length}-mal den Internetverkehr auf das WLAN umgeleitet.`);
+  const osName = input.os === 'macos' ? 'macOS' : 'Windows';
+  if (byDrops) parts.push(`Bei ${withFailover.length} von ${known.length} Abbrüchen hat ${osName} innerhalb von 5 s auf WLAN umgeschaltet und später zurück.`);
+  else parts.push(`${osName} hat im Zeitraum ${switches.length}-mal den Internetverkehr auf das WLAN umgeleitet.`);
   parts.push('Jede Umschaltung ändert die IP-Adresse des PCs (bei DS-Lite auch die öffentliche IPv4-Zuordnung) – Spielverbindungen brechen ab, auch wenn der Ping kaum Verluste zeigt.');
 
   const evidence: FindingEvidence[] = [];
@@ -62,12 +63,14 @@ export function wlanFailover(input: DiagnosisInput): Finding | null {
     severity: 'warn',
     confidence,
     segment: 'client',
-    title: 'Windows wechselt bei Abbrüchen aufs WLAN – Spielverbindungen brechen trotzdem ab',
+    title: `${osName} wechselt bei Abbrüchen aufs WLAN – Spielverbindungen brechen trotzdem ab`,
     summary: parts.join(' '),
     evidence,
     recommendations: [
       'Ursache beheben: das Kabelproblem (siehe „Netzwerkverbindung am PC bricht ab“).',
-      'Optional das WLAN-Profil auf diesem PC auf „Manuell verbinden“ stellen – dann sind Kabelabbrüche allerdings komplette Ausfälle.',
+      input.os === 'macos'
+        ? 'Optional das WLAN während des Spielens ausschalten (bzw. unter Systemeinstellungen → Netzwerk Ethernet vor WLAN einordnen) – dann sind Kabelabbrüche allerdings komplette Ausfälle.'
+        : 'Optional das WLAN-Profil auf diesem PC auf „Manuell verbinden“ stellen – dann sind Kabelabbrüche allerdings komplette Ausfälle.',
     ],
     score: findingScore('warn', confidence, 0.5 * segmentImpact(input, 'client')),
     relatedEventIds: [

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { control as engineControl } from "@/lib/client/api";
+import { usePlatform } from "@/lib/client/platform";
 import { fmtDateTimeShort, fmtRuntime } from "@/lib/format";
 import type { TestSession } from "@/lib/shared/types";
 import { Button } from "@/components/ui/Button";
@@ -46,6 +47,7 @@ export function SessionStartDialog({
   /** nur für Vorschauen: Ersatz für control() */
   control?: SessionControlFn;
 }) {
+  const mac = usePlatform() === "macos";
   const mounted = useMountedRef();
   const [duration, setDuration] = useState<DurationKey>("4320");
   const [label, setLabel] = useState("");
@@ -109,7 +111,13 @@ export function SessionStartDialog({
             aria-describedby="np-session-label-hint"
           />
         </Field>
-        {preventSleep && <p className="text-xs text-fg-3">Der Standby wird während des Tests verhindert. Lege den PC bitte nicht manuell schlafen.</p>}
+        {preventSleep && (
+          <p className="text-xs text-fg-3">
+            {mac
+              ? "Der Ruhezustand wird während des Tests verhindert. Lege den Mac bitte nicht manuell schlafen und klappe ein MacBook nicht zu."
+              : "Der Standby wird während des Tests verhindert. Lege den PC bitte nicht manuell schlafen."}
+          </p>
+        )}
         {error && (
           <p role="alert" className="rounded-lg bg-crit/12 px-3 py-2 text-sm text-crit ring-1 ring-inset ring-crit/30">
             {error}

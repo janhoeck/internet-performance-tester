@@ -189,6 +189,8 @@ export const DEFAULT_GAME_PROCESSES: string[] = [
   'gta5.exe', 'gta5_enhanced.exe', 'fc25.exe', 'fc26.exe', 'rainbowsix.exe', 'rainbowsix_vulkan.exe',
   'tslgame.exe', 'escapefromtarkov.exe', 'wow.exe', 'destiny2.exe', 'robloxplayerbeta.exe',
   'marvel-win64-shipping.exe', 'minecraft.windows.exe',
+  // macOS process names (compared without .exe/.app, docs/research/macos.md §0)
+  'leagueoflegends', 'world of warcraft', 'robloxplayer', 'geforcenow',
 ];
 
 export const DEFAULT_CONFIG: AppConfig = {

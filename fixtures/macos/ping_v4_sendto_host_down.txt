@@ -1,0 +1,5 @@
+PING 192.168.0.1 (192.168.0.1): 32 data bytes
+ping: sendto: Host is down
+
+--- 192.168.0.1 ping statistics ---
+1 packets transmitted, 0 packets received, 100.0% packet loss

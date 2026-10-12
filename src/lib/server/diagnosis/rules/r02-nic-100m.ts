@@ -71,11 +71,18 @@ export function nic100m(input: DiagnosisInput): Finding | null {
   if (up100 + up1g > 0) evidence.push({ label: 'Link-Aufbauten laut Ereignisprotokoll (30 Tage)', value: `${up1g}× 1 Gbit/s, ${up100}× 100 Mbit/s` });
   if (tariff !== null) evidence.push({ label: 'Tarif (Download)', value: fmtMbps(tariff) });
 
-  const recommendations = [
-    'Netzwerkkabel tauschen (neues Cat-6-Kabel direkt PC ↔ Vodafone Station) und einen anderen LAN-Port am Router testen.',
-    'Gegenprobe: Gerätemanager → Intel I225-V → Erweitert → „Speed & Duplex“ kurz auf „1.0 Gbps Full Duplex“ stellen. Kommt die Verbindung dann nicht oder nur instabil zustande, schafft Kabel oder Port kein Gigabit. Danach wieder auf „Auto Negotiation“ zurückstellen.',
-    'Bis zur Behebung große Downloads während des Spielens pausieren.',
-  ];
+  const recommendations =
+    input.os === 'macos'
+      ? [
+          'Netzwerkkabel tauschen (neues Cat-6-Kabel direkt Mac ↔ Vodafone Station), einen anderen LAN-Port am Router testen und den Netzwerkadapter ohne Hub/Dock direkt am Mac anschließen.',
+          'Gegenprobe: Systemeinstellungen → Netzwerk → Ethernet → Details → Hardware: „Konfigurieren“ auf „Manuell“, Geschwindigkeit „1000baseT“, Duplex „full-duplex“. Kommt die Verbindung dann nicht oder nur instabil zustande, schaffen Kabel, Port oder Adapter kein Gigabit. Danach wieder auf „Automatisch“ zurückstellen.',
+          'Bis zur Behebung große Downloads während des Spielens pausieren.',
+        ]
+      : [
+          'Netzwerkkabel tauschen (neues Cat-6-Kabel direkt PC ↔ Vodafone Station) und einen anderen LAN-Port am Router testen.',
+          'Gegenprobe: Gerätemanager → Intel I225-V → Erweitert → „Speed & Duplex“ kurz auf „1.0 Gbps Full Duplex“ stellen. Kommt die Verbindung dann nicht oder nur instabil zustande, schafft Kabel oder Port kein Gigabit. Danach wieder auf „Auto Negotiation“ zurückstellen.',
+          'Bis zur Behebung große Downloads während des Spielens pausieren.',
+        ];
   if (tariffAbove) recommendations.push('Geschwindigkeitsmessungen (z. B. Breitbandmessung der Bundesnetzagentur) erst mit 1-Gbit/s-Link durchführen.');
 
   return {

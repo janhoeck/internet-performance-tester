@@ -1,0 +1,14 @@
+Time stamp                Domain              	Message                                                                         	Duration  	Delay 
+==========                ======              	=======                                                                         	========  	===== 
+UUID: 4D9D6E1A-0B1C-4A3D-9E8F-112233445566
+2026-10-11 08:01:02 +0200 Start               	powerd process is started                                                       	          	
+2026-10-11 08:01:03 +0200 Assertions          	PID 123(WindowServer) Created UserIsActive "com.apple.iohideventsystem.queue.tickle" 00:00:00  id:0x0x500008a1b [System: PrevIdle DeclUser kDisp]	          	
+2026-10-11 23:10:01 +0200 Sleep               	Entering Sleep state due to 'Idle Sleep':TCPKeepAlive=active Using AC (Charge:100%)	2 secs    	
+2026-10-11 23:10:03 +0200 Kernel Client Acks  	Delays to Sleep notifications: [AppleBCM5701Ethernet driver is slow(msg: SetState to 0)(810 ms)]	          	
+2026-10-12 01:40:13 +0200 DarkWake            	DarkWake from Deep Idle [CDNP] : due to RTC/Maintenance Using AC (Charge:100%)  	45 secs   	
+2026-10-12 01:40:58 +0200 Sleep               	Entering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=active Using AC (Charge:100%)	3 secs    	
+2026-10-12 07:30:05 +0200 Wake Requests       	[*process=mDNSResponder request=Maintenance deltaSecs=7199 wakeAt=2026-10-12 09:30:04]	          	
+2026-10-12 07:30:05 +0200 Wake                	Wake from Deep Idle [CDNVA] : due to EC.LidOpen/Lid Open Using AC (Charge:100%) 	          	
+2026-10-12 21:59:59 +0200 Shutdown            	Shutdown requested by loginwindow                                               	          	
+
+Total Sleep/Wakes since boot:2

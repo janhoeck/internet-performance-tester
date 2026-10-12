@@ -9,6 +9,8 @@
 //         LIMITATION: an IPv6 path that silently drops big packets (no Packet Too Big) is not seen.
 // Windows caches the PMTU after the first "fragmentation needed"; later oversized DF probes fail
 // locally (PacketTooBig without responder). Both count as "too big".
+// macOS (docs/research/macos.md §6): `ping -D -s <n>` / `ping6 -D -m -s <n>` (-D: no fragmentation, also
+// for IPv6) and the path MTU of the cloned host route from `route -n get` (engine/tasks/mac-path.ts).
 // Results: snapshot 'mtu' (MtuResult[]), metrics mtu.v4 / mtu.v6, `mtu_change` event on change.
 // Runs every `mtuEveryMin` while a session runs (first run 2 min after the start when the last
 // result is older than the interval) and runNow().
@@ -18,6 +20,8 @@ import { decodeConsole } from '../../src/lib/shared/cp850';
 import { isIpLiteral, normalizeIp, sameIp } from '../../src/lib/shared/net';
 import type { IpFamily, MetricPoint, ModuleState, MtuResult, NetEvent } from '../../src/lib/shared/types';
 import type { EngineContext, EngineModule, Logger, PowerShellHost, TaskResult } from '../core/types';
+import { isMac } from '../platform';
+import { macDfProbe, macV6DontFragment, readMacPmtu } from './mac-path';
 import { FAMILIES, PATH_TARGETS, PROBE_TIMEOUT_MS, errorText, runProcess, system32 } from './traceroute';
 
 export interface MtuRange {
@@ -269,6 +273,27 @@ export async function readDestinationCache(
 
 // ─── one family ────────────────────────────────────────────────────────────
 
+/** Platform wording of the MTU notes (name of the PMTU cache, IPv6 self-fragmentation caveat). */
+export interface MtuWording {
+  cacheName: string;
+  /** note when an IPv6 success could not be checked against the cache (null = no caveat) */
+  v6SelfFragmentNote: () => string | null;
+}
+
+export const WINDOWS_MTU_WORDING: MtuWording = {
+  cacheName: 'Windows-Zielcache',
+  v6SelfFragmentNote: () => 'IPv6 ohne DF-Bit: Windows fragmentiert selbst, Pfad-MTU nicht überprüfbar (Zielcache nicht lesbar)',
+};
+
+/** macOS: ping6 -D forbids fragmentation – the caveat only applies when ping6 rejected -D. */
+export function macMtuWording(dontFragmentV6: () => boolean): MtuWording {
+  return {
+    cacheName: 'macOS-Routencache',
+    v6SelfFragmentNote: () =>
+      dontFragmentV6() ? null : 'IPv6 ohne DF-Bit: macOS fragmentiert selbst, Pfad-MTU nicht überprüfbar (kein Routencache-Eintrag)',
+  };
+}
+
 export interface FamilyMeasurement {
   result: MtuResult;
   search: MtuSearchResult;
@@ -284,8 +309,9 @@ export async function measureFamilyMtu(
   family: IpFamily,
   probe: MtuProbe,
   readCachePmtu: () => Promise<number | null>,
-  opts: { ts?: number; signal?: AbortSignal } = {},
+  opts: { ts?: number; signal?: AbortSignal; wording?: MtuWording } = {},
 ): Promise<FamilyMeasurement> {
+  const wording = opts.wording ?? WINDOWS_MTU_WORDING;
   const target = PATH_TARGETS[family];
   const range = MTU_RANGES[family];
   const ts = opts.ts ?? Date.now();
@@ -306,9 +332,8 @@ export async function measureFamilyMtu(
     const capped: MtuProbe = async (payload) =>
       cachePmtu !== null && payload + range.overhead > cachePmtu ? 'too-big' : memoProbe(payload);
     search = await searchMaxPayload(capped, range.lo, range.hi, { signal: opts.signal });
-    if (cachePmtu === null && search.maxPayload !== null) {
-      notes.push('IPv6 ohne DF-Bit: Windows fragmentiert selbst, Pfad-MTU nicht überprüfbar (Zielcache nicht lesbar)');
-    }
+    const caveat = cachePmtu === null && search.maxPayload !== null ? wording.v6SelfFragmentNote() : null;
+    if (caveat) notes.push(caveat);
   } else {
     search = await searchMaxPayload(probe, range.lo, range.hi, { signal: opts.signal });
     cachePmtu = await readCachePmtu();
@@ -318,7 +343,7 @@ export async function measureFamilyMtu(
   else if (search.failure === 'below-range') notes.push(`Pfad-MTU kleiner als ${range.lo + range.overhead} Byte`);
   else if (search.failure === 'error') notes.push('Ping mit gesetztem DF-Bit fehlgeschlagen');
   if (search.timeoutsAsTooBig > 0) notes.push('Zeitüberschreitungen als „zu groß“ gewertet (mögliches PMTU-Blackhole)');
-  if (family === 4 && mtu !== null && cachePmtu !== null && cachePmtu !== mtu) notes.push(`Windows-Zielcache meldet ${cachePmtu} Byte`);
+  if (family === 4 && mtu !== null && cachePmtu !== null && cachePmtu !== mtu) notes.push(`${wording.cacheName} meldet ${cachePmtu} Byte`);
   return {
     result: { ts, family, target, mtu, maxPayload: search.maxPayload, note: notes.length > 0 ? notes.join(' · ') : null },
     search,
@@ -391,6 +416,12 @@ export function createMtuModule(opts: MtuModuleOptions = {}): EngineModule {
       const p = opts.probe;
       return { probe: (payload) => p(family, target, payload), method: () => 'custom' };
     }
+    if (isMac()) {
+      return {
+        probe: (payload) => macDfProbe(family, target, payload, { signal, track }),
+        method: () => (family === 6 && !macV6DontFragment() ? 'ping6 -m' : family === 6 ? 'ping6 -D' : 'ping -D'),
+      };
+    }
     let usePs = c.ps.available;
     return {
       probe: async (payload) => {
@@ -409,6 +440,7 @@ export function createMtuModule(opts: MtuModuleOptions = {}): EngineModule {
   }
 
   async function cachePmtu(c: EngineContext, family: IpFamily, signal: AbortSignal): Promise<number | null> {
+    if (!opts.readCache && isMac()) return readMacPmtu(family, PATH_TARGETS[family], { signal, track: (child) => c.trackChild(child) });
     const entries = opts.readCache
       ? await opts.readCache(family)
       : await readDestinationCache(family, { signal, track: (child) => c.trackChild(child) });
@@ -424,7 +456,8 @@ export function createMtuModule(opts: MtuModuleOptions = {}): EngineModule {
       if (signal.aborted) break;
       try {
         const prober = proberFor(c, family, signal);
-        const m = await measureFamilyMtu(family, prober.probe, () => cachePmtu(c, family, signal), { signal });
+        const wording = isMac() ? macMtuWording(macV6DontFragment) : WINDOWS_MTU_WORDING;
+        const m = await measureFamilyMtu(family, prober.probe, () => cachePmtu(c, family, signal), { signal, wording });
         results.push(m.result);
         log?.info(
           `MTU IPv${family}: ${m.result.mtu ?? '–'} (payload ${m.result.maxPayload ?? '–'}, cache ${m.cachePmtu ?? '–'}, ${m.search.steps.length} probes via ${prober.method()})${m.result.note ? ` – ${m.result.note}` : ''}`,

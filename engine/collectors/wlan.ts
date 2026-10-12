@@ -1,5 +1,6 @@
 // WLAN collector (ARCHITECTURE §4.9): `netsh wlan show interfaces` (UTF-8, de/en labels) parsed by
 // parseNetshWlan(); "connected" comes from MSFT_NetAdapter.MediaConnectState (adapters snapshot).
+// macOS: `system_profiler SPAirPortDataType -json` (macos/wlan.ts, docs/research/macos.md §4).
 // Metrics wlan.* while connected, snapshot 'wlan' on change (+ every 5 min while connected),
 // wlan_roam events (BSSID or channel change). wlan_connect/wlan_disconnect come with exact times from
 // the event log (WLAN-AutoConfig 8001/8003, eventlog module); this module only emits them as a
@@ -9,6 +10,9 @@ import { parseNetshWlan, wlanInfoFromNetsh } from '../../src/lib/shared/parsers/
 import type { AdapterInfo, AdapterSnapshot, MetricPoint, ModuleState, NetEvent, WlanInfo } from '../../src/lib/shared/types';
 import type { EngineContext, EngineModule, Logger } from '../core/types';
 import { WLAN_CURSOR_KEY } from './eventlog';
+import { isMac } from '../platform';
+import { SystemProfilerWlanSource } from './macos/wlan';
+import type { ToolRunner } from './macos/tools';
 import { PollTimer, ProcessRunner, childTracker, errorMessage, pollMs, system32, timersState } from './util';
 
 const NETSH = (): string => system32('netsh.exe');
@@ -40,33 +44,34 @@ const describe = (i: WlanInfo): string => {
   return parts.length ? ` (${parts.join(', ')})` : '';
 };
 
-function wlanDetails(i: WlanInfo): Record<string, unknown> {
-  return { ssid: i.ssid, bssid: i.bssid, band: i.band, channel: i.channel, signalPct: i.signalPct, rssiDbm: i.rssiDbm, radioType: i.radioType, via: 'netsh' };
+function wlanDetails(i: WlanInfo, via: string): Record<string, unknown> {
+  return { ssid: i.ssid, bssid: i.bssid, band: i.band, channel: i.channel, signalPct: i.signalPct, rssiDbm: i.rssiDbm, radioType: i.radioType, via };
 }
 
 /**
  * Events between two WLAN states. Roam = BSSID change within the same SSID; channel change with the
  * same BSSID (e.g. DFS radar) is reported as roam with reason 'channel'.
  */
-export function diffWlan(prev: WlanInfo | null, cur: WlanInfo, opts: { connectEvents: boolean }): NetEvent[] {
+export function diffWlan(prev: WlanInfo | null, cur: WlanInfo, opts: { connectEvents: boolean; via?: string }): NetEvent[] {
   if (!prev) return [];
+  const via = opts.via ?? 'netsh';
   const out: NetEvent[] = [];
   const base = { ts: cur.ts, segment: 'client' as const, source: 'wlan' as const };
   if (!prev.connected && cur.connected) {
-    if (opts.connectEvents) out.push({ ...base, type: 'wlan_connect', severity: 'info', title: `WLAN verbunden${describe(cur)}`, details: wlanDetails(cur) });
+    if (opts.connectEvents) out.push({ ...base, type: 'wlan_connect', severity: 'info', title: `WLAN verbunden${describe(cur)}`, details: wlanDetails(cur, via) });
     return out;
   }
   if (prev.connected && !cur.connected) {
     if (opts.connectEvents) {
-      out.push({ ...base, type: 'wlan_disconnect', severity: 'info', title: `WLAN getrennt${prev.ssid ? ` (${prev.ssid})` : ''}`, details: { ...wlanDetails(prev), kind: 'disconnected' } });
+      out.push({ ...base, type: 'wlan_disconnect', severity: 'info', title: `WLAN getrennt${prev.ssid ? ` (${prev.ssid})` : ''}`, details: { ...wlanDetails(prev, via), kind: 'disconnected' } });
     }
     return out;
   }
   if (!prev.connected || !cur.connected) return out;
   if (prev.ssid && cur.ssid && prev.ssid !== cur.ssid) {
     if (opts.connectEvents) {
-      out.push({ ...base, type: 'wlan_disconnect', severity: 'info', title: `WLAN getrennt (${prev.ssid})`, details: { ...wlanDetails(prev), kind: 'disconnected' } });
-      out.push({ ...base, type: 'wlan_connect', severity: 'info', title: `WLAN verbunden${describe(cur)}`, details: wlanDetails(cur) });
+      out.push({ ...base, type: 'wlan_disconnect', severity: 'info', title: `WLAN getrennt (${prev.ssid})`, details: { ...wlanDetails(prev, via), kind: 'disconnected' } });
+      out.push({ ...base, type: 'wlan_connect', severity: 'info', title: `WLAN verbunden${describe(cur)}`, details: wlanDetails(cur, via) });
     }
     return out;
   }
@@ -95,11 +100,45 @@ export function wifiAdapterOf(snap: Pick<AdapterSnapshot, 'adapters'> | null): A
   return snap.adapters.find((a) => a.isWifi && !a.isVirtual) ?? null;
 }
 
+/** Where the WLAN state comes from (netsh on Windows, system_profiler on macOS). */
+export interface WlanSource {
+  /** shown in event details ('netsh' / 'system_profiler') */
+  readonly via: string;
+  /** lower bound of the poll interval (slow tools) */
+  readonly minIntervalMs: number;
+  /** state of the Wi-Fi adapter (null = none known yet); ts = after the tool returned */
+  read(wifi: AdapterInfo | null): Promise<WlanInfo>;
+}
+
+export class NetshWlanSource implements WlanSource {
+  readonly via = 'netsh';
+  readonly minIntervalMs = 0;
+
+  constructor(private readonly runner: ToolRunner) {}
+
+  async read(wifi: AdapterInfo | null): Promise<WlanInfo> {
+    const r = await this.runner.run(NETSH(), ['wlan', 'show', 'interfaces'], { timeoutMs: 10_000, maxBytes: 1024 * 1024 });
+    if (r.error) throw r.error;
+    if (r.timedOut) throw new Error('netsh: Zeitüberschreitung');
+    const ifaces = parseNetshWlan(decodeConsole(new Uint8Array(r.stdout)));
+    return wlanInfoFromNetsh(ifaces, Date.now(), { adapterName: wifi?.name ?? null, mediaConnected: wifi ? wifi.mediaConnected : null });
+  }
+}
+
+export interface WlanModuleDeps {
+  /** data source (default: system_profiler on macOS, netsh otherwise) */
+  createSource?: (runner: ToolRunner) => WlanSource;
+}
+
 class WlanModule implements EngineModule {
   readonly name = 'wlan';
+
+  constructor(private readonly deps: WlanModuleDeps = {}) {}
+
   private ctx: EngineContext | null = null;
   private log: Logger | null = null;
   private runner: ProcessRunner | null = null;
+  private source: WlanSource | null = null;
   private timer: PollTimer | null = null;
   private adapters: AdapterSnapshot | null = null;
   private last: WlanInfo | null = null;
@@ -114,6 +153,8 @@ class WlanModule implements EngineModule {
     this.ctx = ctx;
     this.log = ctx.log;
     this.runner = new ProcessRunner(childTracker(ctx));
+    const runner = this.runner;
+    this.source = this.deps.createSource ? this.deps.createSource(runner) : isMac() ? new SystemProfilerWlanSource(runner) : new NetshWlanSource(runner);
     try {
       this.adapters = ctx.db.latestSnapshot<AdapterSnapshot>('adapters')?.data ?? null;
       // only the signature: a change during engine downtime is no live roam/connect event
@@ -124,7 +165,8 @@ class WlanModule implements EngineModule {
     }
     this.unsubs.push(ctx.bus.on('adapters', (snap) => this.onAdapters(snap)));
     this.timer = new PollTimer({
-      intervalMs: () => (this.noAdapter ? NO_ADAPTER_POLL_MS : pollMs(ctx, ctx.config().schedules.wlanPollSec, IDLE_POLL_SEC)),
+      intervalMs: () =>
+        this.noAdapter ? NO_ADAPTER_POLL_MS : Math.max(this.source?.minIntervalMs ?? 0, pollMs(ctx, ctx.config().schedules.wlanPollSec, IDLE_POLL_SEC)),
       run: () => this.poll(),
       onError: (err) => {
         this.lastError = errorMessage(err);
@@ -176,20 +218,17 @@ class WlanModule implements EngineModule {
 
   private async poll(): Promise<void> {
     const ctx = this.ctx;
-    const runner = this.runner;
-    if (!ctx || !runner) return;
+    const source = this.source;
+    if (!ctx || !source) return;
     const wifi = wifiAdapterOf(this.adapters);
-    const r = await runner.run(NETSH(), ['wlan', 'show', 'interfaces'], { timeoutMs: 10_000, maxBytes: 1024 * 1024 });
-    if (r.error) throw r.error;
-    if (r.timedOut) throw new Error('netsh: Zeitüberschreitung');
-    const ts = Date.now();
-    const ifaces = parseNetshWlan(decodeConsole(new Uint8Array(r.stdout)));
-    const info = wlanInfoFromNetsh(ifaces, ts, { adapterName: wifi?.name ?? null, mediaConnected: wifi ? wifi.mediaConnected : null });
-    // no WLAN hardware (netsh lists nothing and the adapters snapshot knows no WLAN adapter)
+    const info = await source.read(wifi);
+    const ts = info.ts;
+    // no WLAN hardware (the tool lists nothing and the adapters snapshot knows no WLAN adapter)
     this.noAdapter = !info.present && this.adapters !== null && wifi === null;
 
+    // the Windows event log module reports exact connect/disconnect times once it reads WLAN-AutoConfig
     const connectEvents = ctx.db.getSetting(WLAN_CURSOR_KEY) === null;
-    for (const e of diffWlan(this.last, info, { connectEvents })) ctx.recordEvent(e);
+    for (const e of diffWlan(this.last, info, { connectEvents, via: source.via })) ctx.recordEvent(e);
     const points = wlanMetrics(info);
     if (points.length) ctx.recordMetrics(points);
     const sig = wlanSignature(info);
@@ -203,6 +242,6 @@ class WlanModule implements EngineModule {
   }
 }
 
-export function createWlanModule(): EngineModule {
-  return new WlanModule();
+export function createWlanModule(deps: WlanModuleDeps = {}): EngineModule {
+  return new WlanModule(deps);
 }

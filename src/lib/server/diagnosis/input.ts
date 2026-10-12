@@ -2,6 +2,7 @@
 // pre-aggregated queries (own SQL – independent of queries.ts). Minute rollups are aggregated in
 // SQL per 15-min bucket (split by speed-test minutes and "stable" minutes); classified seconds per
 // 15-min bucket; events per type with limits; latest snapshots; metric summaries.
+import { hostOsFrom } from '../../shared/platform';
 import type { AppConfig } from '../../shared/config';
 import { EVENT_COLUMNS, SPEEDTEST_COLUMNS, parseJson, rowToEvent, rowToSession, rowToSpeedtest, rowToTraceroute } from '../../shared/db/rows';
 import { udpBurstKey } from '../../shared/metrics';
@@ -504,6 +505,7 @@ export function buildDiagnosisInput(from: number, to: number, opts: BuildInputOp
     from,
     to,
     now,
+    os: hostOsFrom(process.platform),
     config,
     targets,
     stats: rollups.stats,

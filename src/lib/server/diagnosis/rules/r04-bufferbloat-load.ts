@@ -82,7 +82,7 @@ export function bufferbloatLoad(input: DiagnosisInput): Finding | null {
   if (slowLink !== null) evidence.push({ label: 'Link-Geschwindigkeit beim Test', value: fmtLinkSpeed(slowLink) });
 
   const recommendations = [
-    'Downloads/Updates (Steam, Launcher, Windows Update) beim Spielen pausieren oder auf ca. 70 % der Leitungsgeschwindigkeit begrenzen.',
+    `Downloads/Updates (Steam, Launcher, ${input.os === 'macos' ? 'macOS-Updates, iCloud' : 'Windows Update'}) beim Spielen pausieren oder auf ca. 70 % der Leitungsgeschwindigkeit begrenzen.`,
     'Falls vorhanden, eine Bandbreitenbegrenzung bzw. QoS für andere Geräte im Heimnetz nutzen.',
   ];
   if (lanVariant) recommendations.push('Link wieder auf 1 Gbit/s bringen (Kabel/Port, siehe „Kabel/Port schafft kein Gigabit“).');

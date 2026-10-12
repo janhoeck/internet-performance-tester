@@ -6,6 +6,7 @@ import { HealthBadge } from "@/components/ui/HealthBadge";
 import { Panel } from "@/components/ui/Panel";
 import { EmptyState, Skeleton } from "@/components/ui/States";
 import { useClientState, useLiveConnection, useSession } from "@/lib/client/live-store";
+import { useOsWording } from "@/lib/client/platform";
 import { DASH, fmtLinkSpeed, fmtMbit, fmtTime } from "@/lib/format";
 import type { Health } from "@/lib/health";
 import { Num } from "./bits";
@@ -21,6 +22,7 @@ function Row({ label, children }: { label: string; children: ReactNode }) {
 
 /** Verbindungskontext live (1 Hz): erwartete vs. tatsächliche Schnittstelle, Link, eigener Durchsatz. */
 export function LiveContext() {
+  const os = useOsWording();
   const conn = useLiveConnection();
   const client = useClientState();
   const session = useSession();
@@ -70,7 +72,7 @@ export function LiveContext() {
   const linkHealth: Health = client.linkUp === false ? "crit" : client.linkMbps != null && client.linkMbps < 1000 ? "warn" : client.linkUp ? "good" : "unknown";
 
   return (
-    <Panel title={title} description="Sekündlich aus dem Messtakt – zeigt sofort, ob Windows aufs WLAN ausweicht" actions={<HealthBadge status={state} label={wlanFallback ? "WLAN-Ausweichen" : undefined} />}>
+    <Panel title={title} description={`Sekündlich aus dem Messtakt – zeigt sofort, ob ${os.name} aufs WLAN ausweicht`} actions={<HealthBadge status={state} label={wlanFallback ? "WLAN-Ausweichen" : undefined} />}>
       <dl>
         <Row label="Erwartete Schnittstelle">
           <Num>{client.expectedIf ?? DASH}</Num>

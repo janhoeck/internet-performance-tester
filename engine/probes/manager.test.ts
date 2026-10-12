@@ -5,7 +5,10 @@ import type { EgressTick, NicTick } from '../core/types';
 import type { AgentConfig } from './agent-protocol';
 import type { ProbeOutcome } from './common';
 import type { EgressHooks } from './egress';
-import { type DnsClientLike, type EgressLike, type PingerLike, createProbesModule, nicNamesFor, runnerSignature } from './manager';
+import { setPlatformOverride } from '../platform';
+import { type DnsClientLike, type EgressLike, type PingerLike, createDefaultPinger, createProbesModule, nicNamesFor, runnerSignature } from './manager';
+import { MacPinger } from './mac-pinger';
+import { PingerSupervisor } from './pinger';
 import type { PingerHooks, PingerInfo } from './pinger';
 import { pendingText } from './resolve';
 import { staggerOffset } from './runner';
@@ -385,5 +388,23 @@ describe('probes module (manager)', () => {
     h.mod.start?.();
     expect(h.pingers).toHaveLength(2);
     h.mod.stop?.();
+  });
+});
+
+describe('createDefaultPinger', () => {
+  afterEach(() => setPlatformOverride(null));
+  const hooks: PingerHooks = {
+    log: { debug: () => undefined, info: () => undefined, warn: () => undefined, error: () => undefined, child: () => hooks.log },
+    onEcho: () => undefined,
+    onNic: () => undefined,
+    isOwnAddress: () => false,
+    ownAddresses: () => [],
+  };
+
+  it('MacPinger on macOS, the PowerShell agent supervisor on Windows', () => {
+    setPlatformOverride('macos');
+    expect(createDefaultPinger(hooks)).toBeInstanceOf(MacPinger);
+    setPlatformOverride('windows');
+    expect(createDefaultPinger(hooks)).toBeInstanceOf(PingerSupervisor);
   });
 });

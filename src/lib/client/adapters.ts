@@ -24,6 +24,7 @@ import type { ChartEvent, Outage } from "@/lib/echarts-theme";
 import { fmtLinkSpeed } from "@/lib/format";
 import { severityToUi } from "@/lib/health";
 import { segmentFromShared, type SegmentId } from "@/lib/segments";
+import { eventLogSourceText, isMacEventProvider } from "@/lib/shared/platform";
 
 /* -------------------------------------------------------------------------- */
 /* Ereignisse                                                                  */
@@ -69,7 +70,7 @@ export const EVENT_SOURCE_LABEL: Record<EventSource, string> = {
   icmp: "Ping",
   tcp: "TCP-Messung",
   udp: "UDP-Messung",
-  eventlog: "Windows-Ereignisprotokoll",
+  eventlog: "Ereignisprotokoll",
   adapter: "Netzwerkadapter",
   wlan: "WLAN",
   route: "Routing-Tabelle",
@@ -192,7 +193,7 @@ export function eventDetail(e: NetEvent): string | undefined {
       else if (cause === "runtime") parts.push("Abbruch im laufenden Betrieb");
       const relink = num(d.relinkMbps);
       if (relink != null) parts.push(`danach ${fmtLinkSpeed(relink)}`);
-      if (d.wlanFailover === true) parts.push("Windows wich aufs WLAN aus");
+      if (d.wlanFailover === true) parts.push(isMacEventProvider(str(d.provider)) ? "macOS wich aufs WLAN aus" : "Windows wich aufs WLAN aus");
       return parts.length ? parts.join(", ") : undefined;
     }
     case "outage": {
@@ -210,12 +211,13 @@ export function eventDetail(e: NetEvent): string | undefined {
   }
 }
 
-/** "Windows-Ereignisprotokoll (e2fexpress, ID 27)" */
+/** "Windows-Ereignisprotokoll (e2fexpress, ID 27)" bzw. "macOS-Systemprotokoll (pmset)" */
 export function eventSourceText(e: NetEvent): string {
   const d = rec(e.details);
   const base = EVENT_SOURCE_LABEL[e.source] ?? e.source;
   const provider = str(d.provider);
   const id = num(d.eventId) ?? num(d.id);
+  if (e.source === "eventlog") return eventLogSourceText(provider, id) ?? base;
   if (provider && id != null) return `${base} (${provider}, ID ${id})`;
   if (provider) return `${base} (${provider})`;
   return base;

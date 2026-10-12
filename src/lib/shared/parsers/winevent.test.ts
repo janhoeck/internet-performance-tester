@@ -11,6 +11,14 @@ import {
   eventDedupeKey,
   fmtLinkSpeed,
   linkDownEvent,
+  MAC_LINK_DOWN_ID,
+  MAC_LINK_PROVIDER,
+  MAC_LINK_UP_ID,
+  MAC_POWER_ID,
+  MAC_POWER_PROVIDER,
+  macEvent,
+  macLinkUpId,
+  macRecordId,
   linkKindOf,
   markerOf,
   ncsiChangeOf,
@@ -389,5 +397,75 @@ describe('winEventToNetEvent', () => {
     expect(winEventToNetEvent(smart)).toMatchObject({ type: 'adapter_change', severity: 'warn', title: 'Intel SmartSpeed hat die Link-Geschwindigkeit herabgestuft' });
     expect(winEventToNetEvent(removed)?.severity).toBe('warn');
     expect(winEventToNetEvent(unknown)).toBeNull();
+  });
+});
+
+describe('macOS synthetic events', () => {
+  const T = Date.UTC(2026, 9, 12, 19, 0, 0);
+  const link = (id: number, ts: number, data: Record<string, string> = {}, seq = 0) => macEvent(MAC_LINK_PROVIDER, id, ts, { p0: 'Ethernet', ...data }, seq);
+  const power = (id: number, ts: number, data: Record<string, string> = {}) => macEvent(MAC_POWER_PROVIDER, id, ts, data);
+
+  it('record ids are stable, unique per kind/seq and sortable', () => {
+    expect(macRecordId(T, 27)).toBe(T * 1000 + 270);
+    expect(macRecordId(T, 27, 1)).toBe(T * 1000 + 271);
+    expect(macRecordId(T, MAC_LINK_UP_ID)).toBe(T * 1000);
+    expect(macRecordId(T + 1, 1)).toBeGreaterThan(macRecordId(T, 62, 9));
+    expect(Number.isSafeInteger(macRecordId(T, 62, 9))).toBe(true);
+    const e = link(MAC_LINK_DOWN_ID, T);
+    expect(e).toMatchObject({ log: MAC_LINK_PROVIDER, provider: MAC_LINK_PROVIDER, id: 27, ts: T });
+    expect(eventDedupeKey(e)).toBe(`evtlog:macos-link:${T * 1000 + 270}`);
+  });
+
+  it('link kinds: Intel ids, generic up with data and unknown speed', () => {
+    expect(macLinkUpId(1000, 'full')).toBe(32);
+    expect(macLinkUpId(100, 'half')).toBe(34);
+    expect(macLinkUpId(2500, null)).toBe(MAC_LINK_UP_ID);
+    expect(macLinkUpId(null, 'full')).toBe(MAC_LINK_UP_ID);
+    expect(linkKindOf(link(27, T))).toEqual({ kind: 'down' });
+    expect(linkKindOf(link(33, T))).toEqual({ kind: 'up', mbps: 100, duplex: 'full' });
+    expect(linkKindOf(link(MAC_LINK_UP_ID, T, { Mbps: '2500' }))).toEqual({ kind: 'up', mbps: 2500, duplex: null });
+    expect(linkKindOf(link(MAC_LINK_UP_ID, T))).toEqual({ kind: 'up', mbps: null, duplex: null });
+    expect(linkKindOf(link(99, T))).toBeNull();
+    expect(linkKindOf(power(1, T))).toBeNull();
+  });
+
+  it('power markers (dark wake = resume marker)', () => {
+    expect([1, 2, 3, 4, 5, 9].map((id) => markerOf(power(id, T)))).toEqual(['boot', 'sleep', 'resume', 'resume', 'shutdown', null]);
+  });
+
+  it('maps link-ups and power events to NetEvents with Mac wording', () => {
+    expect(winEventToNetEvent(link(MAC_LINK_UP_ID, T, { Mbps: '1000', Source: 'nic' }))).toMatchObject({
+      type: 'nic_link_up', severity: 'info', title: 'Netzwerkverbindung hergestellt: 1 Gbit/s',
+      details: { speedMbps: 1000, duplex: null, provider: 'macos-link', adapter: 'Ethernet', observedBy: 'nic' },
+    });
+    expect(winEventToNetEvent(link(33, T))).toMatchObject({ severity: 'warn', title: 'Netzwerkverbindung hergestellt: 100 Mbit/s Vollduplex' });
+    expect(winEventToNetEvent(link(MAC_LINK_UP_ID, T))).toMatchObject({ severity: 'info', title: 'Netzwerkverbindung hergestellt' });
+    expect(winEventToNetEvent(link(27, T))).toBeNull();
+    expect(winEventToNetEvent(power(1, T))).toMatchObject({ type: 'resume', title: 'Mac gestartet', details: { kind: 'boot' } });
+    expect(winEventToNetEvent(power(2, T, { Reason: "Entering Sleep state due to 'Idle Sleep'", Source: 'pmset' }))).toMatchObject({
+      type: 'standby', title: 'Mac wechselt in den Ruhezustand', details: { kind: 'sleep', observedBy: 'pmset' },
+    });
+    expect(winEventToNetEvent(power(2, T, { Maintenance: '1' }))).toBeNull();
+    expect(winEventToNetEvent(power(3, T))).toMatchObject({ type: 'resume', title: 'Mac aus dem Ruhezustand aufgewacht' });
+    expect(winEventToNetEvent(power(4, T))).toBeNull();
+    expect(winEventToNetEvent(power(5, T))).toMatchObject({ type: 'standby', title: 'Mac heruntergefahren' });
+  });
+
+  it('classifies macOS link drops with the same rules', () => {
+    const evs = [
+      power(MAC_POWER_ID.wake, T),
+      link(27, T + 3 * S, { Source: 'nic' }),
+      link(MAC_LINK_UP_ID, T + 6 * S, { Mbps: '1000' }),
+      link(27, T + 3600 * S, { Source: 'nic' }),
+      link(MAC_LINK_UP_ID, T + 3605 * S, { Mbps: '100' }),
+      power(MAC_POWER_ID.sleep, T + 7200 * S),
+      link(27, T + 7170 * S),
+    ];
+    const res = analyzeLinkDrops(evs, { now: T + 86_400_000, wlanLogAvailable: true });
+    expect(res.map((a) => a.cause)).toEqual(['boot', 'runtime', 'pre_sleep']);
+    expect(res[0].marker).toMatchObject({ kind: 'resume', provider: 'macos-power', id: 3 });
+    expect(res[1]).toMatchObject({ relinkMbps: 100, duplex: null, downtimeMs: 5000, wlanFailover: false });
+    const ev = linkDownEvent(res[1]);
+    expect(ev).toMatchObject({ title: 'Netzwerkverbindung am Mac unterbrochen (5 s, danach 100 Mbit/s)', details: { provider: 'macos-link', adapter: 'Ethernet', observedBy: 'nic' } });
   });
 });

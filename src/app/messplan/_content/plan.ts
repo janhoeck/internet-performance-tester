@@ -3,6 +3,7 @@
  * Hinweis Schriftsatz: nur Glyphen aus dem Latin-Subset (keine Pfeile, kein ≥/≤/≈/Δ/σ).
  */
 import type { Severity } from "@/lib/health";
+import type { HostOs } from "@/lib/shared/platform";
 
 export interface Rating {
   status?: Severity;
@@ -114,6 +115,10 @@ export const FINDINGS: readonly PlanFinding[] = [
   },
 ];
 
+/** macOS: Messprinzip ohne PowerShell (jede Sekunde ein ping-Aufruf je Ziel). */
+export const PRINCIPLE_TEXT_MAC =
+  "Die Mess-Engine startet jede Sekunde für alle Ziele gleichzeitig einen Ping (macOS-Bordmittel, ohne Admin-Rechte) – auch bei Zeitüberschreitungen bleibt der Takt fest – und liest dabei sekündlich den Link-Status der Netzwerkanschlüsse. Daraus wird jede Sekunde einem Abschnitt zugeordnet; die erste zutreffende Regel gewinnt.";
+
 export const PRINCIPLE = {
   text:
     "Ein PowerShell-Hintergrundprozess (.NET-Ping, ohne Admin-Rechte) pingt alle Ziele exakt im gleichen Sekundentakt – auch bei Zeitüberschreitungen bleibt der Takt fest – und meldet dabei sekündlich den Link-Status der Netzwerkadapter. Daraus wird jede Sekunde einem Abschnitt zugeordnet; die erste zutreffende Regel gewinnt.",
@@ -153,6 +158,43 @@ export interface MeasureRow {
   interval: string;
   rating: readonly Rating[];
   purpose: string;
+}
+
+/**
+ * macOS: Messmethoden der Mess-Engine unter macOS (docs/research/macos.md). Schlüssel = Windows-Angabe
+ * in den Tabellen unten; Zeilen, die es unter macOS nicht gibt, stehen in MAC_HIDDEN_METRICS.
+ */
+const MAC_METHODS: Readonly<Record<string, string>> = {
+  ".NET NetworkInterface im Ping-Prozess": "ifconfig und netstat in jedem Messtakt",
+  "wevtutil (Intel e2fexpress/e2fnexpress, Kernel-Boot/-Power, WLAN-AutoConfig); Import der gesamten Historie":
+    "Sekündliche Link-Überwachung im Test, pmset-Protokoll (Ruhezustand), Import früherer Link-Meldungen aus dem Systemprotokoll",
+  "Get-NetAdapterStatistics": "netstat -ibn",
+  "netsh wlan show interfaces": "system_profiler (SSID oft ausgeblendet, ohne BSSID)",
+  "PowerShell, Ereignis Tcpip 4199": "route, arp, ipconfig, scutil",
+  "Leistungszähler TCPv4/TCPv6": "netstat -s (TCP gesamt)",
+  "Ereignisprotokoll und Timer-Lücken": "pmset-Protokoll und Timer-Lücken",
+  ".NET-Ping": "ping im Sekundentakt",
+  ".NET-Ping IPv6": "ping6 im Sekundentakt",
+  "TTL-Pings (.NET)": "traceroute (TTL-Proben)",
+  "TTL-Pings; Verlust zählt nur, wenn er bis zum Ziel bestehen bleibt": "traceroute-TTL-Proben; Verlust zählt nur, wenn er bis zum Ziel bestehen bleibt",
+};
+
+const MAC_METRICS: Readonly<Record<string, string>> = {
+  "Link-Abbrüche aus dem Windows-Ereignisprotokoll inkl. Einordnung (Start/Aufwachen, vor Standby, Router-Neustart, echter Abbruch), Geschwindigkeit nach Wiederaufbau, Ausfalldauer, WLAN-Ausweichen":
+    "Link-Abbrüche inkl. Einordnung (Start/Aufwachen, vor dem Ruhezustand, Router-Neustart, echter Abbruch), Geschwindigkeit nach Wiederaufbau, Ausfalldauer, WLAN-Ausweichen",
+  "Identität: Gateway-MAC, DHCP- und DNS-Server, IPv6-Präfix, IP-Konflikte": "Identität: Gateway-MAC, DHCP- und DNS-Server, IPv6-Präfix",
+  "WLAN (falls verbunden): SSID, BSSID, Signal %, RSSI, Kanal, Band, Raten": "WLAN (falls verbunden): SSID, Signal %, RSSI, Kanal, Band, Senderate",
+};
+
+/** Zeilen ohne macOS-Entsprechung (Treiber-Eigenschaften aus dem Gerätemanager). */
+const MAC_HIDDEN_METRICS: ReadonlySet<string> = new Set(["Treiber und Energiespar-Einstellungen"]);
+
+/** Tabellenzeilen mit den Messmethoden des Betriebssystems, auf dem die Mess-Engine läuft. */
+export function measureRowsFor(rows: readonly MeasureRow[], os: HostOs): readonly MeasureRow[] {
+  if (os !== "macos") return rows;
+  return rows
+    .filter((r) => !MAC_HIDDEN_METRICS.has(r.metric))
+    .map((r) => ({ ...r, metric: MAC_METRICS[r.metric] ?? r.metric, method: MAC_METHODS[r.method] ?? r.method }));
 }
 
 export interface MeasureGroup {
@@ -404,6 +446,12 @@ export const THROUGHPUT_ROWS: readonly MeasureRow[] = [
     purpose: "Bufferbloat; welcher Abschnitt puffert (Router-Ping steigt: LAN-Link; Kopfstation steigt beim Upload: Modem-Puffer)",
   },
 ];
+
+/** Ereignis-Erkennung mit den Werkzeugen des Betriebssystems (macOS ohne PowerShell). */
+export function eventRowsFor(os: HostOs): readonly { event: string; detection: string }[] {
+  if (os !== "macos") return EVENT_ROWS;
+  return EVENT_ROWS.map((r) => ({ ...r, detection: r.detection.replace("PowerShell", "Systemwerkzeuge (route, arp, scutil)") }));
+}
 
 export const EVENT_ROWS: readonly { event: string; detection: string }[] = [
   { event: "Ausfall", detection: "Mindestens 3 s keine Antwort von mindestens 2 Internet-Zielen; Einordnung PC, Heimnetz, Kabel, AFTR (nur IPv4), Backbone oder Internet" },

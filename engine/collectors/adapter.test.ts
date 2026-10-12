@@ -10,6 +10,7 @@ import {
   nicMetrics,
   parseNetSnapshot,
   pickPrimary,
+  powerShellNetSnapshotSource,
   relevantAdvanced,
   router6From,
   serviceMap,
@@ -239,5 +240,20 @@ describe('advanced properties, signature, script', () => {
   it('builds the PowerShell call with quoted adapter names', () => {
     expect(snapshotScript({ routes: true, services: false, advancedFor: null })).toBe('Get-NdNetSnapshot -Routes');
     expect(snapshotScript({ routes: false, services: true, advancedFor: "Jan's LAN" })).toBe("Get-NdNetSnapshot -Services -AdvancedFor 'Jan''s LAN'");
+  });
+});
+
+describe('Windows net snapshot source', () => {
+  it('requires the PowerShell worker and parses Get-NdNetSnapshot', async () => {
+    const off = { available: false, json: () => Promise.reject(new Error('x')), text: () => Promise.reject(new Error('x')), dispose: () => undefined };
+    await expect(powerShellNetSnapshotSource(off).fetch({ routes: true, services: true, advancedFor: null })).rejects.toThrow('PowerShell nicht verfügbar');
+    const scripts: string[] = [];
+    const on = { ...off, available: true, json: <T>(script: string) => (scripts.push(script), Promise.resolve(REAL as T)) };
+    const raw = await powerShellNetSnapshotSource(on).fetch({ routes: true, services: false, advancedFor: 'WLAN' });
+    expect(scripts).toEqual(["Get-NdNetSnapshot -Routes -AdvancedFor 'WLAN'"]);
+    expect(raw.adapters).toHaveLength(4);
+    expect(raw.adapters.every((a) => a.device === undefined)).toBe(true);
+    const bad = { ...on, json: <T>() => Promise.resolve(42 as T) };
+    await expect(powerShellNetSnapshotSource(bad).fetch({ routes: false, services: false, advancedFor: null })).rejects.toThrow('Unerwartete Antwort von Get-NdNetSnapshot');
   });
 });

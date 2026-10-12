@@ -1,0 +1,7 @@
+   route to: 1.1.1.1
+destination: 1.1.1.1
+    gateway: 192.168.0.1
+  interface: en7
+      flags: <UP,GATEWAY,HOST,DONE,WASCLONED,IFSCOPE,IFREF,GLOBAL>
+ recvpipe  sendpipe  ssthresh  rtt,msec    rttvar  hopcount      mtu     expire
+       0         0         0        18         3         0      1460        542 

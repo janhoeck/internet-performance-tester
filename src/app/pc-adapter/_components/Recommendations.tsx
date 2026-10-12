@@ -9,6 +9,7 @@ import { Panel } from "@/components/ui/Panel";
 import { cn } from "@/lib/cn";
 import { fmtDate, fmtInt, fmtNumber, fmtPctValue, NBSP } from "@/lib/format";
 import { useNow } from "@/lib/use-now";
+import { useOsWording } from "@/lib/client/platform";
 import { Note, Num } from "./bits";
 import { isIntelI225, isNetAdapterDriver, type AdvancedProp, type LinkDropRow, gigabitStreak } from "./pc-model";
 
@@ -46,6 +47,56 @@ function Progress({ label, value, goal, unit }: { label: string; value: number; 
   );
 }
 
+/** macOS: kein Treiber- oder Gerätemanager-Weg – USB-/Thunderbolt-Adapter sind die häufigste Fehlerquelle. */
+function macSteps(ethernet: AdapterInfo | null): Step[] {
+  const usb = ethernet != null && /usb|thunderbolt|dock|hub/i.test(`${ethernet.name} ${ethernet.description}`);
+  return [
+    {
+      id: "cable",
+      title: "Kabel tauschen – direkt Mac–Station",
+      body: (
+        <>
+          Neues, kurzes Cat-6-Patchkabel direkt zwischen Mac (bzw. Netzwerkadapter) und Vodafone Station – ohne Wanddose, Kupplung oder Switch. Stecker müssen
+          hörbar einrasten; das Kabel nicht knicken oder einklemmen.
+        </>
+      ),
+    },
+    {
+      id: "port",
+      title: "Anderen LAN-Port der Station nutzen",
+      body: <>Die Station hat vier Gigabit-Ports. Wechsle den Port und notiere, welchen du nutzt – so lässt sich ein defekter Port erkennen.</>,
+    },
+    {
+      id: "adapter",
+      title: usb ? "Netzwerkadapter direkt am Mac anschließen" : "Netzwerkadapter und Anschluss prüfen",
+      body: (
+        <>
+          USB-C-/Thunderbolt-Netzwerkadapter, Docks und Hubs sind am Mac die häufigste Ursache für Link-Abbrüche (Stromsparen, Wärme, Wackelkontakt). Den
+          Adapter testweise ohne Hub/Dock direkt am Mac anstecken, einen anderen Anschluss nutzen oder einen anderen Adapter ausprobieren.
+        </>
+      ),
+    },
+    {
+      id: "force",
+      title: "Gegenprobe: 1 Gbit/s fest einstellen",
+      optional: true,
+      body: (
+        <>
+          Systemeinstellungen → Netzwerk → {ethernet?.name ?? "Ethernet"} → Details → Hardware: „Konfigurieren“ auf „Manuell“, Geschwindigkeit „1000baseT“,
+          Duplex „full-duplex“. Kommt dann keine stabile Verbindung zustande, schafft Kabel, Port oder Adapter kein Gigabit. Danach wieder auf „Automatisch“
+          stellen.
+        </>
+      ),
+    },
+    {
+      id: "update",
+      title: "macOS aktuell halten",
+      optional: true,
+      body: <>Treiber für Netzwerkadapter kommen bei macOS mit den Systemupdates. Erst nach Kabel-, Port- und Adaptertest aktualisieren, damit die Ursache eindeutig bleibt.</>,
+    },
+  ];
+}
+
 export function Recommendations({
   summary,
   ethernet,
@@ -58,6 +109,8 @@ export function Recommendations({
   advanced: readonly AdvancedProp[];
 }) {
   const now = useNow(60_000);
+  const os = useOsWording();
+  const mac = os.id === "macos";
   const problem = summary.runtimeDrops7d > 0 || (summary.relinkBelow1gPct ?? 0) >= 20;
   const netAdapter = isNetAdapterDriver(ethernet);
   const intel = isIntelI225(ethernet);
@@ -66,7 +119,7 @@ export function Recommendations({
   const { streak } = gigabitStreak(drops);
   const daysSince = summary.lastDropTs == null ? 7 : now != null ? Math.max(0, (now - summary.lastDropTs) / 86_400_000) : null;
 
-  const steps: Step[] = [
+  const steps: Step[] = mac ? macSteps(ethernet) : [
     {
       id: "cable",
       title: "Kabel tauschen – direkt PC–Station",
@@ -112,7 +165,7 @@ export function Recommendations({
       ),
     },
   ];
-  if (ss) {
+  if (ss && !mac) {
     steps.push({
       id: "ss",
       title: ssOn ? "Selective Suspend für den Test ausschalten" : "Selective Suspend ist aus",

@@ -2,7 +2,8 @@
 // (`Ping.SendPingAsync(dst, 1000, buf, PingOptions(ttl, false))`, Stopwatch timing – RoundtripTime
 // is 0 for TtlExpired) in a SEPARATE short-lived powershell.exe running engine/tasks/ttl-probe.ps1,
 // so the shared RPC worker is never blocked. Fallback: `tracert -d -w 1000 -h N -4|-6` parsed by
-// parseTracert(). Targets 1.1.1.1 and 2606:4700:4700::1111.
+// parseTracert(). Targets 1.1.1.1 and 2606:4700:4700::1111. macOS: one `traceroute -I -q 1 -f T -m T` per
+// TTL and round, fallback one sequential UDP-mode `traceroute` (engine/tasks/mac-path.ts).
 //
 // Runs: session start ('startup', up to 30 hops), every `tracerouteEveryMin` ('schedule', hops 1–8 ×
 // 3 probes), outage start + shortly after the outage ends ('incident', at most one per 3 min) and
@@ -34,6 +35,8 @@ import {
 } from '../../src/lib/shared/path-analysis';
 import type { IpFamily, ModuleState, NetEvent, Segment, TraceHop, TracerouteResult } from '../../src/lib/shared/types';
 import type { BusEvents, EngineContext, EngineModule, Logger, TaskResult } from '../core/types';
+import { isMac } from '../platform';
+import { runMacTraceroute, runMacTtlProbes } from './mac-path';
 
 // ─── constants ─────────────────────────────────────────────────────────────
 
@@ -98,6 +101,8 @@ export interface ProcessOptions {
   track?: (child: ChildProcess) => void;
   /** stdout limit in bytes (default 4 MB); the child is killed when exceeded */
   maxBytes?: number;
+  /** environment of the child (default: inherited; macOS tools get LC_ALL=C) */
+  env?: NodeJS.ProcessEnv;
 }
 
 export interface ProcessResult {
@@ -166,7 +171,13 @@ export function runProcess(file: string, args: readonly string[], opts: ProcessO
       return;
     }
     try {
-      child = spawn(file, [...args], { windowsHide: true, shell: false, detached: false, stdio: ['ignore', 'pipe', 'pipe'] });
+      child = spawn(file, [...args], {
+        windowsHide: true,
+        shell: false,
+        detached: false,
+        stdio: ['ignore', 'pipe', 'pipe'],
+        ...(opts.env ? { env: opts.env } : {}),
+      });
     } catch (e) {
       error = errorText(e);
       finish(null);
@@ -422,8 +433,12 @@ export function interpretTtlOutput(
   };
 }
 
-/** Runs ttl-probe.ps1 in its own short-lived powershell.exe. Never rejects. */
+/**
+ * Runs ttl-probe.ps1 in its own short-lived powershell.exe (macOS: one traceroute per TTL and
+ * round, engine/tasks/mac-path.ts). Never rejects.
+ */
 export async function runTtlProbes(plan: TtlPlan, opts: TtlRunOptions = {}): Promise<TtlRunResult> {
+  if (isMac()) return runMacTtlProbes(plan, opts);
   let args: string[];
   try {
     args = ttlScriptArgs(await loadTtlScript(), plan);
@@ -465,7 +480,9 @@ export interface SpawnOpts {
   track?: (child: ChildProcess) => void;
 }
 
+/** `tracert` fallback (macOS: one sequential UDP-mode `traceroute`, see mac-path.ts). */
 export async function runTracert(dst: string, family: IpFamily, maxHops: number, opts: SpawnOpts = {}): Promise<TracertRunResult> {
+  if (isMac()) return runMacTraceroute(dst, family, maxHops, opts);
   const args = ['-d', '-w', String(PROBE_TIMEOUT_MS), '-h', String(maxHops), family === 4 ? '-4' : '-6', dst];
   const proc = await runProcess(system32('tracert.exe'), args, {
     timeoutMs: maxHops * 3 * 1500 + 10_000,
@@ -572,6 +589,9 @@ export interface TracerouteModuleOptions {
 /** German failure for ModuleState.lastError */
 class PathError extends Error {}
 
+/** name of the sequential fallback in logs */
+const fallbackName = (): string => (isMac() ? 'traceroute (UDP)' : 'tracert');
+
 export function createTracerouteModule(opts: TracerouteModuleOptions = {}): EngineModule {
   const runTtl = opts.runTtl ?? runTtlProbes;
   const runTr = opts.runTracert ?? runTracert;
@@ -618,11 +638,11 @@ export function createTracerouteModule(opts: TracerouteModuleOptions = {}): Engi
       }
       ttlError = run.error;
       ttlFailures++;
-      log?.warn(`TTL probes IPv${family} failed – falling back to tracert`, { error: run.error });
+      log?.warn(`TTL probes IPv${family} failed – falling back to ${fallbackName()}`, { error: run.error });
       if (ttlFailures >= TTL_FAILURES_BEFORE_TRACERT) {
         preferTracertUntil = Date.now() + TRACERT_PREFERENCE_MS;
         ttlFailures = 0;
-        log?.warn('TTL probes failed repeatedly – using tracert for the next 6 h');
+        log?.warn(`TTL probes failed repeatedly – using ${fallbackName()} for the next 6 h`);
       }
     }
     const tr = await runTr(target, family, maxHops, { signal, track });

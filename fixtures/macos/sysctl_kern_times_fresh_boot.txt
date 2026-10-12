@@ -1,0 +1,3 @@
+kern.boottime: { sec = 1791698462, usec = 345678 } Sun Oct 11 08:01:02 2026
+kern.sleeptime: { sec = 0, usec = 0 } Thu Jan  1 01:00:00 1970
+kern.waketime: { sec = 0, usec = 0 } Thu Jan  1 01:00:00 1970

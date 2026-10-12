@@ -1,0 +1,24 @@
+op = BOOTREPLY
+htype = 1
+flags = 0
+hlen = 6
+hops = 0
+xid = 0x5a1b2c3d
+secs = 0
+ciaddr = 0.0.0.0
+yiaddr = 192.168.0.43
+siaddr = 0.0.0.0
+giaddr = 0.0.0.0
+chaddr = 0:e0:4c:aa:bb:3
+sname = 
+file = 
+options:
+Options count is 8
+dhcp_message_type (uint8): ACK 0x5
+server_identifier (ip): 192.168.0.1
+lease_time (uint32): 0x93a80
+subnet_mask (ip): 255.255.255.0
+router (ip_mult): {192.168.0.1}
+domain_name_server (ip_mult): {192.168.0.1, 192.0.2.53}
+domain_name (string): fritz.box
+end (none): 

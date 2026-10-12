@@ -6,6 +6,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { ChartSkeleton, DataState, KpiSkeleton } from "@/components/ui/States";
 import { TimeRangePicker } from "@/components/ui/TimeRangePicker";
 import { useClientState } from "@/lib/client/live-store";
+import { usePlatform } from "@/lib/client/platform";
 import { useApi } from "@/lib/client/use-api";
 import { useTimeRange } from "@/lib/client/use-time-range";
 import { EthernetCard, VirtualAdapters, WifiCard } from "./AdapterCards";
@@ -53,6 +54,7 @@ function ClientContent({
   rangeLabel: string;
 }) {
   const live = useClientState();
+  const os = usePlatform();
   const groups = useMemo(() => groupAdapters(data.adapters), [data.adapters]);
   const advanced = useMemo(() => readAdvanced(data.adapters?.advanced), [data.adapters]);
   const drops = useMemo(() => linkDropRows(data.linkEvents), [data.linkEvents]);
@@ -80,7 +82,8 @@ function ClientContent({
 
       <LinkEventsTable events={data.linkEvents} rangeLabel={rangeLabel} />
 
-      <AdvancedProps props={advanced} adapterName={groups.ethernet?.description ?? null} />
+      {/* macOS hat keine erweiterten Treiber-Eigenschaften (Gerätemanager) */}
+      {(os !== "macos" || advanced.length > 0) && <AdvancedProps props={advanced} adapterName={groups.ethernet?.description ?? null} />}
 
       <div className="grid grid-cols-1 gap-4 xl:grid-cols-2">
         <WlanPanel wlan={data.wlan} metrics={metrics} from={from} to={to} />

@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { AppShell } from "@/components/shell/AppShell";
+import { PlatformProvider } from "@/lib/client/platform";
+import { hostOsFrom } from "@/lib/shared/platform";
 import { fontVariables } from "./fonts";
 import "./globals.css";
 
@@ -14,10 +16,14 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  // UI and engine run on the same machine – the server's OS is the measuring PC's OS
+  const os = hostOsFrom(process.platform);
   return (
     <html lang="de" data-motion="on" className={fontVariables} suppressHydrationWarning>
       <body>
-        <AppShell sidebarFooter={<span className="np-num">Engine 127.0.0.1:3901</span>}>{children}</AppShell>
+        <PlatformProvider os={os}>
+          <AppShell sidebarFooter={<span className="np-num">Engine 127.0.0.1:3901</span>}>{children}</AppShell>
+        </PlatformProvider>
       </body>
     </html>
   );

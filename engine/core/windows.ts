@@ -1,7 +1,9 @@
 // PowerShell RPC worker + DPAPI secret store come from E-windows (engine/collectors/*). They are
-// imported dynamically; when unavailable the engine keeps running with local fallbacks.
+// imported dynamically; when unavailable the engine keeps running with local fallbacks. On macOS
+// the PowerShell host is a stub and createSecretStore() returns the Keychain store.
 import type { ChildProcess } from 'node:child_process';
 import { projectFileUrl } from '../modules';
+import { hostPlatform, isWindows } from '../platform';
 import type { EngineDb, Logger, PowerShellHost, SecretStore } from './types';
 import { errorMessage, isRecord } from './util';
 
@@ -72,6 +74,11 @@ export interface PowerShellLoadOptions {
 }
 
 export async function loadPowerShellHost(log: Logger, opts: PowerShellLoadOptions = {}): Promise<PowerShellHost> {
+  if (!isWindows() && !opts.importer) {
+    // macOS collectors spawn their own tools (docs/research/macos.md) – no PowerShell needed
+    log.info(`Plattform ${hostPlatform()}: Systemabfragen ohne PowerShell`);
+    return createUnavailablePowerShellHost(`PowerShell wird unter ${hostPlatform() === 'macos' ? 'macOS' : 'Linux'} nicht verwendet`);
+  }
   try {
     const factory = await loadFactory(POWERSHELL_HOST_FILE, 'createPowerShellHost', opts.importer ?? defaultImport);
     const host = factory({ log: log.child('powershell'), onSpawn: opts.onSpawn });

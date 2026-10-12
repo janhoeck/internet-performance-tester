@@ -85,7 +85,20 @@ ${header}${body}
 `;
 }
 
+/** Chromium-based browsers in the standard macOS install locations (system-wide and per user). */
+function macBrowserCandidates(): string[] {
+  const apps = ['/Applications', path.join(os.homedir(), 'Applications')];
+  const bundles: [string, string][] = [
+    ['Google Chrome.app', 'Google Chrome'],
+    ['Microsoft Edge.app', 'Microsoft Edge'],
+    ['Chromium.app', 'Chromium'],
+    ['Brave Browser.app', 'Brave Browser'],
+  ];
+  return apps.flatMap((dir) => bundles.map(([app, bin]) => path.join(dir, app, 'Contents', 'MacOS', bin)));
+}
+
 function findBrowser(): string | null {
+  if (process.platform === 'darwin') return macBrowserCandidates().find((p) => fs.existsSync(p)) ?? null;
   const pf = process.env.ProgramFiles ?? 'C:\\Program Files';
   const pf86 = process.env['ProgramFiles(x86)'] ?? 'C:\\Program Files (x86)';
   const local = process.env.LOCALAPPDATA ?? '';
@@ -171,7 +184,7 @@ async function main(): Promise<void> {
   if (values['kein-pdf']) return;
   const browser = findBrowser();
   if (!browser) {
-    console.log('PDF:        kein Edge/Chrome gefunden – HTML im Browser öffnen und mit Strg+P „Als PDF speichern“.');
+    console.log(`PDF:        kein Edge/Chrome gefunden – HTML im Browser öffnen und mit ${process.platform === 'darwin' ? '⌘P' : 'Strg+P'} „Als PDF speichern“.`);
     return;
   }
   const pdfFile = path.join(dir, `${doc.output}.pdf`);

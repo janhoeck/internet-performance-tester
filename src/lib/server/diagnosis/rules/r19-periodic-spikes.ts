@@ -107,11 +107,11 @@ function fmtPeriod(ms: number): string {
   return m < 120 ? `${m} min` : `${Math.round(m / 60)} h`;
 }
 
-function hintFor(periodMs: number, wifi: boolean): string {
+function hintFor(periodMs: number, wifi: boolean, os: DiagnosisInput['os']): string {
   const s = periodMs / 1000;
   if ((s >= 50 && s <= 70) || (s >= 110 && s <= 130)) {
     return wifi
-      ? 'Ein Abstand von 1–2 Minuten passt zu WLAN-Hintergrundsuchen (Windows sucht regelmäßig nach Netzen) oder Standortdiensten.'
+      ? `Ein Abstand von 1–2 Minuten passt zu WLAN-Hintergrundsuchen (${os === 'macos' ? 'macOS' : 'Windows'} sucht regelmäßig nach Netzen) oder Standortdiensten.`
       : 'Ein Abstand von 1–2 Minuten passt zu einem Hintergrunddienst oder zur Telemetrie (bei WLAN auch zu Hintergrundsuchen).';
   }
   if (s < 600) return 'Typische Ursachen sind zeitgesteuerte Aufgaben, Cloud-Synchronisation oder Wartungsvorgänge im Router.';
@@ -133,7 +133,7 @@ export function periodicSpikes(input: DiagnosisInput): Finding | null {
 
   const summary =
     `Lag-Spitzen treten auffällig regelmäßig auf – etwa alle ${fmtPeriod(periodMs)}. ` +
-    `Das spricht für einen zeitgesteuerten Vorgang statt einer zufälligen Leitungsstörung. ${hintFor(periodMs, wifi)}`;
+    `Das spricht für einen zeitgesteuerten Vorgang statt einer zufälligen Leitungsstörung. ${hintFor(periodMs, wifi, input.os)}`;
 
   const evidence: FindingEvidence[] = [];
   if (byInterval) {

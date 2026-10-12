@@ -1,0 +1,2 @@
+ 9  1.1.1.1  12.871 ms
+traceroute to 1.1.1.1 (1.1.1.1), 9 hops max, 72 byte packets

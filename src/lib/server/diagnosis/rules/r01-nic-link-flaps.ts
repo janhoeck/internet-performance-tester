@@ -1,6 +1,7 @@
 // R01 nic-link-flaps: ≥ 3 genuine (runtime) link drops in 7 days or ≥ 3 within 30 min.
 // Critical at ≥ 5 per day or ≥ 5 within 30 min (docs/research/critique.md §5.3 R01).
 import { fmtDateTime } from '../../../shared/format';
+import type { HostOs } from '../../../shared/platform';
 import type { Finding, FindingEvidence } from '../../../shared/types';
 import { isFaultDrop } from '../links';
 import { fmtCount, fmtLinkSpeed, fmtSecondsCount, fmtSecondsRange, fmtShare } from '../text';
@@ -17,6 +18,19 @@ export const LINK_RECOMMENDATIONS: readonly string[] = [
   'Erst danach den Treiber aktualisieren (Intel „Network Adapter Driver for Windows 11“, NetAdapter-Treiber e2fn 2.1.x) – so bleibt die Ursache eindeutig.',
   'Immer nur eine Änderung zur Zeit vornehmen und als Notiz festhalten – die App vergleicht automatisch vorher/nachher.',
 ];
+
+/** macOS: no driver packages – USB-C/Thunderbolt adapters, docks and hubs are the usual suspects. */
+export const LINK_RECOMMENDATIONS_MAC: readonly string[] = [
+  'Netzwerkkabel direkt zwischen Mac (bzw. Netzwerkadapter) und Vodafone Station gegen ein neues Cat-6-Kabel tauschen (ohne Wanddose, Kupplung oder Switch). Stecker müssen hörbar einrasten; Kabel nicht knicken oder einklemmen.',
+  'Einen anderen LAN-Port am Router verwenden und notieren, welcher Port genutzt wird.',
+  'USB-C-/Thunderbolt-Netzwerkadapter testweise ohne Hub oder Dock direkt am Mac anschließen bzw. einen anderen Adapter ausprobieren; Zwischengeräte (Switch, Powerline, Wanddose) überbrücken.',
+  'Erst danach macOS aktualisieren (Netzwerktreiber kommen mit den Systemupdates) – so bleibt die Ursache eindeutig.',
+  'Immer nur eine Änderung zur Zeit vornehmen und als Notiz festhalten – die App vergleicht automatisch vorher/nachher.',
+];
+
+export function linkRecommendations(os: HostOs | undefined): readonly string[] {
+  return os === 'macos' ? LINK_RECOMMENDATIONS_MAC : LINK_RECOMMENDATIONS;
+}
 
 export function nicLinkFlaps(input: DiagnosisInput): Finding | null {
   const weekStart = input.to - 7 * DAY;
@@ -90,10 +104,10 @@ export function nicLinkFlaps(input: DiagnosisInput): Finding | null {
     severity,
     confidence,
     segment: 'client',
-    title: 'Netzwerkverbindung am PC bricht ab',
+    title: input.os === 'macos' ? 'Netzwerkverbindung am Mac bricht ab' : 'Netzwerkverbindung am PC bricht ab',
     summary,
     evidence,
-    recommendations: [...LINK_RECOMMENDATIONS],
+    recommendations: [...linkRecommendations(input.os)],
     score: findingScore(severity, confidence, impact, Math.min(10, faults.length)),
     relatedEventIds: faults.map((d) => d.id).filter((id): id is number => id !== null).slice(-50),
   };

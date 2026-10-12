@@ -1,0 +1,6 @@
+PING6(80=40+8+32 bytes) 2001:db8:aa00:1234:14a3:9d1e:3b1a:7f02 --> 2606:4700:4700::1111
+40 bytes from 2606:4700:4700::1111, icmp_seq=0 hlim=57 time=11.876 ms
+
+--- 2606:4700:4700::1111 ping6 statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 11.876/11.876/11.876/0.000 ms

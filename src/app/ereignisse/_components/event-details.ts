@@ -6,6 +6,7 @@ import type { NetEvent, OutageClass, TargetConfig } from "@/lib/shared/types";
 import { EVENT_TYPE_LABEL, OUTAGE_CLASS_LABEL, eventSourceText, isOngoingEpisode } from "@/lib/client/adapters";
 import { targetName } from "@/lib/client/targets";
 import { SHARED_SEGMENT_LABEL } from "@/lib/segments";
+import { isMacEventProvider } from "@/lib/shared/platform";
 import { fmtDateTime, fmtDurationMs, fmtInt, fmtLinkSpeed, fmtLossPct, fmtMbit, fmtMs, fmtNumber, fmtPct } from "@/lib/format";
 
 export interface DetailRow {
@@ -77,7 +78,7 @@ function linkDown(e: NetEvent, d: Rec, rows: DetailRow[]): void {
   if (relink != null) push(rows, "Wiederaufbau", `mit ${fmtLinkSpeed(relink)}${relink < 1000 ? " statt 1 Gbit/s" : ""}`, true);
   else if (d.final === true) push(rows, "Wiederaufbau", "keine Wiederverbindung erkannt");
   const failover = bool(d.wlanFailover);
-  if (failover === true) push(rows, "WLAN-Ausweichen", "ja, Windows wich aufs WLAN aus");
+  if (failover === true) push(rows, "WLAN-Ausweichen", isMacEventProvider(str(d.provider)) ? "ja, macOS wich aufs WLAN aus" : "ja, Windows wich aufs WLAN aus");
   else if (d.wlanAlreadyConnected === true) push(rows, "WLAN-Ausweichen", "WLAN war bereits verbunden");
   else push(rows, "WLAN-Ausweichen", yesNo(failover));
   const inetDown = num(d.internetDownMs);

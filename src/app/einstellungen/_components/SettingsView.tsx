@@ -8,10 +8,12 @@ import { ErrorState, Skeleton } from "@/components/ui/States";
 import { toast } from "@/components/ui/Toast";
 import { ApiFailure, errorMessage, saveConfig } from "@/lib/client/api";
 import { useLiveConnection } from "@/lib/client/live-store";
+import { useOsWording } from "@/lib/client/platform";
 import { revalidateApi, setApiData, useApi } from "@/lib/client/use-api";
 import { cn } from "@/lib/cn";
 import type { ConfigResponse, PublicConfig } from "@/lib/shared/api-types";
 import type { AppConfig } from "@/lib/shared/config";
+import type { OsWording } from "@/lib/shared/platform";
 import { ServerIssues } from "./controls";
 import {
   buildPatch,
@@ -44,7 +46,7 @@ interface SectionDef {
 const SECTIONS: readonly SectionDef[] = [
   { id: "router", title: "Router-Zugang", description: "Adresse und Anmeldung an der Vodafone Station.", keys: ["router"], extraPaths: ["routerPassword"] },
   { id: "tarif", title: "Tarif", description: "Vertragswerte – Grundlage für die Bewertung der Speedtests.", keys: ["tariff"] },
-  { id: "langzeittest", title: "Langzeittest", description: "Verhalten des PCs während eines laufenden Tests.", keys: ["session"] },
+  { id: "langzeittest", title: "Langzeittest", description: "Verhalten des Rechners während eines laufenden Tests.", keys: ["session"] },
   { id: "spiele", title: "Spiele-Erkennung", description: "Programme, an denen Netzpuls erkennt, dass du spielst.", keys: ["gaming"] },
   { id: "zeitplaene", title: "Zeitpläne", description: "Wann Speedtests und Pfadmessungen automatisch laufen.", keys: ["schedules", "speedtest", "udpBurst"] },
   { id: "messziele", title: "Messziele", description: "Welche Ziele die Mess-Engine anpingt und wie oft.", keys: ["targets"] },
@@ -53,6 +55,16 @@ const SECTIONS: readonly SectionDef[] = [
   { id: "ereignisprotokoll", title: "Windows-Ereignisprotokoll", description: "Import der Link-Abbrüche aus Windows.", keys: ["eventLog"] },
   { id: "darstellung", title: "Darstellung", description: "Einstellungen nur für diesen Browser.", keys: [] },
 ];
+
+/** Titel/Beschreibung mit betriebssystemabhängigem Wortlaut (Ereignisprotokoll). */
+function sectionText(s: SectionDef, os: OsWording): { title: string; description: string } {
+  if (s.id === "ereignisprotokoll") {
+    return os.id === "windows"
+      ? { title: os.eventLog, description: "Import der Link-Abbrüche aus Windows." }
+      : { title: os.eventLog, description: "Ruhezustand, Neustarts und frühere Link-Abbrüche aus macOS." };
+  }
+  return { title: s.title, description: s.description };
+}
 
 function sectionOfPath(path: string): SectionDef | undefined {
   const head = path.split(".")[0];
@@ -93,6 +105,7 @@ function SettingsSkeleton() {
 }
 
 function SettingsForm({ initial }: { initial: PublicConfig }) {
+  const os = useOsWording();
   const [base, setBase] = useState<PublicConfig>(initial);
   const [draft, setDraft] = useState<AppConfig>(() => toDraft(initial));
   const [password, setPassword] = useState<PasswordDraft>({ mode: "keep" });
@@ -229,7 +242,7 @@ function SettingsForm({ initial }: { initial: PublicConfig }) {
                   }}
                   className="flex h-9 items-center gap-2 rounded-lg px-3 text-sm text-fg-2 hover:bg-raised hover:text-fg focus-visible:outline-2 focus-visible:outline-fiber"
                 >
-                  <span className="min-w-0 flex-1 truncate">{s.title}</span>
+                  <span className="min-w-0 flex-1 truncate">{sectionText(s, os).title}</span>
                   {st.errs + st.srv.length > 0 ? (
                     <OctagonAlert aria-label="enthält Fehler" className="size-3.5 shrink-0 text-crit" strokeWidth={2.25} />
                   ) : st.isDirty ? (
@@ -253,7 +266,7 @@ function SettingsForm({ initial }: { initial: PublicConfig }) {
               <Panel
                 title={
                   <span className="flex flex-wrap items-center gap-2">
-                    {s.title}
+                    {sectionText(s, os).title}
                     {st.isDirty && (
                       <span className="inline-flex h-5 items-center gap-1 rounded-full bg-fiber/12 px-2 text-2xs font-medium text-fiber ring-1 ring-inset ring-fiber/35">
                         <PencilLine aria-hidden className="size-3" strokeWidth={2.25} />
@@ -262,7 +275,7 @@ function SettingsForm({ initial }: { initial: PublicConfig }) {
                     )}
                   </span>
                 }
-                description={s.description}
+                description={sectionText(s, os).description}
               >
                 <ServerIssues issues={st.srv} />
                 {body[s.id]}

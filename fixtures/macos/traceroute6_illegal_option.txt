@@ -1,0 +1,2 @@
+traceroute6: illegal option -- I
+usage: traceroute6 [-dlnrv] [-f firsthop] [-g gateway] [-m hoplimit] [-p port] [-q probes] [-s src] [-w waittime] target [datalen]

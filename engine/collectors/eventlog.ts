@@ -2,6 +2,7 @@
 // polls with one RecordId cursor per log (settings 'eventlog.cursor.<log>'), full history import on
 // first start (config.eventLog.importDays), link-drop classification (parsers/winevent.ts) with
 // provisional results that are updated until all look-ahead windows have passed.
+// macOS: createEventLogModule() returns the system log module (macos/syslog.ts) instead.
 import type { AppConfig } from '../../src/lib/shared/config';
 import type { AdapterSnapshot, ModuleState, NetEvent, Sample } from '../../src/lib/shared/types';
 import {
@@ -27,6 +28,8 @@ import {
   type WinEvent,
 } from '../../src/lib/shared/parsers/winevent';
 import type { EngineContext, EngineModule, Logger, NicTick } from '../core/types';
+import { isMac } from '../platform';
+import { MacSystemLogModule } from './macos/syslog';
 import { PollTimer, ProcessRunner, childTracker, errorMessage, isRecord, system32, timersState } from './util';
 
 export const CURSOR_PREFIX = 'eventlog.cursor.';
@@ -155,7 +158,7 @@ export function wiredGuidsOf(adapters: readonly unknown[]): string[] {
 /** the history import waits this long for the first adapters snapshot (wired GUIDs for the 'inactive' rule) */
 const ADAPTERS_WAIT_MS = 15_000;
 
-interface OpenDown {
+export interface OpenDown {
   id: number;
   ts: number;
   /** JSON of the last written patch (update only on change) */
@@ -171,7 +174,7 @@ export interface ImportSummary {
   errors: string[];
 }
 
-function parseOpen(json: string | null): Map<string, OpenDown> {
+export function parseOpen(json: string | null): Map<string, OpenDown> {
   const out = new Map<string, OpenDown>();
   if (!json) return out;
   try {
@@ -190,7 +193,7 @@ function parseOpen(json: string | null): Map<string, OpenDown> {
   return out;
 }
 
-function countCauses(list: LinkDropAnalysis[]): Record<LinkCause, number> {
+export function countCauses(list: LinkDropAnalysis[]): Record<LinkCause, number> {
   const c: Record<LinkCause, number> = { boot: 0, pre_sleep: 0, router_reboot: 0, runtime: 0 };
   for (const a of list) c[a.cause]++;
   return c;
@@ -607,5 +610,6 @@ export class EventLogModule implements EngineModule {
 }
 
 export function createEventLogModule(deps: EventLogDeps = {}): EngineModule {
+  if (isMac()) return new MacSystemLogModule({ now: deps.now, autoStart: deps.autoStart });
   return new EventLogModule(deps);
 }

@@ -1,0 +1,8 @@
+ 1 traceroute: wrote 1.1.1.1 52 chars, ret=-1
+ *traceroute: wrote 1.1.1.1 52 chars, ret=-1
+ *traceroute: wrote 1.1.1.1 52 chars, ret=-1
+ *
+traceroute to 1.1.1.1 (1.1.1.1), 1 hops max, 52 byte packets
+traceroute: sendto: No route to host
+traceroute: sendto: No route to host
+traceroute: sendto: No route to host

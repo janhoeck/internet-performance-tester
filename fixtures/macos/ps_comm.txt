@@ -1,0 +1,9 @@
+/sbin/launchd
+/usr/libexec/logd
+(zombie)
+/System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
+/Applications/Steam.app/Contents/MacOS/steam_osx
+/Applications/League of Legends.app/Contents/LoL/Game/LeagueofLegends.app/Contents/MacOS/LeagueofLegends
+/Applications/World of Warcraft/_retail_/World of Warcraft.app/Contents/MacOS/World of Warcraft
+kernel_task
+/usr/sbin/netstat

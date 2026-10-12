@@ -1,7 +1,22 @@
 import fs from 'node:fs';
 import { describe, expect, it } from 'vitest';
+import { DEFAULT_CONFIG } from '../../src/lib/shared/config';
 import type { AdapterInfo, VpnInfo } from '../../src/lib/shared/types';
-import { buildVpnInfo, diffVpn, extractJson, otherTunnels, parseWarpSettings, parseWarpStatus, vpnSignature } from './vpn';
+import type { EngineContext } from '../core/types';
+import { silentLogger } from './util';
+import {
+  buildVpnInfo,
+  createVpnModule,
+  diffVpn,
+  extractJson,
+  findMacWarpCli,
+  isWarpTunnel,
+  macOtherTunnels,
+  otherTunnels,
+  parseWarpSettings,
+  parseWarpStatus,
+  vpnSignature,
+} from './vpn';
 
 const fixture = (name: string): unknown => JSON.parse(fs.readFileSync(new URL(`../../fixtures/windows/${name}`, import.meta.url), 'utf8'));
 
@@ -80,5 +95,67 @@ describe('VpnInfo + vpn_change', () => {
   it('signature changes only on relevant fields', () => {
     expect(vpnSignature(base)).toBe(vpnSignature({ ...base, ts: ts + 99 }));
     expect(vpnSignature(base)).not.toBe(vpnSignature(buildVpnInfo(ts, warp, ['NordLynx'])));
+  });
+});
+
+describe('macOS tunnels and warp-cli', () => {
+  const utun = (name: string, addresses: string[], patch: Partial<AdapterInfo> = {}) => adapter(name, name, { addresses, ...patch });
+
+  it('lists routable utun/ipsec/ppp tunnels, never WARP or the link-local system utuns', () => {
+    const list = [
+      utun('utun0', ['fe80::d2c1:5e4f:a0b1:c2d3']),
+      utun('utun4', ['172.16.0.2', '2606:4700:110:8a1b:aaaa:bbbb:cccc:dddd']),
+      utun('utun5', ['10.8.0.6']),
+      utun('ipsec0', ['192.0.2.10']),
+      utun('ppp0', ['198.51.100.7'], { status: 'Disconnected' }),
+      utun('bridge0', ['192.0.2.1']),
+      adapter('Ethernet', 'en7 · Ethernet', { isVirtual: false, addresses: ['192.168.0.43'] }),
+    ];
+    expect(macOtherTunnels(list, { warpInstalled: true })).toEqual(['ipsec0', 'utun5']);
+    expect(macOtherTunnels(list, { warpInstalled: false })).toEqual(['ipsec0', 'utun4', 'utun5']);
+    expect(isWarpTunnel({ addresses: ['2606:4700:110:1::2'] })).toBe(true);
+    expect(isWarpTunnel({ addresses: ['100.96.0.7'] })).toBe(true);
+    expect(isWarpTunnel({ addresses: ['100.64.0.7'] })).toBe(false);
+    expect(isWarpTunnel({ addresses: ['10.8.0.6'] })).toBe(false);
+  });
+
+  it('finds warp-cli at the first existing path', async () => {
+    expect(await findMacWarpCli(['/nicht/vorhanden/warp-cli', process.execPath])).toBe(process.execPath);
+    expect(await findMacWarpCli(['/nicht/vorhanden/warp-cli'])).toBeNull();
+  });
+
+  it('module on macOS: not installed without warp-cli, tunnels from the adapters snapshot', async () => {
+    const snapshots: VpnInfo[] = [];
+    const runs: string[] = [];
+    const ctx = {
+      log: silentLogger,
+      db: { latestSnapshot: (k: string) => (k === 'adapters' ? { ts: 1, data: { adapters: [utun('utun5', ['10.8.0.6']), utun('utun4', ['172.16.0.2'])] } } : null) },
+      bus: { on: () => () => undefined },
+      config: () => DEFAULT_CONFIG,
+      recordEvent: () => 1,
+      recordSnapshot: (_k: string, d: VpnInfo) => snapshots.push(d),
+      trackChild: () => undefined,
+    } as unknown as EngineContext;
+    const runner = {
+      run: (file: string, args: string[]) => {
+        runs.push(`${file} ${args.join(' ')}`);
+        const json = args.includes('status') ? '{"status":"Connected","reason":"NetworkHealthy"}' : '{"settings":{"operation_mode":"warp","split_tunnel_mode":"exclude"}}';
+        return Promise.resolve({ code: 0, stdout: Buffer.from(json), stderr: Buffer.alloc(0), timedOut: false, error: null, durationMs: 1 });
+      },
+      killAll: () => undefined,
+    };
+    const missing = createVpnModule({ mac: true, runner, warpCli: () => Promise.resolve(null) });
+    missing.init?.(ctx);
+    await missing.runNow?.();
+    expect(runs).toEqual([]);
+    expect(snapshots[0]).toMatchObject({ warp: { installed: false }, otherTunnels: ['utun4', 'utun5'] });
+    missing.dispose?.();
+
+    const installed = createVpnModule({ mac: true, runner, warpCli: () => Promise.resolve('/usr/local/bin/warp-cli') });
+    installed.init?.(ctx);
+    await installed.runNow?.();
+    expect(runs).toEqual(['/usr/local/bin/warp-cli -j status', '/usr/local/bin/warp-cli -j settings list']);
+    expect(snapshots.at(-1)).toMatchObject({ warp: { installed: true, connected: true, mode: 'warp', splitTunnel: 'exclude' }, otherTunnels: ['utun5'] });
+    installed.dispose?.();
   });
 });

@@ -1,0 +1,6 @@
+PING6(80=40+8+32 bytes) :: --> 2606:4700:4700::1111
+ping6: sendmsg: No route to host
+ping6: wrote 2606:4700:4700::1111 40 chars, ret=-1
+
+--- 2606:4700:4700::1111 ping6 statistics ---
+1 packets transmitted, 0 packets received, 100.0% packet loss

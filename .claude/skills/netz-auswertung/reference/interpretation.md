@@ -63,7 +63,7 @@ Sekunden priorisieren und Ursachen auf deiner Seite zuerst beheben (sie sind sch
 | `remote` hoch, nur `aws-*` betroffen | Route zum Rechenzentrum oder Ziel antwortet ICMP nachrangig | andere Server-Region testen; prüfen, ob TCP/UDP-Ziele dasselbe zeigen. Spitzen nur bei ICMP zu AWS bei sauberem Cloudflare/Google sind **kein** Anschlussproblem und gehören nicht ins Vodafone-Schreiben | Spieleanbieter | – |
 | Speedtest Upload-Bloat ≥ 60 ms (Note C–F) | Upload-Puffer im Modem; jeder Upload im Haushalt (Cloud-Backup, OneDrive, Steam, Stream, Videocall) treibt den Ping hoch | Uploads beim Spielen pausieren oder in den Apps begrenzen; Vodafone Station hat kein SQM bzw. Bufferbloat-Schutz; langfristig eigener Router mit SQM (FRITZ!Box/OpenWrt) hinter der Station | du | Bloat ↑ < 60 ms |
 | Speed dauerhaft deutlich unter Tarif (per LAN, 1-Gbit/s-Link) | Leitung oder Segment | offizielle **Breitbandmessung** (Desktop-App der BNetzA, 30 Messungen an 3 Tagen innerhalb von 14 Tagen), dann Minderung nach § 57 Abs. 4 TKG | **Vodafone** | Protokoll „vertragskonform“ |
-| `periodic-spikes` | Hintergrunddienst (Windows Update, OneDrive, Virenscanner, Launcher) | genannten Takt mit Task-Manager oder Aufgabenplanung abgleichen | du | Spitzen weg |
+| `periodic-spikes` | Hintergrunddienst (Windows Update, OneDrive, Virenscanner, Launcher; macOS: Updates, iCloud, Time Machine, Spotlight) | genannten Takt mit Task-Manager/Aufgabenplanung (macOS: Aktivitätsanzeige) abgleichen | du | Spitzen weg |
 | `vpn-active` mit vollem Tunnel | VPN leitet Spielverkehr um | VPN fürs Spielen aus bzw. Split-Tunnel | du | – |
 | Router-Neustarts (`router-instability`) | Firmware oder Hardware | Neustartzeiten notieren, Vodafone-Router-Tausch verlangen | **Vodafone** | keine Neustarts |
 
@@ -89,7 +89,7 @@ Sekunden priorisieren und Ursachen auf deiner Seite zuerst beheben (sie sind sch
 - **Sicherheit** der Regeln (gering, mittel, hoch) übernehmen; nichts als sicher darstellen, was die App als gering einstuft.
 - Prozentwerte aus wenigen Messungen (z. B. ein Verlust von 3 % an einem Ziel durch einen einzelnen Burst, siehe
   `loss_burst` in Abschnitt 13) nicht verallgemeinern. Prüfen, ob andere Ziele zur selben Zeit betroffen waren.
-- Link-Abbruch-Zahlen der letzten 7 Tage stammen aus dem Windows-Ereignisprotokoll und können **vor** einer
+- Link-Abbruch-Zahlen der letzten 7 Tage stammen aus dem Windows-Ereignisprotokoll (macOS: sekündliche Link-Überwachung der Mess-Engine, nur während Tests) und können **vor** einer
   Änderung (z. B. Kabeltausch) liegen. Immer mit „im Zeitraum“ vergleichen und das Datum des letzten Abbruchs nennen.
 - Ein Befund der App ist nur eine Hypothese, wenn die Zahlen in `fakten.md` ihm widersprechen. Den Widerspruch
   offen benennen.

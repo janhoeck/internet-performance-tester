@@ -37,11 +37,16 @@ export interface RunOptions {
   timeoutMs: number;
   /** stdout limit; the child is killed when exceeded (default 16 MB) */
   maxBytes?: number;
+  /** environment of the child (default: inherited) */
+  env?: NodeJS.ProcessEnv;
+  /** written to stdin, then stdin is closed (default: no stdin) – keeps secrets off the command line */
+  input?: string;
 }
 
 /**
- * Runs short-lived tools (wevtutil, netsh, tasklist, warp-cli). Every child is spawned without a
- * shell, hidden, never detached, killed on timeout and on `killAll()` (module dispose).
+ * Runs short-lived tools (wevtutil, netsh, tasklist, warp-cli; ifconfig, netstat, … on macOS). Every
+ * child is spawned without a shell, hidden, never detached, killed on timeout and on `killAll()`
+ * (module dispose).
  */
 export class ProcessRunner {
   private readonly children = new Set<ChildProcess>();
@@ -63,7 +68,12 @@ export class ProcessRunner {
       let settled = false;
       let child: ChildProcess;
       try {
-        child = spawn(file, args, { windowsHide: true, shell: false, stdio: ['ignore', 'pipe', 'pipe'] });
+        child = spawn(file, args, {
+          windowsHide: true,
+          shell: false,
+          stdio: [opts.input !== undefined ? 'pipe' : 'ignore', 'pipe', 'pipe'],
+          ...(opts.env ? { env: opts.env } : {}),
+        });
       } catch (e) {
         resolve({ code: null, stdout: Buffer.alloc(0), stderr: Buffer.alloc(0), timedOut: false, error: e as Error, durationMs: 0 });
         return;
@@ -104,6 +114,11 @@ export class ProcessRunner {
         finish(null);
       });
       child.on('close', (code) => finish(code));
+      if (opts.input !== undefined && child.stdin) {
+        // EPIPE when the tool exits early must not crash the engine
+        child.stdin.on('error', () => undefined);
+        child.stdin.end(opts.input);
+      }
     });
   }
 

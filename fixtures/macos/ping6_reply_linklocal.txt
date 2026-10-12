@@ -1,0 +1,6 @@
+PING6(80=40+8+32 bytes) fe80::14a3:9d1e:3b1a:7f02%en7 --> fe80::de73:6ff:fe12:34df%en7
+40 bytes from fe80::de73:6ff:fe12:34df%en7, icmp_seq=0 hlim=64 time=0.612 ms
+
+--- fe80::de73:6ff:fe12:34df%en7 ping6 statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/std-dev = 0.612/0.612/0.612/0.000 ms

@@ -9,6 +9,8 @@ import {
   parseIdentity,
   parseIdentityState,
   parseTasklistCsv,
+  powerShellIdentitySource,
+  tasklistProcessSource,
   v6PrefixOf,
   type IdentityValues,
 } from './identity';
@@ -45,6 +47,8 @@ const TASKLIST = [
 describe('identity parsing', () => {
   it('normalizes MAC addresses and rejects incomplete entries', () => {
     expect(normalizeMac('dc:73:06:12:34:df')).toBe('DC-73-06-12-34-DF');
+    expect(normalizeMac('dc:73:6:12:34:df')).toBe('DC-73-06-12-34-DF'); // macOS arp/netstat octets
+    expect(normalizeMac('0:0:0:0:0:0')).toBeNull();
     expect(normalizeMac('00-00-00-00-00-00')).toBeNull();
     expect(normalizeMac('ff-ff-ff-ff-ff-ff')).toBeNull();
     expect(normalizeMac('')).toBeNull();
@@ -122,11 +126,40 @@ describe('game detection', () => {
     expect(detectGame(procs, [''])).toBeNull();
     expect(parseTasklistCsv('"Na""me.exe","1"')).toEqual(['Na"me.exe']);
   });
+  it('matches macOS process names without .exe/.app', () => {
+    const procs = ['launchd', 'LeagueofLegends', 'World of Warcraft', 'cs2', 'Steam Helper.app'];
+    expect(detectGame(procs, ['valorant-win64-shipping.exe', 'leagueoflegends'], 'macos')).toBe('leagueoflegends');
+    expect(detectGame(procs, ['CS2.EXE'], 'macos')).toBe('cs2'); // Windows default list matches native builds
+    expect(detectGame(procs, ['World of Warcraft'], 'macos')).toBe('world of warcraft');
+    expect(detectGame(procs, ['steam helper'], 'macos')).toBe('steam helper');
+    expect(detectGame(procs, ['dota2.exe', '', '.exe'], 'macos')).toBeNull();
+    // Windows semantics unchanged: names without extension get .exe on both sides
+    expect(detectGame(procs, ['leagueoflegends'], 'windows')).toBe('leagueoflegends.exe');
+    expect(detectGame(['cs2'], ['cs2.exe'], 'windows')).toBe('cs2.exe');
+  });
   it('builds and restores gaming episodes', () => {
     expect(gamingEvent('cs2.exe', 5)).toMatchObject({ type: 'gaming', ts: 5, endTs: null, severity: 'info', title: 'Spiel läuft: cs2.exe', details: { process: 'cs2.exe' } });
     expect(parseEpisode(JSON.stringify({ id: 7, process: 'cs2.exe', ts: 1, lastSeen: 9 }))).toEqual({ id: 7, process: 'cs2.exe', ts: 1, lastSeen: 9 });
     expect(parseEpisode(JSON.stringify({ id: null, process: 'cs2.exe', ts: 1 }))).toEqual({ id: null, process: 'cs2.exe', ts: 1, lastSeen: 1 });
     expect(parseEpisode('null')).toBeNull();
     expect(parseEpisode(null)).toBeNull();
+  });
+});
+
+describe('Windows identity / process sources', () => {
+  it('identity requires the PowerShell worker', async () => {
+    const off = { available: false, json: () => Promise.reject(new Error('x')), text: () => Promise.reject(new Error('x')), dispose: () => undefined };
+    await expect(powerShellIdentitySource(off).fetch('192.168.0.1')).rejects.toThrow('PowerShell nicht verfügbar');
+    const scripts: string[] = [];
+    const on = { ...off, available: true, json: <T>(script: string) => (scripts.push(script), Promise.resolve(REAL_IDENTITY as T)) };
+    expect((await powerShellIdentitySource(on).fetch('192.168.0.1'))?.ifAlias).toBe('Ethernet');
+    expect(scripts).toEqual(["Get-NdIdentity -RouterIp '192.168.0.1'"]);
+  });
+
+  it('tasklist source', async () => {
+    const ok = { run: () => Promise.resolve({ code: 0, stdout: Buffer.from(TASKLIST, 'latin1'), stderr: Buffer.alloc(0), timedOut: false, error: null, durationMs: 1 }) };
+    expect(await tasklistProcessSource(ok).list()).toContain('cs2.exe');
+    const fail = { run: () => Promise.resolve({ code: 1, stdout: Buffer.alloc(0), stderr: Buffer.alloc(0), timedOut: false, error: null, durationMs: 1 }) };
+    await expect(tasklistProcessSource(fail).list()).rejects.toThrow('tasklist Exit-Code 1');
   });
 });

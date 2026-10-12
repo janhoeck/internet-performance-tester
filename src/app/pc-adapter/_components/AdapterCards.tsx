@@ -6,6 +6,7 @@ import { HealthBadge, HealthDot } from "@/components/ui/HealthBadge";
 import { Panel } from "@/components/ui/Panel";
 import { EmptyState } from "@/components/ui/States";
 import { DASH, fmtDate, fmtInt, fmtLinkSpeed } from "@/lib/format";
+import { useOsWording } from "@/lib/client/platform";
 import type { Health } from "@/lib/health";
 import { Chip, KeyValueList, Num, type KeyValueItem } from "./bits";
 import { adapterConnected, adapterStatusText, isNetAdapterDriver, sortAddresses } from "./pc-model";
@@ -46,11 +47,15 @@ function errorsText(a: AdapterInfo): { text: string; health: Health } {
 }
 
 export function EthernetCard({ a }: { a: AdapterInfo | null }) {
+  const os = useOsWording();
+  const mac = os.id === "macos";
   if (!a) {
     return (
       <Panel title="Ethernet">
         <EmptyState icon={EthernetPort} title="Kein Ethernet-Adapter gefunden">
-          Windows meldet keinen kabelgebundenen Netzwerkadapter. Ist der Adapter im Gerätemanager deaktiviert?
+          {mac
+            ? "macOS meldet keinen kabelgebundenen Netzwerkanschluss. Ist der USB- oder Thunderbolt-Adapter angesteckt und unter Systemeinstellungen → Netzwerk aktiv?"
+            : "Windows meldet keinen kabelgebundenen Netzwerkadapter. Ist der Adapter im Gerätemanager deaktiviert?"}
         </EmptyState>
       </Panel>
     );
@@ -81,12 +86,15 @@ export function EthernetCard({ a }: { a: AdapterInfo | null }) {
     },
     {
       label: "Treiber",
-      value: (
-        <span>
-          <Num>{a.driverVersion ?? DASH}</Num>
-          {driverDateText(a.driverDate)}
-        </span>
-      ),
+      value:
+        mac && !a.driverVersion ? (
+          <span className="text-fg-3">von macOS verwaltet</span>
+        ) : (
+          <span>
+            <Num>{a.driverVersion ?? DASH}</Num>
+            {driverDateText(a.driverDate)}
+          </span>
+        ),
       hint: a.serviceName ? (
         <span className="inline-flex flex-wrap items-center gap-1.5">
           Dienst <Num>{a.serviceName}</Num>
@@ -99,7 +107,7 @@ export function EthernetCard({ a }: { a: AdapterInfo | null }) {
     {
       label: "Fehlerzähler (Empfang/Senden)",
       value: <Num className={err.health === "warn" ? "text-warn" : undefined}>{err.text}</Num>,
-      hint: "seit dem letzten Windows-Start",
+      hint: `seit dem letzten ${os.name}-Start`,
     },
   ];
   return (
@@ -120,11 +128,12 @@ export function EthernetCard({ a }: { a: AdapterInfo | null }) {
 }
 
 export function WifiCard({ a }: { a: AdapterInfo | null }) {
+  const os = useOsWording();
   if (!a) {
     return (
       <Panel title="WLAN-Adapter">
         <EmptyState icon={Wifi} title="Kein WLAN-Adapter">
-          Dieser PC hat keinen WLAN-Adapter – es gibt also kein WLAN-Ausweichen bei Kabelabbrüchen.
+          {os.id === "macos" ? "Dieser Mac" : "Dieser PC"} hat keinen WLAN-Adapter – es gibt also kein WLAN-Ausweichen bei Kabelabbrüchen.
         </EmptyState>
       </Panel>
     );
@@ -136,7 +145,7 @@ export function WifiCard({ a }: { a: AdapterInfo | null }) {
         <span className="inline-flex items-center gap-2">
           <Wifi aria-hidden className="size-5 text-fg-3" strokeWidth={1.75} />
           WLAN-Adapter
-          {a.name !== "WLAN" && <span className="text-sm font-normal text-fg-3">({a.name})</span>}
+          {a.name !== "WLAN" && a.name !== "Wi-Fi" && <span className="text-sm font-normal text-fg-3">({a.name})</span>}
         </span>
       }
       description={a.description}
@@ -145,16 +154,19 @@ export function WifiCard({ a }: { a: AdapterInfo | null }) {
       <KeyValueList
         columns={2}
         items={[
-          { label: "Status", value: adapterStatusText(a), hint: up ? "Verbindet sich Windows bei einem Kabelabbruch hierher, wechselt die IP-Adresse." : "Gut so – Spiele laufen übers Kabel." },
+          { label: "Status", value: adapterStatusText(a), hint: up ? `Leitet ${os.name} bei einem Kabelabbruch hierher um, wechselt die IP-Adresse.` : "Gut so – Spiele laufen übers Kabel." },
           { label: "Link", value: <Num>{up ? fmtLinkSpeed(a.linkMbps) : DASH}</Num> },
           {
             label: "Treiber",
-            value: (
-              <span>
-                <Num>{a.driverVersion ?? DASH}</Num>
-                {driverDateText(a.driverDate)}
-              </span>
-            ),
+            value:
+              os.id === "macos" && !a.driverVersion ? (
+                <span className="text-fg-3">von macOS verwaltet</span>
+              ) : (
+                <span>
+                  <Num>{a.driverVersion ?? DASH}</Num>
+                  {driverDateText(a.driverDate)}
+                </span>
+              ),
           },
           { label: "MAC-Adresse", value: <Num>{a.mac ?? DASH}</Num> },
           { label: "Adressen", value: <Addresses list={a.addresses} /> },

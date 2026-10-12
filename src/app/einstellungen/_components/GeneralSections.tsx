@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { Gamepad2, Plus, RotateCcw, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Field, Switch, TextInput } from "@/components/ui/Field";
+import { useOsWording } from "@/lib/client/platform";
 import { DEFAULT_GAME_PROCESSES, type AppConfig } from "@/lib/shared/config";
 import { IssueLine, NumField } from "./controls";
 import type { IssueMap } from "./draft";
@@ -47,13 +48,14 @@ export function TariffSection({ value, onChange, issues }: { value: Tariff; onCh
 type SessionCfg = AppConfig["session"];
 
 export function SessionSection({ value, onChange }: { value: SessionCfg; onChange: (v: SessionCfg) => void }) {
+  const os = useOsWording();
   return (
     <Switch
       id="session-sleep"
       checked={value.preventSleep}
       onChange={(e) => onChange({ preventSleep: e.target.checked })}
-      label="Standby während eines Langzeittests verhindern"
-      hint="Windows schläft dann nicht automatisch ein (ohne Administratorrechte). Manuelles Schlafenlegen bleibt möglich, erzeugt aber eine Messlücke."
+      label={`${os.standby} während eines Langzeittests verhindern`}
+      hint={os.preventSleepHint}
     />
   );
 }
@@ -63,6 +65,7 @@ export function SessionSection({ value, onChange }: { value: SessionCfg; onChang
 type Gaming = AppConfig["gaming"];
 
 export function GamingSection({ value, onChange, issues }: { value: Gaming; onChange: (v: Gaming) => void; issues: IssueMap }) {
+  const os = useOsWording();
   const [entry, setEntry] = useState("");
   const list = value.processNames;
   const entryNorm = entry.trim().toLowerCase();
@@ -72,7 +75,8 @@ export function GamingSection({ value, onChange, issues }: { value: Gaming; onCh
   const add = (e: FormEvent) => {
     e.preventDefault();
     if (!entryNorm || duplicate) return;
-    const name = entryNorm.endsWith(".exe") ? entryNorm : `${entryNorm}.exe`;
+    // Windows-Prozesse tragen die Endung .exe, macOS-Prozesse nicht
+    const name = !os.exeSuffix || entryNorm.endsWith(".exe") ? entryNorm : `${entryNorm}.exe`;
     if (!list.some((p) => p.toLowerCase() === name)) onChange({ processNames: [...list, name] });
     setEntry("");
   };
@@ -88,7 +92,7 @@ export function GamingSection({ value, onChange, issues }: { value: Gaming; onCh
         <Field
           label="Prozessname hinzufügen"
           htmlFor="gaming-add"
-          hint={duplicate ? "Steht schon in der Liste." : "Name aus dem Task-Manager (Details), z. B. „cs2.exe“."}
+          hint={duplicate ? "Steht schon in der Liste." : `Name aus ${os.processTool}, z. B. „${os.processExample}“.`}
           className="min-w-0 flex-1 sm:max-w-sm"
         >
           <TextInput id="gaming-add" value={entry} spellCheck={false} autoComplete="off" className="np-num" onChange={(e) => setEntry(e.target.value)} />

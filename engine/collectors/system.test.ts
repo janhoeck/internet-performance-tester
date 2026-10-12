@@ -1,6 +1,6 @@
 import type { CpuInfo } from 'node:os';
 import { describe, expect, it } from 'vitest';
-import { cpuPct, cpuTimes, memPct, parseTcpCounters, retransPct, tcpMetrics } from './system';
+import { cpuPct, cpuTimes, memPct, parseTcpCounters, powerShellTcpSource, retransPct, tcpMetrics } from './system';
 
 const cpu = (user: number, sys: number, idle: number): CpuInfo => ({ model: 'x', speed: 1, times: { user, nice: 0, sys, idle, irq: 0 } });
 
@@ -47,5 +47,14 @@ describe('TCP retransmissions', () => {
     ]);
     expect(tcpMetrics(a, b, 300_000)).toEqual([]); // gap (standby) → no rate
     expect(tcpMetrics(null, b, 300_000)).toEqual([]);
+  });
+});
+
+describe('Windows TCP counter source', () => {
+  it('requires the PowerShell worker', async () => {
+    const off = { available: false, json: () => Promise.reject(new Error('x')), text: () => Promise.reject(new Error('x')), dispose: () => undefined };
+    await expect(powerShellTcpSource(off).read(1)).rejects.toThrow('PowerShell nicht verfügbar');
+    const on = { ...off, available: true, json: <T>() => Promise.resolve({ t: 5, v4: { retrans: 1, sent: 2 }, v6: null } as T) };
+    expect(await powerShellTcpSource(on).read(1)).toEqual({ ts: 5, v4: { retrans: 1, sent: 2 }, v6: null });
   });
 });

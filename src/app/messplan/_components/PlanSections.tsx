@@ -8,20 +8,23 @@ import { SegmentTopology, type SegmentTopologyProps } from "@/components/viz/Seg
 import { cn } from "@/lib/cn";
 import { HEALTH_ICON, HEALTH_LABEL, HEALTH_TEXT } from "@/lib/health";
 import { FAULT_CLASS_BY_ID } from "@/lib/segments";
+import { hostOsFrom } from "@/lib/shared/platform";
 import {
   ANALYSIS_SUMMARY,
   DOCSIS_NOTE,
   DOCSIS_ROWS,
   DOCSIS_SOURCE,
-  EVENT_ROWS,
+  eventRowsFor,
   FINDINGS,
   FIX_PROOF_TEXT,
   GOAL,
   HYPOTHESES,
   KPI_ROWS,
   MEASURE_GROUPS,
+  measureRowsFor,
   PLAN_META,
   PRINCIPLE,
+  PRINCIPLE_TEXT_MAC,
   PROCEDURE,
   RETENTION_NOTE,
   RETENTION_ROWS,
@@ -205,7 +208,7 @@ export function PrincipleSection() {
           links={SCHEMA.links}
           caption="Schema: an den Kacheln steht, was gemessen wird; an den Abschnitten die Richtwerte für Gut (Median bis Abschnittsende, maximaler Verlust)."
         />
-        <p className="max-w-4xl text-sm text-fg-2">{PRINCIPLE.text}</p>
+        <p className="max-w-4xl text-sm text-fg-2">{hostOsFrom(process.platform) === "macos" ? PRINCIPLE_TEXT_MAC : PRINCIPLE.text}</p>
         <DataTable columns={classColumns} rows={SECOND_CLASSES} rowKey={(r) => r.cls} caption="Klassen der Sekunden-Zuordnung" dense />
         <p className="max-w-4xl text-sm text-fg-2">{PRINCIPLE.after}</p>
       </div>
@@ -275,7 +278,7 @@ export function MeasurementsSection() {
             <SubHeading num={g.num}>
               <span id={`mw-${g.id}`}>{g.title}</span>
             </SubHeading>
-            <DataTable columns={measureColumns(g.ratingHeader)} rows={g.rows} rowKey={(r) => r.metric} caption={g.title} dense />
+            <DataTable columns={measureColumns(g.ratingHeader)} rows={measureRowsFor(g.rows, hostOsFrom(process.platform))} rowKey={(r) => r.metric} caption={g.title} dense />
             {g.note && (
               <p className="mt-3 flex max-w-4xl items-start gap-2 text-sm text-fg-2">
                 <ShieldCheck aria-hidden className="mt-0.5 size-4 shrink-0 text-good" strokeWidth={2} />
@@ -294,13 +297,13 @@ export function MeasurementsSection() {
           <SubHeading num="3.7">
             <span id="mw-durchsatz">Durchsatz & Bufferbloat</span>
           </SubHeading>
-          <DataTable columns={measureColumns()} rows={THROUGHPUT_ROWS} rowKey={(r) => r.metric} caption="Durchsatz und Bufferbloat" dense />
+          <DataTable columns={measureColumns()} rows={measureRowsFor(THROUGHPUT_ROWS, hostOsFrom(process.platform))} rowKey={(r) => r.metric} caption="Durchsatz und Bufferbloat" dense />
         </section>
         <section aria-labelledby="mw-ereignisse">
           <SubHeading num="3.8">
             <span id="mw-ereignisse">Ereignisse (automatisch erkannt)</span>
           </SubHeading>
-          <DataTable columns={eventColumns} rows={EVENT_ROWS} rowKey={(r) => r.event} caption="Automatisch erkannte Ereignisse" dense />
+          <DataTable columns={eventColumns} rows={eventRowsFor(hostOsFrom(process.platform))} rowKey={(r) => r.event} caption="Automatisch erkannte Ereignisse" dense />
         </section>
       </div>
     </PlanSection>

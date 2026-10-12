@@ -12,6 +12,7 @@ import { EmptyState } from "@/components/ui/States";
 import { EChart } from "@/components/viz/EChart";
 import { DASH, fmtDateTime, fmtDurationMs, fmtInt, fmtLinkSpeed, fmtPctValue, fmtRelative } from "@/lib/format";
 import type { Health } from "@/lib/health";
+import { useOsWording } from "@/lib/client/platform";
 import { useNow } from "@/lib/use-now";
 import { Num } from "./bits";
 import { linkDaysOption } from "./pc-charts";
@@ -60,6 +61,7 @@ const COLUMNS: Column<LinkDropRow>[] = [
 ];
 
 export function LinkKpis({ summary, linkMbps }: { summary: ClientResponse["linkSummary"]; linkMbps: number | null }) {
+  const os = useOsWording();
   const now = useNow(60_000);
   const pct = summary.relinkBelow1gPct;
   return (
@@ -74,7 +76,7 @@ export function LinkKpis({ summary, linkMbps }: { summary: ClientResponse["linkS
         status={pct == null ? "unknown" : pct >= 20 ? "crit" : pct > 0 ? "warn" : "good"}
         caption={`Start und Betrieb, davon ${fmtInt(summary.bootRelinks)} beim Start`}
       />
-      <KpiTile label="WLAN-Ausweichen (24 h)" value={fmtInt(summary.wlanFailovers24h)} icon={Wifi} status={summary.wlanFailovers24h > 0 ? "warn" : "good"} caption="Windows wechselte aufs WLAN" />
+      <KpiTile label="WLAN-Ausweichen (24 h)" value={fmtInt(summary.wlanFailovers24h)} icon={Wifi} status={summary.wlanFailovers24h > 0 ? "warn" : "good"} caption={`${os.name} wechselte aufs WLAN`} />
       <KpiTile
         label="Letzter Abbruch im Betrieb"
         value={summary.lastDropTs == null ? "keiner" : now != null ? fmtRelative(summary.lastDropTs, now) : DASH}
@@ -95,17 +97,24 @@ export function LinkKpis({ summary, linkMbps }: { summary: ClientResponse["linkS
 }
 
 export function LinkDaysChart({ days }: { days: ClientResponse["linkDays"] }) {
+  const os = useOsWording();
   const shown = useMemo(() => days.slice(-90), [days]);
   const option = useMemo(() => linkDaysOption(shown), [shown]);
   const total = useMemo(() => shown.reduce((s, d) => s + d.down, 0), [shown]);
   return (
     <Panel
       title="Link-Ereignisse je Tag"
-      description="Aus dem Windows-Ereignisprotokoll (gesamte Historie). Wiederaufbau mit 100 Mbit/s spricht für Kabel, Stecker oder Port."
+      description={
+        os.id === "macos"
+          ? "Von der Mess-Engine erkannt (sekündlich während eines Tests) plus importierte Einträge des macOS-Systemprotokolls. Wiederaufbau mit 100 Mbit/s spricht für Kabel, Stecker, Port oder Adapter."
+          : "Aus dem Windows-Ereignisprotokoll (gesamte Historie). Wiederaufbau mit 100 Mbit/s spricht für Kabel, Stecker oder Port."
+      }
     >
       {shown.length === 0 || total === 0 ? (
         <EmptyState icon={ChartColumn} title="Keine Link-Ereignisse">
-          Im Windows-Ereignisprotokoll gibt es keine Link-Abbrüche des Ethernet-Adapters. Das ist gut so.
+          {os.id === "macos"
+            ? "Bisher wurden keine Link-Abbrüche des Ethernet-Anschlusses erkannt. Das ist gut so."
+            : "Im Windows-Ereignisprotokoll gibt es keine Link-Abbrüche des Ethernet-Adapters. Das ist gut so."}
         </EmptyState>
       ) : (
         <EChart option={option} ariaLabel="Link-Abbrüche und Wiederaufbauten mit 1 Gbit/s bzw. 100 Mbit/s je Tag" height={260} />
@@ -115,6 +124,7 @@ export function LinkDaysChart({ days }: { days: ClientResponse["linkDays"] }) {
 }
 
 export function LinkEventsTable({ events, rangeLabel }: { events: ClientResponse["linkEvents"]; rangeLabel: string }) {
+  const os = useOsWording();
   const [onlyRuntime, setOnlyRuntime] = useState(false);
   const all = useMemo(() => linkDropRows(events), [events]);
   const rows = useMemo(() => (onlyRuntime ? all.filter((r) => r.cause === "runtime") : all), [all, onlyRuntime]);
@@ -135,7 +145,7 @@ export function LinkEventsTable({ events, rangeLabel }: { events: ClientResponse
           <EmptyState icon={Unplug} title={all.length > 0 ? "Keine Abbrüche im Betrieb" : "Keine Link-Abbrüche im Zeitraum"}>
             {all.length > 0
               ? "Im Zeitraum gab es nur normale Neuaufbauten (Start, Aufwachen, Router-Neustart)."
-              : "Wähle einen längeren Zeitraum, um ältere Ereignisse aus dem Windows-Protokoll zu sehen."}
+              : `Wähle einen längeren Zeitraum, um ältere Ereignisse aus dem ${os.eventLog} zu sehen.`}
           </EmptyState>
         }
       />

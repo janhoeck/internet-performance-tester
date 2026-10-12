@@ -1,5 +1,6 @@
 // Module-local types of the diagnosis (N-diagnosis). DiagnosisInput is everything the pure rules
 // need; it is built from SQLite by input.ts (bounded queries) or synthetically in unit tests.
+import type { HostOs } from '../../shared/platform';
 import type { AppConfig } from '../../shared/config';
 import type {
   AdapterSnapshot,
@@ -225,6 +226,8 @@ export interface DiagnosisInput {
   to: number;
   /** generation time */
   now: number;
+  /** OS of the measuring PC – wording of explanations/recommendations (undefined = Windows) */
+  os?: HostOs;
   config: AppConfig;
   /** all configured targets (enabled + disabled) */
   targets: TargetMeta[];

@@ -2,10 +2,13 @@
 // no child process) and system-wide TCP retransmissions every 60 s from the raw perf counters
 // Win32_PerfRawData_Tcpip_TCPv4/TCPv6 (Δ SegmentsRetransmittedPersec / Δ SegmentsSentPersec) via the
 // PowerShell worker → metrics sys.cpu_pct, sys.mem_pct, tcp.retrans_pct, tcp6.retrans_pct.
+// macOS: `netstat -s -p tcp` (one statistic for both families → tcp.retrans_pct only), macos/system.ts.
 import os from 'node:os';
 import type { MetricPoint, ModuleState } from '../../src/lib/shared/types';
-import type { EngineContext, EngineModule, Logger } from '../core/types';
-import { PollTimer, asNumber, errorMessage, isRecord, timersState } from './util';
+import type { EngineContext, EngineModule, Logger, PowerShellHost } from '../core/types';
+import { isMac } from '../platform';
+import { readMacTcpCounters } from './macos/system';
+import { PollTimer, ProcessRunner, asNumber, childTracker, errorMessage, isRecord, timersState } from './util';
 
 const TCP_EVERY_MS = 60_000;
 /** fewer sent segments than this in one interval → no retransmission rate (too noisy) */
@@ -91,12 +94,44 @@ export function tcpMetrics(prev: TcpCounters | null, cur: TcpCounters, maxGapMs:
   return out;
 }
 
+// ─── raw data sources ──────────────────────────────────────────────────────
+
+/** Cumulative TCP counters; null when the OS does not provide them. */
+export interface TcpCounterSource {
+  read(now: number): Promise<TcpCounters | null>;
+  dispose?(): void;
+}
+
+/** Windows: Get-NdTcpCounters through the PowerShell RPC worker. */
+export function powerShellTcpSource(ps: PowerShellHost): TcpCounterSource {
+  return {
+    async read(now) {
+      if (!ps.available) throw new Error('PowerShell nicht verfügbar');
+      return parseTcpCounters(await ps.json<unknown>('Get-NdTcpCounters', { timeoutMs: 20_000 }), now);
+    },
+  };
+}
+
+/** macOS: `netstat -s -p tcp`. */
+export function macTcpSource(runner: Pick<ProcessRunner, 'run' | 'killAll'>): TcpCounterSource {
+  return {
+    read: (now) => readMacTcpCounters(runner, now),
+    dispose: () => runner.killAll(),
+  };
+}
+
+export interface SystemModuleOptions {
+  /** TCP counter source (default: by platform) */
+  createTcpSource?: (ctx: EngineContext) => TcpCounterSource;
+}
+
 // ─── module ────────────────────────────────────────────────────────────────
 
 class SystemModule implements EngineModule {
   readonly name = 'system';
   private ctx: EngineContext | null = null;
   private log: Logger | null = null;
+  private tcpSource: TcpCounterSource | null = null;
   private cpuTimer: PollTimer | null = null;
   private tcpTimer: PollTimer | null = null;
   private cpuPrev: CpuTimes | null = null;
@@ -104,9 +139,16 @@ class SystemModule implements EngineModule {
   private running = false;
   private lastError: string | null = null;
 
+  constructor(private readonly opts: SystemModuleOptions = {}) {}
+
   init(ctx: EngineContext): void {
     this.ctx = ctx;
     this.log = ctx.log;
+    this.tcpSource = this.opts.createTcpSource
+      ? this.opts.createTcpSource(ctx)
+      : isMac()
+        ? macTcpSource(new ProcessRunner(childTracker(ctx)))
+        : powerShellTcpSource(ctx.ps);
     this.cpuTimer = new PollTimer({
       intervalMs: () => ctx.config().schedules.systemPollSec * 1000,
       run: async () => this.pollCpu(),
@@ -138,6 +180,7 @@ class SystemModule implements EngineModule {
 
   dispose(): void {
     this.stop();
+    this.tcpSource?.dispose?.();
   }
 
   state(): ModuleState {
@@ -161,10 +204,10 @@ class SystemModule implements EngineModule {
 
   private async pollTcp(): Promise<void> {
     const ctx = this.ctx;
-    if (!ctx) return;
-    if (!ctx.ps.available) throw new Error('PowerShell nicht verfügbar');
+    const source = this.tcpSource;
+    if (!ctx || !source) return;
     const now = Date.now();
-    const cur = parseTcpCounters(await ctx.ps.json<unknown>('Get-NdTcpCounters', { timeoutMs: 20_000 }), now);
+    const cur = await source.read(now);
     if (!cur) throw new Error('TCP-Leistungszähler nicht verfügbar');
     const points = tcpMetrics(this.tcpPrev, cur, 5 * TCP_EVERY_MS);
     if (points.length) ctx.recordMetrics(points);
@@ -173,6 +216,6 @@ class SystemModule implements EngineModule {
   }
 }
 
-export function createSystemModule(): EngineModule {
-  return new SystemModule();
+export function createSystemModule(opts: SystemModuleOptions = {}): EngineModule {
+  return new SystemModule(opts);
 }

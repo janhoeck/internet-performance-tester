@@ -4,7 +4,7 @@ import path from 'node:path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import type { AdapterInfo } from '../../src/lib/shared/types';
 import type { EgressTick } from '../core/types';
-import { EGRESS_V4_TARGET, EGRESS_V6_TARGET, EgressChecker, checkEgress, interfaceForAddress, probeSourceAddress } from './egress';
+import { EGRESS_V4_TARGET, EGRESS_V6_TARGET, EgressChecker, aliasForDevice, checkEgress, interfaceForAddress, probeSourceAddress } from './egress';
 import { flushPromises } from './test-helpers';
 
 const FIX = path.join(process.cwd(), 'fixtures', 'windows');
@@ -136,5 +136,26 @@ describe('EgressChecker', () => {
     checker.stop();
     await vi.advanceTimersByTimeAsync(5000);
     expect(ticks).toHaveLength(3);
+  });
+});
+
+describe('macOS: BSD device names of the live fallback', () => {
+  const macAdapter = (name: string, device: string, addresses: string[]): AdapterInfo => ({ ...adapter(name, addresses), device }) as AdapterInfo;
+
+  it('aliasForDevice maps a BSD name to the hardware port name', () => {
+    const adapters = [macAdapter('Ethernet', 'en7', []), macAdapter('Wi-Fi', 'en0', [])];
+    expect(aliasForDevice(adapters, 'en0')).toBe('Wi-Fi');
+    expect(aliasForDevice(adapters, 'utun4')).toBe('utun4');
+    expect(aliasForDevice(null, 'en0')).toBe('en0');
+    // Windows adapters carry no device: unchanged
+    expect(aliasForDevice([adapter('Ethernet', [])], 'WLAN')).toBe('WLAN');
+  });
+
+  it('a new address after a failover is reported with the shown name', async () => {
+    const tick = await checkEgress(4000, [macAdapter('Ethernet', 'en7', ['192.168.0.43']), macAdapter('Wi-Fi', 'en0', [])], {
+      probe: async (f) => (f === 4 ? '192.168.0.42' : null),
+      liveInterfaces: () => ({ en0: [{ address: '192.168.0.42', netmask: '255.255.255.0', family: 'IPv4', mac: '3c:22:fb:aa:bb:02', internal: false, cidr: '192.168.0.42/24' }] }),
+    });
+    expect(tick.v4If).toBe('Wi-Fi');
   });
 });

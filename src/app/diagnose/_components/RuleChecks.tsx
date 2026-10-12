@@ -4,7 +4,8 @@ import type { Finding } from "@/lib/shared/types";
 import { HealthBadge } from "@/components/ui/HealthBadge";
 import { severityToUi } from "@/lib/health";
 import { cn } from "@/lib/cn";
-import { insufficientNote, RULE_CHECKS, type RuleDataContext } from "./rules";
+import { usePlatform } from "@/lib/client/platform";
+import { insufficientNote, RULE_CHECKS, ruleText, type RuleDataContext } from "./rules";
 
 interface RuleChecksProps {
   findings: readonly Finding[];
@@ -13,6 +14,7 @@ interface RuleChecksProps {
 
 /** „So wurde geprüft“: alle Regeln R01–R20 mit Ergebnis und Hinweis bei zu wenigen Daten. */
 export function RuleChecks({ findings, ctx }: RuleChecksProps) {
+  const os = usePlatform();
   const byId = new Map(findings.map((f) => [f.id, f]));
   const triggered = RULE_CHECKS.filter((r) => byId.has(r.id)).length;
   return (
@@ -29,8 +31,8 @@ export function RuleChecks({ findings, ctx }: RuleChecksProps) {
             <li key={r.code} className="grid grid-cols-[3rem_1fr] gap-x-3 gap-y-1 px-3 py-2.5 sm:grid-cols-[3rem_1fr_auto]">
               <span className="np-num pt-0.5 text-xs text-fg-3">{r.code}</span>
               <div className="min-w-0">
-                <p className={cn("text-sm", f ? "font-medium text-fg" : "text-fg-2")}>{f ? f.title : r.name}</p>
-                <p className="mt-0.5 text-xs text-fg-3">{r.trigger}</p>
+                <p className={cn("text-sm", f ? "font-medium text-fg" : "text-fg-2")}>{f ? f.title : ruleText(r, os).name}</p>
+                <p className="mt-0.5 text-xs text-fg-3">{ruleText(r, os).trigger}</p>
                 {note && <p className="mt-1 text-xs text-warn">Eingeschränkt prüfbar: {note}.</p>}
               </div>
               <div className="col-start-2 flex items-start gap-2 sm:col-start-3 sm:justify-end">

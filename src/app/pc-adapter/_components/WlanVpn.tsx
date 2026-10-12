@@ -9,6 +9,7 @@ import { Panel } from "@/components/ui/Panel";
 import { EmptyState } from "@/components/ui/States";
 import { EChart } from "@/components/viz/EChart";
 import { DASH, fmtDateTime, fmtInt, fmtMbit } from "@/lib/format";
+import { useOsWording } from "@/lib/client/platform";
 import type { Health } from "@/lib/health";
 import { Chip, KeyValueList, Note, Num } from "./bits";
 import { metricLinesOption } from "./pc-charts";
@@ -18,6 +19,7 @@ function hasValues(m: MetricsResponse | null, key: string): boolean {
 }
 
 export function WlanPanel({ wlan, metrics, from, to }: { wlan: WlanInfo | null; metrics: MetricsResponse | null; from: number | null; to: number | null }) {
+  const os = useOsWording();
   const hasHistory = hasValues(metrics, "wlan.signal_pct");
   const option = useMemo(() => {
     const s = metrics?.series["wlan.signal_pct"];
@@ -58,20 +60,29 @@ export function WlanPanel({ wlan, metrics, from, to }: { wlan: WlanInfo | null; 
   return (
     <Panel
       title={title}
-      description={wlan.connected ? "Funkverbindung der Vodafone Station zu diesem PC" : "Der PC ist nicht mit einem WLAN verbunden"}
+      description={wlan.connected ? `Funkverbindung der Vodafone Station zu diesem ${os.id === "macos" ? "Mac" : "PC"}` : `${os.id === "macos" ? "Der Mac" : "Der PC"} ist nicht mit einem WLAN verbunden`}
       actions={wlan.connected ? <HealthBadge status={signalHealth} label={signalHealth === "good" ? "Signal gut" : signalHealth === "warn" ? "Signal schwach" : undefined} /> : <Chip>getrennt</Chip>}
     >
       {wlan.connected ? (
         <>
           <Note tone="warn" title="WLAN ist verbunden" className="mb-4">
-            Läuft gleichzeitig das Kabel, ist das harmlos. Wechselt Windows bei einem Kabelabbruch hierher, ändert sich die IP-Adresse und Spielverbindungen
-            brechen ab. Für den Test kannst du „Automatisch verbinden“ für dieses WLAN ausschalten.
+            {os.id === "macos"
+              ? "Läuft gleichzeitig das Kabel, ist das harmlos – macOS bevorzugt das Kabel. Leitet macOS bei einem Kabelabbruch hierher um, ändert sich die IP-Adresse und Spielverbindungen brechen ab. Für den Test kannst du das WLAN ausschalten oder unter Systemeinstellungen → Netzwerk die Reihenfolge prüfen (Ethernet vor WLAN)."
+              : "Läuft gleichzeitig das Kabel, ist das harmlos. Wechselt Windows bei einem Kabelabbruch hierher, ändert sich die IP-Adresse und Spielverbindungen brechen ab. Für den Test kannst du „Automatisch verbinden“ für dieses WLAN ausschalten."}
           </Note>
           <KeyValueList
             columns={3}
             items={[
-              { label: "Netzwerk (SSID)", value: <Num>{wlan.ssid ?? DASH}</Num> },
-              { label: "Access Point (BSSID)", value: <Num>{wlan.bssid ?? DASH}</Num> },
+              {
+                label: "Netzwerk (SSID)",
+                value: <Num>{wlan.ssid ?? DASH}</Num>,
+                hint: os.id === "macos" && !wlan.ssid ? "von macOS ausgeblendet (Datenschutz)" : undefined,
+              },
+              {
+                label: "Access Point (BSSID)",
+                value: <Num>{wlan.bssid ?? DASH}</Num>,
+                hint: os.id === "macos" && !wlan.bssid ? "unter macOS ohne Administratorrechte nicht lesbar" : undefined,
+              },
               { label: "Standard", value: wlan.radioType ?? DASH },
               { label: "Band und Kanal", value: <Num>{[wlan.band, wlan.channel != null ? `Kanal ${wlan.channel}` : null].filter(Boolean).join(", ") || DASH}</Num> },
               {

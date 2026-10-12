@@ -4,11 +4,14 @@
 // routes Windows uses for 1.1.1.1 / 2606:4700:4700::1111 (routePollSec). Emits metrics nic.* for the
 // primary adapter (reset-safe counter deltas), adapter_change / route_switch events, bus 'adapters'
 // on every poll, snapshot 'adapters' every 5 min + on change, and $router6.
+// On macOS the same RawNetSnapshot comes from networksetup/ifconfig/netstat/route (macos/net-snapshot.ts).
 import { isLinkLocalV6 } from '../../src/lib/shared/net';
 import { fmtLinkSpeed } from '../../src/lib/shared/parsers/winevent';
 import type { ActiveRoute, AdapterInfo, AdapterSnapshot, IpFamily, MetricPoint, ModuleState, NetEvent, Severity } from '../../src/lib/shared/types';
-import type { EngineContext, EngineModule, Logger } from '../core/types';
-import { PollTimer, asArray, asBool, asNumber, asString, errorMessage, isRecord, pollMs, psQuote, timersState } from './util';
+import type { EngineContext, EngineModule, Logger, PowerShellHost } from '../core/types';
+import { isMac } from '../platform';
+import { createMacNetSnapshotSource } from './macos/net-snapshot';
+import { PollTimer, ProcessRunner, asArray, asBool, asNumber, asString, childTracker, errorMessage, isRecord, pollMs, psQuote, timersState } from './util';
 
 // ─── raw shapes (Get-NdNetSnapshot) ────────────────────────────────────────
 
@@ -28,6 +31,8 @@ export interface RawAdapter {
   driverDate: string | null;
   virtual: boolean;
   hardware: boolean;
+  /** macOS: BSD name (Windows: undefined) */
+  device?: string | null;
 }
 
 export interface RawStats {
@@ -181,6 +186,8 @@ const normGuid = (g: string) => g.replace(/[{}]/g, '').toLowerCase();
 /** AdapterInfo + interface GUID (extra JSON field: maps NCSI/WLAN event-log entries to adapters) */
 export interface AdapterInfoExt extends AdapterInfo {
   guid: string | null;
+  /** macOS: BSD name of the interface (e.g. 'en7'; `name` is the hardware port, e.g. 'Ethernet') */
+  device?: string | null;
 }
 
 export function toAdapterInfos(raw: RawNetSnapshot, serviceNames: ReadonlyMap<string, string>): AdapterInfoExt[] {
@@ -201,6 +208,7 @@ export function toAdapterInfos(raw: RawNetSnapshot, serviceNames: ReadonlyMap<st
       description: a.description,
       ifIndex: a.ifIndex,
       guid: a.guid ? a.guid.toLowerCase() : null,
+      ...(a.device ? { device: a.device } : {}),
       status: a.status,
       linkMbps: up && bps > 0 ? Math.round(bps / 1e6) : null,
       mediaType: a.mediaType,
@@ -500,10 +508,53 @@ export function snapshotScript(opts: { routes: boolean; services: boolean; advan
   return parts.join(' ');
 }
 
+// ─── raw data sources ──────────────────────────────────────────────────────
+
+export interface NetSnapshotRequest {
+  /** routes towards 1.1.1.1 / 2606:4700:4700::1111 */
+  routes: boolean;
+  /** driver service names (Windows only) */
+  services: boolean;
+  /** advanced properties of this adapter (Windows only) */
+  advancedFor: string | null;
+}
+
+/** Raw adapter data of one poll; throws a German error when it cannot be read. */
+export interface NetSnapshotSource {
+  fetch(req: NetSnapshotRequest): Promise<RawNetSnapshot>;
+  dispose?(): void;
+}
+
+/** Windows: Get-NdNetSnapshot through the PowerShell RPC worker. */
+export function powerShellNetSnapshotSource(ps: PowerShellHost): NetSnapshotSource {
+  return {
+    async fetch(req) {
+      if (!ps.available) throw new Error('PowerShell nicht verfügbar');
+      const data = await ps.json<unknown>(snapshotScript(req), { timeoutMs: PS_TIMEOUT_MS });
+      const raw = parseNetSnapshot(data);
+      if (!raw) throw new Error('Unerwartete Antwort von Get-NdNetSnapshot');
+      return raw;
+    },
+  };
+}
+
+/** Source for the current platform: macOS tools or the PowerShell worker. */
+export function defaultNetSnapshotSource(ctx: EngineContext): NetSnapshotSource {
+  return isMac() ? createMacNetSnapshotSource({ runner: new ProcessRunner(childTracker(ctx)) }) : powerShellNetSnapshotSource(ctx.ps);
+}
+
+export interface AdapterModuleOptions {
+  /** raw data source (default: by platform) */
+  createSource?: (ctx: EngineContext) => NetSnapshotSource;
+  /** start the poll timer in init() (default true) */
+  autoStart?: boolean;
+}
+
 class AdapterModule implements EngineModule {
   readonly name = 'adapter';
   private ctx: EngineContext | null = null;
   private log: Logger | null = null;
+  private source: NetSnapshotSource | null = null;
   private timer: PollTimer | null = null;
   private adapters: AdapterInfo[] | null = null;
   private routes: ActiveRoute[] = [];
@@ -520,9 +571,12 @@ class AdapterModule implements EngineModule {
   private firstPoll = true;
   private lastError: string | null = null;
 
+  constructor(private readonly opts: AdapterModuleOptions = {}) {}
+
   init(ctx: EngineContext): void {
     this.ctx = ctx;
     this.log = ctx.log;
+    this.source = (this.opts.createSource ?? defaultNetSnapshotSource)(ctx);
     // baseline for driver changes that happened while the engine was not running
     try {
       const prev = ctx.db.latestSnapshot<AdapterSnapshotExt>('adapters')?.data;
@@ -539,7 +593,7 @@ class AdapterModule implements EngineModule {
         this.log?.debug('Adapterabfrage fehlgeschlagen', { error: this.lastError });
       },
     });
-    this.timer.start(500);
+    if (this.opts.autoStart !== false) this.timer.start(500);
   }
 
   start(): void {
@@ -564,6 +618,7 @@ class AdapterModule implements EngineModule {
 
   dispose(): void {
     this.timer?.stop();
+    this.source?.dispose?.();
   }
 
   state(): ModuleState {
@@ -572,8 +627,8 @@ class AdapterModule implements EngineModule {
 
   private async poll(): Promise<void> {
     const ctx = this.ctx;
-    if (!ctx) return;
-    if (!ctx.ps.available) throw new Error('PowerShell nicht verfügbar');
+    const source = this.source;
+    if (!ctx || !source) return;
     const now = Date.now();
     const cfg = ctx.config();
     const expectedIf = ctx.expectedInterface();
@@ -584,11 +639,7 @@ class AdapterModule implements EngineModule {
     const advFor = prevPrimary && !prevPrimary.isVirtual ? prevPrimary.name : null;
     const wantAdvanced = advFor !== null && (now - this.advancedTs >= SLOW_EVERY_MS || !sameName(advFor, this.advancedFor));
 
-    const data = await ctx.ps.json<unknown>(snapshotScript({ routes: wantRoutes, services: wantServices, advancedFor: wantAdvanced ? advFor : null }), {
-      timeoutMs: PS_TIMEOUT_MS,
-    });
-    const raw = parseNetSnapshot(data);
-    if (!raw) throw new Error('Unerwartete Antwort von Get-NdNetSnapshot');
+    const raw = await source.fetch({ routes: wantRoutes, services: wantServices, advancedFor: wantAdvanced ? advFor : null });
     const ts = Date.now();
     if (raw.services) {
       this.services = serviceMap(raw.services);
@@ -655,6 +706,6 @@ class AdapterModule implements EngineModule {
   }
 }
 
-export function createAdapterModule(): EngineModule {
-  return new AdapterModule();
+export function createAdapterModule(opts: AdapterModuleOptions = {}): EngineModule {
+  return new AdapterModule(opts);
 }

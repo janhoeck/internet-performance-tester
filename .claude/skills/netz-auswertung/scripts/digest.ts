@@ -218,7 +218,7 @@ function linkSection(data: AuswertungData): string {
     `- WLAN: ${wlan ? (wlan.connected ? `verbunden (${wlan.band ?? ''} Kanal ${wlan.channel ?? DASH}, Signal ${pct(wlan.signalPct)})` : 'nicht verbunden') : 'unbekannt'}`,
     `- VPN/WARP: ${vpn?.warp ? `installiert, ${vpn.warp.connected ? 'verbunden' : 'getrennt'}, Split-Tunnel ${vpn.warp.splitTunnel ?? DASH}` : 'kein WARP'}${vpn && vpn.otherTunnels.length ? ` · weitere Tunnel: ${vpn.otherTunnels.join(', ')}` : ''}`,
     '',
-    '### Link-Ereignisse je Tag (Windows-Ereignisprotokoll, letzte 14 Tage mit Ereignissen)',
+    `### Link-Ereignisse je Tag (${process.platform === 'darwin' ? 'Link-Überwachung/macOS-Systemprotokoll' : 'Windows-Ereignisprotokoll'}, letzte 14 Tage mit Ereignissen)`,
     '',
     mdTable(['Tag', 'Abbrüche', 'wieder mit 1 Gbit/s', 'mit 100 Mbit/s', 'andere'], days),
     '### Letzte Link-Ereignisse im Zeitraum',

@@ -8,7 +8,7 @@ import type { Confidence, Finding, FindingEvidence, Segment, Severity } from '..
 import { ATTRIBUTABLE_CLASSES, type BadClass, CLASS_LABELS, CLASS_SEGMENT, fmtShare, joinDe } from '../text';
 import type { DiagnosisInput } from '../types';
 import { coveredHours, findingScore } from '../util';
-import { LINK_RECOMMENDATIONS } from './r01-nic-link-flaps';
+import { linkRecommendations } from './r01-nic-link-flaps';
 import { VODAFONE_REPORT_RECOMMENDATIONS } from './r07-access-spikes';
 
 export const TOP_CAUSE = 'top-cause';
@@ -65,7 +65,7 @@ export function computeTopCause(input: DiagnosisInput): TopCause | null {
 }
 
 const CLASS_RECOMMENDATIONS: Readonly<Record<AttributableClass, readonly string[]>> = {
-  link: LINK_RECOMMENDATIONS.slice(0, 3),
+  link: linkRecommendations(undefined).slice(0, 3),
   lan: [
     'Anderen LAN-Port und ein anderes Netzwerkkabel testen.',
     'Router neu starten; tritt das Problem danach wieder auf, bei Vodafone einen Gerätetausch anfragen.',
@@ -116,7 +116,7 @@ export function topCauseFinding(input: DiagnosisInput): Finding | null {
     title: `${t.confidence === 'high' ? 'Hauptursache' : 'Hauptursache (vorläufig)'}: ${label}`,
     summary: sentences.join(' '),
     evidence,
-    recommendations: [...CLASS_RECOMMENDATIONS[t.cls]],
+    recommendations: t.cls === 'link' ? linkRecommendations(input.os).slice(0, 3) : [...CLASS_RECOMMENDATIONS[t.cls]],
     score: findingScore(t.severity, t.confidence, t.share),
   };
 }

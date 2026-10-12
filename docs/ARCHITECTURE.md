@@ -15,12 +15,15 @@ Windows tools and the router are in `fixtures/` (use them in unit tests).
  Next.js 16 (127.0.0.1:3000) ── reads ──►  SQLite  data/netdiag.db  (WAL)
     │  proxies control + live stream               ▲
     ▼                                              │ writes (batched, 1 tx/s)
- Probe engine (Node 22 + tsx, 127.0.0.1:3901) ─────┘
+ Probe engine (Node 22 + tsx, 127.0.0.1:3901) ─────┘      Windows | macOS (§4.11)
     ├─ ICMP pinger agent (ONE powershell.exe, .NET SendPingAsync, 1 Hz grid, + 1 Hz NIC link state)
+    │    macOS: Node 1 Hz grid, one /sbin/ping(6) -c 1 per target and tick, ifconfig + netstat ticks
     ├─ TCP connect / DNS-over-UDP / HTTP probes, egress-interface check (1 Hz, Node)
     ├─ path discovery + MTR (.NET TTL probes) / MTU / STUN / speed test / UDP burst
     ├─ PowerShell RPC worker (adapters, routes, identity, TCP counters, DPAPI) + wevtutil (event log)
     ├─ netsh wlan, warp-cli -j, tasklist (game detection)
+    │    macOS: networksetup/ifconfig/netstat/route/arp/scutil/ipconfig, system_profiler, pmset, ps,
+    │    traceroute(6), Keychain (security) – no PowerShell
     └─ Router adapter (ARRIS Vodafone Station TG6442 web UI)
 ```
 
@@ -41,6 +44,7 @@ Windows tools and the router are in `fixtures/` (use them in unit tests).
 | `engine/probes/*` (incl. `pinger.ps1`), `src/lib/shared/parsers/ping.ts`, `src/lib/shared/dns.ts` | E-probes | ICMP pinger agent + ping.exe fallback, TCP/UDP-DNS/HTTP runners, egress check, UDP burst |
 | `engine/tasks/{traceroute,mtr,mtu,stun}.ts` (+ `.ps1` helpers), `src/lib/shared/parsers/tracert.ts`, `src/lib/shared/stun.ts`, `src/lib/shared/path-analysis.ts` | E-path | path discovery/route changes/dynamic hosts, MTR + interpretation, MTU, STUN/NAT/CGNAT exit |
 | `engine/tasks/speedtest.ts`, `src/lib/shared/grading.ts` | E-speed | Cloudflare speed test, loaded latency, bufferbloat grade, bottleneck localization |
+| `engine/platform.ts`, `engine/collectors/macos/*`, `engine/probes/mac-pinger.ts`, `engine/tasks/mac-path.ts`, `src/lib/shared/parsers/macos/*`, `src/lib/shared/platform.ts` | E-macos | platform detection, macOS tool runner + interface catalog, macOS sources of adapter/identity/system/wlan/vpn, Keychain store, system log module, ping-per-tick pinger, traceroute-based TTL runner, DF ping/PMTU, OS wording for UI/diagnosis (§4.11) |
 | `engine/collectors/*`, `src/lib/shared/parsers/{netsh,winevent}.ts` | E-windows | PowerShell RPC worker, adapters/routes/addresses, event log (+history, link-drop classification), WLAN, VPN/WARP, system + TCP retransmissions, identity + game detection, DPAPI secret store |
 | `engine/router/*`, `src/lib/shared/docsis.ts` | E-router | router module, ARRIS adapter + crypto + parsers, generic adapter, DOCSIS rating, router-log categorizer |
 | `src/lib/server/*` (except `diagnosis/`, `db.ts`, `config-store.ts`), `src/app/api/**` | N-api | queries, engine client, route handlers |
@@ -59,7 +63,9 @@ Epoch-ms timestamps, RTT in ms, Mbps. German UI strings. Relative imports inside
 Spawn `%SystemRoot%\System32\…` executables by absolute path with `windowsHide: true`, never
 `shell: true`, never `detached: true` (normal children die with the engine – libuv job object).
 Decode console output with `ConsoleLineSplitter`/`decodeConsole` (`cp850.ts`): ping/tracert emit
-CP850, netsh emits UTF-8, warp-cli ASCII. Wall clock (`Date.now()`) for timestamps; monotonic
+CP850, netsh emits UTF-8, warp-cli ASCII. macOS: tools by absolute path from `MAC_TOOLS`
+(`engine/collectors/macos/tools.ts`) via `runTool()` with `LC_ALL=C` (output is UTF-8/ASCII, not
+localized); platform checks only through `engine/platform.ts` (`isMac()`, `setPlatformOverride` in tests). Wall clock (`Date.now()`) for timestamps; monotonic
 clocks only for durations. Parsers are pure functions with vitest tests on `fixtures/`.
 
 ## 4. Engine
@@ -306,6 +312,35 @@ outage, link down, < 30 min since the last run.
 - Router log categorizer (docsis-thresholds.md §6, CM-STATUS codes): `router_log` events (dedupe
   `router:<Timestamp>-<Index>`), MACs redacted in exports. Events `docsis_change` (debounced 2 polls),
   `router_reboot` (uptime decreased), `router_offline` (2 failed polls), `ip_change` (WAN IPv6/AFTR).
+
+### 4.11 macOS (E-macos) – docs/research/macos.md
+
+Same modules, data model and events; every module picks its raw-data source by `isMac()`:
+
+- **PowerShell host**: not loaded on macOS (`ctx.ps.available = false`); no collector depends on it there.
+- **Interfaces**: `MacInterfaceCatalog` joins `networksetup -listallhardwareports` (cached 10 min),
+  `ifconfig -a`, `netstat -ibn`. `AdapterInfo.name` = hardware port name ("Ethernet", "Wi-Fi"), the BSD
+  name is the extra field `device` (AdapterInfoExt). Routes via `route -n get [-inet6]`; `$router6` keeps
+  the zone id macOS prints (`fe80::…%en7`). No driver version / advanced properties.
+- **Pinger**: `MacPinger` (PingerLike) – fixed 1 Hz grid in Node, one `ping -n -c 1 -s 32 -W <ms>` /
+  `ping6 -n -c 1 -s 32` per target and tick (killed after timeout + 500 ms), NIC ticks from the catalog,
+  preventSleep = `caffeinate -i -w <engine pid>`. PingerStatus.mode is 'agent' while it runs.
+- **Path/MTR**: `runTtlProbes`/`runTracert` dispatch to `engine/tasks/mac-path.ts`: one
+  `traceroute(6) -n -I -q 1 -w 1 -f T -m T` per (TTL, round) → the same `HopProbe`s; fallback = one
+  sequential UDP-mode traceroute. **MTU**: `ping -D` / `ping6 -D -m`, PMTU from `route -n get`.
+- **identity**: `route get` + `arp -n` (short MAC octets → `padMac`), `ipconfig getpacket`,
+  `scutil --dns`, autoconf IPv6 from ifconfig; games via `ps -A -o comm=` compared with
+  `normalizeProcessName` (no .exe on macOS). **system**: `netstat -s -p tcp` → only `tcp.retrans_pct`.
+- **wlan**: `system_profiler SPAirPortDataType -json` (≥ 30 s interval; SSID may be redacted, no BSSID).
+  **vpn**: `warp-cli` from `/usr/local/bin` or the app bundle; other tunnels = routable utun/ipsec/ppp.
+- **secret store**: Keychain generic password (service `netzpuls.router`) through `security -i` with the
+  command on stdin; setting value `keychain:v1`.
+- **eventlog** (`MacSystemLogModule`): synthetic `WinEvent`s with providers `macos-link` (link down/up
+  observed from NIC ticks/adapter snapshots, history from the unified log) and `macos-power` (pmset
+  sleep/wake/boot) feed the unchanged `analyzeLinkDrops` classification and NetEvent mapping.
+- **UI/diagnosis**: Next runs on the same machine – the root layout passes `hostOsFrom(process.platform)`
+  to `PlatformProvider` (`usePlatform()`, `useOsWording()` in `src/lib/client/platform.tsx`);
+  `DiagnosisInput.os` selects the wording of the rules (macOS: no Intel/Gerätemanager advice).
 
 ## 5. Next.js API (N-api) – stack.md §4–5
 

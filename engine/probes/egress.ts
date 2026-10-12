@@ -77,6 +77,19 @@ export function interfaceForAddress(
   return null;
 }
 
+/**
+ * Shown adapter name of a live interface: os.networkInterfaces() uses BSD names on macOS ('en7')
+ * while the adapters snapshot names hardware ports ('Ethernet', extra field `device`). Windows
+ * adapters carry no device – the name is returned unchanged.
+ */
+export function aliasForDevice(adapters: readonly Pick<AdapterInfo, 'name'>[] | null, device: string): string {
+  for (const a of adapters ?? []) {
+    const d = (a as { device?: unknown }).device;
+    if (typeof d === 'string' && d === device) return a.name;
+  }
+  return device;
+}
+
 export interface EgressOptions {
   probe?: (family: 4 | 6, host: string) => Promise<string | null>;
   liveInterfaces?: () => LiveInterfaces;
@@ -103,7 +116,10 @@ export async function checkEgress(
   };
   const map = (addr: string | null): string | null => {
     if (!addr) return null;
-    return interfaceForAddress(addr, adapters, null) ?? interfaceForAddress(addr, null, liveList());
+    const known = interfaceForAddress(addr, adapters, null);
+    if (known !== null) return known;
+    const live = interfaceForAddress(addr, null, liveList());
+    return live === null ? null : aliasForDevice(adapters, live);
   };
   return { ts, v4Address: v4, v6Address: v6, v4If: map(v4), v6If: map(v6) };
 }

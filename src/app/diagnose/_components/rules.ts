@@ -3,6 +3,8 @@
  * `id` = Finding.id der Diagnose-API (src/lib/server/diagnosis/rules/*).
  * Wird von /diagnose („So wurde geprüft“) und /bericht genutzt.
  */
+import type { HostOs } from "@/lib/shared/platform";
+
 export type RuleNeed =
   /** braucht Messzeit im Langzeittest (Pings im Sekundentakt) */
   | "coverage"
@@ -177,6 +179,16 @@ export const RULE_CHECKS: readonly RuleCheck[] = [
 ];
 
 export const RULE_BY_ID: Readonly<Record<string, RuleCheck>> = Object.fromEntries(RULE_CHECKS.map((r) => [r.id, r]));
+
+/** Name und Auslöser mit betriebssystemabhängigem Wortlaut (die Liste oben ist für Windows formuliert). */
+export function ruleText(r: RuleCheck, os: HostOs): { name: string; trigger: string } {
+  if (os !== "macos") return { name: r.name, trigger: r.trigger };
+  if (r.id === "nic-link-flaps") {
+    return { name: "Netzwerkverbindung am Mac bricht ab", trigger: "Mindestens 3 echte Link-Abbrüche in 7 Tagen oder 3 innerhalb von 30 Minuten (sekündliche Link-Überwachung)." };
+  }
+  if (r.id === "wlan-failover") return { name: "macOS wechselt bei Abbrüchen aufs WLAN", trigger: r.trigger };
+  return { name: r.name, trigger: r.trigger };
+}
 
 /** Was im Zeitraum an Daten vorhanden ist – Grundlage für die Hinweise „zu wenige Daten“. */
 export interface RuleDataContext {

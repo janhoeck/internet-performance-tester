@@ -2,7 +2,10 @@
 // settings['router.password'] = 'dpapi:<hex blob from ConvertFrom-SecureString>'.
 // The plaintext travels base64-encoded inside the command (no quoting issues) and back as base64.
 // Never log scripts or PowerShell error texts of these calls – they could contain secret material.
+// On macOS createSecretStore() returns the Keychain store (macos/keychain.ts) instead.
 import type { EngineDb, PowerShellHost, SecretStore } from '../core/types';
+import { isMac } from '../platform';
+import { createKeychainSecretStore } from './macos/keychain';
 
 export const ROUTER_PASSWORD_KEY = 'router.password';
 export const DPAPI_PREFIX = 'dpapi:';
@@ -49,6 +52,7 @@ export class SecretStoreError extends Error {
 }
 
 export function createSecretStore(ps: PowerShellHost, db: EngineDb): SecretStore {
+  if (isMac()) return createKeychainSecretStore(db);
   // decrypted value cached per stored blob (re-decrypted when the setting changes)
   let cache: { stored: string; plain: string } | null = null;
 

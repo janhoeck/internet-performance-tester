@@ -20,7 +20,7 @@ export function groupAdapters(snap: AdapterSnapshot | null): AdapterGroups {
   const wired = physical.filter((a) => !a.isWifi);
   const primaryIf = snap?.routes.find((r) => r.family === 4)?.ifAlias ?? null;
   const score = (a: AdapterInfo) =>
-    (a.name === primaryIf ? 4 : 0) + (/ethernet/i.test(a.name) || /ethernet/i.test(a.description) ? 2 : 0) + (a.status === "Up" ? 1 : 0);
+    (a.name === primaryIf ? 4 : 0) + (/ethernet|\bLAN\b/i.test(a.name) || /ethernet/i.test(a.description) ? 2 : 0) + (a.status === "Up" ? 1 : 0);
   const ethernet = [...wired].sort((a, b) => score(b) - score(a))[0] ?? null;
   const wifi = physical.find((a) => a.isWifi) ?? null;
   return {

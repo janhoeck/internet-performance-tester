@@ -4,6 +4,7 @@ import { useState } from "react";
 import { CircleCheck, KeyRound, ShieldAlert, Trash2, Undo2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { ChoiceGroup, Field, Switch, TextInput } from "@/components/ui/Field";
+import { useOsWording } from "@/lib/client/platform";
 import type { AppConfig } from "@/lib/shared/config";
 import { GroupTitle, IssueLine, NumField } from "./controls";
 import { ROUTER_HOSTNAME_TRAP, type IssueMap, type PasswordDraft } from "./draft";
@@ -157,9 +158,10 @@ interface PasswordFieldProps {
 
 /** Nur-Schreib-Feld: das gespeicherte Passwort wird nie angezeigt oder an den Browser gesendet. */
 function PasswordField({ password, onChange, hasPassword, engineOnline, issueText }: PasswordFieldProps) {
+  const os = useOsWording();
   const [editing, setEditing] = useState(false);
   const offlineHint = engineOnline
-    ? "Wird verschlüsselt (Windows DPAPI) lokal gespeichert und nie wieder angezeigt."
+    ? `Wird verschlüsselt (${os.secretStore}) lokal gespeichert und nie wieder angezeigt.`
     : "Mess-Engine nicht erreichbar – ein neues Passwort kann erst gespeichert werden, wenn sie läuft.";
 
   if (password.mode === "remove") {

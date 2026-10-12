@@ -3,6 +3,7 @@
 // docs/research/critique.md §7.5–7.6). Language independent: only provider names, event IDs,
 // EventData names and numbers are evaluated – never the localized message texts. No Node built-ins.
 import { fmtDuration } from '../format';
+import { MAC_LINK_PROVIDER, MAC_POWER_PROVIDER } from '../platform';
 import type { NetEvent, Segment, Severity } from '../types';
 
 // ─── logs, providers, queries ───────────────────────────────────────────────
@@ -25,6 +26,23 @@ export const INTEL_NIC_PROVIDERS = [
 
 const INTEL_SET = new Set<string>(INTEL_NIC_PROVIDERS);
 export const isIntelNicProvider = (provider: string): boolean => INTEL_SET.has(provider.toLowerCase());
+
+// ─── macOS (docs/research/macos.md §5) ──────────────────────────────────────
+// macOS has no event log with stable IDs. The system log module (engine/collectors/macos/syslog.ts)
+// builds synthetic WinEvents so the classification below works unchanged:
+//  - 'macos-link': link changes observed by the engine (NIC ticks, adapter polls) or read from the
+//    unified log. id 27 = down; up uses the Intel ids of INTEL_UP when speed + duplex are known,
+//    otherwise MAC_LINK_UP_ID with data.Mbps / data.Duplex. data.p0 = adapter (shown name).
+//  - 'macos-power': `pmset -g log` / sysctl markers, ids in MAC_POWER_ID.
+// The provider name doubles as the log name, so dedupe keys look like 'evtlog:macos-link:<recordId>'.
+
+export { MAC_LINK_PROVIDER, MAC_POWER_PROVIDER };
+export const MAC_LINK_DOWN_ID = 27;
+/** link up with the speed in data.Mbps (and optional data.Duplex) */
+export const MAC_LINK_UP_ID = 100;
+export const MAC_POWER_ID = { boot: 1, sleep: 2, wake: 3, darkWake: 4, shutdown: 5 } as const;
+
+const isMacLinkProvider = (provider: string): boolean => provider.toLowerCase() === MAC_LINK_PROVIDER;
 
 const P_EVENTLOG = 'eventlog';
 const P_KBOOT = 'microsoft-windows-kernel-boot';
@@ -221,14 +239,43 @@ const INTEL_OTHER: Record<number, { title: string; severity: Severity }> = {
   82: { title: 'Gewählte Link-Geschwindigkeit nicht unterstützt – automatische Aushandlung aktiv', severity: 'warn' },
 };
 
-export type LinkKind = { kind: 'down' } | { kind: 'up'; mbps: number; duplex: 'full' | 'half' } | null;
+/** Link up: speed/duplex are always known for Intel events; macOS observations may lack them (null). */
+export type LinkKind = { kind: 'down' } | { kind: 'up'; mbps: number | null; duplex: 'full' | 'half' | null } | null;
 
-/** Link down/up of an Intel NIC event, null for everything else. */
+/** Link down/up of an Intel NIC event (or a synthetic macOS link event), null for everything else. */
 export function linkKindOf(e: WinEvent): LinkKind {
-  if (!isIntelNicProvider(e.provider)) return null;
+  const mac = isMacLinkProvider(e.provider);
+  if (!mac && !isIntelNicProvider(e.provider)) return null;
   if (e.id === 27) return { kind: 'down' };
   const up = INTEL_UP[e.id];
-  return up ? { kind: 'up', ...up } : null;
+  if (up) return { kind: 'up', ...up };
+  if (mac && e.id === MAC_LINK_UP_ID) {
+    const mbps = Number(e.data.Mbps);
+    const duplex = e.data.Duplex === 'full' || e.data.Duplex === 'half' ? e.data.Duplex : null;
+    return { kind: 'up', mbps: Number.isFinite(mbps) && mbps > 0 ? mbps : null, duplex };
+  }
+  return null;
+}
+
+/** Event id of a macOS link-up: the Intel id when speed + duplex match its table, else MAC_LINK_UP_ID. */
+export function macLinkUpId(mbps: number | null, duplex: 'full' | 'half' | null): number {
+  if (mbps === null || duplex === null) return MAC_LINK_UP_ID;
+  for (const [id, v] of Object.entries(INTEL_UP)) if (v.mbps === mbps && v.duplex === duplex) return Number(id);
+  return MAC_LINK_UP_ID;
+}
+
+/**
+ * Stable, sortable record id of a synthetic macOS event: epoch ms × 1000 + (id mod 100) × 10 + seq.
+ * `seq` (0–9) separates events of the same kind in the same millisecond (e.g. pmset lines with
+ * second resolution). Stays below 2^53 until the year 2255.
+ */
+export function macRecordId(ts: number, id: number, seq = 0): number {
+  return Math.floor(ts) * 1000 + (Math.abs(id) % 100) * 10 + (Math.abs(seq) % 10);
+}
+
+/** Synthetic macOS WinEvent (log = provider, see above). */
+export function macEvent(provider: string, id: number, ts: number, data: Record<string, string> = {}, seq = 0): WinEvent {
+  return { log: provider, provider, id, recordId: macRecordId(ts, id, seq), ts, level: 4, data };
 }
 
 /** 'inactive' = the wired link carried no connectivity before the drop (e.g. adapter re-enabled) – derived from NCSI */
@@ -264,6 +311,13 @@ export function markerOf(e: WinEvent): MarkerKind | null {
       if (e.id === 107 || e.id === 507) return 'resume';
       if (e.id === 41) return 'boot';
       if (e.id === 109) return 'shutdown';
+      return null;
+    case MAC_POWER_PROVIDER:
+      // a dark wake (maintenance/Power Nap) also re-initialises the network link → resume marker
+      if (e.id === MAC_POWER_ID.boot) return 'boot';
+      if (e.id === MAC_POWER_ID.sleep) return 'sleep';
+      if (e.id === MAC_POWER_ID.wake || e.id === MAC_POWER_ID.darkWake) return 'resume';
+      if (e.id === MAC_POWER_ID.shutdown) return 'shutdown';
       return null;
     default:
       if (isIntelNicProvider(e.provider) && (e.id === 41 || e.id === 42)) return 'driver';
@@ -488,7 +542,7 @@ export function analyzeLinkDrops(events: readonly WinEvent[], opts: ClassifyOpti
 
     // matching link-up: next up before the next down (within 10 min)
     let up: WinEvent | null = null;
-    let upKind: { mbps: number; duplex: 'full' | 'half' } | null = null;
+    let upKind: { mbps: number | null; duplex: 'full' | 'half' | null } | null = null;
     for (let j = i + 1; j < links.length; j++) {
       const n = links[j];
       if (n.kind.kind === 'down') break;
@@ -622,7 +676,8 @@ function linkDownTitle(a: LinkDropAnalysis): string {
       if (a.downtimeMs !== null) parts.push(fmtDuration(a.downtimeMs));
       if (relink) parts.push(relink);
       if (a.up === null && a.final) parts.push('keine Wiederverbindung erkannt');
-      return `Netzwerkverbindung am PC unterbrochen${parts.length ? ` (${parts.join(', ')})` : ''}`;
+      const where = isMacLinkProvider(a.down.provider) ? 'Mac' : 'PC';
+      return `Netzwerkverbindung am ${where} unterbrochen${parts.length ? ` (${parts.join(', ')})` : ''}`;
     }
   }
 }
@@ -663,6 +718,7 @@ export function linkDownEvent(a: LinkDropAnalysis): NetEvent {
       recordId: a.down.recordId,
       upRecordId: a.up?.recordId ?? null,
       adapter: adapterName(a.down),
+      ...(a.down.data.Source ? { observedBy: a.down.data.Source } : {}),
     },
     source: 'eventlog',
     dedupeKey: eventDedupeKey(a.down),
@@ -678,6 +734,28 @@ export function linkDownPatch(a: LinkDropAnalysis): Pick<NetEvent, 'endTs' | 'se
 const str = (v: string | undefined): string | null => (v !== undefined && v.trim() !== '' ? v.trim() : null);
 
 /**
+ * macOS power markers → standby/resume events. Dark wakes (Power Nap, maintenance) and the
+ * "Maintenance Sleep" that ends them happen many times a night: they stay classification markers
+ * only and produce no event (data.Maintenance = '1').
+ */
+function macPowerNetEvent(e: WinEvent, base: Pick<NetEvent, 'ts' | 'source' | 'dedupeKey'>): NetEvent | null {
+  const details = { reason: str(e.data.Reason), observedBy: str(e.data.Source), eventId: e.id };
+  switch (e.id) {
+    case MAC_POWER_ID.boot:
+      return { ...base, type: 'resume', severity: 'info', segment: 'client', title: 'Mac gestartet', details: { kind: 'boot', ...details } };
+    case MAC_POWER_ID.sleep:
+      if (e.data.Maintenance === '1') return null;
+      return { ...base, type: 'standby', severity: 'info', segment: 'client', title: 'Mac wechselt in den Ruhezustand', details: { kind: 'sleep', ...details } };
+    case MAC_POWER_ID.wake:
+      return { ...base, type: 'resume', severity: 'info', segment: 'client', title: 'Mac aus dem Ruhezustand aufgewacht', details: { kind: 'resume', ...details } };
+    case MAC_POWER_ID.shutdown:
+      return { ...base, type: 'standby', severity: 'info', segment: 'client', title: 'Mac heruntergefahren', details: { kind: 'shutdown', ...details } };
+    default:
+      return null;
+  }
+}
+
+/**
  * NetEvent for every other mapped event: Intel link-up and adapter conditions, standby/resume/boot/
  * shutdown, WLAN connect/disconnect/failed, address conflict (Tcpip 4199) and NIC driver installs.
  * Returns null for events that are only used as context (NCSI, Power-Troubleshooter, EventLog, …)
@@ -689,16 +767,26 @@ export function winEventToNetEvent(e: WinEvent): NetEvent | null {
   const lk = linkKindOf(e);
   if (lk) {
     if (lk.kind === 'down') return null;
-    const duplex = lk.duplex === 'full' ? 'Vollduplex' : 'Halbduplex';
+    const duplex = lk.duplex === 'full' ? ' Vollduplex' : lk.duplex === 'half' ? ' Halbduplex' : '';
+    const speed = lk.mbps !== null ? `: ${fmtLinkSpeed(lk.mbps)}${duplex}` : '';
     return {
       ...base,
       type: 'nic_link_up',
-      severity: lk.mbps < 1000 || lk.duplex === 'half' ? 'warn' : 'info',
+      severity: (lk.mbps !== null && lk.mbps < 1000) || lk.duplex === 'half' ? 'warn' : 'info',
       segment: 'client',
-      title: `Netzwerkverbindung hergestellt: ${fmtLinkSpeed(lk.mbps)} ${duplex}`,
-      details: { speedMbps: lk.mbps, duplex: lk.duplex, provider: e.provider, eventId: e.id, recordId: e.recordId, adapter: adapterName(e) },
+      title: `Netzwerkverbindung hergestellt${speed}`,
+      details: {
+        speedMbps: lk.mbps,
+        duplex: lk.duplex,
+        provider: e.provider,
+        eventId: e.id,
+        recordId: e.recordId,
+        adapter: adapterName(e),
+        ...(e.data.Source ? { observedBy: e.data.Source } : {}),
+      },
     };
   }
+  if (p === MAC_POWER_PROVIDER) return macPowerNetEvent(e, base);
   if (isIntelNicProvider(e.provider)) {
     const other = INTEL_OTHER[e.id];
     if (!other) return null;

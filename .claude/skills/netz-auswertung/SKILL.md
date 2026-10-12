@@ -115,7 +115,7 @@ Kurz und ohne Wiederholung des Dokuments:
 | Datei | Zweck |
 |---|---|
 | `scripts/collect.ts` | Zeitraum wählen, Daten über die Server-Abfragen der App sammeln → `daten.json`, `fakten.md` |
-| `scripts/render.ts` | HTML-Fragment + Grafiken + Stylesheet → HTML und PDF (Edge/Chrome headless) |
+| `scripts/render.ts` | HTML-Fragment + Grafiken + Stylesheet → HTML und PDF (Edge/Chrome headless, Windows und macOS) |
 | `scripts/data.ts`, `digest.ts`, `anlage.ts`, `charts.ts`, `text.ts` | Datensammlung, Faktenblatt, Messprotokoll, SVG-Grafiken, Beschriftungen |
 | `scripts/style.css` | Druck-Layout (A4) |
 | `reference/interpretation.md` | Wie man die Zahlen deutet; Ursachen- und Lösungskatalog |

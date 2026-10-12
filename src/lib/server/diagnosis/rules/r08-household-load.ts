@@ -44,7 +44,7 @@ export function householdLoad(input: DiagnosisInput): Finding | null {
     summary,
     evidence,
     recommendations: [
-      'Downloads/Updates (Steam, Launcher, Windows Update, Cloud-Backups) beim Spielen pausieren oder auf ca. 70 % der Leitungsgeschwindigkeit drosseln.',
+      `Downloads/Updates (Steam, Launcher, ${input.os === 'macos' ? 'macOS-Updates, iCloud, Time Machine' : 'Windows Update, Cloud-Backups'}) beim Spielen pausieren oder auf ca. 70 % der Leitungsgeschwindigkeit drosseln.`,
       'Test „Ruhiges Heimnetz“: alle anderen Geräte 15 Minuten offline nehmen und vergleichen, ob die Spitzen verschwinden – Ergebnis als Notiz festhalten.',
       'Konsolen-/TV-Updates und Backups in die Nacht verlegen.',
     ],

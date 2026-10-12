@@ -1,0 +1,4 @@
+ping6: illegal option -- D
+usage: ping6 [-CDdfHmnNoqtvwW] [-a addrtype] [-b bufsiz] [-B boundif] [-c count]
+	[-g gateway] [-h hoplimit] [-I interface] [-i wait] [-l preload] [-p pattern]
+	[-S sourceaddr] [-s packetsize] [hops ...] host

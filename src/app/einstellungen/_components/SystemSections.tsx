@@ -10,6 +10,7 @@ import { ChoiceGroup } from "@/components/ui/Field";
 import { Skeleton } from "@/components/ui/States";
 import { toast } from "@/components/ui/Toast";
 import { control } from "@/lib/client/api";
+import { useOsWording } from "@/lib/client/platform";
 import { useApi } from "@/lib/client/use-api";
 import { DASH, fmtBytes, fmtDateTime, fmtNumber } from "@/lib/format";
 import type { StatusResponse } from "@/lib/shared/api-types";
@@ -126,6 +127,8 @@ interface EventLogSectionProps {
 }
 
 export function EventLogSection({ value, onChange, issues, engineOnline }: EventLogSectionProps) {
+  const os = useOsWording();
+  const mac = os.id !== "windows";
   const [days, setDays] = useState<number | null>(value.importDays > 0 ? Math.min(value.importDays, 3650) : 365);
   const [confirm, setConfirm] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -147,8 +150,9 @@ export function EventLogSection({ value, onChange, issues, engineOnline }: Event
   return (
     <div className="flex flex-col gap-5">
       <p className="text-sm text-fg-3">
-        Link-Abbrüche des Netzwerkadapters, Standby und WLAN-Wechsel liest die Mess-Engine aus dem Windows-Ereignisprotokoll. Bereits
-        importierte Einträge werden nicht doppelt gespeichert.
+        {mac
+          ? "Ruhezustand und Neustarts liest die Mess-Engine aus dem macOS-Systemprotokoll (pmset), Link-Abbrüche erkennt sie während eines Tests sekündlich selbst. Beim Import kommen frühere Link-Abbrüche aus dem Systemprotokoll dazu, soweit macOS sie noch aufbewahrt (meist nur wenige Tage). Bereits importierte Einträge werden nicht doppelt gespeichert."
+          : "Link-Abbrüche des Netzwerkadapters, Standby und WLAN-Wechsel liest die Mess-Engine aus dem Windows-Ereignisprotokoll. Bereits importierte Einträge werden nicht doppelt gespeichert."}
       </p>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <NumField
@@ -174,7 +178,7 @@ export function EventLogSection({ value, onChange, issues, engineOnline }: Event
         />
         <div className="flex items-start sm:pt-[1.375rem]">
           <Button icon={FileClock} disabled={!engineOnline || !daysValid} onClick={() => setConfirm(true)}>
-            Ereignisprotokoll neu importieren
+            {mac ? "Systemprotokoll neu importieren" : "Ereignisprotokoll neu importieren"}
           </Button>
         </div>
       </div>
@@ -190,8 +194,8 @@ export function EventLogSection({ value, onChange, issues, engineOnline }: Event
           onClose={() => !busy && setConfirm(false)}
           dismissible={!busy}
           size="sm"
-          title="Ereignisprotokoll neu importieren?"
-          description={`Die Mess-Engine liest die letzten ${days ?? ""} Tage aus dem Windows-Ereignisprotokoll. Das kann bis zu einer Minute dauern.`}
+          title={mac ? "Systemprotokoll neu importieren?" : "Ereignisprotokoll neu importieren?"}
+          description={`Die Mess-Engine liest die letzten ${days ?? ""} Tage aus dem ${os.eventLog}. Das kann bis zu ${mac ? "einigen Minuten" : "einer Minute"} dauern.`}
           footer={
             <>
               <Button onClick={() => setConfirm(false)} disabled={busy}>

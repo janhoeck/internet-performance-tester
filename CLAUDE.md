@@ -2,8 +2,10 @@
 
 # Netzdiagnose – long-term internet line tester
 
-Local Windows tool that runs a long-term ("Langzeittest") measurement of the user's internet
-connection and finds the root cause of gaming lag (ping > 200 ms, packet loss).
+Local Windows/macOS tool that runs a long-term ("Langzeittest") measurement of the user's internet
+connection and finds the root cause of gaming lag (ping > 200 ms, packet loss). Windows is the
+primary (verified) platform; the macOS port (docs/research/macos.md, ARCHITECTURE §4.11) uses only
+macOS system tools and was written without a Mac – keep both paths working.
 UI language: **German**. Code identifiers/comments: English.
 
 Read `docs/ARCHITECTURE.md` before writing code. It is the binding contract (types, DB schema,
@@ -40,7 +42,8 @@ module boundaries, API routes, live-stream protocol, file ownership).
 - All timestamps are epoch **milliseconds** (`number`). RTT/latency in milliseconds (float).
   Throughput in Mbit/s (`Mbps`), byte counters as numbers.
 - Child processes: `spawn`/`execFile` **without a shell**, always with timeouts, always killed on
-  engine shutdown. Never parse localized words when a number/structure is available; when text
+  engine shutdown. macOS tools only by absolute path via `engine/collectors/macos/tools.ts` (`LC_ALL=C`);
+  platform checks only via `engine/platform.ts`; Windows-only code must not run on macOS and vice versa. Never parse localized words when a number/structure is available; when text
   must be parsed, support German **and** English.
 - The engine must never block its event loop (no sync heavy work, no `execSync`, no `DatabaseSync`
   queries over large ranges – batch writes in a transaction every ~1 s).

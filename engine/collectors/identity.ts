@@ -5,10 +5,15 @@
 //    are just stored, later changes → identity_change events.
 //  - running game processes (`tasklist /FO CSV /NH` vs config.gaming.processNames, case-insensitive)
 //    → bus 'gaming', metric pc.gaming and 'gaming' episode events (ts … endTs).
+// On macOS both come from short-lived tools (route/arp/ipconfig/scutil/ifconfig, ps) – macos/identity.ts.
 import { decodeConsole } from '../../src/lib/shared/cp850';
 import { expandIPv6, isGlobalV6, isIPv4 } from '../../src/lib/shared/net';
+import { type HostOs, normalizeProcessName } from '../../src/lib/shared/platform';
 import type { ModuleState, NetEvent } from '../../src/lib/shared/types';
-import type { EngineContext, EngineModule, Logger } from '../core/types';
+import type { EngineContext, EngineModule, Logger, PowerShellHost } from '../core/types';
+import { hostPlatform, isMac } from '../platform';
+import { MacInterfaceCatalog } from './macos/interfaces';
+import { createMacProcessListSource, readMacIdentity } from './macos/identity';
 import { PollTimer, ProcessRunner, asArray, asNumber, asString, childTracker, errorMessage, isRecord, psQuote, system32, timersState } from './util';
 
 export const IDENTITY_SETTING = 'identity.state';
@@ -39,10 +44,15 @@ export type IdentityState = Record<string, IdentityValues>;
 
 const USABLE_NEIGHBOR = /^(reachable|stale|delay|probe|permanent)$/i;
 
-/** 'dc-73-06-12-34-df' / 'DC:73:…' → 'DC-73-06-12-34-DF'; null for empty/incomplete entries */
+/**
+ * 'dc-73-06-12-34-df' / 'DC:73:…' / macOS 'dc:73:6:12:34:df' (octets without leading zero) →
+ * 'DC-73-06-12-34-DF'; null for empty/incomplete entries
+ */
 export function normalizeMac(mac: string | null | undefined): string | null {
   if (!mac) return null;
-  const hex = mac.replace(/[^0-9a-fA-F]/g, '').toUpperCase();
+  const groups = mac.trim().split(/[:-]/);
+  const padded = groups.length === 6 && groups.every((g) => /^[0-9a-fA-F]{1,2}$/.test(g)) ? groups.map((g) => g.padStart(2, '0')).join('') : mac;
+  const hex = padded.replace(/[^0-9a-fA-F]/g, '').toUpperCase();
   if (hex.length !== 12 || /^0+$/.test(hex) || /^F+$/.test(hex)) return null;
   return hex.match(/../g)?.join('-') ?? null;
 }
@@ -170,12 +180,17 @@ const normProc = (n: string) => {
   return s.includes('.') ? s : `${s}.exe`;
 };
 
-/** First configured game (config order) that runs, as configured (lower case) – or null. */
-export function detectGame(processes: readonly string[], configured: readonly string[]): string | null {
-  const running = new Set(processes.map(normProc));
+/**
+ * First configured game (config order) that runs, as configured (lower case) – or null.
+ * Windows: names without extension get '.exe'. macOS: compared without '.exe'/'.app'
+ * (normalizeProcessName), so the Windows default list also matches native macOS builds.
+ */
+export function detectGame(processes: readonly string[], configured: readonly string[], os: HostOs = 'windows'): string | null {
+  const norm = os === 'windows' ? normProc : normalizeProcessName;
+  const running = new Set(processes.map(norm));
   for (const name of configured) {
-    const n = normProc(name);
-    if (n !== '.exe' && running.has(n)) return n;
+    const n = norm(name);
+    if (n !== '.exe' && n !== '' && running.has(n)) return n;
   }
   return null;
 }
@@ -214,6 +229,61 @@ export function gamingEvent(process: string, ts: number): NetEvent {
   };
 }
 
+// ─── raw data sources ──────────────────────────────────────────────────────
+
+/** Identity of the interface towards the router (null = no route right now, e.g. link down). */
+export interface IdentitySource {
+  fetch(routerIp: string): Promise<IdentitySample | null>;
+}
+
+/** Names of the running executables as the OS reports them (e.g. 'cs2.exe' / 'LeagueofLegends'). */
+export interface ProcessListSource {
+  list(): Promise<string[]>;
+}
+
+/** Windows: Get-NdIdentity through the PowerShell RPC worker. */
+export function powerShellIdentitySource(ps: PowerShellHost): IdentitySource {
+  return {
+    async fetch(routerIp) {
+      if (!ps.available) throw new Error('PowerShell nicht verfügbar');
+      const data = await ps.json<unknown>(`Get-NdIdentity -RouterIp ${psQuote(routerIp)}`, { timeoutMs: 20_000 });
+      return parseIdentity(data, Date.now());
+    },
+  };
+}
+
+/** macOS: route/arp/ipconfig/scutil/ifconfig, parsed like Get-NdIdentity. */
+export function macIdentitySource(runner: Pick<ProcessRunner, 'run'>, catalog = new MacInterfaceCatalog(runner)): IdentitySource {
+  return {
+    async fetch(routerIp) {
+      return parseIdentity(await readMacIdentity(runner, catalog, routerIp), Date.now());
+    },
+  };
+}
+
+/** Windows: `tasklist /FO CSV /NH` (image names incl. .exe). */
+export function tasklistProcessSource(runner: Pick<ProcessRunner, 'run'>): ProcessListSource {
+  return {
+    async list() {
+      const r = await runner.run(TASKLIST(), ['/FO', 'CSV', '/NH'], { timeoutMs: 15_000, maxBytes: 8 * 1024 * 1024 });
+      if (r.error) throw r.error;
+      if (r.timedOut || r.code !== 0) throw new Error(`tasklist ${r.timedOut ? 'Zeitüberschreitung' : `Exit-Code ${r.code}`}`);
+      return parseTasklistCsv(decodeConsole(new Uint8Array(r.stdout)));
+    },
+  };
+}
+
+export interface IdentityModuleOptions {
+  /** identity source (default: by platform) */
+  createIdentitySource?: (ctx: EngineContext, runner: ProcessRunner) => IdentitySource;
+  /** process list source (default: by platform) */
+  createProcessSource?: (ctx: EngineContext, runner: ProcessRunner) => ProcessListSource;
+  /** OS used for game name matching (default: the engine's platform) */
+  os?: HostOs;
+  /** start the poll timer in init() (default true) */
+  autoStart?: boolean;
+}
+
 // ─── module ────────────────────────────────────────────────────────────────
 
 class IdentityModule implements EngineModule {
@@ -221,16 +291,32 @@ class IdentityModule implements EngineModule {
   private ctx: EngineContext | null = null;
   private log: Logger | null = null;
   private runner: ProcessRunner | null = null;
+  private identitySource: IdentitySource | null = null;
+  private processSource: ProcessListSource | null = null;
   private timer: PollTimer | null = null;
   private identity: IdentityState = {};
   private episode: GamingEpisode | null = null;
   private gamingKnown = false;
   private lastError: string | null = null;
 
+  constructor(private readonly opts: IdentityModuleOptions = {}) {}
+
   init(ctx: EngineContext): void {
     this.ctx = ctx;
     this.log = ctx.log;
-    this.runner = new ProcessRunner(childTracker(ctx));
+    const runner = new ProcessRunner(childTracker(ctx));
+    this.runner = runner;
+    const mac = isMac();
+    this.identitySource = this.opts.createIdentitySource
+      ? this.opts.createIdentitySource(ctx, runner)
+      : mac
+        ? macIdentitySource(runner)
+        : powerShellIdentitySource(ctx.ps);
+    this.processSource = this.opts.createProcessSource
+      ? this.opts.createProcessSource(ctx, runner)
+      : mac
+        ? createMacProcessListSource(runner)
+        : tasklistProcessSource(runner);
     this.identity = parseIdentityState(ctx.db.getSetting(IDENTITY_SETTING));
     this.episode = parseEpisode(ctx.db.getSetting(GAMING_SETTING));
     this.timer = new PollTimer({
@@ -241,7 +327,7 @@ class IdentityModule implements EngineModule {
         this.log?.debug('Identitäts-/Spielerkennung fehlgeschlagen', { error: this.lastError });
       },
     });
-    this.timer.start(3000);
+    if (this.opts.autoStart !== false) this.timer.start(3000);
   }
 
   start(): void {
@@ -283,11 +369,10 @@ class IdentityModule implements EngineModule {
 
   private async pollIdentity(): Promise<void> {
     const ctx = this.ctx;
-    if (!ctx) return;
-    if (!ctx.ps.available) throw new Error('PowerShell nicht verfügbar');
+    const source = this.identitySource;
+    if (!ctx || !source) return;
     const routerIp = ctx.config().router.ip;
-    const data = await ctx.ps.json<unknown>(`Get-NdIdentity -RouterIp ${psQuote(routerIp)}`, { timeoutMs: 20_000 });
-    const sample = parseIdentity(data, Date.now());
+    const sample = await source.fetch(routerIp);
     if (!sample) return; // no route towards the router right now (link down)
     const prev = this.identity[sample.ifAlias];
     const { events, next } = diffIdentity(prev, sample, routerIp);
@@ -298,13 +383,11 @@ class IdentityModule implements EngineModule {
 
   private async pollGames(): Promise<void> {
     const ctx = this.ctx;
-    const runner = this.runner;
-    if (!ctx || !runner) return;
-    const r = await runner.run(TASKLIST(), ['/FO', 'CSV', '/NH'], { timeoutMs: 15_000, maxBytes: 8 * 1024 * 1024 });
-    if (r.error) throw r.error;
-    if (r.timedOut || r.code !== 0) throw new Error(`tasklist ${r.timedOut ? 'Zeitüberschreitung' : `Exit-Code ${r.code}`}`);
+    const source = this.processSource;
+    if (!ctx || !source) return;
+    const processes = await source.list();
     const now = Date.now();
-    const game = detectGame(parseTasklistCsv(decodeConsole(new Uint8Array(r.stdout))), ctx.config().gaming.processNames);
+    const game = detectGame(processes, ctx.config().gaming.processNames, this.opts.os ?? hostPlatform());
     const ep = this.episode;
     const wasActive = this.gamingKnown ? ep !== null : null;
 
@@ -335,6 +418,6 @@ class IdentityModule implements EngineModule {
   }
 }
 
-export function createIdentityModule(): EngineModule {
-  return new IdentityModule();
+export function createIdentityModule(opts: IdentityModuleOptions = {}): EngineModule {
+  return new IdentityModule(opts);
 }

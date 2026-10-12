@@ -1,6 +1,7 @@
 // Probes module (ARCHITECTURE §4.5): runs during a measurement session.
 //  - ICMP: ONE PowerShell pinger agent for all enabled icmp targets (+ 1 Hz NIC link ticks),
-//    ping.exe fallback handled by the supervisor (pinger.ts)
+//    ping.exe fallback handled by the supervisor (pinger.ts); on macOS one ping per target and
+//    second scheduled by MacPinger (mac-pinger.ts)
 //  - TCP / UDP-DNS / HTTP runners for the other enabled targets (grid-aligned intervals)
 //  - 1 Hz egress interface check (bus 'egress')
 // Dynamic hosts are resolved via ctx.hosts; an unresolved placeholder keeps its target idle until
@@ -18,10 +19,12 @@ import type {
 } from '../../src/lib/shared/types';
 import { SampleStatus } from '../../src/lib/shared/types';
 import type { EgressTick, EngineContext, EngineModule, Logger, NicTick } from '../core/types';
+import { isMac } from '../platform';
 import { type AgentConfig, type AgentTarget, DEFAULT_NICS, normalizeAddress } from './agent-protocol';
 import { type IcmpEcho, type ProbeOutcome, RecentTimestamps, errorMessage, sampleFlags } from './common';
 import { EgressChecker, type EgressHooks } from './egress';
 import { buildProbeUrl, httpProbe } from './http';
+import { MacPinger } from './mac-pinger';
 import { type PingerHooks, type PingerInfo, PingerSupervisor } from './pinger';
 import { HostCache, pendingText, targetAddress } from './resolve';
 import { IntervalRunner, staggerOffset } from './runner';
@@ -66,8 +69,13 @@ export interface ProbesDeps {
   liveInterfaces(): NodeJS.Dict<os.NetworkInterfaceInfo[]>;
 }
 
+/** ICMP pinger of this platform: PowerShell agent supervisor (Windows) or MacPinger (macOS). */
+export function createDefaultPinger(hooks: PingerHooks): PingerLike {
+  return isMac() ? new MacPinger(hooks) : new PingerSupervisor(hooks);
+}
+
 const DEFAULT_DEPS: ProbesDeps = {
-  createPinger: (hooks) => new PingerSupervisor(hooks),
+  createPinger: createDefaultPinger,
   createEgress: (hooks) => new EgressChecker(hooks),
   tcpProbe: tcpConnectProbe,
   httpProbe,

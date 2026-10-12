@@ -1,0 +1,18 @@
+tcp:
+	1234567 packets sent
+		987654 data packets (1234567890 bytes)
+		2345 data packets (3456789 bytes) retransmitted
+		12 resends initiated by MTU discovery
+		123456 ack-only packets (1234 delayed)
+		0 URG only packets
+		0 window probe packets
+		12345 window update packets
+		5678 control packets
+		0 data packets sent after flow control
+	2345678 packets received
+		1234567 acks (for 1234567890 bytes)
+		2345 duplicate acks
+	12345 connection requests
+	2345 connection accepts
+	1234 retransmit timeouts
+		12 connections dropped by rexmit timeout

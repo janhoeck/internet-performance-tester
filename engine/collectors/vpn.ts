@@ -2,8 +2,15 @@
 // `warp-cli -j settings list` (operation_mode, split_tunnel_mode) plus other active tunnel adapters
 // from the adapters snapshot → VpnInfo snapshot 'vpn' and vpn_change events. WARP is never
 // controlled (no connect/disconnect/mode/settings commands).
+// macOS (docs/research/macos.md §0): warp-cli from /usr/local/bin or the app bundle; other tunnels are
+// the utun/ipsec/ppp/… interfaces with a routable address (shown by their BSD name).
+import { constants as fsConstants } from 'node:fs';
+import { access } from 'node:fs/promises';
+import { isLinkLocalV6 } from '../../src/lib/shared/net';
 import type { AdapterInfo, AdapterSnapshot, ModuleState, NetEvent, Severity, VpnInfo } from '../../src/lib/shared/types';
 import type { EngineContext, EngineModule, Logger } from '../core/types';
+import { isMac } from '../platform';
+import { WARP_CLI_MAC_PATHS, toolEnv } from './macos/tools';
 import { PollTimer, ProcessRunner, asString, childTracker, errorMessage, isRecord, timersState, warpCliPath } from './util';
 
 const SNAPSHOT_EVERY_MS = 6 * 3600_000;
@@ -60,6 +67,50 @@ export function otherTunnels(adapters: readonly AdapterInfo[]): string[] {
     .filter((a) => TUNNEL.test(`${a.name} ${a.description}`) && !NOT_TUNNEL.test(`${a.name} ${a.description}`))
     .map((a) => a.name)
     .sort((a, b) => a.localeCompare(b));
+}
+
+/** macOS tunnel interfaces (BSD names) – the macOS adapter source lists them only with an address. */
+const MAC_TUNNEL = /^(utun|ipsec|ppp|tun|tap|wg|zt|feth)\d+$/;
+
+/**
+ * Cloudflare WARP's own tunnel on macOS: utun with WARP's interface address – 172.16.0.2 (consumer
+ * WARP), 100.96.0.0/12 (Zero Trust, 100.96.0.7 on the Windows PC, environment.md) or 2606:4700:110::/48.
+ * It is reported via warp-cli, never as "other tunnel".
+ */
+export function isWarpTunnel(a: Pick<AdapterInfo, 'addresses'>): boolean {
+  return (a.addresses ?? []).some((ip) => {
+    const v4 = /^100\.(\d+)\./.exec(ip);
+    return ip === '172.16.0.2' || (v4 !== null && Number(v4[1]) >= 96 && Number(v4[1]) <= 111) || /^2606:4700:110:/i.test(ip);
+  });
+}
+
+const routable = (ip: string) => ip !== '' && ip !== '::1' && !ip.startsWith('127.') && !isLinkLocalV6(ip.split('%')[0]);
+
+/**
+ * Active macOS tunnels other than WARP: virtual utun/ipsec/ppp/… adapters that are up and carry a
+ * routable address (the always-present system utuns only have link-local addresses). The WARP
+ * tunnel is excluded whenever WARP is installed – otherwise every WARP connect would show up as an
+ * unknown VPN.
+ */
+export function macOtherTunnels(adapters: readonly AdapterInfo[], opts: { warpInstalled: boolean }): string[] {
+  return adapters
+    .filter((a) => a.isVirtual && a.status === 'Up' && MAC_TUNNEL.test(a.name) && (a.addresses ?? []).some(routable))
+    .filter((a) => !(opts.warpInstalled && isWarpTunnel(a)))
+    .map((a) => a.name)
+    .sort((a, b) => a.localeCompare(b));
+}
+
+/** First existing warp-cli on macOS (null = WARP not installed). */
+export async function findMacWarpCli(paths: readonly string[] = WARP_CLI_MAC_PATHS): Promise<string | null> {
+  for (const p of paths) {
+    try {
+      await access(p, fsConstants.X_OK);
+      return p;
+    } catch {
+      /* not here */
+    }
+  }
+  return null;
 }
 
 export function buildVpnInfo(
@@ -140,11 +191,21 @@ export function diffVpn(prev: VpnInfo | null, cur: VpnInfo): NetEvent[] {
   return out;
 }
 
+export interface VpnModuleDeps {
+  /** child process runner (tests) */
+  runner?: Pick<ProcessRunner, 'run' | 'killAll'>;
+  /** warp-cli location (default: Windows %ProgramFiles% path, macOS findMacWarpCli()); null = not installed */
+  warpCli?: () => Promise<string | null>;
+  /** force the macOS tunnel rules (default: isMac()) */
+  mac?: boolean;
+}
+
 class VpnModule implements EngineModule {
   readonly name = 'vpn';
   private ctx: EngineContext | null = null;
   private log: Logger | null = null;
-  private runner: ProcessRunner | null = null;
+  private runner: Pick<ProcessRunner, 'run' | 'killAll'> | null = null;
+  private mac = false;
   private timer: PollTimer | null = null;
   private adapters: AdapterInfo[] = [];
   private last: VpnInfo | null = null;
@@ -153,10 +214,13 @@ class VpnModule implements EngineModule {
   private unsubs: (() => void)[] = [];
   private lastError: string | null = null;
 
+  constructor(private readonly deps: VpnModuleDeps = {}) {}
+
   init(ctx: EngineContext): void {
     this.ctx = ctx;
     this.log = ctx.log;
-    this.runner = new ProcessRunner(childTracker(ctx));
+    this.mac = this.deps.mac ?? isMac();
+    this.runner = this.deps.runner ?? new ProcessRunner(childTracker(ctx));
     try {
       this.adapters = ctx.db.latestSnapshot<AdapterSnapshot>('adapters')?.data?.adapters ?? [];
       const prev = ctx.db.latestSnapshot<VpnInfo>('vpn');
@@ -200,10 +264,15 @@ class VpnModule implements EngineModule {
     return timersState(this.name, true, this.timer ? [this.timer] : [], this.lastError);
   }
 
+  private tunnels(list: readonly AdapterInfo[], warpInstalled: boolean): string[] {
+    return this.mac ? macOtherTunnels(list, { warpInstalled }) : otherTunnels(list);
+  }
+
   /** re-check soon when a tunnel adapter or the WARP adapter changes state */
   private onAdapters(snap: AdapterSnapshot): void {
-    const sig = (list: readonly AdapterInfo[]) =>
-      `${otherTunnels(list).join('|')}#${list.some((a) => /cloudflare\s*warp/i.test(a.description) && a.status === 'Up')}`;
+    const warpUp = (a: AdapterInfo) => (this.mac ? isWarpTunnel(a) : /cloudflare\s*warp/i.test(a.description)) && a.status === 'Up';
+    const installed = this.last?.warp?.installed ?? false;
+    const sig = (list: readonly AdapterInfo[]) => `${this.tunnels(list, installed).join('|')}#${list.some(warpUp)}`;
     const before = sig(this.adapters);
     this.adapters = snap.adapters;
     if (sig(this.adapters) !== before) this.timer?.trigger(1000);
@@ -212,7 +281,9 @@ class VpnModule implements EngineModule {
   private async warpCli(args: string[]): Promise<{ installed: boolean; json: unknown; error: string | null }> {
     const runner = this.runner;
     if (!runner) return { installed: false, json: null, error: 'nicht initialisiert' };
-    const r = await runner.run(warpCliPath(), ['-j', ...args], { timeoutMs: WARP_TIMEOUT_MS, maxBytes: 4 * 1024 * 1024 });
+    const path = this.deps.warpCli ? await this.deps.warpCli() : this.mac ? await findMacWarpCli() : warpCliPath();
+    if (path === null) return { installed: false, json: null, error: null };
+    const r = await runner.run(path, ['-j', ...args], { timeoutMs: WARP_TIMEOUT_MS, maxBytes: 4 * 1024 * 1024, ...(this.mac ? { env: toolEnv() } : {}) });
     if (r.error?.code === 'ENOENT') return { installed: false, json: null, error: null };
     if (r.error) return { installed: true, json: null, error: errorMessage(r.error) };
     if (r.timedOut) return { installed: true, json: null, error: 'warp-cli: Zeitüberschreitung' };
@@ -236,7 +307,7 @@ class VpnModule implements EngineModule {
       error = error ?? st.error;
     }
     const ts = Date.now();
-    const info = buildVpnInfo(ts, { installed: status.installed, status: parseWarpStatus(status.json), settings }, otherTunnels(this.adapters));
+    const info = buildVpnInfo(ts, { installed: status.installed, status: parseWarpStatus(status.json), settings }, this.tunnels(this.adapters, status.installed));
     for (const e of diffVpn(this.last, info)) ctx.recordEvent(e);
     const sig = vpnSignature(info);
     if (sig !== this.lastSignature || ts - this.lastSnapshotTs >= SNAPSHOT_EVERY_MS) {
@@ -249,6 +320,6 @@ class VpnModule implements EngineModule {
   }
 }
 
-export function createVpnModule(): EngineModule {
-  return new VpnModule();
+export function createVpnModule(deps: VpnModuleDeps = {}): EngineModule {
+  return new VpnModule(deps);
 }

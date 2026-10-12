@@ -22,6 +22,7 @@ import { TimeRangePicker } from "@/components/ui/TimeRangePicker";
 import { SessionPicker } from "@/components/ui/SessionPicker";
 import { useApi } from "@/lib/client/use-api";
 import { useLiveConnection } from "@/lib/client/live-store";
+import { useOsWording } from "@/lib/client/platform";
 import { targetName, useTargets } from "@/lib/client/targets";
 import { SESSION_STATUS_LABEL, sessionTitle } from "@/lib/client/sessions";
 import { CONFIDENCE_LABEL, EVENT_TYPE_LABEL, OUTAGE_CLASS_LABEL } from "@/lib/client/adapters";
@@ -82,6 +83,7 @@ function ExportLink({ href, icon: Icon = Download, children }: { href: string | 
 }
 
 export function BerichtView() {
+  const os = useOsWording();
   const er = useEffectiveRange();
   const query = useRangeQuery(er);
   const span = useMemo(() => parseRangeQuery(query), [query]);
@@ -308,9 +310,13 @@ export function BerichtView() {
 
         {/* Link-Abbrüche */}
         <ReportSection
-          title="Link-Abbrüche am PC (im laufenden Betrieb)"
+          title={`Link-Abbrüche am ${os.id === "macos" ? "Mac" : "PC"} (im laufenden Betrieb)`}
           block={false}
-          description="Aus dem Windows-Ereignisprotokoll (Intel I225-V). Neuverbindungen beim Start oder Aufwachen sind herausgerechnet."
+          description={
+            os.id === "macos"
+              ? "Von der Mess-Engine sekündlich erkannt (macOS). Neuverbindungen beim Start oder Aufwachen sind herausgerechnet."
+              : "Aus dem Windows-Ereignisprotokoll (Intel I225-V). Neuverbindungen beim Start oder Aufwachen sind herausgerechnet."
+          }
         >
           <ReportData result={client} isEmpty={() => runtimeDrops.length === 0} empty="Keine Link-Abbrüche im laufenden Betrieb im Zeitraum.">
             {() => <LinkDropTable drops={runtimeDrops} />}

@@ -19,7 +19,7 @@ interface AddTargetDialogProps {
 }
 
 const KINDS = [
-  { value: "icmp", label: "Ping (ICMP)", hint: "wie ping.exe" },
+  { value: "icmp", label: "Ping (ICMP)", hint: "wie der ping-Befehl" },
   { value: "tcp", label: "TCP", hint: "Verbindungsaufbau" },
   { value: "udp-dns", label: "UDP (DNS)", hint: "nur DNS-Server" },
   { value: "http", label: "HTTP", hint: "Antwortzeit" },
