@@ -1,0 +1,12 @@
+
+Ping wird ausgeführt für 192.168.0.2 mit 32 Bytes Daten:
+Zeitüberschreitung der Anforderung.
+Zeitüberschreitung der Anforderung.
+Antwort von 192.168.0.192: Zielhost nicht erreichbar.
+Zeitüberschreitung der Anforderung.
+Antwort von 192.168.0.192: Zielhost nicht erreichbar.
+Zeitüberschreitung der Anforderung.
+Antwort von 192.168.0.192: Zielhost nicht erreichbar.
+Zeitüberschreitung der Anforderung.
+Antwort von 192.168.0.192: Zielhost nicht erreichbar.
+Zeitüberschreitung der Anforderung.

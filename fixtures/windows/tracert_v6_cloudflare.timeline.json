@@ -1,0 +1,156 @@
+{
+ "args": [
+  "-d",
+  "-6",
+  "-w",
+  "1000",
+  "-h",
+  "30",
+  "2606:4700:4700::1111"
+ ],
+ "code": 0,
+ "enc": "cp850",
+ "totalMs": 7909,
+ "lines": [
+  {
+   "t": 15,
+   "line": ""
+  },
+  {
+   "t": 15,
+   "line": "Routenverfolgung zu 2606:4700:4700::1111 über maximal 30 Hops"
+  },
+  {
+   "t": 15,
+   "line": ""
+  },
+  {
+   "t": 15,
+   "partial": "  1  "
+  },
+  {
+   "t": 17,
+   "partial": "  1     1 ms  "
+  },
+  {
+   "t": 18,
+   "partial": "  1     1 ms     1 ms  "
+  },
+  {
+   "t": 20,
+   "partial": "  1     1 ms     1 ms     1 ms  "
+  },
+  {
+   "t": 20,
+   "line": "  1     1 ms     1 ms     1 ms  3fff:8071:7ca0:c980:de73:6ff:fe12:34df "
+  },
+  {
+   "t": 1024,
+   "partial": "  2  "
+  },
+  {
+   "t": 1040,
+   "partial": "  2    16 ms  "
+  },
+  {
+   "t": 1068,
+   "partial": "  2    16 ms    27 ms  "
+  },
+  {
+   "t": 1082,
+   "line": "  2    16 ms    27 ms    13 ms  2a02:8101:3ff:ff89::3 "
+  },
+  {
+   "t": 2078,
+   "partial": "  3  "
+  },
+  {
+   "t": 2100,
+   "partial": "  3    21 ms  "
+  },
+  {
+   "t": 2138,
+   "partial": "  3    21 ms    37 ms  "
+  },
+  {
+   "t": 2151,
+   "line": "  3    21 ms    37 ms    12 ms  2a02:908:0:4d4::1 "
+  },
+  {
+   "t": 3147,
+   "partial": "  4  "
+  },
+  {
+   "t": 3689,
+   "partial": "  4     *     "
+  },
+  {
+   "t": 4698,
+   "partial": "  4     *        *     "
+  },
+  {
+   "t": 5690,
+   "line": "  4     *        *        *     Zeitüberschreitung der Anforderung."
+  },
+  {
+   "t": 5690,
+   "partial": "  5  "
+  },
+  {
+   "t": 5707,
+   "partial": "  5    16 ms  "
+  },
+  {
+   "t": 5723,
+   "partial": "  5    16 ms    15 ms  "
+  },
+  {
+   "t": 5741,
+   "partial": "  5    16 ms    15 ms    18 ms  "
+  },
+  {
+   "t": 5741,
+   "line": "  5    16 ms    15 ms    18 ms  2400:cb00:48:2::c629:f012 "
+  },
+  {
+   "t": 6729,
+   "partial": "  6  "
+  },
+  {
+   "t": 6751,
+   "partial": "  6    21 ms  "
+  },
+  {
+   "t": 6791,
+   "partial": "  6    21 ms    39 ms  "
+  },
+  {
+   "t": 6844,
+   "line": "  6    21 ms    39 ms    52 ms  2400:cb00:48:3:: "
+  },
+  {
+   "t": 7803,
+   "partial": "  7  "
+  },
+  {
+   "t": 7835,
+   "partial": "  7    31 ms  "
+  },
+  {
+   "t": 7868,
+   "partial": "  7    31 ms    33 ms  "
+  },
+  {
+   "t": 7906,
+   "line": "  7    31 ms    33 ms    37 ms  2606:4700:4700::1111 "
+  },
+  {
+   "t": 7906,
+   "line": ""
+  },
+  {
+   "t": 7906,
+   "line": "Ablaufverfolgung beendet."
+  }
+ ]
+}

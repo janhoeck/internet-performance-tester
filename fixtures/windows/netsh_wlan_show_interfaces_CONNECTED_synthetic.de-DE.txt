@@ -1,0 +1,40 @@
+
+
+Es ist 1 Schnittstelle auf dem System vorhanden:
+
+
+    Name                   : WLAN
+    Beschreibung            : Intel(R) Wi-Fi 6E AX211 160MHz
+    GUID                   : 1cdb0ef5-cb64-4b03-9b8d-3de53ab40921
+    Physische Adresse       : e4:60:17:12:34:01
+    Benutzeroberflächentyp         : Primär
+    Status                  : Verbunden
+
+    SSID                   : Vodafone-43FE
+    AP BSSID               : dc:73:06:12:34:e0
+
+    Bereich                   : 5 GHz
+    Kanal                : 36
+
+    VerbundeneS Akm-Verschlüsselungsverfahren : [ akm = 00-0f-ac:2, Chiffre = 00-0f-ac:4 ]
+
+    Netzwerktyp            : Infrastruktur
+    Funktyp                   : 802.11ax
+    Authentifizierung   : WPA2-Personal
+
+    Verschlüsselungsverfahren                 : CCMP
+    Verbindungsmodus        : Profil
+
+    Empfangsrate (MBit/s)  : 1200,9
+    Übertragungsrate (MBit/s) : 1200,9
+    Signal              : 96% 
+    RSSI                   : -48
+    Profil                 : Vodafone-43FE 
+    QoS MSCS konfiguriert         : 0
+    QoS-Zuordnung konfiguriert         : 0
+    Durch Richtlinie zugelassene QoS-Zuordnung   :  0
+
+    Funkstatus           : Hardware Aktiviert
+                             Software Aktiviert
+
+    Status des gehosteten Netzwerks  : Nicht verfügbar

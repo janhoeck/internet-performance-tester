@@ -1,0 +1,124 @@
+{
+  "df": [
+    {
+      "payload": 1432,
+      "status": "Success",
+      "rtt": 39,
+      "from": "1.1.1.1"
+    },
+    {
+      "payload": 1433,
+      "status": "PacketTooBig",
+      "rtt": 0,
+      "from": {}
+    },
+    {
+      "payload": 1472,
+      "status": "PacketTooBig",
+      "rtt": 0,
+      "from": {}
+    }
+  ],
+  "trace": [
+    {
+      "ttl": 1,
+      "status": "TtlExpired",
+      "from": "192.168.0.1",
+      "rttApi": 0,
+      "elapsedMs": 3.32
+    },
+    {
+      "ttl": 2,
+      "status": "TimedOut",
+      "from": {},
+      "rttApi": 0,
+      "elapsedMs": 538.03
+    },
+    {
+      "ttl": 3,
+      "status": "TtlExpired",
+      "from": "92.79.214.92",
+      "rttApi": 0,
+      "elapsedMs": 14.89
+    },
+    {
+      "ttl": 4,
+      "status": "TimedOut",
+      "from": {},
+      "rttApi": 0,
+      "elapsedMs": 990.5
+    },
+    {
+      "ttl": 5,
+      "status": "TimedOut",
+      "from": {},
+      "rttApi": 0,
+      "elapsedMs": 992.08
+    },
+    {
+      "ttl": 6,
+      "status": "TtlExpired",
+      "from": "198.41.240.9",
+      "rttApi": 0,
+      "elapsedMs": 17.82
+    },
+    {
+      "ttl": 7,
+      "status": "Success",
+      "from": "1.1.1.1",
+      "rttApi": 23,
+      "elapsedMs": 23.87
+    }
+  ],
+  "trace6": [
+    {
+      "ttl": 1,
+      "status": "TtlExpired",
+      "from": "3fff:8071:7ca0:c980:de73:6ff:fe12:34df",
+      "rttApi": 0,
+      "elapsedMs": 1.23
+    },
+    {
+      "ttl": 2,
+      "status": "TtlExpired",
+      "from": "2a02:8101:3ff:ff89::3",
+      "rttApi": 0,
+      "elapsedMs": 12.21
+    },
+    {
+      "ttl": 3,
+      "status": "TtlExpired",
+      "from": "2a02:908:0:4d4::1",
+      "rttApi": 0,
+      "elapsedMs": 15.32
+    },
+    {
+      "ttl": 4,
+      "status": "TimedOut",
+      "from": {},
+      "rttApi": 0,
+      "elapsedMs": 920.61
+    },
+    {
+      "ttl": 5,
+      "status": "TimedOut",
+      "from": {},
+      "rttApi": 0,
+      "elapsedMs": 992.2
+    },
+    {
+      "ttl": 6,
+      "status": "TtlExpired",
+      "from": "2400:cb00:48:3::",
+      "rttApi": 0,
+      "elapsedMs": 13.87
+    },
+    {
+      "ttl": 7,
+      "status": "Success",
+      "from": "2606:4700:4700::1111",
+      "rttApi": 12,
+      "elapsedMs": 12.54
+    }
+  ]
+}

@@ -1,0 +1,464 @@
+[
+ {
+  "kind": "msg",
+  "id": "0x00002710",
+  "low16": 10000,
+  "text": "\r\nUsage: ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]\r\n            [-r count] [-s count] [[-j host-list] | [-k host-list]]\r\n            [-w timeout] [-R] [-S srcaddr] [-c compartment] [-p]\r\n            [-4] [-6] target_name\r\n\r\nOptions:\r\n    -t             Ping the specified host until stopped.\r\n                   To see statistics and continue - type Control-Break;\r\n                   To stop - type Control-C.\r\n    -a             Resolve addresses to hostnames.\r\n    -n count       Number of echo requests to send.\r\n    -l size        Send buffer size.\r\n    -f             Set Don't Fragment flag in packet (IPv4-only).\r\n    -i TTL         Time To Live.\r\n    -v TOS         Type Of Service (IPv4-only. This setting has been deprecated\r\n                   and has no effect on the type of service field in the IP\r\n                   Header).\r\n    -r count       Record route for count hops (IPv4-only).\r\n    -s count       Timestamp for count hops (IPv4-only).\r\n    -j host-list   Loose source route along host-list (IPv4-only).\r\n    -k host-list   Strict source route along host-list (IPv4-only).\r\n    -w timeout     Timeout in milliseconds to wait for each reply.\r\n    -R             Use routing header to test reverse route also (IPv6-only).\r\n                   Per RFC 5095 the use of this routing header has been\r\n                   deprecated. Some systems may drop echo requests if\r\n                   this header is used.\r\n    -S srcaddr     Source address to use.\r\n    -c compartment Routing compartment identifier.\r\n    -p             Ping a Hyper-V Network Virtualization provider address.\r\n    -4             Force using IPv4.\r\n    -6             Force using IPv6.\r\n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002711",
+  "low16": 10001,
+  "text": "Value must be supplied for option %1.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002712",
+  "low16": 10002,
+  "text": "Bad value for option %1, valid range is from %2!d! to %3!u!.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002713",
+  "low16": 10003,
+  "text": "Value must be supplied for loose source route.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002714",
+  "low16": 10004,
+  "text": "Bad route specified for loose source route.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002715",
+  "low16": 10005,
+  "text": "Value must be supplied for loose source route.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002716",
+  "low16": 10006,
+  "text": "Bad route specified for loose source route.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002717",
+  "low16": 10007,
+  "text": "Missing option after -o.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002718",
+  "low16": 10008,
+  "text": "Value must be supplied for loose source route.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002719",
+  "low16": 10009,
+  "text": "Bad route specified for loose source route.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271A",
+  "low16": 10010,
+  "text": "Bad value for option %1.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271B",
+  "low16": 10011,
+  "text": "Bad option %1.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271C",
+  "low16": 10012,
+  "text": "Bad parameter %1.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271D",
+  "low16": 10013,
+  "text": "Ping request could not find host %1. Please check the name and try again.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271E",
+  "low16": 10014,
+  "text": "IP address must be specified.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271F",
+  "low16": 10015,
+  "text": "Unable to contact IP driver. %1\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002720",
+  "low16": 10016,
+  "text": "\r\nPinging %1 [%2] %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002722",
+  "low16": 10018,
+  "text": "PING: transmit failed. %1\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002723",
+  "low16": 10019,
+  "text": "Reply from %1: %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002724",
+  "low16": 10020,
+  "text": "(sent %1!d!) %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002725",
+  "low16": 10021,
+  "text": "- MISCOMPARE at offset %1!d! - %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002726",
+  "low16": 10022,
+  "text": "time=%1!d!ms %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002727",
+  "low16": 10023,
+  "text": "time<1ms %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002728",
+  "low16": 10024,
+  "text": "TTL=%1!d!\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002729",
+  "low16": 10025,
+  "text": "General failure.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272A",
+  "low16": 10026,
+  "text": "Destination net unreachable.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272B",
+  "low16": 10027,
+  "text": "Destination host unreachable.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272C",
+  "low16": 10028,
+  "text": "Destination protocol unreachable.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272D",
+  "low16": 10029,
+  "text": "Destination port unreachable.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272E",
+  "low16": 10030,
+  "text": "No resources.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272F",
+  "low16": 10031,
+  "text": "Bad option specified.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002730",
+  "low16": 10032,
+  "text": "Hardware error.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002731",
+  "low16": 10033,
+  "text": "Packet needs to be fragmented but DF set.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002732",
+  "low16": 10034,
+  "text": "Request timed out.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002733",
+  "low16": 10035,
+  "text": "General failure.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002734",
+  "low16": 10036,
+  "text": "Invalid source route specified.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002735",
+  "low16": 10037,
+  "text": "TTL expired in transit.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002736",
+  "low16": 10038,
+  "text": "TTL expired during reassembly.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002737",
+  "low16": 10039,
+  "text": "IP parameter problem.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002738",
+  "low16": 10040,
+  "text": "Source quench received.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002739",
+  "low16": 10041,
+  "text": "Specified option is too large.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273A",
+  "low16": 10042,
+  "text": "Destination specified is invalid.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273B",
+  "low16": 10043,
+  "text": "General failure.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273C",
+  "low16": 10044,
+  "text": "bytes=%1!d! %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273D",
+  "low16": 10045,
+  "text": "Only one source route option may be specified.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273E",
+  "low16": 10046,
+  "text": "    A malformed source or record route option was received.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273F",
+  "low16": 10047,
+  "text": "\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002740",
+  "low16": 10048,
+  "text": "    Route: %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002741",
+  "low16": 10049,
+  "text": "%1 %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002742",
+  "low16": 10050,
+  "text": "-> %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002743",
+  "low16": 10051,
+  "text": "%1 : %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002744",
+  "low16": 10052,
+  "text": "%1!u! %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002745",
+  "low16": 10053,
+  "text": "    Timestamp: %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002746",
+  "low16": 10054,
+  "text": "    An malformed timestamp option was received.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002747",
+  "low16": 10055,
+  "text": "Too many options have been specified.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002748",
+  "low16": 10056,
+  "text": "Unable to allocate required memory.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002749",
+  "low16": 10057,
+  "text": "           %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000274A",
+  "low16": 10058,
+  "text": "Unable to initialize Windows Sockets interface. %1\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000274B",
+  "low16": 10059,
+  "text": "\r\nPinging %1 %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000274C",
+  "low16": 10060,
+  "text": "%1 [%2] %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000274D",
+  "low16": 10061,
+  "text": "%1 [%2] : %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000274E",
+  "low16": 10062,
+  "text": "               %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000274F",
+  "low16": 10063,
+  "text": "\r\nPing statistics for %1!s!:\r\n    Packets: Sent = %2!d!, Received = %3!d!, Lost = %4!d! (%5!u!%% loss),\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002750",
+  "low16": 10064,
+  "text": "Control-Break\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002751",
+  "low16": 10065,
+  "text": "Control-C\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002752",
+  "low16": 10066,
+  "text": "Negotiating IP Security.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002753",
+  "low16": 10067,
+  "text": "Approximate round trip times in milli-seconds:\r\n    Minimum = %1!d!ms, Maximum = %2!d!ms, Average = %3!d!ms\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002754",
+  "low16": 10068,
+  "text": "%1!s! is not a valid address.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002755",
+  "low16": 10069,
+  "text": "\r\nThe option %1 is only supported for %2.\r\n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002756",
+  "low16": 10070,
+  "text": "%1 %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002757",
+  "low16": 10071,
+  "text": "[%1] %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002758",
+  "low16": 10072,
+  "text": "Unable to create socket. %1\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002759",
+  "low16": 10073,
+  "text": "from %1!s! %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000275A",
+  "low16": 10074,
+  "text": "with %1!d! bytes of data:\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000275B",
+  "low16": 10075,
+  "text": "The source and destination address have different address family.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000275C",
+  "low16": 10076,
+  "text": "IPv4 Protocol is not installed.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000275D",
+  "low16": 10077,
+  "text": "Access denied. Option %1 requires administrative privileges.\r\n"
+ }
+]

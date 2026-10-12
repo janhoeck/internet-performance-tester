@@ -1,0 +1,54 @@
+[
+  {
+    "RecordId": 7727,
+    "Id": 107,
+    "Props": [
+      "6",
+      "5",
+      "5",
+      "01/01/1601 01:00:00",
+      "01/01/1601 01:00:00",
+      "0",
+      "0"
+    ],
+    "Message": "Das System wurde aus dem Energiesparmodus reaktiviert."
+  },
+  {
+    "RecordId": 7724,
+    "Id": 42,
+    "Props": [
+      "6",
+      "5",
+      "4",
+      "0",
+      "6"
+    ],
+    "Message": "Das System wird in den Standbymodus versetzt.\r\n\r\nUrsache: Application API"
+  },
+  {
+    "RecordId": 7553,
+    "Id": 107,
+    "Props": [
+      "6",
+      "5",
+      "5",
+      "01/01/1601 01:00:00",
+      "01/01/1601 01:00:00",
+      "0",
+      "0"
+    ],
+    "Message": "Das System wurde aus dem Energiesparmodus reaktiviert."
+  },
+  {
+    "RecordId": 7549,
+    "Id": 42,
+    "Props": [
+      "6",
+      "5",
+      "4",
+      "0",
+      "5"
+    ],
+    "Message": "Das System wird in den Standbymodus versetzt.\r\n\r\nUrsache: Application API"
+  }
+]

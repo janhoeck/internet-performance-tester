@@ -1,0 +1,63 @@
+<!--
+  Vorlage: Inhalt der Auswertung (nur der Körper – Kopfzeile, Stylesheet und Seitenformat ergänzt render.ts).
+  Alles in « » ersetzen; Abschnitte ohne Inhalt weglassen. Nur belegte Zahlen aus fakten.md verwenden.
+  Grafiken: GRAFIK-Kommentare (abschnitte, verlauf, stundenprofil) stehen lassen – render.ts setzt die SVGs ein.
+  Bausteine: .verdict good|warn|bad · .kpis/.kpi · ol.steps · .cards/.card · .callout(.warn) · .badge good|warn|bad|info|du|vodafone|dritte
+-->
+<p class="kicker">Auswertung deines Internetanschlusses</p>
+<h1>«Ein Satz, der das Problem auf den Punkt bringt – z. B. „Die Lags entstehen im Kabelnetz von Vodafone“»</h1>
+<p class="muted">«Langzeittest „…“ · 10.10.2026 12:18 – 13.10.2026 12:18 · 72 h gemessen · Stand …»</p>
+
+<div class="verdict «bad|warn|good»">
+  <h2>«Hauptursache: …»</h2>
+  <p>«2–3 Sätze Alltagssprache: Was passiert? Wo? Wie oft? Wie sicher ist das (vorläufig/sicher)?»</p>
+</div>
+
+<div class="kpis">
+  <div class="kpi"><div class="label">Gestörte Zeit</div><div class="value">«27 %»</div><div class="hint">«der Messzeit»</div></div>
+  <div class="kpi"><div class="label">Lag-Spitzen ≥ 200 ms</div><div class="value">«48 / h»</div><div class="hint">«gut wäre 0»</div></div>
+  <div class="kpi"><div class="label">Router (dein Heimnetz)</div><div class="value">«0,6 ms»</div><div class="hint">«einwandfrei»</div></div>
+  <div class="kpi"><div class="label">Gaming-Score</div><div class="value">«F · 25»</div><div class="hint">«von 100»</div></div>
+</div>
+
+<h2>Wo entstehen die Störungen?</h2>
+<!--GRAFIK:abschnitte-->
+<p>«Erklärung in einfachen Worten, was die Balken bedeuten und welcher Abschnitt wem gehört.»</p>
+
+<h2>Was jetzt zu tun ist</h2>
+<ol class="steps">
+  <li><span class="title">«Konkreter Schritt»</span> <span class="badge du">du</span><br>
+    «Warum dieser Schritt, wie genau (1–3 Handgriffe), woran du merkst, dass es geholfen hat.»</li>
+  <li><span class="title">«Störung bei Vodafone melden»</span> <span class="badge vodafone">Vodafone</span><br>
+    «Mit dem beiliegenden Schreiben und Messprotokoll; was Vodafone tun soll.»</li>
+  <li><span class="title">«Nachmessen»</span> <span class="badge info">Kontrolle</span><br>
+    «Neuen Langzeittest starten und mit diesem vergleichen (vorher/nachher).»</li>
+</ol>
+
+<h2>Die Befunde im Einzelnen</h2>
+<div class="cards">
+  <div class="card">
+    <h3>«Befund»</h3>
+    <p><span class="badge «bad|warn|good»">«kritisch»</span> <span class="badge «vodafone|du|dritte»">«zuständig»</span></p>
+    <p>«Was gemessen wurde (mit Zahlen) und was das bedeutet.»</p>
+  </div>
+</div>
+
+<h2>Verlauf</h2>
+<!--GRAFIK:verlauf-->
+<p>«Was der zeitliche Verlauf zeigt – Häufungen, Uhrzeiten, Abend vs. Tag.»</p>
+<!--GRAFIK:stundenprofil-->
+<p>«Erklärung: Router flach = Heimnetz ok; Kurve steigt ab dem Kabelnetz = Problem dort.»</p>
+
+<h2>Was in Ordnung ist</h2>
+<ul>
+  <li>«Entlastende Befunde, z. B. Router-Ping, kein VPN-Einfluss, NAT günstig.»</li>
+</ul>
+
+<h2>Wie sicher ist das Ergebnis?</h2>
+<div class="callout «warn»">«Messdauer, Abend enthalten?, Sicherheit der Regeln, offene Punkte. Bei < 24 h klar „vorläufig“.»</div>
+
+<h2>Begriffe kurz erklärt</h2>
+<ul class="small">
+  <li><strong>Ping/Latenz:</strong> «…»</li>
+</ul>

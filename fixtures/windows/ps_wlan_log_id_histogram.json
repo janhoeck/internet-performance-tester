@@ -1,0 +1,62 @@
+[
+  {
+    "Id": 11005,
+    "Count": 59,
+    "Newest": "2026-10-09T13:37:55.0880643+02:00",
+    "Sample": "Die Funksicherheit war erfolgreich."
+  },
+  {
+    "Id": 11004,
+    "Count": 59,
+    "Newest": "2026-10-09T13:38:31.7166552+02:00",
+    "Sample": "Die Funksicherheit wurde angehalten."
+  },
+  {
+    "Id": 11010,
+    "Count": 59,
+    "Newest": "2026-10-09T13:37:55.0635301+02:00",
+    "Sample": "Die Funksicherheit wurde gestartet."
+  },
+  {
+    "Id": 11000,
+    "Count": 58,
+    "Newest": "2026-10-09T13:37:53.0068022+02:00",
+    "Sample": "Die Drahtlosnetzwerkzuordnung wurde gestartet."
+  },
+  {
+    "Id": 8000,
+    "Count": 58,
+    "Newest": "2026-10-08T19:11:27.2808732+02:00",
+    "Sample": "Der Dienst für die automatische WLAN-Konfiguration hat eine Verbindung mit einem Funknetzwerk gestartet."
+  },
+  {
+    "Id": 8001,
+    "Count": 54,
+    "Newest": "2026-10-09T13:37:55.0931808+02:00",
+    "Sample": "Vom Dienst für die automatische WLAN-Konfiguration wurde erfolgreich eine Verbindung mit einem Funknetzwerk hergestellt."
+  },
+  {
+    "Id": 11001,
+    "Count": 54,
+    "Newest": "2026-10-09T13:37:55.0635214+02:00",
+    "Sample": "Die Funknetzwerkzuordnung war erfolgreich."
+  },
+  {
+    "Id": 8003,
+    "Count": 51,
+    "Newest": "2026-10-09T13:38:31.7184060+02:00",
+    "Sample": "Der Dienst für die automatische WLAN-Konfiguration hat die Verbindung mit einem Funknetzwerk erfolgreich getrennt."
+  },
+  {
+    "Id": 8002,
+    "Count": 4,
+    "Newest": "2026-10-08T18:29:52.3189508+02:00",
+    "Sample": "Vom Dienst für die automatische WLAN-Konfiguration konnte keine Verbindung mit einem Funknetzwerk hergestellt werden."
+  },
+  {
+    "Id": 8011,
+    "Count": 3,
+    "Newest": "2026-10-08T18:29:23.4120451+02:00",
+    "Sample": "Die Verbindung mit dem letzten fehlerfreien Netzwerk wird hergestellt. "
+  }
+]

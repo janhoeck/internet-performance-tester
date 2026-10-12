@@ -1,0 +1,12 @@
+{
+  "password": "test-password",
+  "salt": "badd6f0848f968df",
+  "iv": "c1697be73d452e75",
+  "iterations": 1000,
+  "keySizeBits": 128,
+  "tagLenBits": 128,
+  "loginPlaintext": "{\"Password\": \"test-password\", \"Nonce\": \"df59fc3de28c9f18d95a162836aa298b\"}",
+  "encAad": "loginPassword",
+  "decAad": "nonce",
+  "decPlaintext": "df59fc3de28c9f18d95a162836aa298b"
+}

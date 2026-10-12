@@ -1,0 +1,11 @@
+[
+  {
+    "LogName": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "RecordCount": 459,
+    "IsEnabled": true,
+    "MaximumSizeInBytes": 1052672,
+    "FileSize": 1052672,
+    "LastWriteTime": "2026-10-09T13:44:35.3997510+02:00",
+    "OldestRecordNumber": 1
+  }
+]

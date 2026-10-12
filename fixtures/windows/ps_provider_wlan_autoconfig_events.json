@@ -1,0 +1,290 @@
+[
+  {
+    "Id": 8000,
+    "Version": 0,
+    "Description": "Der Dienst für die automatische WLAN-Konfiguration hat eine Verbindung mit einem Funknetzwerk gestartet. Netzwerkadapter: %2 Schnittstellen- GUID: %1 Verbindungsmodus: %3 Profilname: %4 SSID: %5 BSS-Typ: %6",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"InterfaceDescription\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ConnectionMode\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ProfileName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> </template>"
+  },
+  {
+    "Id": 8001,
+    "Version": 0,
+    "Description": "Vom Dienst für die automatische WLAN-Konfiguration wurde erfolgreich eine Verbindung mit einem Funknetzwerk hergestellt. Netzwerkadapter: %2 Schnittstellen-GUID: %1 Verbindungsmodus: %3 Profilname: %4 SSID: %5 BSS-Typ: %6 PHY-Typ: %7 Authentifizierung: %8 Verschlüsselung: %9 802.1x-fähig: %10 Ausgeblendet: %12",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"InterfaceDescription\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ConnectionMode\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ProfileName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"PHYType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"AuthenticationAlgorithm\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"CipherAlgorithm\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"OnexEnabled\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> <data name=\"NonBroadcast\" inType=\"win:Boolean\" outType=\"xs:boolean\"/> </template>"
+  },
+  {
+    "Id": 8002,
+    "Version": 0,
+    "Description": "Vom Dienst für die automatische WLAN-Konfiguration konnte keine Verbindung mit einem Funknetzwerk hergestellt werden. Netzwerkadapter: %2 Schnittstellen-GUID: %1 Verbindungsmodus: %3 Profilname: %4 SSID: %5 BSS-Typ: %6 Fehlerursache:%7 RSSI %10",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"InterfaceDescription\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ConnectionMode\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ProfileName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"FailureReason\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ReasonCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> <data name=\"RSSI\" inType=\"win:Int32\" outType=\"xs:int\"/> </template>"
+  },
+  {
+    "Id": 8003,
+    "Version": 0,
+    "Description": "Der Dienst für die automatische WLAN-Konfiguration hat die Verbindung mit einem Funknetzwerk erfolgreich getrennt. Netzwerkadapter: %2 Schnittstellen-GUID: %1 Verbindungsmodus: %3 Profilname: %4 SSID: %5 BSS-Typ: %6 Ursache: %7",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"InterfaceDescription\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ConnectionMode\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ProfileName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"Reason\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> <data name=\"ReasonCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> </template>"
+  },
+  {
+    "Id": 8004,
+    "Version": 0,
+    "Description": "Das Funknetzwerk ist aufgrund eines Verbindungsfehlers blockiert. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Verbindungsmodus: %5 Profilname: %4 SSID(s): %3 BSS-Typ: %6 Fehlerursache:%7 Dauer des Blockierungszeitgebers (Minuten): %8",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceDescription\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"SSID(s)\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ProfileName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ConnectionMode\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"FailureReason\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BlockTime\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"ReasonCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> </template>"
+  },
+  {
+    "Id": 8005,
+    "Version": 0,
+    "Description": "Das Starten des gehosteten Netzwerks über den Dienst für die automatische WLAN-Konfiguration hat begonnen. Schnittstellen-GUID: %1 SSID: %2",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"SSID\" inType=\"win:AnsiString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 8006,
+    "Version": 0,
+    "Description": "Das Starten des gehosteten Netzwerks über den Dienst für die automatische WLAN-Konfiguration wurde fertig gestellt. Schnittstellen-GUID: %1 SSID: %2",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"SSID\" inType=\"win:AnsiString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 8007,
+    "Version": 0,
+    "Description": "Fehler beim Starten des gehosteten Netzwerks über den Dienst für die automatische WLAN-Konfiguration. Fehlercode: %2 Fehlermeldung: %3 Schnittstellen-GUID: %1 SSID: %4",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"ErrorCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"ErrorMsg\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:AnsiString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 8008,
+    "Version": 0,
+    "Description": "Das Beenden des gehosteten Netzwerks über den Dienst für die automatische Konfiguration hat begonnen. Schnittstellen-GUID: %1 SSID: %2",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"SSID\" inType=\"win:AnsiString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 8009,
+    "Version": 0,
+    "Description": "Das Beenden des gehosteten Netzwerks über den Dienst für die automatische WLAN-Konfiguration wurde fertig gestellt. Schnittstellen-GUID: %1 SSID: %2",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"SSID\" inType=\"win:AnsiString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 8010,
+    "Version": 0,
+    "Description": "Fehler beim Beenden des gehosteten Netzwerks über den Dienst für die automatische WLAN-Konfiguration. Fehlercode: %2 Fehlermeldung: %3 Schnittstellen-GUID: %1 SSID: %4",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"ErrorCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"ErrorMsg\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:AnsiString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 8011,
+    "Version": 0,
+    "Description": "Die Verbindung mit dem letzten fehlerfreien Netzwerk wird hergestellt. Netzwerkadapter: %2 Schnittstellen-GUID: %1 Profilename: %3 SSID: %4 BSS-Typ: %5",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"InterfaceDescription\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ProfileName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> </template>"
+  },
+  {
+    "Id": 8012,
+    "Version": 0,
+    "Description": "Netzwerkadapter für NLO-Ermittlung: Schnittstellen-GUID: %1 %2",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"InterfaceDescription\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 11000,
+    "Version": 0,
+    "Description": "Die Drahtlosnetzwerkzuordnung wurde gestartet. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Lokale MAC-Adresse: %3 Netzwerk-SSID: %4 BSS-Typ: %5 Authentifizierung: %6 Verschlüsselung: %7 802.1X Aktiviert: %8",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Adapter\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"DeviceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"LocalMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"Auth\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"Cipher\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"OnexEnabled\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"IhvConnectivitySetting\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> </template>"
+  },
+  {
+    "Id": 11001,
+    "Version": 0,
+    "Description": "Die Funknetzwerkzuordnung war erfolgreich. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Lokale MAC-Adresse: %3 Netzwerk-SSID: %4 BSS-Typ: %5 Management Frame Protection-fähig: %6",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Adapter\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"DeviceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"LocalMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> <data name=\"MgmtFrameProtection\" inType=\"win:Boolean\" outType=\"xs:boolean\"/> </template>"
+  },
+  {
+    "Id": 11002,
+    "Version": 0,
+    "Description": "Fehler bei der Funknetzwerkzuordnung. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Lokale MAC-Adresse: %3 Netzwerk-SSID: %4 BSS-Typ: %5 Fehlerursache: %6 Dot11-Statuscode: %8 RSSI: %10",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Adapter\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"DeviceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"LocalMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"FailureReason\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ReasonCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"Dot11StatusCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> <data name=\"RSSI\" inType=\"win:Int32\" outType=\"xs:int\"/> </template>"
+  },
+  {
+    "Id": 11003,
+    "Version": 0,
+    "Description": "Die Funksicherheit wurde gestartet. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Lokale MAC-Adresse: %3 Netzwerk-SSID: %4 BSS-Typ: %5 Authentifizierung: %6 Verschlüsselung: %8 802.1x-fähig: %10",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Adapter\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"DeviceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"LocalMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"Auth\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"AuthVal\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"Cipher\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"CipherVal\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"FIPSMode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"OnexEnabled\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> </template>"
+  },
+  {
+    "Id": 11004,
+    "Version": 0,
+    "Description": "Die Funksicherheit wurde angehalten. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Lokale MAC-Adresse: %3 Netzwerk-SSID: %4 BSS-Typ: %5 Sicherheitshinweis: %6",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Adapter\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"DeviceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"LocalMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SecurityHint\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SecurityHintCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> </template>"
+  },
+  {
+    "Id": 11005,
+    "Version": 0,
+    "Description": "Die Funksicherheit war erfolgreich. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Lokale MAC-Adresse: %3 Netzwerk-SSID: %4 BSS-Typ: %5",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Adapter\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"DeviceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"LocalMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> </template>"
+  },
+  {
+    "Id": 11006,
+    "Version": 0,
+    "Description": "Fehler bei der Drahtlossicherheit. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Lokale MAC-Adresse: %3 Netzwerk-SSID: %4 BSS-Typ: %5 Peer-MAC-Adresse: %6 Ursache: %7 Fehler: %9",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Adapter\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"DeviceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"LocalMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"PeerMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ReasonText\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ReasonCode\" inType=\"win:HexInt32\" outType=\"win:HexInt32\"/> <data name=\"ErrorCode\" inType=\"win:HexInt32\" outType=\"win:HexInt32\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> </template>"
+  },
+  {
+    "Id": 11007,
+    "Version": 0,
+    "Description": "Die Funk-IHV-Sicherheit wurde gestartet. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Lokale MAC-Adresse: %3 Netzwerk-SSID: %4 BSS-Typ: %5",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Adapter\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"DeviceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"LocalMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"IhvSecuritySetting\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> </template>"
+  },
+  {
+    "Id": 11008,
+    "Version": 0,
+    "Description": "Die Funk-IHV-Sicherheit war erfolgreich. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Lokale MAC-Adresse: %3 Netzwerk-SSID: %4 BSS-Typ: %5",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Adapter\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"DeviceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"LocalMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> </template>"
+  },
+  {
+    "Id": 11009,
+    "Version": 0,
+    "Description": "Fehler bei der Drahtlos-IHV-Sicherheit. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Lokale MAC-Adresse: %3 Netzwerk- SSID: %4 BSS-Typ: %5 Peer-MAC-Adresse: %6 Ursache: %7 Zusätzliche Datenlänge: %8",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Adapter\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"DeviceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"LocalMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"PeerMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"IhvReasonCode\" inType=\"win:HexInt32\" outType=\"win:HexInt32\"/> <data name=\"IhvDataLength\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"IhvData\" inType=\"win:Binary\" outType=\"xs:hexBinary\" length=\"256\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> </template>"
+  },
+  {
+    "Id": 11010,
+    "Version": 0,
+    "Description": "Die Funksicherheit wurde gestartet. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Lokale MAC-Adresse: %3 Netzwerk-SSID: %4 BSS-Typ: %5 Authentifizierung: %6 Verschlüsselung: %8 FIPS-Modus: %10 802.1x-fähig: %11",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Adapter\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"DeviceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"LocalMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"Auth\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"AuthVal\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"Cipher\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"CipherVal\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"FIPSMode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"OnexEnabled\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> </template>"
+  },
+  {
+    "Id": 12011,
+    "Version": 0,
+    "Description": "Die Funk-802.1x-Authentifizierung wurde gestartet. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Lokale MAC-Adresse: %3 Netzwerk-SSID: %4 BSS-Typ: %5 EAP-Informationstyp: %6, Anbieter-ID: %7, Anbietertyp: %8, Autor-ID: %9",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Adapter\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"DeviceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"LocalMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"EapType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"VendorID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"VendorType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"AuthorID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> </template>"
+  },
+  {
+    "Id": 12012,
+    "Version": 0,
+    "Description": "Die Funk-802.1x-Authentifizierung war erfolgreich. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Lokale MAC-Adresse: %3 Netzwerk-SSID: %4 BSS-Typ: %5 Identität: %6 Benutzer: %8 Domäne: %8",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Adapter\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"DeviceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"LocalMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"Identity\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"User\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"Domain\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> <data name=\"ExplicitCredentials\" inType=\"win:Boolean\" outType=\"xs:boolean\"/> </template>"
+  },
+  {
+    "Id": 12013,
+    "Version": 0,
+    "Description": "Fehler bei der Drahtlos-802.1X-Authentifizerung. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Lokale MAC-Adresse: %3 Netzwerk-SSID: %4 BSS-Typ: %5 Peer-MAC-Adresse: %6 Identität: %7 Benutzer: %8 Domäne: %9 Ursache: %10 Fehler: %12 EAP-Grund: %13 EAP-Fehlerursachen-Zeichenfolge: %14 EAP-Fehler: %15",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Adapter\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"DeviceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"LocalMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"PeerMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"Identity\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"User\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"Domain\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ReasonText\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ReasonCode\" inType=\"win:HexInt32\" outType=\"win:HexInt32\"/> <data name=\"ErrorCode\" inType=\"win:HexInt32\" outType=\"win:HexInt32\"/> <data name=\"EAPReasonCode\" inType=\"win:HexInt32\" outType=\"win:HexInt32\"/> <data name=\"EAPRootCauseString\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"EAPErrorCode\" inType=\"win:HexInt32\" outType=\"win:HexInt32\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> <data name=\"ExplicitCredentials\" inType=\"win:Boolean\" outType=\"xs:boolean\"/> </template>"
+  },
+  {
+    "Id": 12014,
+    "Version": 0,
+    "Description": "Die Funk-802.1x-Authentifizierung wurde neu gestartet. Netzwerkadapter: %1 Schnittstellen-GUID: %2 Lokale MAC-Adresse: %3 Netzwerk-SSID: %4 BSS-Typ: %5 EAP-Informationstyp: %6, Anbieter-ID: %7, Anbietertyp: %8, Autor-ID: %9 Grund für Neustart: %10",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Adapter\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"DeviceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"LocalMac\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"BSSType\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"EapType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"VendorID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"VendorType\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"AuthorID\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"RestartReason\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"ConnectionId\" inType=\"win:Pointer\" outType=\"win:HexInt64\"/> </template>"
+  },
+  {
+    "Id": 13001,
+    "Version": 0,
+    "Description": "Es wurde nicht versucht, eine Prä-Anmeldungsverbindung herzustellen. Ergebnis: %1 Ursache: %2",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Result\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"Reason\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> </template>"
+  },
+  {
+    "Id": 13002,
+    "Version": 0,
+    "Description": "Es wurde versucht, eine Prä-Anmeldungsverbindung herzustellen. Ergebnis: %1 Schnittstellen-GUID: %2 Profilname: %3 Angeforderte Felder: %4",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Result\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"ProfileName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"RequestedFields\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 13011,
+    "Version": 0,
+    "Description": "Es wurde nicht versucht, nach der Anmeldung eine Verbindung herzustellen. Ergebnis: %1 Ursache: %2",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Result\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"Reason\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> </template>"
+  },
+  {
+    "Id": 13012,
+    "Version": 0,
+    "Description": "Nach der Anmeldung wurde versucht, eine Verbindung herzustellen. Ergebnis: %1 Schnittstellen-GUID: %2 Profilname: %3",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Result\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"ProfileName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 13013,
+    "Version": 0,
+    "Description": "Der nach der Anmeldung erfolgte Verbindungsversuch ist abgeschlossen. Ergebnis des Netzwerkverbindungsversuchs: %1 Ursache: %2 Schnittstellen-GUID: %3 Profilname: %4",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Result\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"Reason\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"ProfileName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 13014,
+    "Version": 0,
+    "Description": "Es wurde versucht, nach der Anmeldung eine Verbindung herzustellen. Ergebnis: %1 Schnittstellen-GUID: %2 Profilname: %3",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Result\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"ProfileName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 13100,
+    "Version": 0,
+    "Description": "%1 - Kosten werden für Profil %4 bei Schnittstelle %3 auf %2 geändert.",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"CostSource\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"CostValue\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"ProfileName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 13101,
+    "Version": 0,
+    "Description": "Gruppenrichtlinienkosten werden auf %1 geändert.",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"CostValue\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> </template>"
+  },
+  {
+    "Id": 13102,
+    "Version": 0,
+    "Description": "%1 - Kosten werden für Profil %3 bei Schnittstelle %2 gelöscht.",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"CostSource\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"ProfileName\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 13103,
+    "Version": 0,
+    "Description": "Gruppenrichtlinienkosten werden gelöscht.",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> </template>"
+  },
+  {
+    "Id": 20019,
+    "Version": 0,
+    "Description": "Ein Client wurde dem gehosteten Netzwerk zugeordnet. Schnittstellen-GUID: %1 Schnittstellenbeschreibung:%2 Netzwerk-SSID: %3 Lokale MAC-Adresse: %4 Peer-MAC-Adresse: %5",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"InterfaceDescription\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"LocalMAC\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"PeerMAC\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 20020,
+    "Version": 0,
+    "Description": "Ein Client wurde erfolgreich für das gehostete Netzwerk authentifiziert. Schnittstellen-GUID: %1 Schnittstellenbeschreibung:%2 Netzwerk-SSID: %3 Lokale MAC-Adresse: %4 Peer-MAC-Adresse: %5",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"InterfaceDescription\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"LocalMAC\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"PeerMAC\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 20021,
+    "Version": 0,
+    "Description": "Fehler beim Authentifizieren eines Clients für das gehostete Netzwerk. Fehlercode: %2 Fehlermeldung: %3 Schnittstellen-GUID: %1 Schnittstellenbeschreibung:%4 Netzwerk-SSID: %5 Lokale MAC-Adresse: %6",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"InterfaceGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"ErrorCode\" inType=\"win:UInt32\" outType=\"win:ErrorCode\"/> <data name=\"ErrorMsg\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"InterfaceDescription\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"SSID\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> <data name=\"LocalMAC\" inType=\"win:UnicodeString\" outType=\"xs:string\"/> </template>"
+  },
+  {
+    "Id": 60001,
+    "Version": 0,
+    "Description": "Fehler: %1 Speicherort: %2 Kontext: %3",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"ErrorCode\" inType=\"win:UInt32\" outType=\"win:ErrorCode\"/> <data name=\"Location\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"Context\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> </template>"
+  },
+  {
+    "Id": 60002,
+    "Version": 0,
+    "Description": "Warnung: %1 Speicherort: %2 Kontext: %3",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"WarningCode\" inType=\"win:UInt32\" outType=\"win:ErrorCode\"/> <data name=\"Location\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"Context\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> </template>"
+  },
+  {
+    "Id": 60003,
+    "Version": 0,
+    "Description": "Gewechselt in Status: %1 Kontext: %2",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"NextState\" inType=\"win:UInt8\" outType=\"xs:unsignedByte\"/> <data name=\"Context\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> </template>"
+  },
+  {
+    "Id": 60004,
+    "Version": 0,
+    "Description": "Aktualisierter Kontext: %1 Ursache für Update: %2",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"Context\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"UpdateReasonCode\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> </template>"
+  },
+  {
+    "Id": 60101,
+    "Version": 0,
+    "Description": "Quelladresse: %1 Quellport: %2 Zieladresse: %3 Zielport: %4 Protokoll: %5 Referenzparameter: %6",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"SourceAddress\" inType=\"win:UInt32\" outType=\"win:IPv4\"/> <data name=\"SourcePort\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"DestinationAddress\" inType=\"win:UInt32\" outType=\"win:IPv4\"/> <data name=\"DestinationPort\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"Protocol\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"ReferenceContext\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> </template>"
+  },
+  {
+    "Id": 60102,
+    "Version": 0,
+    "Description": "Quelladresse: %1 Quellport: %2 Zieladresse: %3 Zielport: %4 Protokoll: %5 Referenzparameter: %6",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"SourceAddress\" inType=\"win:Binary\" outType=\"win:IPv6\" length=\"16\"/> <data name=\"SourcePort\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"DestinationAddress\" inType=\"win:Binary\" outType=\"win:IPv6\" length=\"16\"/> <data name=\"DestinationPort\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"Protocol\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"ReferenceContext\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> </template>"
+  },
+  {
+    "Id": 60103,
+    "Version": 0,
+    "Description": "Schnittstellen-Guid: %1 Schnittstellen-Index: %2 Schnittstellen-LUID: %3 Referenzparameter: %4",
+    "Template": "<template xmlns=\"http://schemas.microsoft.com/win/2004/08/events\"> <data name=\"IfGuid\" inType=\"win:GUID\" outType=\"xs:GUID\"/> <data name=\"IfIndex\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> <data name=\"IfLuid\" inType=\"win:UInt64\" outType=\"win:HexInt64\"/> <data name=\"ReferenceContext\" inType=\"win:UInt32\" outType=\"xs:unsignedInt\"/> </template>"
+  }
+]

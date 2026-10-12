@@ -1,0 +1,6 @@
+[
+  {
+    "errorId": "NoMatchingEventsFound,Microsoft.PowerShell.Commands.GetWinEventCommand",
+    "message": "Es wurden keine Ereignisse gefunden, die den angegebenen Auswahlkriterien entsprechen."
+  }
+]

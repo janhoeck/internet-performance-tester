@@ -1,0 +1,5630 @@
+[
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 1,
+    "t": 1787589512174,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 2,
+    "t": 1787667938044,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 3,
+    "t": 1787667939772,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x100000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 6,
+    "t": 1787667939798,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x1",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 8,
+    "t": 1787667972325,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x1",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 9,
+    "t": 1787675388612,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 10,
+    "t": 1787752788244,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 11,
+    "t": 1787752789539,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x200000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 14,
+    "t": 1787752789579,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x2",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 16,
+    "t": 1787752865187,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x2",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 17,
+    "t": 1787765541392,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x3"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 18,
+    "t": 1787842815154,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x3"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 19,
+    "t": 1787842816659,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x300000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 22,
+    "t": 1787842816691,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x3",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 24,
+    "t": 1787842849380,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x3",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 25,
+    "t": 1787850269605,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x4"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 26,
+    "t": 1787925723032,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x4"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 27,
+    "t": 1787925724790,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x400000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 30,
+    "t": 1787925724845,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x4",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 32,
+    "t": 1787925757305,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x4",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 33,
+    "t": 1787932873873,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 34,
+    "t": 1788076196028,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 35,
+    "t": 1788076197916,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x500000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 38,
+    "t": 1788076197953,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x5",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 40,
+    "t": 1788076232310,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x5",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 41,
+    "t": 1788113691614,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x6"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 42,
+    "t": 1788184896019,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x6"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 43,
+    "t": 1788184897354,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x600000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 46,
+    "t": 1788184897391,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x6",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 48,
+    "t": 1788184930306,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x6",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 49,
+    "t": 1788197672261,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 50,
+    "t": 1788197672268,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 51,
+    "t": 1788197672326,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x100000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 54,
+    "t": 1788197672355,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x1",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 56,
+    "t": 1788197672865,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x1",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 57,
+    "t": 1788242333022,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 58,
+    "t": 1788272871963,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 59,
+    "t": 1788272872872,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x100000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 62,
+    "t": 1788272872900,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x1",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 64,
+    "t": 1788272906725,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x1",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 65,
+    "t": 1788285706379,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 66,
+    "t": 1788290120074,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 67,
+    "t": 1788290121036,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x200000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 70,
+    "t": 1788290121073,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x2",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 72,
+    "t": 1788290154536,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x2",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 73,
+    "t": 1788338313599,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 74,
+    "t": 1788338313611,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 75,
+    "t": 1788338313678,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x100000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 78,
+    "t": 1788338313708,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x1",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 80,
+    "t": 1788338314232,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x1",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8011,
+    "recordId": 81,
+    "t": 1788373462829,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 82,
+    "t": 1788373462886,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 83,
+    "t": 1788419392020,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 84,
+    "t": 1788419393423,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x200000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 87,
+    "t": 1788419393451,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x2",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 89,
+    "t": 1788419429328,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x2",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 90,
+    "t": 1788432723049,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x3"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 91,
+    "t": 1788440169012,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x3"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 92,
+    "t": 1788440170213,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x300000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 95,
+    "t": 1788440170245,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x3",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 97,
+    "t": 1788440203726,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x3",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 98,
+    "t": 1788459845598,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x4"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 99,
+    "t": 1788523116046,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x4"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 100,
+    "t": 1788523117301,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x400000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 103,
+    "t": 1788523117378,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x4",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 105,
+    "t": 1788523153237,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x4",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 106,
+    "t": 1788542822599,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 107,
+    "t": 1788594538035,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 108,
+    "t": 1788594538846,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x500000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 111,
+    "t": 1788594538897,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x5",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 113,
+    "t": 1788594574818,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x5",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 114,
+    "t": 1788607621613,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x6"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 115,
+    "t": 1788684636056,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x6"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 116,
+    "t": 1788684639043,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x600000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 119,
+    "t": 1788684639088,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x6",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 121,
+    "t": 1788684673654,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x6",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 122,
+    "t": 1788800614466,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 123,
+    "t": 1788877609050,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 124,
+    "t": 1788877612110,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x100000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 127,
+    "t": 1788877612145,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x1",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 129,
+    "t": 1788877646469,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x1",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 130,
+    "t": 1788888925800,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 131,
+    "t": 1788888925814,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 132,
+    "t": 1788888925983,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x200000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 135,
+    "t": 1788888926019,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x2",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 140,
+    "t": 1788888988770,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wurde vom Treiber getrennt.",
+      "ConnectionId": "0x2",
+      "ReasonCode": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 141,
+    "t": 1788888996311,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 142,
+    "t": 1788888996319,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 143,
+    "t": 1788888996389,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x100000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 146,
+    "t": 1788888996416,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x1",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 148,
+    "t": 1788889061323,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Anforderung zum vorübergehenden Trennen der Verbindung getrennt.",
+      "ConnectionId": "0x1",
+      "ReasonCode": "13"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 149,
+    "t": 1788889125676,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 150,
+    "t": 1788889125690,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 151,
+    "t": 1788889125704,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x200000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 154,
+    "t": 1788889125757,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x2",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 156,
+    "t": 1788961862138,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wurde vom Treiber getrennt.",
+      "ConnectionId": "0x2",
+      "ReasonCode": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 157,
+    "t": 1788961863361,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x3"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 158,
+    "t": 1788961863368,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x3"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 159,
+    "t": 1788961863569,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x300000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 162,
+    "t": 1788961863770,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x3",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 164,
+    "t": 1788961898993,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x3",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 165,
+    "t": 1788979720841,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x4"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 166,
+    "t": 1789049898047,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x4"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 167,
+    "t": 1789049899529,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x400000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 170,
+    "t": 1789049899582,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x4",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 172,
+    "t": 1789049995044,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x4",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 173,
+    "t": 1789064037857,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 174,
+    "t": 1789064037865,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 175,
+    "t": 1789064038405,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x100000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 178,
+    "t": 1789064038433,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x1",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 180,
+    "t": 1789064038955,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x1",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 181,
+    "t": 1789135611652,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 182,
+    "t": 1789135611658,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 183,
+    "t": 1789135611713,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x100000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 186,
+    "t": 1789135611751,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x1",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 188,
+    "t": 1789135673334,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x1",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 189,
+    "t": 1789145990417,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 190,
+    "t": 1789294076029,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 191,
+    "t": 1789294077406,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x200000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 194,
+    "t": 1789294077460,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x2",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 196,
+    "t": 1789294113553,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x2",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 197,
+    "t": 1789300091200,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x3"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 198,
+    "t": 1790322787375,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x3"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 199,
+    "t": 1790322791393,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x300000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 202,
+    "t": 1790322791425,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x3",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 204,
+    "t": 1790322825865,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x3",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 205,
+    "t": 1790368493233,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x4"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 206,
+    "t": 1790416989073,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x4"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 207,
+    "t": 1790416990837,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x400000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 210,
+    "t": 1790416990876,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x4",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 215,
+    "t": 1790439934056,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x4",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 216,
+    "t": 1790440624972,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 217,
+    "t": 1790440625010,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 218,
+    "t": 1790440625231,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x500000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 221,
+    "t": 1790440625261,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x5",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 223,
+    "t": 1790440664278,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x5",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 224,
+    "t": 1790440834851,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x6"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 225,
+    "t": 1790440835025,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x6"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 226,
+    "t": 1790440835241,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x600000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 229,
+    "t": 1790440835276,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x6",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 231,
+    "t": 1790440872850,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x6",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 232,
+    "t": 1790441190007,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x7"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 233,
+    "t": 1790441190032,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x7"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 234,
+    "t": 1790441190261,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x700000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 237,
+    "t": 1790441190286,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x7",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 239,
+    "t": 1790441586804,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x7",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 240,
+    "t": 1790445984120,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x8"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 241,
+    "t": 1790495506031,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x8"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 242,
+    "t": 1790495507494,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x800000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 245,
+    "t": 1790495507521,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x8",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 247,
+    "t": 1790495577287,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x8",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 248,
+    "t": 1790498710356,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x9"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 249,
+    "t": 1790498710420,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x9"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 250,
+    "t": 1790498710587,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x900000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 253,
+    "t": 1790498710624,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x9",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 255,
+    "t": 1790498755989,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x9",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 256,
+    "t": 1790505632429,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0xa"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 257,
+    "t": 1790529784996,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0xa"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 258,
+    "t": 1790529786536,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0xa00000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 261,
+    "t": 1790529786568,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0xa",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 263,
+    "t": 1790535613185,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 264,
+    "t": 1790535613197,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 265,
+    "t": 1790535613250,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x100000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 268,
+    "t": 1790535613315,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x1",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 270,
+    "t": 1790535613898,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x1",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 271,
+    "t": 1790688730847,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 272,
+    "t": 1790688730854,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 273,
+    "t": 1790688730907,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x100000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 276,
+    "t": 1790688730951,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x1",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 278,
+    "t": 1790688731466,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x1",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 279,
+    "t": 1790688842873,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 280,
+    "t": 1790688842881,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 281,
+    "t": 1790688842937,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x100000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 284,
+    "t": 1790688842958,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x1",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 289,
+    "t": 1790776039793,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x1",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 290,
+    "t": 1790776124364,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 291,
+    "t": 1790776124377,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 292,
+    "t": 1790776124547,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x200000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 295,
+    "t": 1790776124575,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x2",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 297,
+    "t": 1790776158981,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x2",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 298,
+    "t": 1790783270138,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x3"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 299,
+    "t": 1790861712057,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x3"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 300,
+    "t": 1790861713391,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x300000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 303,
+    "t": 1790861713422,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x3",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 305,
+    "t": 1790861776826,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x3",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 306,
+    "t": 1790881200641,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x4"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 307,
+    "t": 1790948470044,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x4"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 308,
+    "t": 1790948471668,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x400000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 311,
+    "t": 1790948471710,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x4",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 313,
+    "t": 1790948534783,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x4",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 314,
+    "t": 1790968245149,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 315,
+    "t": 1791014515062,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 316,
+    "t": 1791014516728,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x500000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 319,
+    "t": 1791014516755,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x5",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 321,
+    "t": 1791014551592,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x5",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8011,
+    "recordId": 322,
+    "t": 1791024693541,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 323,
+    "t": 1791024693602,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x6"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 324,
+    "t": 1791028381015,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x6"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 325,
+    "t": 1791028382600,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x600000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 328,
+    "t": 1791028382631,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x6",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 330,
+    "t": 1791028651398,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x6",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 331,
+    "t": 1791028824573,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Manuelle Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x7"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 332,
+    "t": 1791028824584,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x7"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 333,
+    "t": 1791028824601,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x700000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 336,
+    "t": 1791028824632,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Manuelle Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x7",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 338,
+    "t": 1791048404158,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 339,
+    "t": 1791048404171,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 340,
+    "t": 1791048404224,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x100000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 343,
+    "t": 1791048404257,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x1",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 345,
+    "t": 1791053982068,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 346,
+    "t": 1791106159048,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 347,
+    "t": 1791106160365,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x100000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 350,
+    "t": 1791106160398,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x1",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 352,
+    "t": 1791106252513,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x1",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 353,
+    "t": 1791134992599,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 354,
+    "t": 1791204027015,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 355,
+    "t": 1791204027926,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x200000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 358,
+    "t": 1791204027970,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x2",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 360,
+    "t": 1791204091369,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x2",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 361,
+    "t": 1791222479102,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x3"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 362,
+    "t": 1791295024063,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x3"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 363,
+    "t": 1791295025702,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x300000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 366,
+    "t": 1791295025731,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x3",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 368,
+    "t": 1791295060601,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x3",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 369,
+    "t": 1791312674617,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x4"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 370,
+    "t": 1791363555019,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x4"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 371,
+    "t": 1791363556693,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x400000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 374,
+    "t": 1791363556723,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x4",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 376,
+    "t": 1791363590295,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x4",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 377,
+    "t": 1791365063447,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 378,
+    "t": 1791365063664,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 379,
+    "t": 1791365063825,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x500000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 382,
+    "t": 1791365063868,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x5",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 384,
+    "t": 1791365498113,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x5",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 385,
+    "t": 1791394255597,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x6"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 386,
+    "t": 1791464709058,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x6"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 387,
+    "t": 1791464710806,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x600000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 390,
+    "t": 1791464710844,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x6",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 392,
+    "t": 1791464773627,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x6",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 393,
+    "t": 1791465263004,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x7"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 394,
+    "t": 1791465263024,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x7"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 395,
+    "t": 1791465263191,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x700000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 398,
+    "t": 1791465263281,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x7",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 400,
+    "t": 1791465361037,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x7",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 401,
+    "t": 1791476953395,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x8"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 402,
+    "t": 1791476953406,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x8"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8002,
+    "recordId": 403,
+    "t": 1791476963411,
+    "level": 2,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "FailureReason": "Der Treiber wurde während der Zuordnung getrennt.",
+      "ReasonCode": "229378",
+      "ConnectionId": "0x8",
+      "RSSI": "255"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8011,
+    "recordId": 404,
+    "t": 1791476963412,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 405,
+    "t": 1791476963413,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x9"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 406,
+    "t": 1791476963420,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x9"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8002,
+    "recordId": 407,
+    "t": 1791476970851,
+    "level": 2,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "FailureReason": "Der Treiber wurde während der Zuordnung getrennt.",
+      "ReasonCode": "229378",
+      "ConnectionId": "0x9",
+      "RSSI": "255"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 408,
+    "t": 1791476976465,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0xa"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 409,
+    "t": 1791476976478,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0xa"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8002,
+    "recordId": 410,
+    "t": 1791476979088,
+    "level": 2,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "FailureReason": "Fehler beim Herstellen der Verbindung, da kein verbindungsfähiger Zugriffspunkt sichtbar war.",
+      "ReasonCode": "229396",
+      "ConnectionId": "0xa",
+      "RSSI": "255"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 411,
+    "t": 1791476989701,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0xb"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 412,
+    "t": 1791476989709,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0xb"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8002,
+    "recordId": 413,
+    "t": 1791476992318,
+    "level": 2,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "FailureReason": "Fehler beim Herstellen der Verbindung, da kein verbindungsfähiger Zugriffspunkt sichtbar war.",
+      "ReasonCode": "229396",
+      "ConnectionId": "0xb",
+      "RSSI": "255"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 414,
+    "t": 1791477113044,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0xc"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 415,
+    "t": 1791477113052,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0xc"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 416,
+    "t": 1791477113103,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0xc00000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 419,
+    "t": 1791477113113,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0xc",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 424,
+    "t": 1791477145319,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wurde vom Treiber getrennt.",
+      "ConnectionId": "0xc",
+      "ReasonCode": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 425,
+    "t": 1791477149500,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 426,
+    "t": 1791477149510,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x1"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 427,
+    "t": 1791477149564,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x100000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 430,
+    "t": 1791477149587,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x1",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 435,
+    "t": 1791477269649,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x1",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 436,
+    "t": 1791477626502,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 437,
+    "t": 1791477626644,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x2"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 438,
+    "t": 1791477626870,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x200000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 441,
+    "t": 1791477627139,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x2",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 443,
+    "t": 1791477661765,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x2",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 444,
+    "t": 1791477722636,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x3"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 445,
+    "t": 1791477722737,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x3"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 446,
+    "t": 1791477722753,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x300000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 449,
+    "t": 1791477722780,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x3",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 451,
+    "t": 1791477818227,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x3",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8000,
+    "recordId": 452,
+    "t": 1791479487280,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x4"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11000,
+    "recordId": 453,
+    "t": 1791545873006,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Auth": "WPA2-Personal",
+      "Cipher": "AES-GCMP-128",
+      "OnexEnabled": "0",
+      "IhvConnectivitySetting": "",
+      "ConnectionId": "0x4"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 11001,
+    "recordId": 454,
+    "t": 1791545875063,
+    "level": 4,
+    "data": {
+      "Adapter": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "DeviceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "LocalMac": "E4:60:17:12:34:01",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "ConnectionId": "0x400000000",
+      "MgmtFrameProtection": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8001,
+    "recordId": 457,
+    "t": 1791545875093,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x4",
+      "NonBroadcast": "false"
+    },
+    "msg": null
+  },
+  {
+    "log": "Microsoft-Windows-WLAN-AutoConfig/Operational",
+    "provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "id": 8003,
+    "recordId": 459,
+    "t": 1791545911718,
+    "level": 4,
+    "data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x4",
+      "ReasonCode": "5"
+    },
+    "msg": null
+  }
+]

@@ -1,0 +1,9 @@
+
+Ping wird ausgeführt für 2606:4700:4700::1111 mit 1452 Bytes Daten:
+Antwort von 2606:4700:4700::1111: Zeit=20ms 
+
+Ping-Statistik für 2606:4700:4700::1111:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 20ms, Maximum = 20ms, Mittelwert = 20ms

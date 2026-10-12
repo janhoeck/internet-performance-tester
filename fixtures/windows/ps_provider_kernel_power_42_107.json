@@ -1,0 +1,197 @@
+[
+  {
+    "Id": 41,
+    "Version": 0,
+    "Description": "Der letzte Übergang in den Standbymodus war nicht erfolgreich. Mögliche Fehlerursache: Das System hat beim Übergang in den Ruhezustand aufgehört zu reagieren, ist abgestürzt, oder seine Stromversorgung wurde unterbrochen."
+  },
+  {
+    "Id": 41,
+    "Version": 1,
+    "Description": "Der letzte Übergang in den Standbymodus war nicht erfolgreich. Mögliche Fehlerursache: Das System hat beim Übergang in den Ruhezustand aufgehört zu reagieren, ist abgestürzt, oder seine Stromversorgung wurde unterbrochen."
+  },
+  {
+    "Id": 41,
+    "Version": 2,
+    "Description": "Das System wurde neu gestartet, ohne dass es zuvor ordnungsgemäß heruntergefahren wurde. Dieser Fehler kann auftreten, wenn das System nicht mehr reagiert hat oder abgestürzt ist oder die Stromzufuhr unerwartet unterbrochen wurde."
+  },
+  {
+    "Id": 41,
+    "Version": 3,
+    "Description": "Das System wurde neu gestartet, ohne dass es zuvor ordnungsgemäß heruntergefahren wurde. Dieser Fehler kann auftreten, wenn das System nicht mehr reagiert hat oder abgestürzt ist oder die Stromzufuhr unerwartet unterbrochen wurde."
+  },
+  {
+    "Id": 41,
+    "Version": 4,
+    "Description": "Das System wurde neu gestartet, ohne dass es zuvor ordnungsgemäß heruntergefahren wurde. Dieser Fehler kann auftreten, wenn das System nicht mehr reagiert hat oder abgestürzt ist oder die Stromzufuhr unerwartet unterbrochen wurde."
+  },
+  {
+    "Id": 41,
+    "Version": 5,
+    "Description": "Das System wurde neu gestartet, ohne dass es zuvor ordnungsgemäß heruntergefahren wurde. Dieser Fehler kann auftreten, wenn das System nicht mehr reagiert hat oder abgestürzt ist oder die Stromzufuhr unerwartet unterbrochen wurde."
+  },
+  {
+    "Id": 41,
+    "Version": 6,
+    "Description": "Das System wurde neu gestartet, ohne dass es zuvor ordnungsgemäß heruntergefahren wurde. Dieser Fehler kann auftreten, wenn das System nicht mehr reagiert hat oder abgestürzt ist oder die Stromzufuhr unerwartet unterbrochen wurde."
+  },
+  {
+    "Id": 41,
+    "Version": 7,
+    "Description": "Das System wurde neu gestartet, ohne dass es zuvor ordnungsgemäß heruntergefahren wurde. Dieser Fehler kann auftreten, wenn das System nicht mehr reagiert hat oder abgestürzt ist oder die Stromzufuhr unerwartet unterbrochen wurde."
+  },
+  {
+    "Id": 41,
+    "Version": 8,
+    "Description": "Das System wurde neu gestartet, ohne dass es zuvor ordnungsgemäß heruntergefahren wurde. Dieser Fehler kann auftreten, wenn das System nicht mehr reagiert hat oder abgestürzt ist oder die Stromzufuhr unerwartet unterbrochen wurde."
+  },
+  {
+    "Id": 41,
+    "Version": 9,
+    "Description": "Das System wurde neu gestartet, ohne dass es zuvor ordnungsgemäß heruntergefahren wurde. Dieser Fehler kann auftreten, wenn das System nicht mehr reagiert hat oder abgestürzt ist oder die Stromzufuhr unerwartet unterbrochen wurde."
+  },
+  {
+    "Id": 41,
+    "Version": 10,
+    "Description": "Das System wurde neu gestartet, ohne dass es zuvor ordnungsgemäß heruntergefahren wurde. Dieser Fehler kann auftreten, wenn das System nicht mehr reagiert hat oder abgestürzt ist oder die Stromzufuhr unerwartet unterbrochen wurde."
+  },
+  {
+    "Id": 42,
+    "Version": 0,
+    "Description": "Das System wechselt in den Standbymodus."
+  },
+  {
+    "Id": 42,
+    "Version": 2,
+    "Description": "Das System wird in den Standbymodus versetzt. Ursache: %3"
+  },
+  {
+    "Id": 42,
+    "Version": 3,
+    "Description": "Das System wird in den Standbymodus versetzt. Ursache: %3"
+  },
+  {
+    "Id": 105,
+    "Version": 0,
+    "Description": "Wechsel der Stromquelle"
+  },
+  {
+    "Id": 105,
+    "Version": 1,
+    "Description": "Wechsel der Stromquelle"
+  },
+  {
+    "Id": 107,
+    "Version": 0,
+    "Description": ""
+  },
+  {
+    "Id": 107,
+    "Version": 1,
+    "Description": "Das System wurde aus dem Energiesparmodus reaktiviert."
+  },
+  {
+    "Id": 109,
+    "Version": 0,
+    "Description": "Der Kernelenergie-Manager hat einen Übergang zum Herunterfahren initiiert. Aktion: %1 Ereigniscode: %2 Ursache: %3"
+  },
+  {
+    "Id": 172,
+    "Version": 0,
+    "Description": "Verbindungsstatus im Standbymodus: %1, Ursache: %2"
+  },
+  {
+    "Id": 187,
+    "Version": 0,
+    "Description": "Von einem Prozess im Benutzermodus wurde versucht, den Systemstatus durch den Aufruf der SetSuspendState- oder SetSystemPowerState-API zu ändern."
+  },
+  {
+    "Id": 506,
+    "Version": 0,
+    "Description": "Das System wechselt in den modernen Standbymodus Grund: %1."
+  },
+  {
+    "Id": 506,
+    "Version": 1,
+    "Description": "Das System wechselt in den modernen Standbymodus Grund: %1."
+  },
+  {
+    "Id": 506,
+    "Version": 2,
+    "Description": "Das System wechselt in den modernen Standbymodus Grund: %1."
+  },
+  {
+    "Id": 506,
+    "Version": 3,
+    "Description": "Das System wechselt in den modernen Standbymodus Grund: %1."
+  },
+  {
+    "Id": 507,
+    "Version": 0,
+    "Description": "Das System beendet den modernen Standbymodus Grund: %10."
+  },
+  {
+    "Id": 507,
+    "Version": 1,
+    "Description": "Das System beendet den modernen Standbymodus Grund: %10."
+  },
+  {
+    "Id": 507,
+    "Version": 2,
+    "Description": "Das System beendet den modernen Standbymodus Grund: %10."
+  },
+  {
+    "Id": 507,
+    "Version": 3,
+    "Description": "Das System beendet den modernen Standbymodus Grund: %10."
+  },
+  {
+    "Id": 507,
+    "Version": 4,
+    "Description": "Das System beendet den modernen Standbymodus Grund: %10."
+  },
+  {
+    "Id": 507,
+    "Version": 5,
+    "Description": "Das System beendet den modernen Standbymodus Grund: %10."
+  },
+  {
+    "Id": 507,
+    "Version": 6,
+    "Description": "Das System beendet den modernen Standbymodus Grund: %10."
+  },
+  {
+    "Id": 507,
+    "Version": 7,
+    "Description": "Das System beendet den modernen Standbymodus Grund: %10."
+  },
+  {
+    "Id": 507,
+    "Version": 8,
+    "Description": "Das System beendet den modernen Standbymodus Grund: %10."
+  },
+  {
+    "Id": 507,
+    "Version": 9,
+    "Description": "Das System beendet den modernen Standbymodus Grund: %10."
+  },
+  {
+    "Id": 507,
+    "Version": 10,
+    "Description": "Das System beendet den modernen Standbymodus Grund: %10."
+  },
+  {
+    "Id": 507,
+    "Version": 11,
+    "Description": "Das System beendet den modernen Standbymodus Grund: %10."
+  },
+  {
+    "Id": 507,
+    "Version": 12,
+    "Description": "Das System beendet den modernen Standbymodus Grund: %10."
+  },
+  {
+    "Id": 566,
+    "Version": 0,
+    "Description": "Die Systemsitzung ist von %3 zu %10. gewechselt. Ursache: %2 BootId: %1"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "RecordId": 7751,
+    "Id": 33,
+    "Level": 4,
+    "Task": 0,
+    "Keywords": 36028797018963970,
+    "Props": [
+      "",
+      "Intel(R) Ethernet Controller (3) I225-V",
+      "0 0 4 0 2 0 48 0 0 0 0 0 33 0 4 96 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 33 0 4 96"
+    ],
+    "Message": "Intel(R) Ethernet Controller (3) I225-V\r\n Die Netzwerkverbindung wurde mit 100 Mbit/s Vollduplex hergestellt.\r\n",
+    "MachineName": "Jan-PC"
+  },
+  {
+    "RecordId": 7730,
+    "Id": 27,
+    "Level": 3,
+    "Task": 0,
+    "Keywords": 36028797018963970,
+    "Props": [
+      "",
+      "Intel(R) Ethernet Controller (3) I225-V",
+      "0 0 4 0 2 0 48 0 0 0 0 0 27 0 4 160 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 27 0 4 160"
+    ],
+    "Message": "Intel(R) Ethernet Controller (3) I225-V\r\n Netzwerkverbindung wurde unterbrochen.\r\n",
+    "MachineName": "Jan-PC"
+  },
+  {
+    "RecordId": 7707,
+    "Id": 32,
+    "Level": 4,
+    "Task": 0,
+    "Keywords": 36028797018963970,
+    "Props": [
+      "",
+      "Intel(R) Ethernet Controller (3) I225-V",
+      "0 0 4 0 2 0 48 0 0 0 0 0 32 0 4 96 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 32 0 4 96"
+    ],
+    "Message": "Intel(R) Ethernet Controller (3) I225-V\r\n Die Netzwerkverbindung wurde mit 1 Gbit/s Vollduplex hergestellt.\r\n",
+    "MachineName": "Jan-PC"
+  }
+]

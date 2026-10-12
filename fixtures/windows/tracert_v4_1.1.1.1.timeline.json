@@ -1,0 +1,151 @@
+{
+ "args": [
+  "-d",
+  "-w",
+  "1000",
+  "-h",
+  "30",
+  "1.1.1.1"
+ ],
+ "code": 0,
+ "enc": "cp850",
+ "totalMs": 9920,
+ "lines": [
+  {
+   "t": 17,
+   "line": ""
+  },
+  {
+   "t": 17,
+   "line": "Routenverfolgung zu 1.1.1.1 über maximal 30 Hops"
+  },
+  {
+   "t": 17,
+   "line": ""
+  },
+  {
+   "t": 17,
+   "partial": "  1  "
+  },
+  {
+   "t": 19,
+   "partial": "  1     2 ms  "
+  },
+  {
+   "t": 20,
+   "partial": "  1     2 ms    <1 ms  "
+  },
+  {
+   "t": 22,
+   "partial": "  1     2 ms    <1 ms     1 ms  "
+  },
+  {
+   "t": 22,
+   "line": "  1     2 ms    <1 ms     1 ms  192.168.0.1 "
+  },
+  {
+   "t": 1029,
+   "partial": "  2  "
+  },
+  {
+   "t": 1695,
+   "partial": "  2     *     "
+  },
+  {
+   "t": 2704,
+   "partial": "  2     *        *     "
+  },
+  {
+   "t": 3695,
+   "line": "  2     *        *        *     Zeitüberschreitung der Anforderung."
+  },
+  {
+   "t": 3695,
+   "partial": "  3  "
+  },
+  {
+   "t": 3713,
+   "partial": "  3    18 ms  "
+  },
+  {
+   "t": 3729,
+   "partial": "  3    18 ms    15 ms  "
+  },
+  {
+   "t": 4703,
+   "line": "  3    18 ms    15 ms     *     92.79.214.92 "
+  },
+  {
+   "t": 4703,
+   "partial": "  4  "
+  },
+  {
+   "t": 4720,
+   "partial": "  4    15 ms  "
+  },
+  {
+   "t": 5696,
+   "partial": "  4    15 ms     *     "
+  },
+  {
+   "t": 5714,
+   "line": "  4    15 ms     *       18 ms  145.254.2.199 "
+  },
+  {
+   "t": 6703,
+   "partial": "  5  "
+  },
+  {
+   "t": 6722,
+   "partial": "  5    18 ms  "
+  },
+  {
+   "t": 7699,
+   "partial": "  5    18 ms     *     "
+  },
+  {
+   "t": 8693,
+   "line": "  5    18 ms     *        *     198.41.240.18 "
+  },
+  {
+   "t": 8693,
+   "partial": "  6  "
+  },
+  {
+   "t": 8747,
+   "partial": "  6    54 ms  "
+  },
+  {
+   "t": 8788,
+   "partial": "  6    54 ms    40 ms  "
+  },
+  {
+   "t": 8825,
+   "line": "  6    54 ms    40 ms    36 ms  198.41.240.9 "
+  },
+  {
+   "t": 9795,
+   "partial": "  7  "
+  },
+  {
+   "t": 9837,
+   "partial": "  7    42 ms  "
+  },
+  {
+   "t": 9877,
+   "partial": "  7    42 ms    40 ms  "
+  },
+  {
+   "t": 9918,
+   "line": "  7    42 ms    40 ms    40 ms  1.1.1.1 "
+  },
+  {
+   "t": 9918,
+   "line": ""
+  },
+  {
+   "t": 9918,
+   "line": "Ablaufverfolgung beendet."
+  }
+ ]
+}

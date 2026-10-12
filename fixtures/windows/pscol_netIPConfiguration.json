@@ -1,0 +1,96 @@
+[
+  {
+    "ifIndex": 4,
+    "alias": "Ethernet",
+    "description": "Intel(R) Ethernet Controller (3) I225-V",
+    "profile": "Vodafone-43FE",
+    "ipv4": [
+      "192.168.0.192"
+    ],
+    "ipv6": [
+      "3fff:8071:7ca0:c980:b219:6c3e:eadc:4c15",
+      "3fff:8071:7ca0:c980::b211"
+    ],
+    "gw4": [
+      "192.168.0.1"
+    ],
+    "gw6": [
+      "fe80::de73:6ff:fe12:34df"
+    ],
+    "dns": [
+      "3fff:8071:7ca0:c980:de73:6ff:fe12:34df",
+      "1.1.1.1",
+      "8.8.8.8"
+    ],
+    "netAdapterStatus": "Up"
+  },
+  {
+    "ifIndex": 35,
+    "alias": "CloudflareWARP",
+    "description": "Cloudflare WARP Interface Tunnel",
+    "profile": "CloudflareWARP",
+    "ipv4": [
+      "100.96.0.7"
+    ],
+    "ipv6": [
+      "2606:4700:cf1:1000::7"
+    ],
+    "gw4": [
+      null
+    ],
+    "gw6": [
+      null
+    ],
+    "dns": [
+      "3fff:8071:7ca0:c980:de73:6ff:fe12:34df",
+      "1.1.1.1",
+      "8.8.8.8"
+    ],
+    "netAdapterStatus": "Up"
+  },
+  {
+    "ifIndex": 6,
+    "alias": "WLAN",
+    "description": "Intel(R) Wi-Fi 6E AX211 160MHz",
+    "profile": null,
+    "ipv4": [
+      "192.168.0.35"
+    ],
+    "ipv6": [
+      "3fff:8071:7ca0:c980:1061:256a:b1d2:3429",
+      "3fff:8071:7ca0:c980::bf0c"
+    ],
+    "gw4": [
+      "192.168.0.1"
+    ],
+    "gw6": [
+      null
+    ],
+    "dns": [
+      "192.168.0.1"
+    ],
+    "netAdapterStatus": "Disconnected"
+  },
+  {
+    "ifIndex": 14,
+    "alias": "Bluetooth-Netzwerkverbindung",
+    "description": "Bluetooth Device (Personal Area Network)",
+    "profile": null,
+    "ipv4": [
+      "169.254.157.108"
+    ],
+    "ipv6": [],
+    "gw4": [
+      null
+    ],
+    "gw6": [
+      null
+    ],
+    "dns": [
+      "fec0:0:0:ffff::1",
+      "fec0:0:0:ffff::2",
+      "fec0:0:0:ffff::3"
+    ],
+    "netAdapterStatus": "Disconnected"
+  }
+]

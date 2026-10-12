@@ -1,0 +1,197 @@
+[
+  {
+    "Provider": "Microsoft-Windows-Kernel-General",
+    "Count": 131,
+    "Ids": "1x24,24x12,16x58,15x17,11x12,20x2,25x2,12x2,13x2"
+  },
+  {
+    "Provider": "NetBT",
+    "Count": 98,
+    "Ids": "4311x98"
+  },
+  {
+    "Provider": "Netwtw14",
+    "Count": 69,
+    "Ids": "6062x15,7021x31,7003x1,7018x3,7017x3,7010x3,7002x3,7005x3,7027x3,7036x3,8000x1"
+  },
+  {
+    "Provider": "Microsoft-Windows-IsolatedUserMode",
+    "Count": 69,
+    "Ids": "2x21,1x21,5x25,3x2"
+  },
+  {
+    "Provider": "Service Control Manager",
+    "Count": 67,
+    "Ids": "7045x48,7040x17,7026x2"
+  },
+  {
+    "Provider": "Microsoft-Windows-Kernel-Boot",
+    "Count": 66,
+    "Ids": "32x12,18x12,27x12,25x12,30x12,238x2,20x2,153x2"
+  },
+  {
+    "Provider": "Microsoft-Windows-DistributedCOM",
+    "Count": 65,
+    "Ids": "10016x59,10010x6"
+  },
+  {
+    "Provider": "Microsoft-Windows-Kernel-Power",
+    "Count": 64,
+    "Ids": "566x29,107x9,42x9,187x9,172x2,125x2,577x2,109x2"
+  },
+  {
+    "Provider": "Microsoft-Windows-Kernel-Processor-Power",
+    "Count": 56,
+    "Ids": "55x56"
+  },
+  {
+    "Provider": "Microsoft-Windows-WindowsUpdateClient",
+    "Count": 55,
+    "Ids": "19x18,43x19,44x18"
+  },
+  {
+    "Provider": "Microsoft-Windows-HttpService",
+    "Count": 55,
+    "Ids": "113x8,111x8,112x34,117x3,114x2"
+  },
+  {
+    "Provider": "e2fexpress",
+    "Count": 48,
+    "Ids": "33x9,27x24,32x15"
+  },
+  {
+    "Provider": "Microsoft-Windows-Configuration-Change-Monitor",
+    "Count": 48,
+    "Ids": "1x48"
+  },
+  {
+    "Provider": "Microsoft-Windows-Time-Service",
+    "Count": 47,
+    "Ids": "35x4,37x10,158x29,134x4"
+  },
+  {
+    "Provider": "Microsoft-Windows-FilterManager",
+    "Count": 32,
+    "Ids": "6x30,1x2"
+  },
+  {
+    "Provider": "winsrvext",
+    "Count": 31,
+    "Ids": "100x31"
+  },
+  {
+    "Provider": "Microsoft-Windows-TPM-WMI",
+    "Count": 30,
+    "Ids": "1038x12,1041x12,1808x2,1025x2,1282x2"
+  },
+  {
+    "Provider": "Microsoft-Windows-EnhancedStorage-EhStorTcgDrv",
+    "Count": 25,
+    "Ids": "100x23,12x2"
+  },
+  {
+    "Provider": "Microsoft-Windows-Winlogon",
+    "Count": 23,
+    "Ids": "7001x12,7002x11"
+  },
+  {
+    "Provider": "EventLog",
+    "Count": 16,
+    "Ids": "6013x10,6005x2,6009x2,6006x2"
+  },
+  {
+    "Provider": "Microsoft-Windows-Dhcp-Client",
+    "Count": 14,
+    "Ids": "50036x4,50103x2,50037x2,50106x2,50105x2,50104x2"
+  },
+  {
+    "Provider": "Microsoft-Windows-Hyper-V-Hypervisor",
+    "Count": 12,
+    "Ids": "167x2,165x2,156x2,129x2,2x2,1x2"
+  },
+  {
+    "Provider": "BTHUSB",
+    "Count": 12,
+    "Ids": "18x12"
+  },
+  {
+    "Provider": "Microsoft-Windows-Wininit",
+    "Count": 12,
+    "Ids": "18x2,14x2,23x2,25x2,24x2,19x2"
+  },
+  {
+    "Provider": "Microsoft-Windows-Ntfs",
+    "Count": 11,
+    "Ids": "98x11"
+  },
+  {
+    "Provider": "Microsoft-Windows-Power-Troubleshooter",
+    "Count": 10,
+    "Ids": "1x10"
+  },
+  {
+    "Provider": "Microsoft-Windows-WLAN-AutoConfig",
+    "Count": 9,
+    "Ids": "4003x1,10001x2,4000x2,4001x2,10002x2"
+  },
+  {
+    "Provider": "Microsoft-Windows-DHCPv6-Client",
+    "Count": 8,
+    "Ids": "51046x2,51057x4,51047x2"
+  },
+  {
+    "Provider": "Microsoft-Windows-Directory-Services-SAM",
+    "Count": 6,
+    "Ids": "16983x2,16977x2,16962x2"
+  },
+  {
+    "Provider": "Volsnap",
+    "Count": 5,
+    "Ids": "25x1,33x4"
+  },
+  {
+    "Provider": "Microsoft-Windows-DNS-Client",
+    "Count": 3,
+    "Ids": "1014x3"
+  },
+  {
+    "Provider": "Microsoft-Windows-UserPnp",
+    "Count": 2,
+    "Ids": "20003x2"
+  },
+  {
+    "Provider": "Microsoft-Windows-HAL",
+    "Count": 2,
+    "Ids": "16x2"
+  },
+  {
+    "Provider": "MEIx64",
+    "Count": 2,
+    "Ids": "2x2"
+  },
+  {
+    "Provider": "User32",
+    "Count": 2,
+    "Ids": "1074x2"
+  },
+  {
+    "Provider": "TPM",
+    "Count": 2,
+    "Ids": "18x2"
+  },
+  {
+    "Provider": "usbaudio2",
+    "Count": 2,
+    "Ids": "16x2"
+  },
+  {
+    "Provider": "LsaSrv",
+    "Count": 2,
+    "Ids": "6156x2"
+  },
+  {
+    "Provider": "Application Popup",
+    "Count": 1,
+    "Ids": "26x1"
+  }
+]

@@ -1,0 +1,1158 @@
+[
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 601,
+    "t": 1787589510670,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "1"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 604,
+    "t": 1787589512805,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 723,
+    "t": 1787675386518,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "2"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 728,
+    "t": 1787675389630,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 822,
+    "t": 1787765540610,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "3"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 825,
+    "t": 1787765542408,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 937,
+    "t": 1787850267523,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "4"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 941,
+    "t": 1787850270654,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 1016,
+    "t": 1787932873100,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 1019,
+    "t": 1787932874726,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 1142,
+    "t": 1788113689748,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "6"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 1146,
+    "t": 1788113692674,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 1943,
+    "t": 1788242332194,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "1"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 1945,
+    "t": 1788242333582,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 2042,
+    "t": 1788285705685,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "2"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 2045,
+    "t": 1788285707448,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 2566,
+    "t": 1788373461601,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "1"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 2568,
+    "t": 1788373463682,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 2634,
+    "t": 1788432722541,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "2"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 2636,
+    "t": 1788432724036,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 2727,
+    "t": 1788459843600,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "3"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 2730,
+    "t": 1788459846629,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 2831,
+    "t": 1788542820578,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "4"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 2836,
+    "t": 1788542823457,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 2907,
+    "t": 1788607619376,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 2910,
+    "t": 1788607622483,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 3359,
+    "t": 1788800613209,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "1"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 3363,
+    "t": 1788800615399,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 3490,
+    "t": 1788889285877,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "2"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 3493,
+    "t": 1788889287905,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 3613,
+    "t": 1788979719842,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "3"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 3616,
+    "t": 1788979721836,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 4449,
+    "t": 1789145989926,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "1"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 4452,
+    "t": 1789145991102,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 4526,
+    "t": 1789300090615,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "2"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 4529,
+    "t": 1789300092233,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 4730,
+    "t": 1790368492054,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "3"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 4733,
+    "t": 1790368494122,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 4792,
+    "t": 1790423545897,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "4"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 4795,
+    "t": 1790423551921,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 4907,
+    "t": 1790445982671,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 4909,
+    "t": 1790445985158,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 4975,
+    "t": 1790505631616,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "6"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 4977,
+    "t": 1790505633477,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 6428,
+    "t": 1790708937803,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "1"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 6431,
+    "t": 1790708939315,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 6490,
+    "t": 1790783269021,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "2"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 6493,
+    "t": 1790783271198,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 6567,
+    "t": 1790881200136,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "3"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 6569,
+    "t": 1790881201602,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 6663,
+    "t": 1790968244600,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "4"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 6665,
+    "t": 1790968245970,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 6720,
+    "t": 1791024691876,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 6723,
+    "t": 1791024694623,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 6968,
+    "t": 1791040176087,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "1"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 6970,
+    "t": 1791040177836,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 7196,
+    "t": 1791053981163,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "1"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 7198,
+    "t": 1791053982763,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 7288,
+    "t": 1791134987013,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "2"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 7293,
+    "t": 1791134993640,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 7376,
+    "t": 1791222477420,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "3"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 7379,
+    "t": 1791222480175,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 7450,
+    "t": 1791312672503,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "4"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 7453,
+    "t": 1791312675484,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 7549,
+    "t": 1791394252490,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "5"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 7553,
+    "t": 1791394256670,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 42,
+    "recordId": 7724,
+    "t": 1791479486451,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "Reason": "4",
+      "Flags": "0",
+      "TransitionsToOn": "6"
+    },
+    "msg": null
+  },
+  {
+    "log": "System",
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "id": 107,
+    "recordId": 7727,
+    "t": 1791479488157,
+    "level": 4,
+    "data": {
+      "TargetState": "6",
+      "EffectiveState": "5",
+      "WakeFromState": "5",
+      "ProgrammedWakeTimeAc": "1601-01-01T00:00:00.0000000Z",
+      "ProgrammedWakeTimeDc": "1601-01-01T00:00:00.0000000Z",
+      "WakeRequesterTypeAc": "0",
+      "WakeRequesterTypeDc": "0"
+    },
+    "msg": null
+  }
+]

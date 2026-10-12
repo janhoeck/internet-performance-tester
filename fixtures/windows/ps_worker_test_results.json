@@ -1,0 +1,244 @@
+{
+  "ready": {
+    "ready": true,
+    "pid": 33180,
+    "ps": "5.1.26100.9444",
+    "startupMs": 222.6
+  },
+  "calls": [
+    {
+      "label": "trivial#0",
+      "ms": 55.2,
+      "ok": true,
+      "data": 2
+    },
+    {
+      "label": "trivial#1",
+      "ms": 0.5,
+      "ok": true,
+      "data": 2
+    },
+    {
+      "label": "trivial#2",
+      "ms": 0.6,
+      "ok": true,
+      "data": 2
+    },
+    {
+      "label": "trivial#3",
+      "ms": 0.5,
+      "ok": true,
+      "data": 2
+    },
+    {
+      "label": "trivial#4",
+      "ms": 0.5,
+      "ok": true,
+      "data": 2
+    },
+    {
+      "label": "getNetAdapter#0",
+      "ms": 495.3,
+      "ok": true,
+      "data": {
+        "Name": "Ethernet",
+        "Status": "Up",
+        "ReceiveLinkSpeed": 100000000,
+        "TransmitLinkSpeed": 100000000,
+        "MediaConnectionState": 1
+      }
+    },
+    {
+      "label": "getNetAdapter#1",
+      "ms": 15.6,
+      "ok": true,
+      "data": {
+        "Name": "Ethernet",
+        "Status": "Up",
+        "ReceiveLinkSpeed": 100000000,
+        "TransmitLinkSpeed": 100000000,
+        "MediaConnectionState": 1
+      }
+    },
+    {
+      "label": "getNetAdapter#2",
+      "ms": 15.5,
+      "ok": true,
+      "data": {
+        "Name": "Ethernet",
+        "Status": "Up",
+        "ReceiveLinkSpeed": 100000000,
+        "TransmitLinkSpeed": 100000000,
+        "MediaConnectionState": 1
+      }
+    },
+    {
+      "label": "getNetAdapter#3",
+      "ms": 15.1,
+      "ok": true,
+      "data": {
+        "Name": "Ethernet",
+        "Status": "Up",
+        "ReceiveLinkSpeed": 100000000,
+        "TransmitLinkSpeed": 100000000,
+        "MediaConnectionState": 1
+      }
+    },
+    {
+      "label": "getNetAdapter#4",
+      "ms": 24.6,
+      "ok": true,
+      "data": {
+        "Name": "Ethernet",
+        "Status": "Up",
+        "ReceiveLinkSpeed": 100000000,
+        "TransmitLinkSpeed": 100000000,
+        "MediaConnectionState": 1
+      }
+    },
+    {
+      "label": "getNetAdapterStatistics#0",
+      "ms": 35.8,
+      "ok": true,
+      "data": {
+        "ReceivedBytes": 1516627307,
+        "SentBytes": 71985720,
+        "ReceivedPacketErrors": 0,
+        "ReceivedDiscardedPackets": 0
+      }
+    },
+    {
+      "label": "getNetAdapterStatistics#1",
+      "ms": 14,
+      "ok": true,
+      "data": {
+        "ReceivedBytes": 1516627614,
+        "SentBytes": 71985720,
+        "ReceivedPacketErrors": 0,
+        "ReceivedDiscardedPackets": 0
+      }
+    },
+    {
+      "label": "getNetAdapterStatistics#2",
+      "ms": 14.1,
+      "ok": true,
+      "data": {
+        "ReceivedBytes": 1516627955,
+        "SentBytes": 71985720,
+        "ReceivedPacketErrors": 0,
+        "ReceivedDiscardedPackets": 0
+      }
+    },
+    {
+      "label": "error_nonexistent_adapter",
+      "ms": 54.2,
+      "ok": false,
+      "error": "Es wurden keine MSFT_NetAdapter-Objekte gefunden, bei denen die Name-Eigenschaft gleich \"DoesNotExist\" ist. Überprüfen Sie den Wert der Eigenschaft, und versuchen Sie es erneut.",
+      "errorType": "Microsoft.PowerShell.Cmdletization.Cim.CimJobException",
+      "errorId": "CmdletizationQuery_NotFound_Name,Get-NetAdapter"
+    },
+    {
+      "label": "error_syntax",
+      "ms": 3.6,
+      "ok": false,
+      "error": "Ausnahme beim Aufrufen von \"Create\" mit 1 Argument(en):  \"In Zeile:1 Zeichen:23\r\n+ Get-NetAdapter -Name (\r\n+                       ~\nNach \"(\" wurde ein Ausdruck erwartet.\r\n\r\nIn Zeile:1 Zeichen:23\r\n+ Get-NetAdapter -Name (\r\n+                       ~\nSchließende \")\" fehlt in einem Ausdruck.\"",
+      "errorType": "System.Management.Automation.MethodInvocationException",
+      "errorId": "ParseException"
+    },
+    {
+      "label": "unicode_roundtrip",
+      "ms": 8.1,
+      "ok": true,
+      "data": "Zeitüberschreitung äöüß € 测试"
+    },
+    {
+      "label": "null_result",
+      "ms": 8.9,
+      "ok": true,
+      "data": null
+    },
+    {
+      "label": "empty_pipeline",
+      "ms": 26.1,
+      "ok": true,
+      "data": null
+    },
+    {
+      "label": "multiline_cmd",
+      "ms": 8.3,
+      "ok": true,
+      "data": 42
+    },
+    {
+      "label": "single_elem_array_forced",
+      "ms": 7.4,
+      "ok": true,
+      "data": [
+        1
+      ]
+    },
+    {
+      "label": "single_elem_unwrapped",
+      "ms": 0.4,
+      "ok": true,
+      "data": 1
+    },
+    {
+      "label": "datetime_default_serialization",
+      "ms": 19.1,
+      "ok": true,
+      "data": [
+        "/Date(1791547200000)/",
+        {
+          "value": "/Date(1791547200000)/",
+          "DisplayHint": 2,
+          "DateTime": "Freitag, 9. Oktober 2026 14:00:00"
+        }
+      ]
+    },
+    {
+      "label": "datetime_fixed",
+      "ms": 18.3,
+      "ok": true,
+      "data": {
+        "epochMs": 1791547200000,
+        "iso": "2026-10-09T14:00:00.0000000",
+        "kind": "Unspecified"
+      }
+    },
+    {
+      "label": "enum_default_serialization",
+      "ms": 7.7,
+      "ok": true,
+      "data": [
+        1,
+        11010
+      ]
+    },
+    {
+      "label": "stray_write_host",
+      "ms": 16.4,
+      "ok": true,
+      "data": 7
+    },
+    {
+      "label": "burst5_sleep50_each",
+      "ms": 390.4,
+      "ok": true,
+      "data": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "exitCodeAfterStdinEnd": 0,
+  "exitMs": 21.4,
+  "logs": [
+    "stderr: #< CLIXML\r\n",
+    "stray: hello from write-host",
+    "stderr: <Objs Version=\"1.1.0.1\" xmlns=\"http://schemas.microsoft.com/powershell/2004/04\"><Obj S=\"information\" RefId=\"0\"><TN RefId=\"0\"><T>System.Management.Automation.InformationRecord</T><T>System.Object</T></TN><ToString>hello from write-host</ToString><Props><Obj N=\"MessageData\" RefId=\"1\"><TN RefId=\"1\"><T>"
+  ]
+}

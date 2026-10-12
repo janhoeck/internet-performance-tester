@@ -1,0 +1,15 @@
+HTTP/1.1 400 Bad Request
+Set-Cookie: PHPSESSID=7f12125a72150605d818b29358aa6bce; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Security-Policy: default-src 'self' 'nonce-Sv36ydWmM6KqGDEzRFtUDHghokQ=' ; connect-src 'self' ; img-src *; style-src 'self' 'unsafe-inline'; font-src 'self'; worker-src 'self'; script-src 'strict-dynamic' 'unsafe-inline' 'nonce-Sv36ydWmM6KqGDEzRFtUDHghokQ=' http: https:; base-uri 'none'; object-src 'none';
+Content-type: text/html; charset=UTF-8
+X-Frame-Options: DENY
+X-XSS-Protection: 0
+Strict-Transport-Security: max-age=15552000; includeSubdomains
+Server: null
+X-Content-Type-Options: nosniff
+Content-Length: 159
+Date: Fri, 09 Oct 2026 12:38:45 GMT
+

@@ -1,0 +1,45 @@
+
+Schnittstellenname: WLAN
+
+    Treiber                   : Intel(R) Wi-Fi 6E AX211 160MHz
+    Hersteller                : Intel Corporation
+    Anbieter                  : Intel
+    Datum                     : 10.03.2024
+    Version                   : 23.40.0.4
+    INF-Datei                 : oem51.inf
+    Typ                       : Wi-Fi-Treiber (Ursprungsversion)
+    Unterstützte Funktypen    : 802.11b 802.11g 802.11n 802.11a 802.11ac 802.11ax
+    FIPS 140-Modus wird unterstützt: Ja
+    802.11w Management Frame Protection wird unterstützt: Ja
+    Unterstützte gehostete Netzwerke  : Nein
+    Im Infrastrukturmodus unterstützte Authentifizierung und unterstütztes Verschlüsselungsverfahren:
+                                Offen            Keine
+                                Offen            WEP-40bit
+                                Offen            WEP-104bit
+                                Offen            WEP
+                                Firmenweiter WPA TKIP
+                                Firmenweiter WPA CCMP
+                                WPA-Personal     TKIP
+                                WPA-Personal     CCMP
+                                WPA2-Enterprise  TKIP
+                                WPA2-Enterprise  CCMP
+                                WPA2-Personal    TKIP
+                                WPA2-Personal    CCMP
+                                Offen            Herstellerdefiniert
+                                WPA3-Personal    CCMP
+                                Herstellerdefiniert Herstellerdefiniert
+                                WPA3-Enterprise 192 Bits GCMP-256
+                                OWE              CCMP
+                                WPA3-Enterprise  CCMP
+                                WPA3-Enterprise  TKIP
+    Anzahl unterstützter Bänder: 3
+                                2,4 GHz [ 0 MHz – 0 MHz]
+                                5 GHz [ 0 MHz – 0 MHz]
+                                6 GHz [ 0 MHz – 0 MHz]
+    IHV-Dienst vorhanden      : Ja
+    IHV-Adapter-OUI           : [00 00 00], Typ: [00]
+    IHV-Erweiterbarkeits-DLL-Pfad: C:\Windows\System32\DriverStore\FileRepository\netwtw6e.inf_amd64_5433b0cac0a04d0e\IntelIHVRouter14.dll
+    IHV UI-Erweiterbarkeits-ClSID: {00000000-0000-0000-0000-000000000000}
+    IHV-Diagnose-CLSID     : {00000000-0000-0000-0000-000000000000}
+    Unterstützte drahtlose Anzeige: Ja (Grafiktreiber: Ja, Wi-Fi-Treiber: Ja)
+

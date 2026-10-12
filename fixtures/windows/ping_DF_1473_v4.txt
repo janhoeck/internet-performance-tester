@@ -1,0 +1,7 @@
+
+Ping wird ausgeführt für 1.1.1.1 mit 1473 Bytes Daten:
+Paket müsste fragmentiert werden, DF-Flag ist jedoch gesetzt.
+
+Ping-Statistik für 1.1.1.1:
+    Pakete: Gesendet = 1, Empfangen = 0, Verloren = 1
+    (100% Verlust),

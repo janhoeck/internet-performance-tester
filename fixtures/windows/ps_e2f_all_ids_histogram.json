@@ -1,0 +1,17 @@
+[
+  {
+    "Id": 33,
+    "Count": 30,
+    "Sample": "Intel(R) Ethernet Controller (3) I225-V"
+  },
+  {
+    "Id": 27,
+    "Count": 77,
+    "Sample": "Intel(R) Ethernet Controller (3) I225-V"
+  },
+  {
+    "Id": 32,
+    "Count": 47,
+    "Sample": "Intel(R) Ethernet Controller (3) I225-V"
+  }
+]

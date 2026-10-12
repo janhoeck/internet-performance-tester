@@ -1,0 +1,120 @@
+/* Netzpuls – Druck-Stylesheet für Auswertung und Störungsmeldung (A4, hell, Netzpuls-Farben) */
+@page { size: A4; margin: 16mm 15mm 16mm 18mm; }
+
+:root {
+  --fg: #0E1624;
+  --fg-2: #394353;
+  --fg-3: #586475;
+  --line: #DCE2E9;
+  --line-strong: #C0C8D3;
+  --soft: #F0F4F9;
+  --fiber: #00758D;
+  --fiber-deep: #005A6E;
+  --good: #087736;
+  --warn: #965800;
+  --crit: #C2272D;
+  --info: #1F68BC;
+}
+
+* { box-sizing: border-box; }
+html { background: #E9EEF4; }
+body {
+  margin: 0 auto;
+  max-width: 210mm;
+  padding: 14mm 15mm 18mm 18mm;
+  background: #FFFFFF;
+  color: var(--fg);
+  font: 10.5pt/1.5 "Segoe UI", Arial, sans-serif;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+@media print {
+  html { background: #FFFFFF; }
+  body { padding: 0; max-width: none; }
+}
+
+h1 { font-size: 20pt; line-height: 1.2; margin: 0 0 4pt; letter-spacing: -0.01em; }
+h2 { font-size: 13pt; margin: 18pt 0 6pt; color: var(--fiber-deep); break-after: avoid; }
+h3 { font-size: 11pt; margin: 12pt 0 4pt; break-after: avoid; }
+p { margin: 0 0 7pt; }
+ul, ol { margin: 0 0 8pt; padding-left: 18pt; }
+li { margin: 2pt 0; }
+strong { font-weight: 650; }
+a { color: var(--fiber-deep); }
+.muted { color: var(--fg-3); }
+.small, table.small { font-size: 8.5pt; }
+.kicker { text-transform: uppercase; letter-spacing: 0.08em; font-size: 8.5pt; font-weight: 600; color: var(--fiber); margin: 0 0 2pt; }
+
+/* Kopf */
+.doc-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 12pt; border-bottom: 2.5pt solid var(--fiber); padding-bottom: 8pt; margin-bottom: 14pt; }
+.doc-head .brand { font-weight: 700; color: var(--fiber); font-size: 11pt; }
+.doc-head .meta { text-align: right; color: var(--fg-3); font-size: 9pt; }
+
+/* Abschnitte */
+.block { break-inside: auto; }
+.chart { display: block; width: 100%; height: auto; margin: 6pt 0 10pt; break-inside: avoid; }
+.note { background: var(--soft); border-left: 3pt solid var(--fiber); padding: 6pt 9pt; }
+
+/* Tabellen */
+table.data { width: 100%; border-collapse: collapse; margin: 4pt 0 10pt; font-size: 9.5pt; }
+table.data th, table.data td { padding: 3.5pt 6pt; border-bottom: 0.75pt solid var(--line); text-align: left; vertical-align: top; }
+table.data th { background: var(--soft); font-weight: 600; color: var(--fg-2); border-bottom: 1pt solid var(--line-strong); }
+table.data td:not(:first-child) { font-variant-numeric: tabular-nums; }
+table.data tr { break-inside: avoid; }
+thead { display: table-header-group; }
+
+dl.facts { display: grid; grid-template-columns: 42mm 1fr; gap: 3pt 10pt; margin: 4pt 0 10pt; }
+dl.facts dt { color: var(--fg-3); font-weight: 600; }
+dl.facts dd { margin: 0; }
+
+/* Auswertung: Ampel, Kennzahlen, Karten, Schritte */
+.verdict { border-radius: 8pt; padding: 11pt 14pt; margin: 4pt 0 12pt; border: 1pt solid var(--line); background: var(--soft); break-inside: avoid; }
+.verdict h2 { margin: 0 0 4pt; color: var(--fg); font-size: 14pt; }
+.verdict.good { border-color: var(--good); background: #EAF6EF; }
+.verdict.warn { border-color: var(--warn); background: #FBF2E2; }
+.verdict.bad { border-color: var(--crit); background: #FBEAEA; }
+
+.badge { display: inline-block; padding: 0.5pt 6pt; border-radius: 99pt; font-size: 8.5pt; font-weight: 650; border: 0.75pt solid currentColor; white-space: nowrap; }
+.badge.good { color: var(--good); }
+.badge.warn { color: var(--warn); }
+.badge.bad { color: var(--crit); }
+.badge.info { color: var(--info); }
+.badge.du { color: #CB5A00; }
+.badge.vodafone { color: var(--crit); }
+.badge.dritte { color: #008779; }
+
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7pt; margin: 6pt 0 12pt; }
+.kpi { border: 0.75pt solid var(--line); border-radius: 6pt; padding: 7pt 9pt; break-inside: avoid; }
+.kpi .label { font-size: 8.5pt; color: var(--fg-3); }
+.kpi .value { font-size: 15pt; font-weight: 700; line-height: 1.25; }
+.kpi .hint { font-size: 8.5pt; color: var(--fg-3); }
+
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; margin: 6pt 0 12pt; }
+.card { border: 0.75pt solid var(--line); border-radius: 6pt; padding: 8pt 10pt; break-inside: avoid; }
+.card h3 { margin-top: 0; }
+
+ol.steps { list-style: none; counter-reset: step; padding: 0; }
+ol.steps > li { counter-increment: step; position: relative; padding: 7pt 10pt 7pt 34pt; margin: 0 0 6pt; border: 0.75pt solid var(--line); border-radius: 6pt; break-inside: avoid; }
+ol.steps > li::before { content: counter(step); position: absolute; left: 9pt; top: 7pt; width: 17pt; height: 17pt; border-radius: 50%; background: var(--fiber); color: #FFF; font-weight: 700; font-size: 9pt; display: grid; place-items: center; }
+ol.steps .title { font-weight: 650; }
+
+.callout { border-left: 3pt solid var(--info); background: #EDF3FB; padding: 7pt 10pt; margin: 6pt 0 10pt; break-inside: avoid; }
+.callout.warn { border-color: var(--warn); background: #FBF2E2; }
+
+/* Brief (DIN-5008-nah) */
+.brief { font-size: 10pt; line-height: 1.42; }
+.brief .absender { font-size: 8.5pt; color: var(--fg-2); border-bottom: 0.5pt solid var(--line-strong); display: inline-block; padding-bottom: 1pt; margin-bottom: 4mm; }
+.brief .empfaenger { min-height: 20mm; margin-bottom: 3mm; }
+.brief .datum { text-align: right; margin-bottom: 5mm; }
+.brief .betreff { font-weight: 700; font-size: 11pt; margin-bottom: 4mm; }
+.brief h3 { font-size: 10.5pt; margin: 7pt 0 2pt; }
+.brief p { margin-bottom: 5pt; }
+.brief ul, .brief ol { margin-bottom: 5pt; }
+.brief li { margin: 1pt 0; }
+.brief .gruss { margin-top: 5mm; margin-bottom: 0; }
+.brief .unterschrift { margin-top: 10mm; }
+.fill { background: #FFF1B8; outline: 0.75pt dashed #C9A100; padding: 0 3pt; border-radius: 2pt; }
+
+/* Anlage auf neuer Seite */
+.page-break { break-before: page; }
+.anlage-head { border-bottom: 2.5pt solid var(--fiber); padding-bottom: 6pt; margin-bottom: 8pt; }

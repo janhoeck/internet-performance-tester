@@ -1,0 +1,208 @@
+
+$ ping -f -l 1472 -n 1 -w 1500 1.1.1.1   (exit 1, 19 ms)
+
+Ping wird ausgeführt für 1.1.1.1 mit 1472 Bytes Daten:
+Paket müsste fragmentiert werden, DF-Flag ist jedoch gesetzt.
+
+Ping-Statistik für 1.1.1.1:
+    Pakete: Gesendet = 1, Empfangen = 0, Verloren = 1
+    (100% Verlust),
+
+$ ping -f -l 1473 -n 1 -w 1500 1.1.1.1   (exit 1, 19 ms)
+
+Ping wird ausgeführt für 1.1.1.1 mit 1473 Bytes Daten:
+Paket müsste fragmentiert werden, DF-Flag ist jedoch gesetzt.
+
+Ping-Statistik für 1.1.1.1:
+    Pakete: Gesendet = 1, Empfangen = 0, Verloren = 1
+    (100% Verlust),
+
+$ ping -f -l 1472 -n 1 -w 1500 8.8.8.8   (exit 0, 19 ms)
+
+Ping wird ausgeführt für 8.8.8.8 mit 1472 Bytes Daten:
+Antwort von 192.168.0.1: Paket müsste fragmentiert werden, DF-Flag ist jedoch gesetzt.
+
+Ping-Statistik für 8.8.8.8:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+
+$ ping -6 -l 1452 -n 1 -w 1500 2606:4700:4700::1111   (exit 0, 40 ms)
+
+Ping wird ausgeführt für 2606:4700:4700::1111 mit 1452 Bytes Daten:
+Antwort von 2606:4700:4700::1111: Zeit=20ms 
+
+Ping-Statistik für 2606:4700:4700::1111:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 20ms, Maximum = 20ms, Mittelwert = 20ms
+
+$ ping -6 -l 1453 -n 1 -w 1500 2606:4700:4700::1111   (exit 0, 69 ms)
+
+Ping wird ausgeführt für 2606:4700:4700::1111 mit 1453 Bytes Daten:
+Antwort von 2606:4700:4700::1111: Zeit=51ms 
+
+Ping-Statistik für 2606:4700:4700::1111:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 51ms, Maximum = 51ms, Mittelwert = 51ms
+
+$ ping -f -l 1472 -n 1 -w 1500 1.1.1.1   (exit 1, 17 ms)
+
+Ping wird ausgeführt für 1.1.1.1 mit 1472 Bytes Daten:
+Paket müsste fragmentiert werden, DF-Flag ist jedoch gesetzt.
+
+Ping-Statistik für 1.1.1.1:
+    Pakete: Gesendet = 1, Empfangen = 0, Verloren = 1
+    (100% Verlust),
+
+$ ping -f -l 1336 -n 1 -w 1500 1.1.1.1   (exit 0, 49 ms)
+
+Ping wird ausgeführt für 1.1.1.1 mit 1336 Bytes Daten:
+Antwort von 1.1.1.1: Bytes=1336 Zeit=31ms TTL=57
+
+Ping-Statistik für 1.1.1.1:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 31ms, Maximum = 31ms, Mittelwert = 31ms
+
+$ ping -f -l 1404 -n 1 -w 1500 1.1.1.1   (exit 0, 47 ms)
+
+Ping wird ausgeführt für 1.1.1.1 mit 1404 Bytes Daten:
+Antwort von 1.1.1.1: Bytes=1404 Zeit=28ms TTL=57
+
+Ping-Statistik für 1.1.1.1:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 28ms, Maximum = 28ms, Mittelwert = 28ms
+
+$ ping -f -l 1438 -n 1 -w 1500 1.1.1.1   (exit 1, 19 ms)
+
+Ping wird ausgeführt für 1.1.1.1 mit 1438 Bytes Daten:
+Paket müsste fragmentiert werden, DF-Flag ist jedoch gesetzt.
+
+Ping-Statistik für 1.1.1.1:
+    Pakete: Gesendet = 1, Empfangen = 0, Verloren = 1
+    (100% Verlust),
+
+$ ping -f -l 1421 -n 1 -w 1500 1.1.1.1   (exit 0, 43 ms)
+
+Ping wird ausgeführt für 1.1.1.1 mit 1421 Bytes Daten:
+Antwort von 1.1.1.1: Bytes=1421 Zeit=25ms TTL=57
+
+Ping-Statistik für 1.1.1.1:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 25ms, Maximum = 25ms, Mittelwert = 25ms
+
+$ ping -f -l 1429 -n 1 -w 1500 1.1.1.1   (exit 0, 88 ms)
+
+Ping wird ausgeführt für 1.1.1.1 mit 1429 Bytes Daten:
+Antwort von 1.1.1.1: Bytes=1429 Zeit=69ms TTL=57
+
+Ping-Statistik für 1.1.1.1:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 69ms, Maximum = 69ms, Mittelwert = 69ms
+
+$ ping -f -l 1433 -n 1 -w 1500 1.1.1.1   (exit 1, 20 ms)
+
+Ping wird ausgeführt für 1.1.1.1 mit 1433 Bytes Daten:
+Paket müsste fragmentiert werden, DF-Flag ist jedoch gesetzt.
+
+Ping-Statistik für 1.1.1.1:
+    Pakete: Gesendet = 1, Empfangen = 0, Verloren = 1
+    (100% Verlust),
+
+$ ping -f -l 1431 -n 1 -w 1500 1.1.1.1   (exit 0, 49 ms)
+
+Ping wird ausgeführt für 1.1.1.1 mit 1431 Bytes Daten:
+Antwort von 1.1.1.1: Bytes=1431 Zeit=29ms TTL=57
+
+Ping-Statistik für 1.1.1.1:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 29ms, Maximum = 29ms, Mittelwert = 29ms
+
+$ ping -f -l 1432 -n 1 -w 1500 1.1.1.1   (exit 0, 42 ms)
+
+Ping wird ausgeführt für 1.1.1.1 mit 1432 Bytes Daten:
+Antwort von 1.1.1.1: Bytes=1432 Zeit=23ms TTL=57
+
+Ping-Statistik für 1.1.1.1:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 23ms, Maximum = 23ms, Mittelwert = 23ms
+
+$ ping -6 -l 1452 -n 1 -w 1500 2606:4700:4700::1111   (exit 0, 65 ms)
+
+Ping wird ausgeführt für 2606:4700:4700::1111 mit 1452 Bytes Daten:
+Antwort von 2606:4700:4700::1111: Zeit=47ms 
+
+Ping-Statistik für 2606:4700:4700::1111:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 47ms, Maximum = 47ms, Mittelwert = 47ms
+
+$ ping -6 -l 1453 -n 1 -w 1500 2606:4700:4700::1111   (exit 0, 63 ms)
+
+Ping wird ausgeführt für 2606:4700:4700::1111 mit 1453 Bytes Daten:
+Antwort von 2606:4700:4700::1111: Zeit=46ms 
+
+Ping-Statistik für 2606:4700:4700::1111:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 46ms, Maximum = 46ms, Mittelwert = 46ms
+
+$ ping -6 -l 1480 -n 1 -w 1500 2606:4700:4700::1111   (exit 0, 87 ms)
+
+Ping wird ausgeführt für 2606:4700:4700::1111 mit 1480 Bytes Daten:
+Antwort von 2606:4700:4700::1111: Zeit=68ms 
+
+Ping-Statistik für 2606:4700:4700::1111:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 68ms, Maximum = 68ms, Mittelwert = 68ms
+
+$ ping -6 -l 2000 -n 1 -w 1500 2606:4700:4700::1111   (exit 0, 46 ms)
+
+Ping wird ausgeführt für 2606:4700:4700::1111 mit 2000 Bytes Daten:
+Antwort von 2606:4700:4700::1111: Zeit=27ms 
+
+Ping-Statistik für 2606:4700:4700::1111:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 27ms, Maximum = 27ms, Mittelwert = 27ms
+
+$ ping -6 -l 4000 -n 1 -w 1500 2606:4700:4700::1111   (exit 0, 43 ms)
+
+Ping wird ausgeführt für 2606:4700:4700::1111 mit 4000 Bytes Daten:
+Antwort von 2606:4700:4700::1111: Zeit=23ms 
+
+Ping-Statistik für 2606:4700:4700::1111:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 23ms, Maximum = 23ms, Mittelwert = 23ms
+
+$ ping -6 -l 8000 -n 1 -w 1500 2606:4700:4700::1111   (exit 0, 43 ms)
+
+Ping wird ausgeführt für 2606:4700:4700::1111 mit 8000 Bytes Daten:
+Antwort von 2606:4700:4700::1111: Zeit=25ms 
+
+Ping-Statistik für 2606:4700:4700::1111:
+    Pakete: Gesendet = 1, Empfangen = 1, Verloren = 0
+    (0% Verlust),
+Ca. Zeitangaben in Millisek.:
+    Minimum = 25ms, Maximum = 25ms, Mittelwert = 25ms

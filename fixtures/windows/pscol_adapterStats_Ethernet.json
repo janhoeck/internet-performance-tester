@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Ethernet",
+    "rxBytes": 1535609500,
+    "rxUnicastPkts": 1172432,
+    "rxMulticastPkts": 19174,
+    "rxBroadcastPkts": 242,
+    "rxDiscarded": 0,
+    "rxErrors": 0,
+    "txBytes": 81926953,
+    "txUnicastPkts": 663391,
+    "txMulticastPkts": 1793,
+    "txBroadcastPkts": 214,
+    "txDiscarded": 0,
+    "txErrors": 0,
+    "t": 1791550215075
+  }
+]

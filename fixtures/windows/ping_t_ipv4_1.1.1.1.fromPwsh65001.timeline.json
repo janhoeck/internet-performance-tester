@@ -1,0 +1,163 @@
+{
+  "case": "ipv4_1.1.1.1",
+  "args": [
+    "-t",
+    "-w",
+    "1000",
+    "1.1.1.1"
+  ],
+  "tag": "fromPwsh65001",
+  "killAt": 9015.3,
+  "exit": {
+    "code": null,
+    "signal": "SIGTERM",
+    "t": 9017.3
+  },
+  "stderr": "",
+  "trailingUnterminated": null,
+  "chunkCount": 10,
+  "linesPerChunk": 1.1,
+  "chunks": [
+    {
+      "t": 21.9,
+      "len": 56,
+      "afterKill": false,
+      "hex": "0d 0a 50 69 6e 67 20 77 69 72 64 20 61 75 73 67 65 66 81 68 72 74 20 66 81 72 20 31 2e 31 2e 31 2e 31 20 6d 69 74 20 33 32 20 42 79 74 65 73 20 44 61 74 65 6e 3a 0d 0a"
+    },
+    {
+      "t": 46.7,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 1041.3,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 2049.6,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 3056.3,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 4075.5,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 5087.3,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 6086.2,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 7095.3,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 8100.2,
+      "len": 48,
+      "afterKill": false
+    }
+  ],
+  "lines": [
+    {
+      "t": 21.9,
+      "latin1": "",
+      "utf8Valid": true,
+      "cp850": "",
+      "utf8": ""
+    },
+    {
+      "t": 21.9,
+      "latin1": "Ping wird ausgefhrt fr 1.1.1.1 mit 32 Bytes Daten:",
+      "utf8Valid": false,
+      "cp850": "Ping wird ausgeführt für 1.1.1.1 mit 32 Bytes Daten:",
+      "utf8": "Ping wird ausgef�hrt f�r 1.1.1.1 mit 32 Bytes Daten:",
+      "highBytes": "81 81"
+    },
+    {
+      "t": 46.7,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=25ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=25ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=25ms TTL=57"
+    },
+    {
+      "t": 1041.3,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=15ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=15ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=15ms TTL=57"
+    },
+    {
+      "t": 2049.6,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=17ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=17ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=17ms TTL=57"
+    },
+    {
+      "t": 3056.3,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=17ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=17ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=17ms TTL=57"
+    },
+    {
+      "t": 4075.5,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=27ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=27ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=27ms TTL=57"
+    },
+    {
+      "t": 5087.3,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=29ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=29ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=29ms TTL=57"
+    },
+    {
+      "t": 6086.2,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=18ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=18ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=18ms TTL=57"
+    },
+    {
+      "t": 7095.3,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=19ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=19ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=19ms TTL=57"
+    },
+    {
+      "t": 8100.2,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=15ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=15ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=15ms TTL=57"
+    }
+  ],
+  "replyLineDeltasMs": [
+    994.6,
+    1008.3,
+    1006.7,
+    1019.2,
+    1011.8,
+    998.9,
+    1009.1,
+    1004.9
+  ]
+}

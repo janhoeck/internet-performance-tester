@@ -1,0 +1,548 @@
+[
+ {
+  "kind": "msg",
+  "id": "0x6004001C",
+  "low16": 28,
+  "text": "%2%n\r\nThe network adapter is transitioning to a low-power state.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x6004001D",
+  "low16": 29,
+  "text": "%2%n\r\nThe network adapter has exited a low-power state.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x6004001F",
+  "low16": 31,
+  "text": "%2%n\r\nDie Netzwerkverbindung wurde mit 10 Gbit/s Vollduplex hergestellt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040020",
+  "low16": 32,
+  "text": "%2%n\r\nDie Netzwerkverbindung wurde mit 1 Gbit/s Vollduplex hergestellt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040021",
+  "low16": 33,
+  "text": "%2%n\r\nDie Netzwerkverbindung wurde mit 100 Mbit/s Vollduplex hergestellt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040022",
+  "low16": 34,
+  "text": "%2%n\r\nDie Netzwerkverbindung wurde mit 100 Mbit/s Halbduplex hergestellt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040023",
+  "low16": 35,
+  "text": "%2%n\r\nDie Netzwerkverbindung wurde mit 10 Mbit/s Vollduplex hergestellt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040024",
+  "low16": 36,
+  "text": "%2%n\r\nDie Netzwerkverbindung wurde mit 10 Mbit/s Halbduplex hergestellt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040028",
+  "low16": 40,
+  "text": "%2%n\r\nIntel SmartSpeed hat die Verbindungsgeschwindigkeit von der angegebenen Höchstgeschwindigkeit heruntergestuft.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040029",
+  "low16": 41,
+  "text": "%2%n\r\nDer Netzwerkadaptertreiber wurde gestoppt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x6004002A",
+  "low16": 42,
+  "text": "%2%n\r\nDer Netzwerkadaptertreiber wurde gestartet.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040035",
+  "low16": 53,
+  "text": "%2%n\r\nJumbo Frames können nicht konfiguriert werden, wenn MACSec aktiviert ist.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040038",
+  "low16": 56,
+  "text": "%2%n\r\nDer Netzwerktreiber wurde angehalten, da der Netzwerkadapter entfernt wurde.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040039",
+  "low16": 57,
+  "text": "%2%n\r\nDie Netzwerkverbindung wurde mit 2,5 Gbit/s Vollduplex hergestellt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x6004003A",
+  "low16": 58,
+  "text": "%2%n\r\nDie Netzwerkverbindung wurde mit 25 Gbit/s Vollduplex hergestellt, angeforderte FEC: %3, FEC: %4, Autoneg: %5.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x6004003B",
+  "low16": 59,
+  "text": "%2%n\r\nDie Netzwerkverbindung wurde mit 40 Gbit/s Vollduplex hergestellt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x6004003C",
+  "low16": 60,
+  "text": "%2%n\r\nDie Netzwerkverbindung wurde mit 50 Gbit/s Vollduplex hergestellt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x6004003D",
+  "low16": 61,
+  "text": "%2%n\r\nDie Netzwerkverbindung wurde mit 20 Gbit/s Vollduplex hergestellt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x6004003E",
+  "low16": 62,
+  "text": "%2%n\r\nDie Netzwerkverbindung wurde mit 5 Gbit/s Vollduplex hergestellt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040040",
+  "low16": 64,
+  "text": "%2%n\r\nDie eTrack-ID dieses Netzwerkadapters lautet: %3.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040046",
+  "low16": 70,
+  "text": "%2%n\r\nDer Treiber dieses Geräts hat eine ältere Version des NVM-Images erkannt, als erwartet wurde. Bitte aktualisieren Sie das NVM-Image.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040049",
+  "low16": 73,
+  "text": "%2%n\r\nDie Benutzereinstellungen 'Speed and Duplex' und 'Flow Control' können nicht verändert werden, da sich dieses Gerät im Betriebsmodus 'Virtual Connect' befindet.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x6004004C",
+  "low16": 76,
+  "text": "%2%n\r\nDie Netzwerkverbindung wurde mit 25 Gbit/s Vollduplex hergestellt, angeforderte FEC: %3, FEC: Keine, Autoneg: %4.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040053",
+  "low16": 83,
+  "text": "%2%n\r\nNIC-Link is aktiv, %3 Vollduplex, Angeforderte FEC: %4, FEC: %5, Autoneg: %6, Flusssteuerung: %7.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040054",
+  "low16": 84,
+  "text": "%2%n\r\nMögliche Fehlkonfiguration des Ethernet-Anschlusses festgestellt. Sollte dies nicht vorgesehen sein, verwenden Sie bitte das Intel® Ethernet-Anschluss Konfigurationstool, um das Problem zu beheben.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040055",
+  "low16": 85,
+  "text": "%2%n\r\nDCB ist %3 in der Hardware. Dieser Port unterstützt maximal %4 TC.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040056",
+  "low16": 86,
+  "text": "%2%n\r\nRDMA-Funktionalität ist bei der aktuellen Gerätekonfiguration nicht verfügbar.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040058",
+  "low16": 88,
+  "text": "%2%n\r\nDDP-Paket erfolgreich geladen: %3 Version %4 %n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x6004005F",
+  "low16": 95,
+  "text": "%2%n\r\nTreiber konnte DDP-Paketdatei nicht laden, da auf dem Gerät bereits ein kompatibles DDP-Paket existiert.%n\r\nGerät hat Paket '%3' Version %4. Treiber hat Paket '%5' Version %6.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040060",
+  "low16": 96,
+  "text": "%2%n\r\nFW-LLDP wurde vorübergehend aktiviert, damit QoS aktiviert werden kann.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040061",
+  "low16": 97,
+  "text": "%2%n\r\nFW-LLDP wurde wieder deaktiviert.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040062",
+  "low16": 98,
+  "text": "%2%n\r\nFW-LLDP konnte nicht initialisiert werden.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040063",
+  "low16": 99,
+  "text": "%2%n\r\nFW-LLDP konnte nicht gestoppt werden.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040066",
+  "low16": 102,
+  "text": "%2%n\r\nFlusssteuerung ist auf dieser Schnittstelle aktiviert. Bei RDMA-Datenverkehr wird empfohlen, auf allen Netzwerkschnittstellen und Switches die Flusssteuerung durchgängig zu aktivieren, um Leistungsabfall durch Paketverlust zu vermeiden.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040067",
+  "low16": 103,
+  "text": "%2%n\r\nPROBLEM: Dieser Adapter unterstützt kein ROCEv2 und kann RDMA nicht verwenden.\r\nMAẞNAHME: Ändern Sie das Registrierungs-Schlüsselwort *NetworkDirectTechnology in eine unterstützte Technologie wie iWARP.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040069",
+  "low16": 105,
+  "text": "%2%n\r\nRDMA-Empfangsfenster eingestellt auf %3.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x6004006A",
+  "low16": 106,
+  "text": "%2%n\r\nDie Rdma-Pe-Fw-Version: %3.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x6004006E",
+  "low16": 110,
+  "text": "%2%n\r\nDie Netzwerkverbindung wurde mit 25 Gbit/s Vollduplex hergestellt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x6004006F",
+  "low16": 111,
+  "text": "%2%n\r\nDie Netzwerkverbindung wurde mit 100 Gbit/s Vollduplex hergestellt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040070",
+  "low16": 112,
+  "text": "%2%n\r\nDCB funktioniert bei der aktuellen Geschwindigkeit nicht. Weitere Informationen finden Sie im Adapterbenutzerleitfaden.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x60040071",
+  "low16": 113,
+  "text": "%2%n\r\nDCB funktioniert nicht, wenn LLDP Agent in UEFI deaktiviert ist. Bitte aktivieren Sie „LLDP Agent“ auf dem UEFI-Bildschirm „NIC Configuration“.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA004001B",
+  "low16": 27,
+  "text": "%2%n\r\nNetzwerkverbindung wurde unterbrochen.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA004001E",
+  "low16": 30,
+  "text": "%2%n\r\nPROBLEM: Der Netzwerkadapter ist auf automatische Absprache konfiguriert, der Verbindungspartner aber nicht. Es ist möglich, dass ein Duplexkonflikt auftritt.%n\r\nMAẞNAHME: Konfigurieren Sie den Verbindungspartner für automatische Absprache.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA0040025",
+  "low16": 37,
+  "text": "%2%n\r\nDie für dieses Gerät verfügbare PCI-Express-Bandbreite reicht u. U. für optimale Leistung nicht aus. Bitte wechseln Sie das Gerät auf einen anderen PCI-e-Link mit mehr Lanes bzw. höherer Übertragungsrate.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA0040036",
+  "low16": 54,
+  "text": "%2%n\r\nPROBLEM: Ein bösartiger VF-Treiber wurde bei VF-ID %3 erkannt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA0040041",
+  "low16": 65,
+  "text": "%2%n\r\nProblem: Die für diese Karte verfügbare PCI-Express-Bandbreite reicht für optimale Leistung nicht aus.%n\r\nMAẞNAHME: Versetzen Sie den Adapter in einen x4-PCI-Express-Steckplatz der dritten Generation.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA0040042",
+  "low16": 66,
+  "text": "%2%n\r\nPROBLEM: Die für diese Karte verfügbare PCI-Express-Bandbreite reicht für optimale Leistung nicht aus.%n\r\nMAẞNAHME: Versetzen Sie den Adapter in einen x8-PCI-Express-Steckplatz der dritten Generation.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA0040043",
+  "low16": 67,
+  "text": "%2%n\r\nDie Partition ermittelte eine Verbindungsgeschwindigkeit unter 10 Gbit/s.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA0040045",
+  "low16": 69,
+  "text": "%2%n\r\nDer Treiber dieses Geräts hat eine neuere Version des NVM-Images erkannt, als erwartet wurde. Bitte installieren Sie die neueste Version des Netzwerktreibers.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA004004A",
+  "low16": 74,
+  "text": "%2%n\r\nPROBLEM: Virtualisierungsfunktionen deaktiviert, da NumVFs bei aktivierter SRIOV auf null gesetzt wurde.%n\r\nMAẞNAHME: Um die Virtualisierungsfunktionen zu aktivieren, setzen Sie NumVFs auf einen anderen Wert als null und starten Sie anschließend den Adapter neu.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA004004D",
+  "low16": 77,
+  "text": "%2%n\r\nPROBLEM: Laden des Treibers fehlgeschlagen, da EEPROM-Prüfsumme nicht validiert werden konnte\r\nMAẞNAHME: Zur Behebung des Problems das gültige NVM flashen.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA0040050",
+  "low16": 80,
+  "text": "%2%n\r\nPROBLEM: RDMA wird unterstützt, ist aber nicht verfügbar.%n\r\nMAẞNAHME: Fügen Sie RDMA-VFs mit dem Schlüsselwort „RdmaMaxVfsEnabled“ auf allen Ports hinzu. Weitere Informationen erhalten Sie im Abschnitt „NDK-Modus 3“ des Benutzerhandbuchs.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA0040051",
+  "low16": 81,
+  "text": "%2%n\r\nPROBLEM: Der lokale NUMA-Knoten kann nicht zugewiesen werden, was Auswirkungen auf die Leistung hat.%n\r\nMAẞNAHME: Überprüfen Sie die NUMA-Speicherverteilung.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA0040052",
+  "low16": 82,
+  "text": "%2%n\r\nDie gewählte Geschwindigkeit wird von dem Datenträger nicht unterstützt. Alternativ wird versucht, eine Verbindung mit der Option \"Automatische Aushandlung\" herzustellen.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA0040057",
+  "low16": 87,
+  "text": "%2%n\r\nPROBLEM: %3 Tx Endeckung schädlicher Treibererkennungsereignisse auf PF: %4 VF: %5 MAC: %6.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA0040064",
+  "low16": 100,
+  "text": "%2%n\r\nFirmware-Rollbackmodus erkannt. Aktuelle Version ist NVM: %3, FW: %4. Funktionalität des Geräts kann eingeschränkt sein.%n\r\nEinzelheiten zum Firmware-Rollbackmodus finden Sie im Intel(R) Ethernet Adapters and Devices User Guide.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA0040065",
+  "low16": 101,
+  "text": "%2%n\r\nPROBLEM: Flusssteuerung ist auf dieser Schnittstelle deaktiviert. Bei RDMA-Datenverkehr wird empfohlen, auf allen Netzwerkschnittstellen und Switches die Flusssteuerung durchgängig zu aktivieren, um Leistungsabfall durch Paketverlust zu vermeiden.%n\r\nMAẞNAHME: Aktivieren Sie Flusssteuerung auf Verbindungsebene oder prioritäre Flusssteuerung für Network Direct-Port 445 auf dieser Schnittstelle.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA004006B",
+  "low16": 107,
+  "text": "%2%n\r\nPROBLEM: %3 Rx Entdeckung schädlicher Treibererkennungsereignisse auf PF: %4 VF: %5 MAC: %6 MDDAutoResetVFs: %7.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA004006C",
+  "low16": 108,
+  "text": "%2%n\r\nDie gewählte Geschwindigkeit wird von dem akutellen Datenträger nicht unterstützt. Wählen Sie bitte eine Verbindungsgeschwindigkeit, die von dem aktuellen Datenträger unterstützt wird.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA0040072",
+  "low16": 114,
+  "text": "%2%n\r\nVF MAC %3 mit vPortID %4 auf PF MAC %5 generiert asynchrone Nachrichten und kann die PF-Nachrichtenschlange überlasten. Weitere Informationen finden Sie im Adapterbenutzerleitfaden.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA0040073",
+  "low16": 115,
+  "text": "%2%n\r\nFür SR-IOV sind nur %3 MSI-X Interrupts verfügbar. Es sind nicht genügend Ressourcen vorhanden, um für %5 VFs %4 MSI-X Interrupts pro VF zu unterstützen.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xA0040074",
+  "low16": 116,
+  "text": "%2%n\r\nEs wurde ein nicht unterstützter Modultyp erkannt. Eine Liste unterstützter Module finden Sie im Intel(R) Ethernet Adapters and Devices User Guide.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE0040006",
+  "low16": 6,
+  "text": "%2%n\r\nPROBLEM: Die zum Betrieb erforderlichen Zuordnungsregister konnten nicht zugewiesen werden.%n\r\nMAẞNAHME: Verringern Sie die Anzahl der Übertragungsdeskriptoren und starten Sie Ihr System neu.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE0040007",
+  "low16": 7,
+  "text": "%2%n\r\nPROBLEM: Interrupt für den Netzwerkadapter konnte nicht zugewiesen werden.%n\r\nMAẞNAHME: Probieren Sie einen anderen PCI-Steckplatz aus.%n\r\nMAẞNAHME: Installieren Sie den neuesten Treiber von \"http://www.intel.com/support/go/network/adapter/home.htm\".%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE0040017",
+  "low16": 23,
+  "text": "%2%n\r\nPROBLEM: Das EEPROM auf Ihrem Netzwerkadapter ist möglicherweise fehlerhaft.%n\r\nMAẞNAHME: Besuchen Sie \"http://www.intel.com/support/go/network/adapter/home.htm\" für Hilfestellung.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE0040018",
+  "low16": 24,
+  "text": "%2%n\r\nPROBLEM: Der Netzwerkadapter konnte nicht gestartet werden.%n\r\nMAẞNAHME: Installieren Sie den neuesten Treiber von \"http://www.intel.com/support/go/network/adapter/home.htm\".%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE0040019",
+  "low16": 25,
+  "text": "%2%n\r\nPROBLEM: Die MAC-Adresse auf Ihrem Netzwerkadapter ist ungültig.%n\r\nMAẞNAHME: Besuchen Sie \"http://www.intel.com/support/go/network/adapter/home.htm\" für Hilfestellung.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE004002B",
+  "low16": 43,
+  "text": "%2%n\r\nPROBLEM: Der zum Betrieb benötigte gemeinsam genutzte Speicher konnte nicht zugewiesen werden.%n\r\nMAẞNAHME: Verringern Sie die Anzahl der Übertragungs- und Empfangsdeskriptoren und starten Sie Ihr System neu.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE004002C",
+  "low16": 44,
+  "text": "%2%n\r\nPROBLEM: Der zum Betrieb benötigte Speicher konnte nicht zugewiesen werden.%n\r\nMAẞNAHME: Verringern Sie die Anzahl der Übertragungs- und Empfangsdeskriptoren und starten Sie Ihr System neu.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE004002D",
+  "low16": 45,
+  "text": "%2%n\r\nPROBLEM: Der zum Betrieb benötigte Ressourcenpool konnte nicht zugewiesen werden.%n\r\nMAẞNAHME: Verringern Sie die Anzahl der Übertragungs- und Empfangsdeskriptoren und starten Sie Ihr System neu.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE004002E",
+  "low16": 46,
+  "text": "%2%n\r\nPROBLEM: Die zum Betrieb benötigten Scatter-Gather-DMA-Ressourcen konnten nicht initialisiert werden.%n\r\nMAẞNAHME: Verringern Sie die Anzahl der Übertragungsdeskriptoren und starten Sie Ihr System neu.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE004002F",
+  "low16": 47,
+  "text": "%2%n\r\nPROBLEM: Der Netzwerkadapter-Flash konnte nicht zugewiesen werden.%n\r\nMAẞNAHME: Installieren Sie den neuesten Treiber von \"http://www.intel.com/support/go/network/adapter/home.htm\".%n\r\nMAẞNAHME: Probieren Sie einen anderen Steckplatz aus.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE0040030",
+  "low16": 48,
+  "text": "%2%n\r\nPROBLEM: Der Lüfter des Netzwerkadapters ist ausgefallen.%n\r\nMAẞNAHME: Schalten Sie den Computer aus und ersetzen Sie den Netzwerkadapter.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE0040031",
+  "low16": 49,
+  "text": "%2%n\r\nPROBLEM: Der Treiber konnte aufgrund eines auf diesem Adapter installierten, nicht unterstützten SFP+ Moduls nicht geladen werden.%n\r\nMAẞNAHME: Ersetzen Sie das Modul.%n\r\nMAẞNAHME: Installieren Sie den neuesten Treiber von \"http://www.intel.com/support/go/network/adapter/home.htm\".%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE0040032",
+  "low16": 50,
+  "text": "%2%n\r\nPROBLEM: Der Netzwerkadapter wurde gestoppt, da er überhitzt ist.%n\r\nMAẞNAHME: Starten Sie den Computer neu. Falls das Problem weiterhin besteht, fahren Sie den Computer herunter und ersetzen Sie den Netzwerkadapter.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE0040033",
+  "low16": 51,
+  "text": "%2%n\r\nPROBLEM: Die Geschwindigkeit des Netzwerkadapters wurde verringert, da er überhitzt ist.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE0040034",
+  "low16": 52,
+  "text": "%2%n\r\nPROBLEM: Der Netzwerkadapter wurde gestoppt, da er überhitzt ist.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE0040044",
+  "low16": 68,
+  "text": "%2%n\r\nDer Treiber dieses Geräts wurde angehalten, da das NVM-Image neuer ist als der Treiber. Bitte installieren Sie die neueste Version des Netzwerktreibers.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE0040047",
+  "low16": 71,
+  "text": "%2%n\r\nRx/Tx ist auf diesem Gerät deaktiviert, da ein nicht unterstützter SFP+ Modultyp erkannt wurde. Eine Liste unterstützter Module finden Sie im Intel(R) Ethernet Adapters and Devices User Guide.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE0040048",
+  "low16": 72,
+  "text": "%2%n\r\nPROBLEM: Der Treiber konnte nicht geladen werden, da der Adapter keine MSI-X-Interruptressourcen erhalten hat.%n\r\nMAẞNAHME: Stecken Sie den Adapter in einen anderen Steckplatz oder eine andere Plattform.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE004004B",
+  "low16": 75,
+  "text": "%2%n\r\nPROBLEM: Treiber konnte nicht geladen werden, da das Gerät mit einem Switch verbunden ist, der Datenverkehrsklasse 0 nicht anbietet.%n\r\nMAẞNAHME: Um dieses Problem zu beheben, trennen Sie das Gerät von dem Switch oder konfigurieren Sie den Switch so, dass er Datenverkehrsklasse 0 (TC0) anbietet. Starten Sie anschließend das System neu und starten Sie die Treiberinstallation erneut.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE004004E",
+  "low16": 78,
+  "text": "%2%n\r\nRx/Tx ist auf diesem Gerät deaktiviert, da das Modul die thermischen Anforderungen nicht erfüllt. Eine Liste unterstützter Module finden Sie im Intel(R) Ethernet Adapters and Devices User Guide.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE004004F",
+  "low16": 79,
+  "text": "%2%n\r\nFirmware-Wiederherstellungsmodus erkannt. Beschränkte Funktionalität. Einzelheiten zum Firmware-Wiederherstellungsmodus finden Sie im Intel(R) Ethernet Adapters and Devices User Guide.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE0040059",
+  "low16": 89,
+  "text": "%2%n\r\nPROBLEM: Unbekannter Fehler beim Laden des DDP-Pakets. System wechselt in den abgesicherten Modus.%n\r\nAKTION: Starten Sie den Adapter neu. Falls das Problem weiterhin auftritt, installieren Sie den neuesten Treiber von \"http://www.intel.com/support/go/network/adapter/home.htm\".%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE004005A",
+  "low16": 90,
+  "text": "%2%n\r\nPROBLEM: DDP-Paket konnte nicht geladen werden, da seine Sicherheitsversion zu niedrig ist. System wechselt in den abgesicherten Modus.%n\r\nMAẞNAHME: Installieren Sie den neuesten Treiber von \"http://www.intel.com/support/go/network/adapter/home.htm\".%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE004005B",
+  "low16": 91,
+  "text": "%2%n\r\nPROBLEM: Signatur des DDP-Pakets ist ungültig, Paket kann nicht geladen werden. System wechselt in den abgesicherten Modus.%n\r\nMAẞNAHME: Installieren Sie den neuesten Treiber von \"http://www.intel.com/support/go/network/adapter/home.htm.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE004005C",
+  "low16": 92,
+  "text": "%2%n\r\nGerätefehler beim Laden des DDP-Pakets. Gerät wird zurückgesetzt.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE004005D",
+  "low16": 93,
+  "text": "%2%n\r\nDDP-Paket auf dem Gerät wird vom Treiber nicht unterstützt. Gerät: Paket %3 Version %4.x.x.%n\r\nTreiber erfordert Version %5.x.x. System wechselt in den abgesicherten Modus.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE004005E",
+  "low16": 94,
+  "text": "%2%n\r\nUnbekannter Fehler beim Laden des DDP-Pakets. Bitte führen Sie einen Neustart des Systems durch. Falls das Problem weiterhin auftritt, aktualisieren Sie das NVM. System wechselt in den abgesicherten Modus.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE0040068",
+  "low16": 104,
+  "text": "%2%n\r\nDer Wiederherstellungsmodus wird aufgrund wiederholter FW-Rücksetzungen aufgerufen. Dies kann einige Minuten dauern. Bezieht sich auf den Intel(R) Ethernet Adapters and Devices User Guide.%n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0xE004006D",
+  "low16": 109,
+  "text": "%2%n\r\nDie geladene Firmware auf dem Gerät ist nicht mit dem DDP-Paket kompatibel. Aktualisieren Sie bitte das NVM des Geräts. System wechselt in den abgesicherten Modus.%n\r\n\u0000&"
+ }
+]

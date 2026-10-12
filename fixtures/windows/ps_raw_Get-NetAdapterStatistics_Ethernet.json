@@ -1,0 +1,201 @@
+[
+  {
+    "ifAlias": "Ethernet",
+    "InterfaceAlias": "Ethernet",
+    "ifDesc": "Intel(R) Ethernet Controller (3) I225-V",
+    "Caption": "MSFT_NetAdapterStatisticsSettingData 'Intel(R) Ethernet Controller (3) I225-V'",
+    "Description": "Intel(R) Ethernet Controller (3) I225-V",
+    "ElementName": "Intel(R) Ethernet Controller (3) I225-V",
+    "InstanceID": "{178AF0A6-93F5-4ACE-ACE2-2ECDF78704F2}",
+    "InterfaceDescription": "Intel(R) Ethernet Controller (3) I225-V",
+    "Name": "Ethernet",
+    "Source": 2,
+    "SystemName": "Jan-PC",
+    "OutboundDiscardedPackets": 0,
+    "OutboundPacketErrors": 0,
+    "RdmaStatistics": {
+      "CimClass": {
+        "CimSuperClassName": null,
+        "CimSuperClass": null,
+        "CimClassProperties": [
+          "AcceptedConnections",
+          "ActiveConnections",
+          "CompletionQueueErrors",
+          "ConnectionErrors",
+          "FailedConnectionAttempts",
+          "InboundBytes",
+          "InboundFrames",
+          "InitiatedConnections",
+          "OutboundBytes",
+          "OutboundFrames"
+        ],
+        "CimClassQualifiers": [
+          "ClassVersion = \"1.0.0\"",
+          "locale = 1033"
+        ],
+        "CimClassMethods": [],
+        "CimSystemProperties": {
+          "Namespace": "ROOT/StandardCimv2",
+          "ServerName": "JAN-PC",
+          "ClassName": "MSFT_NetAdapter_RdmaStatistics",
+          "Path": null
+        }
+      },
+      "CimInstanceProperties": [
+        {
+          "Name": "AcceptedConnections",
+          "Value": 0,
+          "CimType": 8,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "ActiveConnections",
+          "Value": 0,
+          "CimType": 8,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "CompletionQueueErrors",
+          "Value": 0,
+          "CimType": 8,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "ConnectionErrors",
+          "Value": 0,
+          "CimType": 8,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "FailedConnectionAttempts",
+          "Value": 0,
+          "CimType": 8,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "InboundBytes",
+          "Value": 0,
+          "CimType": 8,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "InboundFrames",
+          "Value": 0,
+          "CimType": 8,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "InitiatedConnections",
+          "Value": 0,
+          "CimType": 8,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "OutboundBytes",
+          "Value": 0,
+          "CimType": 8,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "OutboundFrames",
+          "Value": 0,
+          "CimType": 8,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        }
+      ],
+      "CimSystemProperties": {
+        "Namespace": "ROOT/StandardCimv2",
+        "ServerName": "JAN-PC",
+        "ClassName": "MSFT_NetAdapter_RdmaStatistics",
+        "Path": null
+      }
+    },
+    "ReceivedBroadcastBytes": 17830,
+    "ReceivedBroadcastPackets": 232,
+    "ReceivedBytes": 1517271169,
+    "ReceivedDiscardedPackets": 0,
+    "ReceivedMulticastBytes": 5166409,
+    "ReceivedMulticastPackets": 17580,
+    "ReceivedPacketErrors": 0,
+    "ReceivedUnicastBytes": 1507582386,
+    "ReceivedUnicastPackets": 1126136,
+    "RscStatistics": {
+      "CimClass": {
+        "CimSuperClassName": null,
+        "CimSuperClass": null,
+        "CimClassProperties": [
+          "CoalescedBytes",
+          "CoalescedPackets",
+          "CoalescingEvents",
+          "CoalescingExceptions"
+        ],
+        "CimClassQualifiers": [
+          "ClassVersion = \"1.0.0\"",
+          "locale = 1033"
+        ],
+        "CimClassMethods": [],
+        "CimSystemProperties": {
+          "Namespace": "ROOT/StandardCimv2",
+          "ServerName": "JAN-PC",
+          "ClassName": "MSFT_NetAdapter_RscStatistics",
+          "Path": null
+        }
+      },
+      "CimInstanceProperties": [
+        {
+          "Name": "CoalescedBytes",
+          "Value": 0,
+          "CimType": 8,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "CoalescedPackets",
+          "Value": 0,
+          "CimType": 8,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "CoalescingEvents",
+          "Value": 0,
+          "CimType": 8,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        },
+        {
+          "Name": "CoalescingExceptions",
+          "Value": 0,
+          "CimType": 8,
+          "Flags": "Property, ReadOnly, NotModified",
+          "IsValueModified": false
+        }
+      ],
+      "CimSystemProperties": {
+        "Namespace": "ROOT/StandardCimv2",
+        "ServerName": "JAN-PC",
+        "ClassName": "MSFT_NetAdapter_RscStatistics",
+        "Path": null
+      }
+    },
+    "SentBroadcastBytes": 16727,
+    "SentBroadcastPackets": 204,
+    "SentBytes": 72661400,
+    "SentMulticastBytes": 248030,
+    "SentMulticastPackets": 1715,
+    "SentUnicastBytes": 68789658,
+    "SentUnicastPackets": 629597,
+    "SupportedStatistics": 4163583,
+    "PSComputerName": null
+  }
+]

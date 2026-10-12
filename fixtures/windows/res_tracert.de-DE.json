@@ -1,0 +1,284 @@
+[
+ {
+  "kind": "msg",
+  "id": "0x00002710",
+  "low16": 10000,
+  "text": "[%1] %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002711",
+  "low16": 10001,
+  "text": "%1!4lu! ms  %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002712",
+  "low16": 10002,
+  "text": "  <1 ms  %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002713",
+  "low16": 10003,
+  "text": "\r\nSyntax: tracert [-d] [-h Max. Hops] [-j Hostliste] [-w Zeitlimit]\r\n                [-R] [-S Quelladresse] [-4] [-6] Zielname\r\n\r\nOptionen:\r\n    -d                  Löst Adressen nicht in Hostnamen auf.\r\n    -h Max. Hops  Maximale Anzahl an Hops bei Zielsuche\r\n    -j Hostliste        \"Loose Source Route\" gemäß Hostliste (nur IPv4)\r\n    -w Zeitlimit        Zeitlimit in Millisekunden für eine Antwort\r\n    -R                  Verfolgt Rundwegpfad (nur IPv6).\r\n    -S Quelladresse     Zu verwendende Quelladresse (nur IPv6).\r\n    -4                  Erzwingt die Verwendung von IPv4.\r\n    -6                  Erzwingt die Verwendung von IPv6.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002714",
+  "low16": 10004,
+  "text": "Der Zielname %1 konnte nicht aufgelöst werden.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002715",
+  "low16": 10005,
+  "text": "Zum IP-Treiber kann keine Verbindung hergestellt werden. Fehlercode %1!d!.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002716",
+  "low16": 10006,
+  "text": "\r\nRoutenverfolgung zu %1 [%2]\r\nüber maximal %3!u! Hops:\r\n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002717",
+  "low16": 10007,
+  "text": "%1!3lu!  %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002718",
+  "low16": 10008,
+  "text": "Keine Informationen verfügbar.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002719",
+  "low16": 10009,
+  "text": " meldet: %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271A",
+  "low16": 10010,
+  "text": "Übertragungsfehler: Fehlercode %1!lu!.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271B",
+  "low16": 10011,
+  "text": "\r\nAblaufverfolgung beendet.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271F",
+  "low16": 10015,
+  "text": "Allgemeiner Fehler.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002720",
+  "low16": 10016,
+  "text": "Zielnetz nicht erreichbar.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002721",
+  "low16": 10017,
+  "text": "Zielhost nicht erreichbar.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002722",
+  "low16": 10018,
+  "text": "Zielprotokoll nicht erreichbar.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002723",
+  "low16": 10019,
+  "text": "Zielprotokoll nicht erreichbar.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002724",
+  "low16": 10020,
+  "text": "Keine Ressourcen.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002725",
+  "low16": 10021,
+  "text": "Eine IP-Option ist ungültig.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002726",
+  "low16": 10022,
+  "text": "Hardwarefehler.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002727",
+  "low16": 10023,
+  "text": "Paket muss fragmentiert werden, DF-Flag ist jedoch gesetzt.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002728",
+  "low16": 10024,
+  "text": "Zeitüberschreitung der Anforderung.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002729",
+  "low16": 10025,
+  "text": "Allgemeiner Fehler.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272A",
+  "low16": 10026,
+  "text": "Ungültige Quellroute angegeben.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272B",
+  "low16": 10027,
+  "text": "Die Gültigkeitsdauer wurde bei der Übertragung überschritten.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272C",
+  "low16": 10028,
+  "text": "Die Gültigkeitsdauer wurde beim Wiederaufbau überschritten.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272D",
+  "low16": 10029,
+  "text": "IP-Parameterfehler.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272E",
+  "low16": 10030,
+  "text": "Löschvorgang der Quelle empfangen.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272F",
+  "low16": 10031,
+  "text": "Die angegebene Option ist zu groß.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002730",
+  "low16": 10032,
+  "text": "Das angegebene Ziel ist ungültig.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002731",
+  "low16": 10033,
+  "text": "Allgemeiner Fehler.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002732",
+  "low16": 10034,
+  "text": "Fehler bei der Initialisierung der Windows Sockets-Schnittstelle. Fehlercode %1!d!.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002733",
+  "low16": 10035,
+  "text": "\r\nRoutenverfolgung zu %1 über maximal %2!u! Hops\r\n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002734",
+  "low16": 10036,
+  "text": "Für die Option %1 muss ein Wert angegeben werden.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002735",
+  "low16": 10037,
+  "text": "Ungültiger Wert für die Option %1.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002736",
+  "low16": 10038,
+  "text": "%1 ist keine gültige Quellrouteadresse.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002737",
+  "low16": 10039,
+  "text": "Zu viele Optionen wurden angegeben.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002738",
+  "low16": 10040,
+  "text": "%1 ist keine gültige Befehlsoption.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002739",
+  "low16": 10041,
+  "text": "Ein Zielname oder eine Zieladresse muss angegeben werden.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273A",
+  "low16": 10042,
+  "text": "%1 %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273B",
+  "low16": 10043,
+  "text": "   *     %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273C",
+  "low16": 10044,
+  "text": "\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273D",
+  "low16": 10045,
+  "text": "%1 %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273E",
+  "low16": 10046,
+  "text": "IP-Sicherheit wird verhandelt.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273F",
+  "low16": 10047,
+  "text": "\"%1\" ist keine gültige Adresse.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002740",
+  "low16": 10048,
+  "text": "\r\nDie Option \"%1\" wird nur für %2 unterstützt.\r\n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002741",
+  "low16": 10049,
+  "text": "Das Socket konnte nicht erstellt werden. Fehlercode %1!d!.\r\n"
+ }
+]

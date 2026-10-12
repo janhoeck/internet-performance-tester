@@ -1,0 +1,8 @@
+
+Ping wird ausgeführt für 192.0.2.1 mit 32 Bytes Daten:
+Zeitüberschreitung der Anforderung.
+Zeitüberschreitung der Anforderung.
+Zeitüberschreitung der Anforderung.
+Zeitüberschreitung der Anforderung.
+Zeitüberschreitung der Anforderung.
+Zeitüberschreitung der Anforderung.

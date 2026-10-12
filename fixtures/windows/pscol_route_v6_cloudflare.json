@@ -1,0 +1,12 @@
+[
+  {
+    "remote": "2606:4700:4700::1111",
+    "sourceAddress": "3fff:8071:7ca0:c980:d8de:c10f:adb:ac10",
+    "ifIndex": 4,
+    "interfaceAlias": "Ethernet",
+    "nextHop": "fe80::de73:6ff:fe12:34df",
+    "destinationPrefix": "::/0",
+    "routeMetric": 256,
+    "interfaceMetric": 35
+  }
+]

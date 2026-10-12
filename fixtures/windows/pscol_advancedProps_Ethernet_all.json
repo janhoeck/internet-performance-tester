@@ -1,0 +1,1004 @@
+[
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "*DeviceSleepOnDisconnect",
+    "value": "0",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": "Flow Control",
+    "displayValue": "Rx & Tx Enabled",
+    "keyword": "*FlowControl",
+    "value": "3",
+    "defaultDisplayValue": "Auto Negotiation",
+    "validDisplayValues": [
+      "Disabled",
+      "Tx Enabled",
+      "Rx Enabled",
+      "Rx & Tx Enabled",
+      "Auto Negotiation"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "*HeaderDataSplit",
+    "value": "1",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "*IdleRestriction",
+    "value": "0",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": "Interrupt Moderation",
+    "displayValue": "Enabled",
+    "keyword": "*InterruptModeration",
+    "value": "1",
+    "defaultDisplayValue": "Enabled",
+    "validDisplayValues": [
+      "Disabled",
+      "Enabled"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "displayName": "IPv4 Checksum Offload",
+    "displayValue": "Rx & Tx Enabled",
+    "keyword": "*IPChecksumOffloadIPv4",
+    "value": "3",
+    "defaultDisplayValue": "Rx & Tx Enabled",
+    "validDisplayValues": [
+      "Disabled",
+      "Tx Enabled",
+      "Rx Enabled",
+      "Rx & Tx Enabled"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  {
+    "displayName": "Jumbo Packet",
+    "displayValue": "1514",
+    "keyword": "*JumboPacket",
+    "value": "1514",
+    "defaultDisplayValue": "1514",
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "*LsoV1IPv4",
+    "value": "0",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": "Large Send Offload V2 (IPv4)",
+    "displayValue": "Enabled",
+    "keyword": "*LsoV2IPv4",
+    "value": "1",
+    "defaultDisplayValue": "Enabled",
+    "validDisplayValues": [
+      "Disabled",
+      "Enabled"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "displayName": "Large Send Offload V2 (IPv6)",
+    "displayValue": "Enabled",
+    "keyword": "*LsoV2IPv6",
+    "value": "1",
+    "defaultDisplayValue": "Enabled",
+    "validDisplayValues": [
+      "Disabled",
+      "Enabled"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "displayName": "Wake from S0ix on Magic Packet",
+    "displayValue": "Enabled",
+    "keyword": "*ModernStandbyWoLMagicPacket",
+    "value": "1",
+    "defaultDisplayValue": "Enabled",
+    "validDisplayValues": [
+      "Disabled",
+      "Enabled"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "*NumRssQueues",
+    "value": "4",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": "ARP Offload",
+    "displayValue": "Enabled",
+    "keyword": "*PMARPOffload",
+    "value": "1",
+    "defaultDisplayValue": "Enabled",
+    "validDisplayValues": [
+      "Disabled",
+      "Enabled"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "displayName": "NS Offload",
+    "displayValue": "Enabled",
+    "keyword": "*PMNSOffload",
+    "value": "1",
+    "defaultDisplayValue": "Enabled",
+    "validDisplayValues": [
+      "Disabled",
+      "Enabled"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "displayName": "Packet Priority & VLAN",
+    "displayValue": "Packet Priority & VLAN Enabled",
+    "keyword": "*PriorityVLANTag",
+    "value": "3",
+    "defaultDisplayValue": "Packet Priority & VLAN Enabled",
+    "validDisplayValues": [
+      "Packet Priority & VLAN Disabled",
+      "Packet Priority Enabled",
+      "VLAN Enabled",
+      "Packet Priority & VLAN Enabled"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  {
+    "displayName": "Receive Buffers",
+    "displayValue": "1024",
+    "keyword": "*ReceiveBuffers",
+    "value": "1024",
+    "defaultDisplayValue": "1024",
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": "Selective Suspend",
+    "displayValue": "Enabled",
+    "keyword": "*SelectiveSuspend",
+    "value": "1",
+    "defaultDisplayValue": "Enabled",
+    "validDisplayValues": [
+      "Disabled",
+      "Enabled"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "displayName": "Speed & Duplex",
+    "displayValue": "Auto Negotiation",
+    "keyword": "*SpeedDuplex",
+    "value": "0",
+    "defaultDisplayValue": "Auto Negotiation",
+    "validDisplayValues": [
+      "Auto Negotiation",
+      "10 Mbps Half Duplex",
+      "10 Mbps Full Duplex",
+      "100 Mbps Half Duplex",
+      "100 Mbps Full Duplex",
+      "1.0 Gbps Full Duplex",
+      "2.5 Gbps Full Duplex"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "6",
+      "2500"
+    ]
+  },
+  {
+    "displayName": "Selective Suspend Idle Timeout",
+    "displayValue": "5",
+    "keyword": "*SSIdleTimeout",
+    "value": "5",
+    "defaultDisplayValue": "5",
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": "TCP Checksum Offload (IPv4)",
+    "displayValue": "Rx & Tx Enabled",
+    "keyword": "*TCPChecksumOffloadIPv4",
+    "value": "3",
+    "defaultDisplayValue": "Rx & Tx Enabled",
+    "validDisplayValues": [
+      "Disabled",
+      "Tx Enabled",
+      "Rx Enabled",
+      "Rx & Tx Enabled"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  {
+    "displayName": "TCP Checksum Offload (IPv6)",
+    "displayValue": "Rx & Tx Enabled",
+    "keyword": "*TCPChecksumOffloadIPv6",
+    "value": "3",
+    "defaultDisplayValue": "Rx & Tx Enabled",
+    "validDisplayValues": [
+      "Disabled",
+      "Tx Enabled",
+      "Rx Enabled",
+      "Rx & Tx Enabled"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  {
+    "displayName": "Transmit Buffers",
+    "displayValue": "1024",
+    "keyword": "*TransmitBuffers",
+    "value": "1024",
+    "defaultDisplayValue": "1024",
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": "UDP Checksum Offload (IPv4)",
+    "displayValue": "Rx & Tx Enabled",
+    "keyword": "*UDPChecksumOffloadIPv4",
+    "value": "3",
+    "defaultDisplayValue": "Rx & Tx Enabled",
+    "validDisplayValues": [
+      "Disabled",
+      "Tx Enabled",
+      "Rx Enabled",
+      "Rx & Tx Enabled"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  {
+    "displayName": "UDP Checksum Offload (IPv6)",
+    "displayValue": "Rx & Tx Enabled",
+    "keyword": "*UDPChecksumOffloadIPv6",
+    "value": "3",
+    "defaultDisplayValue": "Rx & Tx Enabled",
+    "validDisplayValues": [
+      "Disabled",
+      "Tx Enabled",
+      "Rx Enabled",
+      "Rx & Tx Enabled"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  {
+    "displayName": "Wake on Magic Packet",
+    "displayValue": "Enabled",
+    "keyword": "*WakeOnMagicPacket",
+    "value": "1",
+    "defaultDisplayValue": "Enabled",
+    "validDisplayValues": [
+      "Disabled",
+      "Enabled"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "displayName": "Wake on Pattern Match",
+    "displayValue": "Enabled",
+    "keyword": "*WakeOnPattern",
+    "value": "1",
+    "defaultDisplayValue": "Enabled",
+    "validDisplayValues": [
+      "Disabled",
+      "Enabled"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1"
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "CoInstallFlag",
+    "value": "2150109185",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": "DMA Coalescing",
+    "displayValue": "Disabled",
+    "keyword": "DMACoalescing",
+    "value": "0",
+    "defaultDisplayValue": "Disabled",
+    "validDisplayValues": [
+      "Disabled",
+      "250 usec",
+      "500 usec",
+      "1 msec",
+      "2 msec",
+      "3 msec",
+      "4 msec",
+      "5 msec",
+      "6 msec",
+      "7 msec",
+      "8 msec",
+      "9 msec",
+      "10 msec"
+    ],
+    "validRegistryValues": [
+      "0",
+      "250",
+      "500",
+      "1000",
+      "2000",
+      "3000",
+      "4000",
+      "5000",
+      "6000",
+      "7000",
+      "8000",
+      "9000",
+      "10000"
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "EnableLLI",
+    "value": "0",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "EnableModernStandby",
+    "value": "1",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": "Enable PME",
+    "displayValue": "Enabled",
+    "keyword": "EnablePME",
+    "value": "1",
+    "defaultDisplayValue": "Enabled",
+    "validDisplayValues": [
+      "Enabled",
+      "Disabled"
+    ],
+    "validRegistryValues": [
+      "1",
+      "0"
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "EnableWakeOnManagmentOnTCO",
+    "value": "0",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "IdleTimeoutMs",
+    "value": "5000",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "IntelANSVlanID",
+    "value": "",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": "Interrupt Moderation Rate",
+    "displayValue": "Low",
+    "keyword": "ITR",
+    "value": "64",
+    "defaultDisplayValue": "Low",
+    "validDisplayValues": [
+      "Extreme",
+      "High",
+      "Medium",
+      "Low",
+      "Minimal",
+      "Off"
+    ],
+    "validRegistryValues": [
+      "500",
+      "250",
+      "125",
+      "64",
+      "32",
+      "0"
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "LLIPorts",
+    "value": "",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": "Log Link State Event",
+    "displayValue": "Enabled",
+    "keyword": "LogLinkStateEvent",
+    "value": "51",
+    "defaultDisplayValue": "Enabled",
+    "validDisplayValues": [
+      "Enabled",
+      "Disabled"
+    ],
+    "validRegistryValues": [
+      "51",
+      "16"
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "MasterSlave",
+    "value": "0",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "MulticastFilterType",
+    "value": "0",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "PciScanMethod",
+    "value": "3",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "ReceiveScalingMode",
+    "value": "1",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "TxIntDelay",
+    "value": "28",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "UniversalInstall",
+    "value": "1",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "VlanFiltering",
+    "value": "0",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": "Wait for Link",
+    "displayValue": "Auto Detect",
+    "keyword": "WaitAutoNegComplete",
+    "value": "2",
+    "defaultDisplayValue": "Auto Detect",
+    "validDisplayValues": [
+      "Off",
+      "On",
+      "Auto Detect"
+    ],
+    "validRegistryValues": [
+      "0",
+      "1",
+      "2"
+    ]
+  },
+  {
+    "displayName": "Wake on Link Settings",
+    "displayValue": "Forced",
+    "keyword": "WakeOnLink",
+    "value": "2",
+    "defaultDisplayValue": "Forced",
+    "validDisplayValues": [
+      "Disabled",
+      "Forced"
+    ],
+    "validRegistryValues": [
+      "0",
+      "2"
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "WakeOnMagicPacketFromS5",
+    "value": "1",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "WakeOnSlot",
+    "value": "0",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "DriverDesc",
+    "value": "Intel(R) Ethernet Controller (3) I225-V",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "ProviderName",
+    "value": "Intel",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "DriverDate",
+    "value": "2-15-2024",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "DriverVersion",
+    "value": "1.1.4.43",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "InfPath",
+    "value": "oem25.inf",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "InfSection",
+    "value": "E15F3_3.10.0.1..17763",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "IncludedInfs",
+    "value": "pci.inf",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "MatchingDeviceId",
+    "value": "PCI\\VEN_8086&DEV_15F3&REV_03",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "*IfType",
+    "value": "6",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "*MediaType",
+    "value": "0",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "*PhysicalMediaType",
+    "value": "14",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "BusType",
+    "value": "5",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "Characteristics",
+    "value": "132",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "IfTypePreStart",
+    "value": "6",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "NetworkInterfaceInstallTimestamp",
+    "value": "134320622756665933",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "DeviceInstanceID",
+    "value": "PCI\\VEN_8086&DEV_15F3&SUBSYS_7E061462&REV_03\\D843AEFFFF2C793E00",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "ComponentId",
+    "value": "PCI\\VEN_8086&DEV_15F3&REV_03",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "NetCfgInstanceId",
+    "value": "{178AF0A6-93F5-4ACE-ACE2-2ECDF78704F2}",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": null,
+    "displayValue": null,
+    "keyword": "NetLuidIndex",
+    "value": "32769",
+    "defaultDisplayValue": null,
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  },
+  {
+    "displayName": "Locally Administered Address",
+    "displayValue": null,
+    "keyword": "NetworkAddress",
+    "value": "",
+    "defaultDisplayValue": "",
+    "validDisplayValues": [
+      null
+    ],
+    "validRegistryValues": [
+      null
+    ]
+  }
+]

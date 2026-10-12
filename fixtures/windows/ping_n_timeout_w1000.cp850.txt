@@ -1,0 +1,10 @@
+
+Ping wird ausgeführt für 192.0.2.1 mit 32 Bytes Daten:
+Zeitüberschreitung der Anforderung.
+Zeitüberschreitung der Anforderung.
+Zeitüberschreitung der Anforderung.
+Zeitüberschreitung der Anforderung.
+
+Ping-Statistik für 192.0.2.1:
+    Pakete: Gesendet = 4, Empfangen = 0, Verloren = 4
+    (100% Verlust),

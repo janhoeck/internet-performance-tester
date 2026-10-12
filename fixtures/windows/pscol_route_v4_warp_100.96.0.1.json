@@ -1,0 +1,12 @@
+[
+  {
+    "remote": "100.96.0.1",
+    "sourceAddress": "100.96.0.7",
+    "ifIndex": 35,
+    "interfaceAlias": "CloudflareWARP",
+    "nextHop": "192.0.2.1",
+    "destinationPrefix": "100.96.0.0/12",
+    "routeMetric": 256,
+    "interfaceMetric": 5
+  }
+]

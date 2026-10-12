@@ -1,0 +1,163 @@
+{
+  "case": "ipv4_1.1.1.1",
+  "args": [
+    "-t",
+    "-w",
+    "1000",
+    "1.1.1.1"
+  ],
+  "tag": "fromBash",
+  "killAt": 9007.5,
+  "exit": {
+    "code": null,
+    "signal": "SIGTERM",
+    "t": 9009.4
+  },
+  "stderr": "",
+  "trailingUnterminated": null,
+  "chunkCount": 10,
+  "linesPerChunk": 1.1,
+  "chunks": [
+    {
+      "t": 19.2,
+      "len": 56,
+      "afterKill": false,
+      "hex": "0d 0a 50 69 6e 67 20 77 69 72 64 20 61 75 73 67 65 66 81 68 72 74 20 66 81 72 20 31 2e 31 2e 31 2e 31 20 6d 69 74 20 33 32 20 42 79 74 65 73 20 44 61 74 65 6e 3a 0d 0a"
+    },
+    {
+      "t": 41.3,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 1038.6,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 2047.7,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 3055.9,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 4083.5,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 5074.6,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 6078.9,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 7115.1,
+      "len": 48,
+      "afterKill": false
+    },
+    {
+      "t": 8091.7,
+      "len": 48,
+      "afterKill": false
+    }
+  ],
+  "lines": [
+    {
+      "t": 19.2,
+      "latin1": "",
+      "utf8Valid": true,
+      "cp850": "",
+      "utf8": ""
+    },
+    {
+      "t": 19.2,
+      "latin1": "Ping wird ausgefhrt fr 1.1.1.1 mit 32 Bytes Daten:",
+      "utf8Valid": false,
+      "cp850": "Ping wird ausgeführt für 1.1.1.1 mit 32 Bytes Daten:",
+      "utf8": "Ping wird ausgef�hrt f�r 1.1.1.1 mit 32 Bytes Daten:",
+      "highBytes": "81 81"
+    },
+    {
+      "t": 41.3,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=22ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=22ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=22ms TTL=57"
+    },
+    {
+      "t": 1038.6,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=18ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=18ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=18ms TTL=57"
+    },
+    {
+      "t": 2047.7,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=19ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=19ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=19ms TTL=57"
+    },
+    {
+      "t": 3055.9,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=20ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=20ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=20ms TTL=57"
+    },
+    {
+      "t": 4083.5,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=42ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=42ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=42ms TTL=57"
+    },
+    {
+      "t": 5074.6,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=22ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=22ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=22ms TTL=57"
+    },
+    {
+      "t": 6078.9,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=21ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=21ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=21ms TTL=57"
+    },
+    {
+      "t": 7115.1,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=49ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=49ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=49ms TTL=57"
+    },
+    {
+      "t": 8091.7,
+      "latin1": "Antwort von 1.1.1.1: Bytes=32 Zeit=17ms TTL=57",
+      "utf8Valid": true,
+      "cp850": "Antwort von 1.1.1.1: Bytes=32 Zeit=17ms TTL=57",
+      "utf8": "Antwort von 1.1.1.1: Bytes=32 Zeit=17ms TTL=57"
+    }
+  ],
+  "replyLineDeltasMs": [
+    997.3,
+    1009.1,
+    1008.2,
+    1027.6,
+    991.1,
+    1004.3,
+    1036.2,
+    976.6
+  ]
+}

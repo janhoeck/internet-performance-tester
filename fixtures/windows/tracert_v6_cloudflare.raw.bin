@@ -1,0 +1,12 @@
+
+Routenverfolgung zu 2606:4700:4700::1111 Åber maximal 30 Hops
+
+  1     1 ms     1 ms     1 ms  3fff:8071:7ca0:c980:de73:6ff:fe12:34df 
+  2    16 ms    27 ms    13 ms  2a02:8101:3ff:ff89::3 
+  3    21 ms    37 ms    12 ms  2a02:908:0:4d4::1 
+  4     *        *        *     ZeitÅberschreitung der Anforderung.
+  5    16 ms    15 ms    18 ms  2400:cb00:48:2::c629:f012 
+  6    21 ms    39 ms    52 ms  2400:cb00:48:3:: 
+  7    31 ms    33 ms    37 ms  2606:4700:4700::1111 
+
+Ablaufverfolgung beendet.

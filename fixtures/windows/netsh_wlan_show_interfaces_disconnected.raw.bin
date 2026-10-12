@@ -1,0 +1,12 @@
+
+Es ist 1 Schnittstelle auf dem System vorhanden:
+
+    Name                   : WLAN
+    Beschreibung            : Intel(R) Wi-Fi 6E AX211 160MHz
+    GUID                   : 1cdb0ef5-cb64-4b03-9b8d-3de53ab40921
+    Physische Adresse       : e4:60:17:12:34:01
+    Benutzeroberflächentyp         : Primär
+    Status                  : getrennt
+    Funkstatus           : Hardware Aktiviert
+                             Software Aktiviert
+

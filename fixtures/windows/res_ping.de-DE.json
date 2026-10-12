@@ -1,0 +1,464 @@
+[
+ {
+  "kind": "msg",
+  "id": "0x00002710",
+  "low16": 10000,
+  "text": "\r\nSyntax: ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]\r\n             [-r count] [-s count] [[-j host-list] | [-k host-list]]\r\n             [-w timeout] [-R] [-S srcaddr] [-c compartment] [-p]\r\n             [-4] [-6] Zielname\r\n\r\nOptionen:\r\n    -t             Pingt den angegebenen Host bis zur Beendigung des Vorgangs.\r\n                   Drücken Sie STRG+UNTBR, um die Statistik anzuzeigen und\r\n                   den Vorgang fortzusetzen.\r\n                   Drücken Sie STRG+C, um den Vorgang abzubrechen.\r\n    -a             Löst Adressen zu Hostnamen auf.\r\n    -n count       Die Anzahl der zu sendenden Echoanforderungen.\r\n    -l size        Die Größe des Sendepuffers.\r\n    -f             Legt das Kennzeichen für \"Nicht fragmentieren\" im Paket\r\n                   fest (nur IPv4).\r\n    -i TTL         Die Lebensdauer.\r\n    -v TOS         Der Diensttyp (nur IPv4. Diese Einstellung ist veraltet\r\n                   und hat keine Auswirkungen auf das Diensttypfeld im IP-\r\n                   Header).\r\n    -r count       Datensatzroute für Anzahl von Hops (nur IPv4).\r\n    -s count       Zeitstempel für Anzahl von Hops (nur IPv4).\r\n    -j host-list   \"Loose Source Route\" gemäß Hostliste (nur IPv4).\r\n    -k host-list   \"Strict Source Route\" gemäß Hostliste (nur IPv4).\r\n    -w timeout     Zeitlimit in Millisekunden für die einzelnen Antworten.\r\n    -R             Verwendet den Routingheader, um auch die umgekehrte Route\r\n                   zu testen (nur IPv6).\r\n                   Dieser Routingheader wird nicht mehr verwendet\r\n                   (siehe RFC 5095). Bei manchen Systemen werden\r\n                   Echoanforderungen verworfen, wenn\r\n                   dieser Header verwendet wird.\r\n    -S srcaddr     Die zu verwendende Quelladresse.\r\n    -c compartment Routingdepotbezeichner\r\n    -p             Pingt die Adresse eines Anbieters für die\r\n                   Hyper-V-Netzwerkvirtualisierung.\r\n    -4             Erzwingt die Verwendung von IPv4.\r\n    -6             Erzwingt die Verwendung von IPv6.\r\n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002711",
+  "low16": 10001,
+  "text": "Der Wert muss für die Option angegeben werden %1.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002712",
+  "low16": 10002,
+  "text": "Ungültiger Wert für die Option %1. Der Gültige Bereich liegt zwischen %2!d! und %3!u!.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002713",
+  "low16": 10003,
+  "text": "Wert für \"Loose Source Route\" muss angegeben werden.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002714",
+  "low16": 10004,
+  "text": "Ungültige Route für \"Loose Source Route\" angegeben.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002715",
+  "low16": 10005,
+  "text": "Wert für \"Loose Source Route\" muss angegeben werden.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002716",
+  "low16": 10006,
+  "text": "Ungültige Route für \"Loose Source Route\" angegeben.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002717",
+  "low16": 10007,
+  "text": "Fehlende Option nach -o.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002718",
+  "low16": 10008,
+  "text": "Wert für \"Loose Source Route\" muss angegeben werden.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002719",
+  "low16": 10009,
+  "text": "Ungültige Route für \"Loose Source Route\" angegeben.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271A",
+  "low16": 10010,
+  "text": "Ungültiger Wert für die Option \"%1\".\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271B",
+  "low16": 10011,
+  "text": "Ungültige Option: %1.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271C",
+  "low16": 10012,
+  "text": "Ungültiger Parameter %1.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271D",
+  "low16": 10013,
+  "text": "Ping-Anforderung konnte Host \"%1\" nicht finden. Überprüfen Sie den Namen, und versuchen Sie es erneut.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271E",
+  "low16": 10014,
+  "text": "IP-Adresse muss angegeben werden.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271F",
+  "low16": 10015,
+  "text": "Mit dem IP-Treiber konnte keine Verbindung hergestellt werden. %1\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002720",
+  "low16": 10016,
+  "text": "\r\nPing wird ausgeführt für %1 [%2] %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002722",
+  "low16": 10018,
+  "text": "PING: Fehler bei der Übertragung. %1\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002723",
+  "low16": 10019,
+  "text": "Antwort von %1: %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002724",
+  "low16": 10020,
+  "text": "(gesendet %1!d!) %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002725",
+  "low16": 10021,
+  "text": "- FEHLER bei Offset %1!d! - %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002726",
+  "low16": 10022,
+  "text": "Zeit=%1!d!ms %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002727",
+  "low16": 10023,
+  "text": "Zeit<1ms %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002728",
+  "low16": 10024,
+  "text": "TTL=%1!d!\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002729",
+  "low16": 10025,
+  "text": "Allgemeiner Fehler.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272A",
+  "low16": 10026,
+  "text": "Zielnetz nicht erreichbar.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272B",
+  "low16": 10027,
+  "text": "Zielhost nicht erreichbar.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272C",
+  "low16": 10028,
+  "text": "Zielprotokoll nicht erreichbar.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272D",
+  "low16": 10029,
+  "text": "Zielport nicht erreichbar.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272E",
+  "low16": 10030,
+  "text": "Keine Ressourcen.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272F",
+  "low16": 10031,
+  "text": "Ungültige Option angegeben.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002730",
+  "low16": 10032,
+  "text": "Hardwarefehler.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002731",
+  "low16": 10033,
+  "text": "Paket müsste fragmentiert werden, DF-Flag ist jedoch gesetzt.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002732",
+  "low16": 10034,
+  "text": "Zeitüberschreitung der Anforderung.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002733",
+  "low16": 10035,
+  "text": "Allgemeiner Fehler.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002734",
+  "low16": 10036,
+  "text": "Ungültige Quellroute angegeben.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002735",
+  "low16": 10037,
+  "text": "Die Gültigkeitsdauer wurde bei der Übertragung überschritten.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002736",
+  "low16": 10038,
+  "text": "Die Gültigkeitsdauer wurde beim Wiederaufbau überschritten.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002737",
+  "low16": 10039,
+  "text": "IP-Parameterfehler.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002738",
+  "low16": 10040,
+  "text": "Löschvorgang der Quelle empfangen.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002739",
+  "low16": 10041,
+  "text": "Die angegebene Option ist zu groß.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273A",
+  "low16": 10042,
+  "text": "Das angegebene Ziel ist ungültig.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273B",
+  "low16": 10043,
+  "text": "Allgemeiner Fehler.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273C",
+  "low16": 10044,
+  "text": "Bytes=%1!d! %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273D",
+  "low16": 10045,
+  "text": "Es kann nur eine Sourcerouteoption angegeben werden.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273E",
+  "low16": 10046,
+  "text": "    Eine ungültige Source- oder Recordrouteoption wurde empfangen.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273F",
+  "low16": 10047,
+  "text": "\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002740",
+  "low16": 10048,
+  "text": "    Route: %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002741",
+  "low16": 10049,
+  "text": "%1 %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002742",
+  "low16": 10050,
+  "text": "-> %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002743",
+  "low16": 10051,
+  "text": "%1 : %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002744",
+  "low16": 10052,
+  "text": "%1!u! %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002745",
+  "low16": 10053,
+  "text": "    Zeitstempel: %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002746",
+  "low16": 10054,
+  "text": "    Eine ungültige Zeitstempeloption wurde empfangen.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002747",
+  "low16": 10055,
+  "text": "Zu viele Optionen wurden angegeben.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002748",
+  "low16": 10056,
+  "text": "Erforderlicher Speicher kann nicht reserviert werden.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002749",
+  "low16": 10057,
+  "text": "           %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000274A",
+  "low16": 10058,
+  "text": "Die Windows Sockets-Schnittstelle konnte nicht initialisiert werden. %1\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000274B",
+  "low16": 10059,
+  "text": "\r\nPing wird ausgeführt für %1 %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000274C",
+  "low16": 10060,
+  "text": "%1 [%2] %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000274D",
+  "low16": 10061,
+  "text": "%1 [%2] : %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000274E",
+  "low16": 10062,
+  "text": "               %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000274F",
+  "low16": 10063,
+  "text": "\r\nPing-Statistik für %1!s!:\r\n    Pakete: Gesendet = %2!d!, Empfangen = %3!d!, Verloren = %4!d!\r\n    (%5!u!%% Verlust),\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002750",
+  "low16": 10064,
+  "text": "STRG-UNTRBR\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002751",
+  "low16": 10065,
+  "text": "STRG-C\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002752",
+  "low16": 10066,
+  "text": "IP-Sicherheit wird verhandelt.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002753",
+  "low16": 10067,
+  "text": "Ca. Zeitangaben in Millisek.:\r\n    Minimum = %1!d!ms, Maximum = %2!d!ms, Mittelwert = %3!d!ms\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002754",
+  "low16": 10068,
+  "text": "%1!s! ist keine gültige Adresse.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002755",
+  "low16": 10069,
+  "text": "\r\nDie Option \"%1\" wird nur für %2 unterstützt.\r\n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002756",
+  "low16": 10070,
+  "text": "%1 %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002757",
+  "low16": 10071,
+  "text": "[%1] %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002758",
+  "low16": 10072,
+  "text": "Das Socket konnte nicht erstellt werden. %1\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002759",
+  "low16": 10073,
+  "text": "von %1!s! %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000275A",
+  "low16": 10074,
+  "text": "mit %1!d! Bytes Daten:\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000275B",
+  "low16": 10075,
+  "text": "Quell- und Zieladresse haben eine unterschiedliche Adressgruppe.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000275C",
+  "low16": 10076,
+  "text": "Das IPv4-Protokoll ist nicht installiert.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000275D",
+  "low16": 10077,
+  "text": "Zugriff verweigert. Für die Option \"%1\" sind Administratorberechtigungen erforderlich.\r\n"
+ }
+]

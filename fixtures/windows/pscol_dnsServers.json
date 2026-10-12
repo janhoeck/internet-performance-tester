@@ -1,0 +1,85 @@
+[
+  {
+    "ifIndex": 35,
+    "alias": "CloudflareWARP",
+    "family": "IPv4",
+    "servers": [
+      "1.1.1.1",
+      "8.8.8.8"
+    ]
+  },
+  {
+    "ifIndex": 35,
+    "alias": "CloudflareWARP",
+    "family": "IPv6",
+    "servers": [
+      "3fff:8071:7ca0:c980:de73:6ff:fe12:34df"
+    ]
+  },
+  {
+    "ifIndex": 2,
+    "alias": "LAN-Verbindung* 9",
+    "family": "IPv6",
+    "servers": [
+      "fec0:0:0:ffff::1",
+      "fec0:0:0:ffff::2",
+      "fec0:0:0:ffff::3"
+    ]
+  },
+  {
+    "ifIndex": 18,
+    "alias": "LAN-Verbindung* 10",
+    "family": "IPv6",
+    "servers": [
+      "fec0:0:0:ffff::1",
+      "fec0:0:0:ffff::2",
+      "fec0:0:0:ffff::3"
+    ]
+  },
+  {
+    "ifIndex": 4,
+    "alias": "Ethernet",
+    "family": "IPv4",
+    "servers": [
+      "1.1.1.1",
+      "8.8.8.8"
+    ]
+  },
+  {
+    "ifIndex": 4,
+    "alias": "Ethernet",
+    "family": "IPv6",
+    "servers": [
+      "3fff:8071:7ca0:c980:de73:6ff:fe12:34df",
+      "3fff:8071:7ca0:c980:de73:6ff:fe12:34df"
+    ]
+  },
+  {
+    "ifIndex": 6,
+    "alias": "WLAN",
+    "family": "IPv4",
+    "servers": [
+      "192.168.0.1"
+    ]
+  },
+  {
+    "ifIndex": 14,
+    "alias": "Bluetooth-Netzwerkverbindung",
+    "family": "IPv6",
+    "servers": [
+      "fec0:0:0:ffff::1",
+      "fec0:0:0:ffff::2",
+      "fec0:0:0:ffff::3"
+    ]
+  },
+  {
+    "ifIndex": 1,
+    "alias": "Loopback Pseudo-Interface 1",
+    "family": "IPv6",
+    "servers": [
+      "fec0:0:0:ffff::1",
+      "fec0:0:0:ffff::2",
+      "fec0:0:0:ffff::3"
+    ]
+  }
+]

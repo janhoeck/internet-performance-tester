@@ -1,0 +1,120 @@
+{
+  "ping_DF_1472_v4": {
+    "exit": 1,
+    "ms": 19,
+    "echo": {
+      "kind": "frag_needed",
+      "from": null
+    }
+  },
+  "ping_DF_1473_v4": {
+    "exit": 1,
+    "ms": 19,
+    "echo": {
+      "kind": "frag_needed",
+      "from": null
+    }
+  },
+  "ping_DF_1472_v4_8.8.8.8": {
+    "exit": 0,
+    "ms": 20,
+    "echo": {
+      "kind": "frag_needed",
+      "from": "192.168.0.1"
+    }
+  },
+  "ping_v6_1452": {
+    "exit": 0,
+    "ms": 40,
+    "echo": {
+      "kind": "reply",
+      "rttMs": 20,
+      "subMs": false,
+      "ttl": null,
+      "bytes": null,
+      "from": "2606"
+    }
+  },
+  "ping_v6_1453": {
+    "exit": 0,
+    "ms": 70,
+    "echo": {
+      "kind": "reply",
+      "rttMs": 51,
+      "subMs": false,
+      "ttl": null,
+      "bytes": null,
+      "from": "2606"
+    }
+  },
+  "v4_DF_search": {
+    "max": 1432,
+    "steps": [
+      [
+        1336,
+        "reply"
+      ],
+      [
+        1404,
+        "reply"
+      ],
+      [
+        1438,
+        "frag_needed"
+      ],
+      [
+        1421,
+        "reply"
+      ],
+      [
+        1429,
+        "reply"
+      ],
+      [
+        1433,
+        "frag_needed"
+      ],
+      [
+        1431,
+        "reply"
+      ],
+      [
+        1432,
+        "reply"
+      ]
+    ],
+    "impliedPathMtu": 1460
+  },
+  "v6_sizes": [
+    [
+      1452,
+      "reply",
+      47
+    ],
+    [
+      1453,
+      "reply",
+      46
+    ],
+    [
+      1480,
+      "reply",
+      68
+    ],
+    [
+      2000,
+      "reply",
+      27
+    ],
+    [
+      4000,
+      "reply",
+      23
+    ],
+    [
+      8000,
+      "reply",
+      25
+    ]
+  ]
+}

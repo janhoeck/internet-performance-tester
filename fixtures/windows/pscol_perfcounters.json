@@ -1,0 +1,87 @@
+{
+  "tcpv4": [
+    {
+      "SegmentsRetransmittedPersec": 88484,
+      "SegmentsSentPersec": 11321609,
+      "SegmentsReceivedPersec": 11745206,
+      "ConnectionFailures": 21854,
+      "ConnectionsReset": 2855,
+      "ConnectionsEstablished": 32,
+      "t": 1791550770923
+    }
+  ],
+  "tcpv4_ms0": 311.2,
+  "tcpv4_ms1": 17.8,
+  "tcpv6": [
+    {
+      "SegmentsRetransmittedPersec": 76164,
+      "SegmentsSentPersec": 41991141,
+      "SegmentsReceivedPersec": 44062213,
+      "ConnectionFailures": 19480,
+      "ConnectionsReset": 630,
+      "ConnectionsEstablished": 64
+    }
+  ],
+  "tcpv6_ms0": 25.9,
+  "tcpv6_ms1": 14.7,
+  "udpv4": [
+    {
+      "DatagramsReceivedErrors": 0,
+      "DatagramsNoPortPersec": 66562,
+      "DatagramsReceivedPersec": 8253821,
+      "DatagramsSentPersec": 5243913
+    }
+  ],
+  "udpv4_ms0": 25.3,
+  "udpv4_ms1": 14.7,
+  "nicRaw": [
+    {
+      "Name": "Intel[R] Ethernet Controller [3] I225-V",
+      "CurrentBandwidth": 100000000,
+      "BytesReceivedPersec": 1653297495,
+      "BytesSentPersec": 97690087,
+      "PacketsReceivedErrors": 0,
+      "PacketsReceivedDiscarded": 0,
+      "PacketsOutboundErrors": 0,
+      "PacketsOutboundDiscarded": 0,
+      "OutputQueueLength": 0,
+      "Timestamp_Sys100NS": 134360315710420000,
+      "Frequency_Sys100NS": 10000000
+    },
+    {
+      "Name": "Intel[R] Wi-Fi 6E AX211 160MHz",
+      "CurrentBandwidth": 961000000,
+      "BytesReceivedPersec": 653950,
+      "BytesSentPersec": 202952,
+      "PacketsReceivedErrors": 0,
+      "PacketsReceivedDiscarded": 0,
+      "PacketsOutboundErrors": 0,
+      "PacketsOutboundDiscarded": 0,
+      "OutputQueueLength": 0,
+      "Timestamp_Sys100NS": 134360315710420000,
+      "Frequency_Sys100NS": 10000000
+    }
+  ],
+  "nicRaw_ms0": 29.1,
+  "nicRaw_ms1": 16.8,
+  "nicFormatted": [
+    {
+      "Name": "Intel[R] Ethernet Controller [3] I225-V",
+      "CurrentBandwidth": 100000000,
+      "BytesReceivedPersec": 28415,
+      "BytesSentPersec": 232352,
+      "PacketsReceivedErrors": 0,
+      "OutputQueueLength": 0
+    },
+    {
+      "Name": "Intel[R] Wi-Fi 6E AX211 160MHz",
+      "CurrentBandwidth": 961000000,
+      "BytesReceivedPersec": 0,
+      "BytesSentPersec": 0,
+      "PacketsReceivedErrors": 0,
+      "OutputQueueLength": 0
+    }
+  ],
+  "nicFormatted_ms0": 294.9,
+  "nicFormatted_ms1": 278.4
+}

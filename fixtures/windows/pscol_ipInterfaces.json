@@ -1,0 +1,156 @@
+[
+  {
+    "ifIndex": 14,
+    "alias": "Bluetooth-Netzwerkverbindung",
+    "family": "IPv6",
+    "connectionState": "Disconnected",
+    "nlMtu": 1500,
+    "interfaceMetric": 65,
+    "automaticMetric": "Enabled",
+    "dhcp": "Disabled",
+    "forwarding": "Disabled"
+  },
+  {
+    "ifIndex": 18,
+    "alias": "LAN-Verbindung* 10",
+    "family": "IPv6",
+    "connectionState": "Disconnected",
+    "nlMtu": 1500,
+    "interfaceMetric": 25,
+    "automaticMetric": "Enabled",
+    "dhcp": "Disabled",
+    "forwarding": "Disabled"
+  },
+  {
+    "ifIndex": 2,
+    "alias": "LAN-Verbindung* 9",
+    "family": "IPv6",
+    "connectionState": "Disconnected",
+    "nlMtu": 1500,
+    "interfaceMetric": 25,
+    "automaticMetric": "Enabled",
+    "dhcp": "Disabled",
+    "forwarding": "Disabled"
+  },
+  {
+    "ifIndex": 4,
+    "alias": "Ethernet",
+    "family": "IPv6",
+    "connectionState": "Connected",
+    "nlMtu": 1500,
+    "interfaceMetric": 35,
+    "automaticMetric": "Enabled",
+    "dhcp": "Enabled",
+    "forwarding": "Disabled"
+  },
+  {
+    "ifIndex": 6,
+    "alias": "WLAN",
+    "family": "IPv6",
+    "connectionState": "Disconnected",
+    "nlMtu": 1500,
+    "interfaceMetric": 35,
+    "automaticMetric": "Enabled",
+    "dhcp": "Enabled",
+    "forwarding": "Disabled"
+  },
+  {
+    "ifIndex": 35,
+    "alias": "CloudflareWARP",
+    "family": "IPv6",
+    "connectionState": "Connected",
+    "nlMtu": 1280,
+    "interfaceMetric": 5,
+    "automaticMetric": "Enabled",
+    "dhcp": "Disabled",
+    "forwarding": "Disabled"
+  },
+  {
+    "ifIndex": 1,
+    "alias": "Loopback Pseudo-Interface 1",
+    "family": "IPv6",
+    "connectionState": "Connected",
+    "nlMtu": 4294967295,
+    "interfaceMetric": 75,
+    "automaticMetric": "Enabled",
+    "dhcp": "Disabled",
+    "forwarding": "Disabled"
+  },
+  {
+    "ifIndex": 14,
+    "alias": "Bluetooth-Netzwerkverbindung",
+    "family": "IPv4",
+    "connectionState": "Disconnected",
+    "nlMtu": 1500,
+    "interfaceMetric": 65,
+    "automaticMetric": "Enabled",
+    "dhcp": "Enabled",
+    "forwarding": "Disabled"
+  },
+  {
+    "ifIndex": 18,
+    "alias": "LAN-Verbindung* 10",
+    "family": "IPv4",
+    "connectionState": "Disconnected",
+    "nlMtu": 1500,
+    "interfaceMetric": 25,
+    "automaticMetric": "Enabled",
+    "dhcp": "Disabled",
+    "forwarding": "Disabled"
+  },
+  {
+    "ifIndex": 2,
+    "alias": "LAN-Verbindung* 9",
+    "family": "IPv4",
+    "connectionState": "Disconnected",
+    "nlMtu": 1500,
+    "interfaceMetric": 25,
+    "automaticMetric": "Enabled",
+    "dhcp": "Enabled",
+    "forwarding": "Disabled"
+  },
+  {
+    "ifIndex": 4,
+    "alias": "Ethernet",
+    "family": "IPv4",
+    "connectionState": "Connected",
+    "nlMtu": 1500,
+    "interfaceMetric": 35,
+    "automaticMetric": "Enabled",
+    "dhcp": "Enabled",
+    "forwarding": "Disabled"
+  },
+  {
+    "ifIndex": 6,
+    "alias": "WLAN",
+    "family": "IPv4",
+    "connectionState": "Disconnected",
+    "nlMtu": 1500,
+    "interfaceMetric": 35,
+    "automaticMetric": "Enabled",
+    "dhcp": "Enabled",
+    "forwarding": "Disabled"
+  },
+  {
+    "ifIndex": 35,
+    "alias": "CloudflareWARP",
+    "family": "IPv4",
+    "connectionState": "Connected",
+    "nlMtu": 1280,
+    "interfaceMetric": 5,
+    "automaticMetric": "Enabled",
+    "dhcp": "Disabled",
+    "forwarding": "Disabled"
+  },
+  {
+    "ifIndex": 1,
+    "alias": "Loopback Pseudo-Interface 1",
+    "family": "IPv4",
+    "connectionState": "Connected",
+    "nlMtu": 4294967295,
+    "interfaceMetric": 75,
+    "automaticMetric": "Enabled",
+    "dhcp": "Disabled",
+    "forwarding": "Disabled"
+  }
+]

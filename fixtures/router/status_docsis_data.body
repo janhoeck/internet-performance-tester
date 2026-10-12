@@ -1,0 +1,4 @@
+
+
+
+<script type="text/javascript" nonce="<?php echo $csp_nonce?>"> alert(xlate("PAGE_OVERVIEW_SESSION_LOST_POPUP_TEXT")); location.href="../index.php";</script>

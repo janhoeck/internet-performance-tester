@@ -1,0 +1,11 @@
+
+       MTU  MediaSenseState      Bytes In     Bytes Out  Schnittstelle
+----------  ---------------  ------------  ------------  -------------
+4294967295                1             0        242244  Loopback Pseudo-Interface 1
+      1280                1             0         23702  CloudflareWARP
+      1500                2       2081593        907629  WLAN
+      1500                1   93015950582    3914746586  Ethernet
+      1500                5             0          1154  LAN-Verbindung* 9
+      1500                5             0          1154  LAN-Verbindung* 10
+      1500                5             0          5397  Bluetooth-Netzwerkverbindung
+

@@ -1,0 +1,18 @@
+[
+  {
+    "ifIndex": 4,
+    "alias": "Ethernet",
+    "name": "Vodafone-43FE",
+    "category": "Public",
+    "ipv4": "Internet",
+    "ipv6": "Internet"
+  },
+  {
+    "ifIndex": 35,
+    "alias": "CloudflareWARP",
+    "name": "CloudflareWARP",
+    "category": "Public",
+    "ipv4": "LocalNetwork",
+    "ipv6": "NoTraffic"
+  }
+]

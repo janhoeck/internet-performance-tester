@@ -1,0 +1,4220 @@
+[
+ {
+  "kind": "str",
+  "id": "56001",
+  "low16": 56001,
+  "text": "nicht bereit"
+ },
+ {
+  "kind": "str",
+  "id": "56002",
+  "low16": 56002,
+  "text": "Verbunden"
+ },
+ {
+  "kind": "str",
+  "id": "56003",
+  "low16": 56003,
+  "text": "Das Ad-hoc-Netzwerk wurde gebildet."
+ },
+ {
+  "kind": "str",
+  "id": "56004",
+  "low16": 56004,
+  "text": "Verbindung wird getrennt"
+ },
+ {
+  "kind": "str",
+  "id": "56005",
+  "low16": 56005,
+  "text": "getrennt"
+ },
+ {
+  "kind": "str",
+  "id": "56006",
+  "low16": 56006,
+  "text": "Wird zugeordnet."
+ },
+ {
+  "kind": "str",
+  "id": "56007",
+  "low16": 56007,
+  "text": "Wird gesucht."
+ },
+ {
+  "kind": "str",
+  "id": "56008",
+  "low16": 56008,
+  "text": "wird authentifiziert"
+ },
+ {
+  "kind": "str",
+  "id": "56999",
+  "low16": 56999,
+  "text": "Unbekannter Status"
+ },
+ {
+  "kind": "str",
+  "id": "57001",
+  "low16": 57001,
+  "text": "Fügt einen Konfigurationseintrag zu einer Tabelle hinzu.\n"
+ },
+ {
+  "kind": "str",
+  "id": "57002",
+  "low16": 57002,
+  "text": "Löscht einen Konfigurationseintrag aus einer Tabelle.\n"
+ },
+ {
+  "kind": "str",
+  "id": "57003",
+  "low16": 57003,
+  "text": "Legt Konfigurationsinformationen fest.\n"
+ },
+ {
+  "kind": "str",
+  "id": "57004",
+  "low16": 57004,
+  "text": "Zeigt Informationen an.\n"
+ },
+ {
+  "kind": "str",
+  "id": "57005",
+  "low16": 57005,
+  "text": "Speichert die WLAN-Profile in XML-Dateien.\n"
+ },
+ {
+  "kind": "str",
+  "id": "57006",
+  "low16": 57006,
+  "text": "Starten Sie das gehostete Netzwerk.\n"
+ },
+ {
+  "kind": "str",
+  "id": "57007",
+  "low16": 57007,
+  "text": "Beenden Sie das gehostete Netzwerk.\n"
+ },
+ {
+  "kind": "str",
+  "id": "57008",
+  "low16": 57008,
+  "text": "Aktualisieren Sie die Einstellungen für das gehostete Netzwerk.\n"
+ },
+ {
+  "kind": "str",
+  "id": "57009",
+  "low16": 57009,
+  "text": "Befehle für die IHV-Protokollierung.\n"
+ },
+ {
+  "kind": "str",
+  "id": "57051",
+  "low16": 57051,
+  "text": "Stellt eine Verbindung mit einem Drahtlosnetzwerk her.\n"
+ },
+ {
+  "kind": "str",
+  "id": "57052",
+  "low16": 57052,
+  "text": "\nSyntax: %1!s! [name=]<Zeichenfolge> [[ssid=]<Zeichenfolge>] [[interface=]<Zeichenfolge>]\n\nParameter:\n\n    Tag             Wert\n    ssid          - SSID des Drahtlosnetzwerks.\n    name          - Name des Profils, das beim Verbindungsversuch verwendet wird.\n    interface     - Name der Schnittstelle, über die die Verbindungsversuche initiiert werden.\n\nAnmerkungen:\n\n    Stellt eine Verbindung mit dem Netzwerk her, das durch die SSID gekennzeichnet ist,\n\tund verwendet hierzu das angegebene Profil. Der Verbindungsversuch wird über die angegebene \n\tSchnittstelle initiiert, es sei denn, im System ist nur eine verfügbare \n\tSchnittstelle vorhanden. In diesem Fall kann der Schnittstellenparameter ausgelassen werden.\n\n    Der Parameter \"profile name\" ist erforderlich, \"ssid\" ist jedoch optional.Wenn nur ein SSID\n\tim Profil vorhanden ist, wird diese SSID zum Herstellen einer Verbindung verwendet. \n\tSind mehrere SSIDs im Profil vorhanden, dann ist der Parameter \"ssid\" erforderlich.\n\n    Der Parameter \"interface\" ist erforderlich, wenn im System zwei oder\n    mehr verfügbare Schnittstellen vorhanden sind. Wenn der Parameter\n    \"interface\" angegeben ist, darf der Name kein Platzhalter sein.\n\n    Wenn die angegebene Schnittstelle bereits mit einem Drahtlosnetzwerk verbunden ist, wird die\n\tSchnittstelle mit diesem Befehl zunächst vom verbundenen Netzwerk getrennt, und dann wird eine\n\tVerbindung mit dem neuen Netzwerk hergestellt. Wenn es sich bei den beiden Netzwerken um ein und\n    dasselbe Netzwerk handelt, gibt dieser Befehl lediglich eine Erfolgs-meldung zurück und führt keine Aktion aus.\n\nBeispiele:\n\n    %1!s! name=Profil1 ssid=SSID1\n    %1!s! name=Profil2 ssid=SSID2 interface=\"Drahtlosnetzwerkverbindung\"\n"
+ },
+ {
+  "kind": "str",
+  "id": "57053",
+  "low16": 57053,
+  "text": "Trennt die Verbindung mit einem Drahtlosnetzwerk.\n"
+ },
+ {
+  "kind": "str",
+  "id": "57054",
+  "low16": 57054,
+  "text": "\nSyntax: %1!s! [[interface=]<Zeichenfolge>]\n\nParameter:\n\n    Tag             Wert\n    interface     - Name der Schnittstelle, über die die Verbindung getrennt\n                    wird.\n\nBemerkungen:\n\n    Trennt die Drahtlosnetzwerkverbindung auf der angegebenen Schnittstelle.\n\n    Der Parameter \"interface\" ist erforderlich, wenn im System zwei oder\n    mehr verfügbare Schnittstellen vorhanden sind. Für den Schnittstellennamen\n    können Platzhalter verwendet werden, um mehrere Schnittstellen anzugeben.\n\nBeispiele:\n\n    %1!s! \n    %1!s! interface=\"Drahtlosnetzwerkverbindung\"\n"
+ },
+ {
+  "kind": "str",
+  "id": "58001",
+  "low16": 58001,
+  "text": "Fügt ein Drahtlosnetzwerk der Liste der zulässigen\n                 oder blockierten Netzwerke hinzu.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58002",
+  "low16": 58002,
+  "text": "\nSyntax: %1!s! [permission=]allow|block|denyall [[ssid=]<Zeichenfolge>]\n       [networktype=]infrastructure|adhoc\n\nParameter:\n\n    Tag             Wert\n    permission    - Berechtigungstyp des Filters.\n    ssid          - SSID des Drahtlosnetzwerks.\n    networktype   - Netzwerktyp des Drahtlosnetzwerks.\n\nBeschreibung:\n\n    Entfernt ein Drahtlosnetzwerk aus der Liste der zulässigen und blockierten\n    Netzwerke, die im System konfiguriert ist.\n\n    Parameter \"ssid\" ist erforderlich, wenn \"permission\" auf \"allow\" oder\n    \"block\" gesetzt ist. Wenn \"permission\" auf \"denyall\" gesetzt ist, sollte\n    der Parameter \"ssid\" nicht bereitgestellt werden.\n\nBeispiele:\n\n    %1!s! permission=allow ssid=ssid1 networktype=infrastructure\n    %1!s! permission=block ssid=ssid2 networktype=adhoc\n    %1!s! permission=denyall networktype=adhoc\n"
+ },
+ {
+  "kind": "str",
+  "id": "58003",
+  "low16": 58003,
+  "text": "Fügt ein WLAN-Profil zu der angegebenen Schnittstelle hinzu.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58004",
+  "low16": 58004,
+  "text": "\nSyntax: %1!s! [filename=]<Zeichenfolge> [[interface=]<Zeichenfolge>]\n              [[user=]all|current]\n\nParameter:\n\n    Tag             Wert\n    filename      - Name der XML-Profildatei.\n    interface     - Schnittstellenname.\n    user          - Benutzerbereich, alle Benutzer oder nur der aktuelle\n                    Benutzer.\n\n\nAnmerkungen:\n\n    Fügt einer Schnittstelle für alle oder für die aktuellen Benutzer ein\n    Drahtlosnetzwerkprofil hinzu.\n\n    Der Parameter \"filename\" ist erforderlich. Er ist der Name der XML-Datei,\n    die die mit Profildaten enthält.\n\n    Der Parameter \"interface\" ist optional. Er ist einer der Schnittstellen-\n    namen, die mit dem Befehl \"netsh wlan show interface\" angezeigt werden.\n    Wenn der Schnittstellenname angegeben ist, wird das Profil der angegebenen\n    Schnittstelle hinzugefügt, andernfalls wird das Profil in allen Drahtlos-\n    schnittstellen hinzugefügt.\n\n    Der Parameter \"user\" ist optional. Er gibt an, ob dieses Profil auf alle\n    Benutzer oder nur auf den aktuellen Benutzer angewendet wird.\n    Standardmäßig wird es auf den aktuellen Benutzer angewendet.\n\nBeispiele:\n\n    %1!s! filename=\"Profil1.xml\" interface=\"Drahtlosnetzwerkverbindung\"\n    user=current\n"
+ },
+ {
+  "kind": "str",
+  "id": "58005",
+  "low16": 58005,
+  "text": "\nSyntax: %1!s! [permission=]allow|block|denyall [[ssid=]<Zeichenfolge>]\n        [networktype=]infrastructure\n\nParameter:\n\n    Tag             Wert\n    permission    - Berechtigungstyp des Filters.\n    ssid          - SSID des Funknetzwerks.\n    networktype   - Netzwerktyp des Funknetzwerks.\n\nHinweise:\n\n    Fügt ein Funknetzwerk der Liste der zulässigen und blockierten Netzwerke\n    hinzu, die im System konfiguriert sind.\n\n    Der ssid-Parameter ist erforderlich, wenn \"permission\" auf \"allow\" oder\n    \"block\" festgelegt ist. Wenn \"permission\" auf \"denyall\" festgelegt ist,\n    dann darf der ssid-Parameter nicht angegeben werden.\n\nBeispiele:\n\n    %1!s! permission=allow ssid=ssid1 networktype=infrastructure\n"
+ },
+ {
+  "kind": "str",
+  "id": "58006",
+  "low16": 58006,
+  "text": "Startet die ausführliche WLAN-IHV-Protokollierung.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58007",
+  "low16": 58007,
+  "text": "\nSyntax: %1!s! \n\nHinweise:\n\n    Startet die ausführliche WLAN-IHV-Protokollierung.\n\nBeispiele:\n\n    %1!s! \n"
+ },
+ {
+  "kind": "str",
+  "id": "58008",
+  "low16": 58008,
+  "text": "Beendet die ausführliche WLAN-IHV-Protokollierung.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58009",
+  "low16": 58009,
+  "text": "\nSyntax: %1!s! \n\nHinweise:\n\n    Beendet die ausführliche WLAN-IHV-Protokollierung.\n\nBeispiele:\n\n    %1!s! \n"
+ },
+ {
+  "kind": "str",
+  "id": "58011",
+  "low16": 58011,
+  "text": "Entfernt ein Drahtlosnetzwerk aus der Liste der zulässigen\n                 oder blockierten Netzwerke.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58012",
+  "low16": 58012,
+  "text": "\nSyntax: %1!s! [permission=]<allow|block|denyall> [[ssid=]<Zeichenfolge>]\n              [networktype=]<infrastructure|adhoc>\n\nParameter:\n\n    Tag             Wert\n    permission    - Berechtigungstyp des Filters.\n    ssid          - SSID des Drahtlosnetzwerks.\n    networktype   - Netzwerktyp des Drahtlosnetzwerks.\n\nBeschreibung:\n\n    Entfernt ein Drahtlosnetzwerk aus der Liste der zulässigen und blockierten\n    Netzwerke, die im System konfiguriert ist.\n\n    Parameter \"ssid\" ist erforderlich, wenn \"permission\" auf \"allow\" oder\n    \"block\" gesetzt ist. Wenn \"permission\" auf \"denyall\" gesetzt ist, sollte\n    der Parameter \"ssid\" nicht bereitgestellt werden.\n\nBeispiele:\n\n    %1!s! permission=allow ssid=ssid1 networktype=infrastructure\n    %1!s! permission=block ssid=ssid2 networktype=adhoc\n    %1!s! permission=denyall networktype=adhoc\n"
+ },
+ {
+  "kind": "str",
+  "id": "58013",
+  "low16": 58013,
+  "text": "Löscht WLAN-Profil von einer oder mehreren Schnittstellen.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58014",
+  "low16": 58014,
+  "text": "\nSyntax: %1!s! [name=]<Zeichenfolge> [[interface=]<Zeichenfolge>]\n\nParameter:\n\n    Tag             Wert\n    name          - Name des zu löschenden Profils.\n    interface     - Schnittstellenname.\n\nAnmerkungen:\n\n    Entfernt ein Drahtlosnetzwerkprofil von einer Schnittstelle oder auf\n    Computerebene.\n\n    Der Parameter \"name\" ist erforderlich. Es ist der Name des zu löschenden\n    Profils.\n    Der Parameter \"interface\" ist optional. Wenn er angegeben ist, wird das\n    Profil nur von der angegebenen Schnittstelle entfernt. Wenn er ausgelassen\n    wird, wird das Profil auf Computerebene und von allen Schnittstellen\n    entfernt, die über ein solches Profil verfügen.\n\n    Der Profilname kann Platzhalterzeichen enthalten, und mehrere Profile mit\n    einem übereinstimmenden Namen werden entfernt.\n\nBeispiele:\n\n    %1!s! name=\"Profil 1\" interface=\"Drahtlosnetzwerkverbindung\"\n    %1!s! name=\"Profil 1\" i=*\n"
+ },
+ {
+  "kind": "str",
+  "id": "58015",
+  "low16": 58015,
+  "text": "\nSyntax: %1!s! [permission=]allow|block|denyall [[ssid=]<Zeichenfolge>]\n        [networktype=]infrastructure\n\nParameter:\n\n    Tag             Wert\n    permission    - Berechtigungstyp des Filters.\n    ssid          - SSID des Funknetzwerks.\n    networktype   - Netzwerktyp des Funknetzwerks.\n\nHinweise:\n\n    Entfernt ein Funknetzwerk aus der Liste der zulässigen und blockierten\n    Netzwerke, die im System konfiguriert sind.\n\n    Der ssid-Parameter ist erforderlich, wenn \"permission\" auf \"allow\" oder\n    \"block\" festgelegt ist. Wenn \"permission\" auf \"denyall\" festgelegt ist,\n    dann darf der ssid-Parameter nicht angegeben werden.\n\nBeispiele:\n\n    %1!s! permission=allow ssid=ssid1 networktype=infrastructure\n"
+ },
+ {
+  "kind": "str",
+  "id": "58021",
+  "low16": 58021,
+  "text": "Exportiert die angegebenen Profile in XML-Dateien.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58022",
+  "low16": 58022,
+  "text": "\nSyntax: %1!s! [name=]<Zeichenfolge> [folder=]<Zeichenfolge> [[interface=]<Zeichenfolge>] [key=<Zeichenfolge>]\n\nParameter:\n\n    Tag            Wert\n    name         - Name des zu exportierenden Profils.\n    folder       - Name des Ordners, in dem die XML-Profildateien \n                   gespeichert werden.\n    interface    - Name der Schnittstelle, für die dieses Profil konfiguriert ist.\n    key          - Zum Anzeigen des Schlüssels in Nur-Text muss \"key=clear\" festgelegt werden.\n\nHinweise:\n\n    Speichert die ausgewählten Profile in XML-Dateien im angegebenen Ordner.\n    Für jedes exportierte Profil erhält die Ausgabedatei den Namen\n    \"Schnittstellenname-Profilname.xml\".\n\t\n    Die Parameter \"folder\", \"name\" und \"interface\" sind optional. Wenn der\n    Profilname angegeben ist, wird das angegebene Profil gespeichert.\n    Andernfalls werden Profile einer beliebigen Schnittstelle gespeichert.\n    \n\tWenn der Parameter \"folder\" angegeben ist, muss damit ein vorhandener Ordner\n    angegeben werden, auf den vom lokalen Computer aus zugegriffen werden kann.\n    Es kann sich dabei entweder um einen absoluten Pfad oder einen relativen Pfad\n    zum aktuellen Arbeitsverzeichnis handeln. Zudem bezieht sich \".\" auf das\n    aktuelle Arbeitsverzeichnis und \"..\" auf das übergeordnete Verzeichnis des\n    aktuellen Arbeitsverzeichnisses. Der Ordnername darf kein UNC-Pfad sein. Profile \n    werden standardmäßig im aktuellen Arbeitsverzeichnis gespeichert.\n    \n\tWenn der Schnittstellenname angegeben ist, wird nur das angegebene Profil an der\n    angegebenen Schnittstelle gespeichert. Andernfalls werden alle Profile mit dem\n    angegebenen Namen im System gespeichert.\n    \n\tWenn ein Schlüssel in Nur-Text erforderlich ist und es sich bei dem Anrufer um den \n\tlokalen Administrator handelt, enthält die XML-Ausgabedatei den Schlüssel in Nur-Text.\n    Andernfalls enthält die XML-Ausgabedatei einen verschlüsselten Schlüssel. \n\nBeispiele:\n\n    %1!s! name=\"Profil 1\" folder=c:\\profiles\n    interface=\"Drahtlosnetzwerkverbindung\"\n    %1!s! name=\"Profil 2\" folder=.\n    %1!s! name=\"Profil 3\" folder=. key=clear\n"
+ },
+ {
+  "kind": "str",
+  "id": "58031",
+  "low16": 58031,
+  "text": "Aktiviert bzw. deaktiviert automatische Konfigurationslogik\n                 auf der Schnittstelle.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58032",
+  "low16": 58032,
+  "text": "\nSyntax: %1!s! [enabled=]yes|no [interface=]<Zeichenfolge>\n\nParameter:\n\n    Tag           Wert\n    enabled     - Legt die automatische Konfigurationslogikauf auf\n                  aktiviert oder deaktiviert fest.\n    interface   - Der Name der Schnittstelle, für die diese Einsstellung\n                  geändert wird.\n\nBeschreibung:\n\n    Aktiviert oder deaktiviert die automatische Konfigurationslogik für\n    eine Schnittstelle. Ist die Logik deaktiviert, stellt Windows\n    nicht automatisch eine Verbindung mt Drahtlosnetwerken über die ange-\n    gebene Schnittstelle her.\n\n    Beide Parameter sind erforderlich.\n\nBeispiele:\n\n    %1!s! enabled=yes interface=\"Drahtlosnetzwerkverbindung\"\n"
+ },
+ {
+  "kind": "str",
+  "id": "58033",
+  "low16": 58033,
+  "text": "Legt die Reihenfolge eines Drahtlosnetzwerkprofils fest.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58034",
+  "low16": 58034,
+  "text": "\nSyntax: %1!s! [name=]<Zeichenfolge> [interface=]<Zeichenfolge>\n              [priority=]<Ganze Zahl>\n\nParameter:\n\n    Tag           Wert\n    name        - Name des Benutzerprofils, für das Sie die Priorität ändern\n                  möchten.\n    interface   - Name der Schnittstelle, für die dieses Profil konfiguriert\n                  ist.\n    priority    - Die neue Priorität des Benutzerprofils.\n\nHinweise:\n\n    Legt die Prioritätsreihenfolge eines Drahtlosnetzwerkprofils an einer\n    Schnittstelle fest. Alle drei Parameter sind erforderlich.\n\n    Es kann nur die Reihenfolge von Benutzerprofilen geändert werden.\n    Gruppenrichtlinienprofile sind schreibgeschützt. Gruppenrichtlinienprofile\n    haben immer Vorrang vor Benutzerprofilen.\n\n    Der Parameter \"priority\" gibt die neue Position des Profils\n    in der Liste der bevorzugten Profile an. Wenn der Wert 1 ist, wird\n    das Profil an die erste Position in der Liste der Benutzerprofile\n    verschoben.\n\nBeispiele:\n\n    %1!s! name=\"Profil1\" interface=\"Drahtlosnetzwerkverbindung\"\n    priority=1\n"
+ },
+ {
+  "kind": "str",
+  "id": "58035",
+  "low16": 58035,
+  "text": "Zeigt die blockierten Netzwerke in der sichtbaren\n                      Netzwerkliste an oder blendet sie aus.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58036",
+  "low16": 58036,
+  "text": "\nSyntax: %1!s! [display=]show|hide\n\nParameter:\n\n    Tag           Wert\n    display     - Zeigt die blockierten Netzwerke in der sichtbaren\n                  Netzwerkliste an oder blendet sie aus.\n\nBeschreibung:\n\n    Gibt an, ob die blockierten Netzwerke in der sichtbaren Netzwerkliste\n    angezeigt werden oder nicht.\n    Bei Deaktivierung werden die blockierten Netzwerke nicht in der sichtbaren\n    Liste der Drahtlosnetzwerke angezeigt.\n\n    Der Parameter \"display\" ist erforderlich.\n\nBeispiele:\n\n    %1!s! display=show\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "58037",
+  "low16": 58037,
+  "text": "Aktiviert bzw. deaktiviert die Ablaufverfolgung.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58038",
+  "low16": 58038,
+  "text": "\nSyntax: %1!s! [mode=]yes|no|persistent]\n\nParameter:\n\n    Tag           Wert\n    mode        - Enable, dauerhaft speichern oder Ablaufverfolgung\n                  deaktivieren.\n\nAnmerkungen:\n\n    Aktiviert oder deaktiviert die Ablaufverfolgung mit der Option, die\n    Ablaufverfolgung als dauerhaft festzulegen. Ist die Ablaufverfolgung\n    aktiviert, werden die Ablaufverfolgungsprotokolle für Drahtlos-LAN\n    erfasst und in den Ablaufverfolgungsdateien gespeichert.\n\n    Der Parameter \"mode\" ist erforderlich. Im Modus \"persistent\" ist die\n    Ablaufverfolgung auch nach dem Systemneustart aktiv. Falls \"mode\" auf\n    \"disable\" festgelegt ist, dann wird sowohl die dauerhafte als auch die\n    nicht dauerhafte Ablaufverfolgung angehalten.\n\nBeispiel:\n\n    %1!s! mode=yes\n"
+ },
+ {
+  "kind": "str",
+  "id": "58039",
+  "low16": 58039,
+  "text": "Erteilt bzw. verweigert Berechtigung zum Erstellen\n                 von Benutzerprofilen für alle Benutzer.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58040",
+  "low16": 58040,
+  "text": "\nSyntax: %1!s! [[enabled=]yes|no]\n\nParameter:\n\n    Tag           Wert\n    enabled     - Erteilt bzw. verweigert die Berechtigung zum Erstellen von\n                  Benutzerprofilen für alle Benutzer.\n\nAnmerkungen:\n\n    Falls \"enabled\" auf \"yes\" festgelegt ist, kann jeder Benutzer\n    Benutzerprofile für alle Benutzer erstellen.\n\n    Der Parameter \"enabled\" ist erforderlich.\n\nBeispiele:\n\n    %1!s! enabled=yes\n"
+ },
+ {
+  "kind": "str",
+  "id": "58041",
+  "low16": 58041,
+  "text": "Zufällige MAC-Adressen auf Schnittstelle aktivieren oder deaktivieren.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58042",
+  "low16": 58042,
+  "text": "\nVerwendung: %1!s! [enabled=]yes|no [interface=]<Zeichenfolge>\n\nParameter:\n\n    Tag           Wert\n    enabled     - Zufällige MAC-Adressen aktivieren oder deaktivieren.\n    interface   - Name der Schnittstelle, für die die Einstellung geändert werden\n                  muss.\n\nHinweise:\n\n    Der Befehl schlägt fehl, wenn die Schnittstelle\n    keine zufällige Vergabe unterstützt oder wenn die zufällige Vergabe vom Systemadministrator \n    blockiert wurde. \n\n    Beide Parameter sind erforderlich.\n\nBeispiele:\n\n    %1!s! enabled=yes interface=\"Drahtlose Netzwerkverbindung\"\n"
+ },
+ {
+  "kind": "str",
+  "id": "58051",
+  "low16": 58051,
+  "text": "Zeigt an, ob automatische Konfigurationslogik aktiviert\n                  ist oder nicht.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58052",
+  "low16": 58052,
+  "text": "\nSyntax: %1!s!\n\nAnmerkungen:\n\n      Zeigt die globale Einstellung an, die angibt, ob die automatische\n      Konfigurationslogik für jede Schnittstelle aktiviert ist oder nicht.\n\nBeispiele:\n\n      %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58053",
+  "low16": 58053,
+  "text": "Zeigt Anzeigeeinstellungen für blockierte Netzwerke an.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58054",
+  "low16": 58054,
+  "text": "\nSyntax: %1!s!\n\nBeschreibung:\n\n      Zeigt die globale Einstellung an, ob die blockierten Netzwerke in\n      der Liste der sichtbaren Netzwerke angezeigt werden oder nicht.\n\nBeispiele:\n\n      %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58055",
+  "low16": 58055,
+  "text": "Zeigt Eigenschaften für Drahtlos-LAN-Treiber an.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58056",
+  "low16": 58056,
+  "text": "\nSyntax: %1!s! [[interface=]<Zeichenfolge>]\n\nParameter:\n\n    Tag             Wert\n    interface     - Name der Schnittstelle, für die Treiberinformationen\n                    angezeigt werden sollen.\n\nAnmerkungen:\n\n    Zeigt die Informationen zu den im System vorhandenen 802.11-\n    Drahtlosschnittstellen und -Treibern an.\n\nBeispiele:\n\n    %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58057",
+  "low16": 58057,
+  "text": "Zeigt Liste der zugelassene und blockierten Netzwerke an.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58058",
+  "low16": 58058,
+  "text": "\nSyntax: %1!s! [permission=]allow|block\n\nParameter:\n\n    Tag             Wert\n    permission    - Die Berechtigung, die Liste der zulässigen oder\n                    blockierten Netzwerke auszuwählen.\n\nBeschreibung:\n\n    Zeigt die Liste der zulässigen und blockierten Netzwerke an, die auf dem\n    System konfiguriert ist.\n\nBeispiele:\n\n    %1!s!\n    %1!s! permission=allow\n    %1!s! permission=block\n"
+ },
+ {
+  "kind": "str",
+  "id": "58059",
+  "low16": 58059,
+  "text": "Zeigt eine Liste der Drahtlos-LAN-Schnittstellen\n                  auf dem System an.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58060",
+  "low16": 58060,
+  "text": "\nSyntax: %1!s!\n\nBeschreibung:\n\n   Zeigt die Drahtlosschnittstellen an, die auf dem System konfiguriert sind.\n   Für diesen Befehl gibt es keine Parameter.\n\nBeispiele:\n\n   %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58061",
+  "low16": 58061,
+  "text": "Zeigt Liste der für den Computer sichtbaren Netzwerke an.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58062",
+  "low16": 58062,
+  "text": "\nSyntax: %1!s! [[interface=]<Zeichenfolge>] [[mode=]all/empty]\n\nParameter:\n\n    Tag             Wert\n    interface     - Der Name der Schnittstelle, für die dieses Profil\n                    konfiguriert ist.\n    mode          - Ruft detaillierte bssid-Informationen ab.\n\nBeschreibung:\n\n    Zeigt die für das System verfügbaren Netzwerke an.\n    Die Parameter \"interface\" und \"bssid\" sind optional.\n\n    Wenn der Schnittstellenname angegeben ist, werden nur Netzwerke für die\n    angegebene Schnittstelle aufgeführt. Andernfalls werden alle für das\n    System sichtbaren Netzwerke aufgeführt.\n\n    Wenn \"mode=all\" angegeben ist, werden auch die sichtbaren BSSIDs für\n    jede SSID aufgeführt. Andernfalls werden nur SSIDs aufgeführt.\n\nBeispiele:\n\n    %1!s! interface=\"Drahtlosnetzwerkverbindung\"\n    %1!s! mode=all\n    %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58063",
+  "low16": 58063,
+  "text": "Zeigt Liste der auf dem Computer konfigurierten Profile an.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58064",
+  "low16": 58064,
+  "text": "\nSyntax:  %1!s!  [[name=]<Zeichenfolge>]  [[interface=]<Zeichenfolge>]  [key=<Zeichenfolge>]\n\nParameter:\n\n    Tag         Wert\n    name      - Name  des  anzuzeigenden  Profils.\n    interface - Name  der  Schnittstelle,  für  die  dieses  Profil konfiguriert  ist.\n    key       - Zum  Anzeigen  des  Schlüssels  in  Nur-Text  muss  \"key=clear\" festgelegt  werden.\n\nHinweise:\n\n    Zeigt  die  Profildaten  an  oder  listet  die  Profile  im  System  auf.\n    Die  Parameter  \"name\"  und  \"interface\"  sind  beide  optional.\n\t\n    Wenn  der  Profilname  angegeben  ist,  wird  der  Inhalt  des  Profils angezeigt. \n\tAndernfalls  werden  nur  der  Profilname  und  die Profilbeschreibung  aufgelistet.\n\t\n    Wenn  der  Schnittstellenname  angegeben  ist,  wird  nur  das  angegebene \n    Profil  an  der  angegebenen  Schnittstelle  aufgelistet.  Andernfalls \n    werden  alle  Profile  mit  dem  angegebenen  Namen  im  System  aufgelistet.\n\t\n    Wenn  der  Schlüssel  auf  \"clear\"  festgelegt  ist  und  es  sich  bei  dem Anrufer  um \n\tden  lokalen  Administrator  handelt,  wird  der  Schlüssel  in Nur-Text  angezeigt.\n\t\n    Gruppenrichtlinienprofile  sind  schreibgeschützt.  Benutzerprofile  sind  \n    lesbar  und  beschreibbar,  und  die  Reihenfolge  kann  geändert  werden.\n\t\nBeispiele:\n\n    %1!s!  name=\"Profil  1\"  interface=\"Drahtlosnetzwerkverbindung\"\n    %1!s!  name=\"Profil  2\"\n    %1!s!  name=\"Profil  3\"  key=clear\n    %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58065",
+  "low16": 58065,
+  "text": "Zeigt die globalen Einstellungen des Drahtlos-LANs an.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58066",
+  "low16": 58066,
+  "text": "\nSyntax: %1!s!\n\nHinweise:\n\n      Zeigt die globalen Einstellungen für den Dienst für die automatische\n      WLAN-Konfiguration an, einschließlich der Informationen dazu, ob die\n      Logik für die automatische Konfiguration für die einzelnen Schnittstellen\n      aktiviert ist und ob die blockierten Netzwerke in der Liste der \n      sichtbaren Netzwerke angezeigt werden.\n\n      Die Listen der zulässigen und blockierten Filter können mit dem\n      Befehl \"show filters\" angezeigt werden.\n\nBeispiele:\n\n      %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58067",
+  "low16": 58067,
+  "text": "Zeigt an, ob Drahtlos-LAN-Ablaufverfolgung aktiviert oder\n                 deaktiviert ist.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58068",
+  "low16": 58068,
+  "text": "\nSyntax: %1!s!\n\nAnmerkungen:\n\n    Zeigt an, ob Drahtlos-LAN-Ablaufverfolgung aktiviert oder deaktiviert ist.\n\nBeispiele:\n\n    %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58069",
+  "low16": 58069,
+  "text": "Zeigt die vollständigen Drahtlosgerät- und Netzwerk-\n                 informationen an.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58070",
+  "low16": 58070,
+  "text": "\nSyntax: %1!s!\n\nBeschreibung:\n\n    Zeigt die vollständigen 802.11-Drahtlosschnittstelleninformationen,\n    -Netzwerke und -Drahtloseinstellungen im System an, einschließlich:\n        - Drahtlostreiberinformationen\n        - Drahtlosschnittstellenstatus\n        - Drahtloskonfigurationseinstellungen\n        - Drahtlosnetzwerkfilter\n        - Drahtlosnetzwerkprofil-Liste und Details\n        - Sichtbare Drahtlosnetzwerke\n\nBeispiele:\n\n    %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58071",
+  "low16": 58071,
+  "text": "Zeigt, ob jeder Benutzer alle Benutzerprofile\n                 erstellen darf.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58072",
+  "low16": 58072,
+  "text": "\nSyntax: %1!s!\n\nAnmerkungen:\n\n    Zeigt die globale Einstellung, ob das Erstellen aller Benutzerprofile\n    für jeden Benutzer zulässig ist, an.\n\nBeispiele:\n\n    %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58073",
+  "low16": 58073,
+  "text": "Zeigt, ob zufällige MAC-Adressen aktiviert oder\n                 deaktiviert sind.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58074",
+  "low16": 58074,
+  "text": "\nVerwendung: %1!s!\n\nHinweise:\n\n      Zeigt die globale Einstellung dazu an, ob die zufällige MAC-Logik auf der Schnittstelle \n      aktiviert oder deaktiviert ist.\n\nBeispiele:\n\n      %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58075",
+  "low16": 58075,
+  "text": "Zeigt die Drahtlosfunktionen des Systems an.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58076",
+  "low16": 58076,
+  "text": "\nSyntax: %1!s!\n\nAnmerkungen:\n\n      Zeigt die Drahtlosfunktionen des Systems an.\n\nBeispiele:\n\n      %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58077",
+  "low16": 58077,
+  "text": "Generiert einen Bericht mit Informationen zu aktuellen Drahtlossitzungen.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58078",
+  "low16": 58078,
+  "text": "\nSyntax: %1!s! [duration=<Zeichenfolge>] [log=<Zeichenfolge>] [logger=<autologger,…>]\n\nHinweise:\n\n    Generiert einen Bericht mit Informationen zu den letzten Drahtlossitzungen. \n    Berichte zur Drahtlosaktivität werden auf der Basis des\n    Systemereignisprotokolls standardmäßig für die letzten drei Tage generiert. \n\n    Der Berichtszeitraum kann geändert werden, indem die Anzahl der Tage\n    mithilfe des optionalen duration-Parameters angegeben wird. \n\n    Sie können auch den Pfad zu einer ETL-Datei angeben, die anstelle des Computerereignisprotokolls \n    als Ereignisquelle verwendet wird. \n\n    Sie können eine kommagetrennte Liste automatischer Protokollierungsdienste angeben, für \n    die ebenfalls Protokolle abgerufen werden. Die Protokolle \"WiFiSession\" und \"LwtNetLog\" werden standardmäßig \n    abgerufen. \nBeispiele:\n\n    %1!s! duration=\"7\" log=\"logpath.etl\" logger=\"name1,name2\"\n"
+ },
+ {
+  "kind": "str",
+  "id": "58081",
+  "low16": 58081,
+  "text": "\nSyntax: %1!s!\n\nHinweise:\n\n      Zeigt die globalen Einstellungen für den Dienst für die automatische\n      WLAN-Konfiguration an, einschließlich der Informationen dazu, ob die\n      Logik für die automatische Konfiguration für die einzelnen Schnittstellen\n      aktiviert ist, ob die blockierten Netzwerke in der Liste der sichtbaren\n      Netzwerke angezeigt werden und ob nur Gruppenrichtlinienprofile\n      für Netzwerke verwendet werden, die mit Gruppenrichtlinien konfiguriert\n      werden.\n\n      Die Listen der zulässigen und blockierten Filter können mit dem\n      Befehl \"show filters\" angezeigt werden.\n\nBeispiele:\n\n      %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58082",
+  "low16": 58082,
+  "text": "Zeigt die Einstellung \"Nur Gruppenrichtlinienprofile für Netzwerke verwenden, die mit Gruppenrichtlinien konfiguriert werden\" an.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58083",
+  "low16": 58083,
+  "text": "\nSyntax: %1!s!\n\nAnmerkungen:\n\n              Zeigt die globale Einstellung an, die definiert, ob nur\n              Gruppenrichtlinienprofile für Netzwerke, die mit \n              Gruppenrichtlinien konfiguriert werden, verwendet werden sollen.\n\nBeispiele:\n\n              %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58101",
+  "low16": 58101,
+  "text": "Legen Sie die Parameter in einem Drahtlosnetzwerkprofil fest.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58102",
+  "low16": 58102,
+  "text": "\nSyntax: %1!s! [name=]<Zeichenfolge> [[interface=]<Zeichenfolge>] \n       [SSIDname=<Zeichenfolge>] [ConnectionType=ESS|IBSS] [autoSwitch=yes|no]\n       [ConnectionMode=auto|manual] [nonBroadcast=yes|no] \n       [Randomization=[yes|no]] \n       [authentication=open|shared|WPA|WPA2|WPAPSK|WPA2PSK] \n       [encryption=none|WEP|TKIP|AES] [keyType=networkKey|passphrase] \n       [keyIndex=1-4] [keyMaterial=<Zeichenfolge>] [PMKCacheMode=yes|no] \n       [PMKCacheSize=1-255] [PMKCacheTTL=300-86400] [preAuthMode=yes|no] \n       [preAuthThrottle=1-16 [FIPS=yes|no] \n       [useOneX=yes|no] [authMode=machineOrUser|machineOnly|userOnly|guest] \n       [ssoMode=preLogon|postLogon|none] [maxDelay=1-120] \n       [allowDialog=yes|no] [userVLAN=yes|no] \n       [heldPeriod=1-3600] [AuthPeriod=1-3600] [StartPeriod=1-3600] \n       [maxStart=1-100] [maxAuthFailures=1-100] [cacheUserData = yes|no] \n       [cost=default|unrestricted|fixed|variable] \n"
+ },
+ {
+  "kind": "str",
+  "id": "58103",
+  "low16": 58103,
+  "text": "\nParameter:\n\n    Tag              Wert\n    name           - Name des zu ändernden Profils.\n    interface      - Name der Schnittstelle, für die das Profil festgelegt wird.\n    SSIDname       - SSID des WLANs, die maximale Länge ist 32. \n    ConnectionType - Gibt an, ob es sich beim Netzwerk um ein Infrastruktur (ESS)- oder Ad-hoc (IBSS)-Netzwerk handelt. \n    ConnectionMode - Automatisches oder manuelles Herstellen der Netzwerkverbindung. \n                     Muss \"manual\" sein, wenn der Verbindungstyp IBSS lautet. \n    autoSwitch     - Das Roamingverhalten eines Netzwerks mit automatischer Verbindung, \n                     wenn ein bevorzugteres Netzwerk in Reichweite ist. \n    randomization  - Gibt an, ob die Randomisierung von MAC-Adressen aktiviert oder deaktiviert ist. \n    nonBroadcast   - Gibt an, ob eine Verbindung mit einem ausgeblendeten Netzwerk hergestellt werden soll. \n    authentication - Der zu verwendende Authentifizierungstyp. \n    encryption     - Die zu verwendende Verschlüsselungsmethode. \n    keyType        - Gibt an, ob der gemeinsam verwendete Schlüssel ein Netzwerkschlüssel oder eine Passphrase ist. \n    keyIndex       - Für die Verschlüsselung des Datenverkehrs von Funknetzwerken sollte der Schlüsselindex verwendet werden. \n    keyMaterial    - Der Netzwerkschlüssel oder die Pasphrase. \n    PMKCacheMode   - Gibt an, ob die PMK-Zwischenspeicherung verwendet wird. Trifft nur auf WPA2-Netzwerke zu. \n    PMKCacheSize   - Die Anzahl von Einträgen im PMK-Cache auf dem Client. \n    PMKCacheTTL    - Die Zeit in Sekunden, über die ein PMK-Cache beibehalten wird. \n    preAuthMode    - Gibt an, ob die Vorauthentifizierung verwendet wird. Trifft zur auf WPA2-Netzwerke zu. \n    preAuthThrottle - Die Anzahl erneuter Authentifizierungsversuche bei benachbarten Zugriffspunkten (Access Points, APs). \n    FIPS           - Aktiviert oder deaktiviert den FIPS-Modus. \n    useOneX         - Gibt an, ob die 802.1X-Authentifizierung verwendet wird. \n    authMode       - Für die Authentifizierung zu verwendender Anmeldeinformationstyp.\n    ssoMode        - Typ des anzuwendenden Single Sign-Ons (falls vorhanden).\n    maxDelay       - Zeitüberschreitungswert zum Herstellen einer Verbindung für Single Sign-On.\n    allowDialog    - Lässt das Anzeigen eines Dialogfelds für \"preLogon\" zu bzw. nicht zu.\n    userVLAN       - Gibt an, ob das Netzwerk bei der Benutzerauthentifizierung zu einem anderen VLAN wechselt.\n    heldPeriod     - Das Intervall (in Sekunden) zwischen zwei Authentifizierungsversuchen. \n    AuthPeriod     - Die maximale Zeit (in Sekunden), die ein Client auf eine Antwort vom Authentifikator wartet. \n    StartPeriod    - Die Wartezeit (in Sekunden) vor einem EAPOL-Start.\n    maxStart       - Die maximale Anzahl gesendeter EAPOL-Startmeldungen. \n    maxAuthFailures - Die maximale Anzahl zulässiger Authentifizierungsfehler \n                     für Anmeldeinformationen. \n    cacheUserData -  Gibt an, ob die Benutzeranmeldeinformationen zur späteren Verwendung zwischengespeichert werden. \n    cost          -  Die Kosten, die dem Profil zugeordnet sind. \n\nHinweise:\n\n    Ändert das angegebene Profil. Wenn die Schnittstelle angegeben ist, \n    wird nur das Profil an dieser Schnittstelle geändert. \n\n    Der Namensparameter ist erforderlich. Außer dem Profilnamen und \n    der Schnittstelle muss mindestens ein weiterer Parameter angegeben werden. \n\nBeispiele:\n\n    %1!s! name=Profile1 authMode=userOnly ssoMode=preLogon \n    %1!s! name=Profile2 ssoMode=none fips=yes \n"
+ },
+ {
+  "kind": "str",
+  "id": "58209",
+  "low16": 58209,
+  "text": "Legen Sie die Eigenschaften des gehosteten Netzwerks fest.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58210",
+  "low16": 58210,
+  "text": "\nSyntax: %1!s! [mode=]allow|disallow [ssid=]<SSID>\n                         [key=]<Passphrase> [keyUsage=]persistent|temporary\n\nParameter:\n\n    Tag             Wert\n    mode            Gibt an, ob das gehostete Netzwerk zugelassen werden soll \n                    oder nicht.\n    ssid            SSID des gehosteten Netzwerks.\n    key             Der für das gehostete Netzwerk verwendete Benutzer-\n                    sicherheitsschlüssel.\n    keyUsage        Gibt an, ob der Benutzersicherheitsschlüssel beständig \n                    oder temporär ist. \n\nHinweise:\n\n   Mit diesem Befehl werden die Eigenschaften des gehosteten Netzwerks \n   geändert. Dazu zählt Folgendes: SSID des gehosteten Netzwerks, ob das \n   gehostete Netzwerk im System zugelassen wird oder nicht sowie ein vom \n   gehosteten Netzwerk verwendeter Benutzersicherheitsschlüssel. \n\n\n    Bei dem Benutzersicherheitsschlüssel sollte es sich um eine Zeichenfolge \n    mit 8 bis 63 ASCII-Zeichen handeln, beispielsweise eine Passphrase oder 64 \n    Hexdezimalzahlen, die 32 Binärbytes darstellen. \n\n\n    Wenn \"keyUsage\" als \"persistent\" angegeben ist, wird der Sicherheits-\n    schlüssel gespeichert und verwendet, wenn das gehostete Netzwerk zu einem \n    späteren Zeitpunkt erneut gestartet wird. Andernfalls wird er nur \n    verwendet, wenn das gehostete Netzwerk jetzt oder beim nächsten Mal \n    gestartet wird. Wenn das gehostete Netzwerk beendet wird, wird der \n    temporäre Sicherheitsschlüssel aus dem System gelöscht. Wenn \"keyUsage\" \n    nicht angegeben wird, ist dafür standardmäßig \"persistent\" festgelegt. \n\n    Für diesen Befehl sind Administratorrechte erforderlich, um das gehostete \n    Netzwerk zulassen bzw. nicht zulassen zu können. \n\nBeispiele:\n\n    %1!s! mode=allow \n    %1!s! ssid=ssid1 \n    %1!s! key=passphrase keyUsage=persistent \n"
+ },
+ {
+  "kind": "str",
+  "id": "58211",
+  "low16": 58211,
+  "text": "Zeigen Sie die Eigenschaften und den Status für das gehostete Netzwerk an.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58212",
+  "low16": 58212,
+  "text": "\nSyntax: %1!s! [[setting=]security]\n\nParameter:\n\n    Tag          Wert\n    setting      Gibt die anzuzeigenden Einstellungen für das gehostete \n                 Netzwerk an.\n\nHinweise:\n\n    Mit diesem Befehl werden die Eigenschaften des gehosteten Netzwerks und \n    dessen Status angezeigt, wenn es gestartet wurde.\n\n    Bei Angabe des Parameters \"setting\" werden die Sicherheitsalgorithmen und\n    der Schlüssel des gehosteten Netzwerks angezeigt. \n\nBeispiele:\n\n    %1!s!\n    %1!s! setting=security\n"
+ },
+ {
+  "kind": "str",
+  "id": "58213",
+  "low16": 58213,
+  "text": "Starten Sie das gehostete Netzwerk.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58214",
+  "low16": 58214,
+  "text": "\nSyntax: %1!s! \n\nHinweise:\n\n    Mit diesem Befehl wird der WLAN-Dienst zum Starten des gehosteten Netzwerks\n    aufgefordert.\n\n    Für diesen Befehl sind Administratorrechte erforderlich.\n\nBeispiele:\n\n    %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58215",
+  "low16": 58215,
+  "text": "Beenden Sie das gehostete Netzwerk.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58216",
+  "low16": 58216,
+  "text": "\nSyntax: %1!s! \n\nHinweise:\n\n    Mit diesem Befehl wird der WLAN-Dienst zum Beenden des gehosteten Netzwerks\n    aufgefordert.\n\nBeispiele:\n\n    %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58217",
+  "low16": 58217,
+  "text": "Aktualisieren Sie die Einstellungen für das gehostete Netzwerk.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58218",
+  "low16": 58218,
+  "text": "\nSyntax: %1!s! [data=]key\r\n\r\nParameter:\r\n\r\n    Tag             Wert\r\n    data            Gibt die zu aktualisierenden Daten für das gehostete \r\n    Netzwerk an.\r\n\r\nHinweise:\r\n\r\n    Mit diesem Befehl wird der WLAN-Dienst zur Verwendung eines neuen\r\n    Sicherheitsschlüssels für das gehostete Netzwerk aufgefordert.\r\n\r\nBeispiele:\r\n\r\n    %1!s! key\n"
+ },
+ {
+  "kind": "str",
+  "id": "58219",
+  "low16": 58219,
+  "text": "Zeigt die Einstellungen für die Zulassung freigegebener Benutzeranmeldeinformationen an.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58220",
+  "low16": 58220,
+  "text": "\nSyntax: %1!s!\n\nHinweise:\n\n      Zeigt die globale Einstellung an, ob freigegebene \n      Benutzeranmeldeinformationen für 802.1X-Netzwerke zulässig sein sollen.\n\nBeispiele:\n\n      %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "58221",
+  "low16": 58221,
+  "text": "Lassen Sie die Verwendung freigegebener Benutzeranmeldeinformationen für die \n                          Netzwerkauthentifizierung durch den Benutzer zu bzw. nicht zu.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58222",
+  "low16": 58222,
+  "text": "\nSyntax: %1!s! [allow=]yes|no\n\nParameter:\n\n    Tag         Wert\n    allow     - Die Verwendung freigegebener Benutzeranmeldeinformationen wird\n                zugelassen bzw. nicht zugelassen.\n\nHinweise:\n\n    Geben Sie an, ob die Verwendung freigegebener Benutzeranmeldeinformationen\n    auf dem Client für die Netzwerkauthentifizierung zulässig sein soll oder\n    nicht.\n\n    Der Parameter \"allow\" ist erforderlich.\n\nBeispiele:\n\n    %1!s! allow=yes \n\n"
+ },
+ {
+  "kind": "str",
+  "id": "58223",
+  "low16": 58223,
+  "text": "Legen Sie den Profiltyp auf \"all-user\" oder \"per-user\" fest. \n"
+ },
+ {
+  "kind": "str",
+  "id": "58224",
+  "low16": 58224,
+  "text": "\nSyntax: %1!s! [name=]<Zeichenfolge> [profiletype=]all|current\n        [[interface=]<Zeichenfolge>]\n\nParameter:\n\n    Tag           Wert\n    name           - Name des zu ändernden Profils.\n    profiletype    - Der gewünschte Profiltyp [all-user/per-user]. \n    interface      - Name der Schnittstelle, an der das Profil festgelegt wird.\n\nHinweise:\n\n    Ändert den Profiltyp für das angegebene Profil. Wenn die Schnittstelle\n    Angegeben ist, wird nur das Profil an dieser Schnittstelle geändert.\n\n    Der Name und die Profiltypparameter sind erforderlich. \n\nBeispiele:\n\n    %1!s! name=Profile1 profiletype=all\n"
+ },
+ {
+  "kind": "str",
+  "id": "58225",
+  "low16": 58225,
+  "text": "Exportieren Sie das Profil für das gehostete Netzwerk in eine XML-Datei.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58226",
+  "low16": 58226,
+  "text": "\nSyntax: %1!s!\n\nHinweise:\n\n    Mit diesem Befehl wird das Clientprofil für das gehostete Netzwerk in einer\n    XML-Datei gespeichert. Sie kann anderen Windows-Drahtlosclients hinzugefügt\n    werden, um eine Verbindung mit dem gehosteten Netzwerk herzustellen. \n\nBeispiele:\n\n    %1!s! \n\n"
+ },
+ {
+  "kind": "str",
+  "id": "58227",
+  "low16": 58227,
+  "text": "Generieren Sie einen intelligenten WLAN-Ablaufverfolgungsbericht.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58228",
+  "low16": 58228,
+  "text": "\nSyntax: %1!s!\n\nHinweise:\n\n    Mit diesem Befehl wird ein intelligenter WLAN-Ablaufverfolgungsbericht \n    generiert und für die Meldung von WLAN-Problemen vorbereitet. \n\nBeispiele:\n\n    %1!s! \n"
+ },
+ {
+  "kind": "str",
+  "id": "58229",
+  "low16": 58229,
+  "text": "Legen Sie den Blockierungszeitraum fest.\n"
+ },
+ {
+  "kind": "str",
+  "id": "58230",
+  "low16": 58230,
+  "text": "\nSyntax: %1!s! [value=]0-60\n\nParameter:\n\n    Tag           Wert\n    value - Gibt die Dauer (in Minuten) an, für die automatische \n            Verbindungsversuche mit dem Netzwerk angehalten werden.\n\nHinweise:\n\n    Ändert den angegebenen Zeitgeber. Der Wert wird in Minuten angegeben. Der \n    blockierte Status wird bei einem manuellen Verbindungsversuch, bei einer \n    Sitzungsänderung oder bei einer Medienverbindung zurückgesetzt.\n\n\nBeispiele:\n\n    %1!s! value=2 \n    %1!s! 25 \n\n"
+ },
+ {
+  "kind": "str",
+  "id": "59006",
+  "low16": 59006,
+  "text": "Netzwerkshellbefehle benötigen Standortberechtigungen für den Zugriff auf WLAN-Informationen. Aktivieren Sie „Positionsdienste“ auf der Seite „Standort“ in den Datenschutz- und Sicherheitseinstellungen.\nHier ist der URI für die Seite „Standort“ in der App „Einstellungen“: ms-settings:privacy-location\nFühren Sie den folgenden Befehl aus, um die Seite „Standort“ in der App „Einstellungen“ zu öffnen:\nstart ms-settings:privacy-location\n\nOder um die Seite „Standort“ über das Dialogfeld „Ausführen“ zu öffnen, drücken Sie die Windows-Logo-Taste + R und kopieren Sie dann den obigen URI und fügen Sie ihn ein.\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "59007",
+  "low16": 59007,
+  "text": "Netzwerkshellbefehle benötigen Standortberechtigungen für den Zugriff auf WLAN-Informationen. Aktivieren Sie „Positionsdienste“ auf der Seite „Standort“ in den Datenschutz- und Sicherheitseinstellungen.\n\nHier ist den URI für die Seite „Standort“ in der App „Einstellungen“:\n‚\u001b]8;; ms-settings:privacy-location\u001b\\ms-settings:privacy-location\u001b]8;;\u001b\\\nUm die Seite „Standort“ in der Einstellungs-App zu öffnen, halten Sie die STRG-TASTE gedrückt, und wählen Sie den Link aus, oder führen Sie den folgenden Befehl aus:\nstart ms-settings:privacy-location\n\nOder um die Seite „Standort“ über das Dialogfeld „Ausführen“ zu öffnen, drücken Sie die Windows-Logo-Taste + R und kopieren Sie dann den obigen URI und fügen Sie ihn ein.\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "59011",
+  "low16": 59011,
+  "text": "Die Funktion %1!s! gibt den Fehler %2!u! zurück:\n"
+ },
+ {
+  "kind": "str",
+  "id": "59013",
+  "low16": 59013,
+  "text": "Ungültiger Wert \"%2!s!\" für Befehlsoption \"%1!s!\"."
+ },
+ {
+  "kind": "str",
+  "id": "59014",
+  "low16": 59014,
+  "text": "Ein oder mehrere Parameter für den Befehl sind falsch.\n"
+ },
+ {
+  "kind": "str",
+  "id": "59015",
+  "low16": 59015,
+  "text": "Der Wert für Option \"%1!s!\" ist ungültig. Er muss 8 bis 63 Zeichen enthalten.\n"
+ },
+ {
+  "kind": "str",
+  "id": "59025",
+  "low16": 59025,
+  "text": "Ungültiger Wert \"%2!s!\" für Befehlsoption \"%1!s!\".\n"
+ },
+ {
+  "kind": "str",
+  "id": "59501",
+  "low16": 59501,
+  "text": "\n"
+ },
+ {
+  "kind": "str",
+  "id": "59502",
+  "low16": 59502,
+  "text": "Diese Drahtlosschnittstelle ist nicht im System vorhanden."
+ },
+ {
+  "kind": "str",
+  "id": "59503",
+  "low16": 59503,
+  "text": "Im System ist keine Drahtlosschnittstelle vorhanden."
+ },
+ {
+  "kind": "str",
+  "id": "59504",
+  "low16": 59504,
+  "text": "Der Dienst für die automatische WLAN-Konfiguration (wlansvc) wird nicht ausgeführt."
+ },
+ {
+  "kind": "str",
+  "id": "59505",
+  "low16": 59505,
+  "text": "Fehler beim Herstellen einer Verbindung mit dem Dienst für die automatische WLAN-Konfiguration (wlansvc). Fehler %1!lu!."
+ },
+ {
+  "kind": "str",
+  "id": "60001",
+  "low16": 60001,
+  "text": "\nEs sind %1!d! Schnittstellen auf dem System vorhanden:\n"
+ },
+ {
+  "kind": "str",
+  "id": "60002",
+  "low16": 60002,
+  "text": "\nEs ist %1!d! Schnittstelle auf dem System vorhanden:\n"
+ },
+ {
+  "kind": "str",
+  "id": "60003",
+  "low16": 60003,
+  "text": "\n    Name                   : %1!s!\n    Beschreibung            : %2!s!\n    GUID                   : %3!s!\n    Physische Adresse       : %4!02x!:%5!02x!:%6!02x!:%7!02x!:%8!02x!:%9!02x!\n    Benutzeroberflächentyp         : Primär\n    Status                  : %10!s!"
+ },
+ {
+  "kind": "str",
+  "id": "60005",
+  "low16": 60005,
+  "text": "    Profil                 : %1!s! \n"
+ },
+ {
+  "kind": "str",
+  "id": "60006",
+  "low16": 60006,
+  "text": "\n    SSID                   : %1!s!\n    AP BSSID               : %2!02x!:%3!02x!:%4!02x!:%5!02x!:%6!02x!:%7!02x!"
+ },
+ {
+  "kind": "str",
+  "id": "60007",
+  "low16": 60007,
+  "text": "\n    Netzwerktyp            : %1!s!\n    Funktyp                   : %2!s!\n    Authentifizierung   : %3!s!"
+ },
+ {
+  "kind": "str",
+  "id": "60008",
+  "low16": 60008,
+  "text": "\n    Verschlüsselungsverfahren                 : %1!s!\n    Verbindungsmodus        : %2!s!"
+ },
+ {
+  "kind": "str",
+  "id": "60009",
+  "low16": 60009,
+  "text": "\n    Empfangsrate (MBit/s)  : %1!s!\n    Übertragungsrate (MBit/s) : %2!s!\n    Signal              : %3!d!%% \n"
+ },
+ {
+  "kind": "str",
+  "id": "60010",
+  "low16": 60010,
+  "text": "Profil"
+ },
+ {
+  "kind": "str",
+  "id": "60011",
+  "low16": 60011,
+  "text": "Temporäres Profil"
+ },
+ {
+  "kind": "str",
+  "id": "60012",
+  "low16": 60012,
+  "text": "Suche (gesichert)"
+ },
+ {
+  "kind": "str",
+  "id": "60013",
+  "low16": 60013,
+  "text": "Suche (ungesichert)"
+ },
+ {
+  "kind": "str",
+  "id": "60014",
+  "low16": 60014,
+  "text": "Automat. Verbindung"
+ },
+ {
+  "kind": "str",
+  "id": "60015",
+  "low16": 60015,
+  "text": "Ungültig"
+ },
+ {
+  "kind": "str",
+  "id": "60016",
+  "low16": 60016,
+  "text": "\n    Name                   : %1!s!\n    Beschreibung            : %2!s!\n    GUID                   : %3!s!\n    Physische Adresse       : %4!02x!:%5!02x!:%6!02x!:%7!02x!:%8!02x!:%9!02x!\n    Benutzeroberflächentyp         : Sekundär\n    Primäre Benutzeroberfläche      : %10!s!\n    State                  : %11!s!"
+ },
+ {
+  "kind": "str",
+  "id": "60017",
+  "low16": 60017,
+  "text": "  (H2E)"
+ },
+ {
+  "kind": "str",
+  "id": "60018",
+  "low16": 60018,
+  "text": "         Details: "
+ },
+ {
+  "kind": "str",
+  "id": "60019",
+  "low16": 60019,
+  "text": "    QoS MSCS konfiguriert         : %1!d!\n    QoS-Zuordnung konfiguriert         : %2!d!\n    Durch Richtlinie zugelassene QoS-Zuordnung   :  %3!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60033",
+  "low16": 60033,
+  "text": "    Clients des gehosteten Netzwerks : %1!02x!:%2!02x!:%3!02x!:%4!02x!:%5!02x!:%6!02x!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60034",
+  "low16": 60034,
+  "text": "                             %1!02x!:%2!02x!:%3!02x!:%4!02x!:%5!02x!:%6!02x!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60035",
+  "low16": 60035,
+  "text": "\n    Status des gehosteten Netzwerks  : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60101",
+  "low16": 60101,
+  "text": "Das Profil %1!s! wird der Schnittstelle %2!s! hinzugefügt."
+ },
+ {
+  "kind": "str",
+  "id": "60102",
+  "low16": 60102,
+  "text": "Profilformatfehler 0x%1!X!: %2!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60103",
+  "low16": 60103,
+  "text": "Das Profil konnte nicht hinzugefügt werden. Fehler %x%1!X!: %2!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60104",
+  "low16": 60104,
+  "text": "Fehler beim Hinzufügen von Profil \"%1!s!\". Ein Profil mit diesem Namen ist in der Gruppenrichtlinie oder in einem anderen Benutzerbereich bereits vorhanden und kann nicht überschrieben werden."
+ },
+ {
+  "kind": "str",
+  "id": "60105",
+  "low16": 60105,
+  "text": "Sie sind nicht berechtigt, das Profil \"%1!s!\" für den aktuellen Benutzer hinzuzufügen."
+ },
+ {
+  "kind": "str",
+  "id": "60106",
+  "low16": 60106,
+  "text": "Sie sind nicht berechtigt, das Profil \"%1!s!\" für alle Benutzer hinzuzufügen."
+ },
+ {
+  "kind": "str",
+  "id": "60107",
+  "low16": 60107,
+  "text": "Die Sicherheits- oder Konnektivitätseinstellung im Profil \"%1!s!\" wird vom Drahtlosadapter \"%2!s!\" nicht unterstützt."
+ },
+ {
+  "kind": "str",
+  "id": "60113",
+  "low16": 60113,
+  "text": "Fehler beim Hinzufügen des Profils an der Schnittstelle \"%3!s!\". Fehler 0x%1!X!: %2!s!. \n"
+ },
+ {
+  "kind": "str",
+  "id": "60201",
+  "low16": 60201,
+  "text": "Das Profil\"%1!s!\" ist auf keiner Schnittstelle vorhanden."
+ },
+ {
+  "kind": "str",
+  "id": "60202",
+  "low16": 60202,
+  "text": "Das Profil \"%1!s!\" wird aus der Schnittstelle \"%2!s!\" gelöscht."
+ },
+ {
+  "kind": "str",
+  "id": "60203",
+  "low16": 60203,
+  "text": "Sie besitzen keine ausreichenden Rechte, oder das Profil \"%1!s!\" in Schnittstelle \"%2!s!\" ist ein Gruppenrichtlinienprofil."
+ },
+ {
+  "kind": "str",
+  "id": "60301",
+  "low16": 60301,
+  "text": "Die Prioritätsreihenfolge des Profils \"%1!s!\" wurde erfolgreich aktualisiert."
+ },
+ {
+  "kind": "str",
+  "id": "60302",
+  "low16": 60302,
+  "text": "Die Prioritätsreihenfolge für Profil \"%1!s!\" wird nicht geändert für \"%2!s!\". "
+ },
+ {
+  "kind": "str",
+  "id": "60303",
+  "low16": 60303,
+  "text": "Das Profil \"%1!s!\" ist auf keiner verfügbaren Schnittstelle vorhanden. "
+ },
+ {
+  "kind": "str",
+  "id": "60304",
+  "low16": 60304,
+  "text": "Die Reihenfolge der bevorzugten Profile beginnt mit 1."
+ },
+ {
+  "kind": "str",
+  "id": "60305",
+  "low16": 60305,
+  "text": "Die Reihenfolge des Gruppenrichtlinienprofils \"%1!s!\" kann nicht geändert werden."
+ },
+ {
+  "kind": "str",
+  "id": "60401",
+  "low16": 60401,
+  "text": "\nDas Schnittstellenprofil \"%1!s!\" wurde erfolgreich in\nDatei \"%2!s!\" gespeichert.\n"
+ },
+ {
+  "kind": "str",
+  "id": "60402",
+  "low16": 60402,
+  "text": "Das Profil \"%1!s!\" ist auf keiner Schnittstelle vorhanden."
+ },
+ {
+  "kind": "str",
+  "id": "60403",
+  "low16": 60403,
+  "text": "Das Profil \"%1!s!\" ist nicht auf Schnittstelle \"%2!s!\" vorhanden."
+ },
+ {
+  "kind": "str",
+  "id": "60404",
+  "low16": 60404,
+  "text": "Auf dem System ist kein Profil vorhanden."
+ },
+ {
+  "kind": "str",
+  "id": "60405",
+  "low16": 60405,
+  "text": "\nDas Gruppenrichtlinienprofil \"%1!s!\" wurde erfolgreich in der\nDatei \"%2!s!\" gespeichert.\n"
+ },
+ {
+  "kind": "str",
+  "id": "60406",
+  "low16": 60406,
+  "text": "Der angegebene Ordner \"%1!s!\" ist ungültig."
+ },
+ {
+  "kind": "str",
+  "id": "60501",
+  "low16": 60501,
+  "text": "Das Profil \"%1!s!\" ist im System nicht vorhanden."
+ },
+ {
+  "kind": "str",
+  "id": "60502",
+  "low16": 60502,
+  "text": "Das Profil \"%1!s!\" ist nicht auf Schnittstelle \"%2!s!\" vorhanden."
+ },
+ {
+  "kind": "str",
+  "id": "60503",
+  "low16": 60503,
+  "text": "Auf dem System ist kein Profil vorhanden."
+ },
+ {
+  "kind": "str",
+  "id": "60504",
+  "low16": 60504,
+  "text": "Das Profil ist kein Drahtlos-LAN-Profil."
+ },
+ {
+  "kind": "str",
+  "id": "60505",
+  "low16": 60505,
+  "text": "\nDas Profil \"%2!s!\" auf Schnittstelle %1!s!:\n=======================================================================\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60506",
+  "low16": 60506,
+  "text": "\nProfile auf Schnittstelle %1!s!:\n"
+ },
+ {
+  "kind": "str",
+  "id": "60507",
+  "low16": 60507,
+  "text": "    %1!s! : %2!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60508",
+  "low16": 60508,
+  "text": "    <Kein>\n"
+ },
+ {
+  "kind": "str",
+  "id": "60509",
+  "low16": 60509,
+  "text": "\nGruppenrichtlinienprofile (schreibgeschützt)\n---------------------------------\n"
+ },
+ {
+  "kind": "str",
+  "id": "60510",
+  "low16": 60510,
+  "text": "\nBenutzerprofile\n---------------\n"
+ },
+ {
+  "kind": "str",
+  "id": "60511",
+  "low16": 60511,
+  "text": "    %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60512",
+  "low16": 60512,
+  "text": "Die in diesem Profil konfigurierte EAP-Methode ist nicht vorhanden."
+ },
+ {
+  "kind": "str",
+  "id": "60513",
+  "low16": 60513,
+  "text": "Die in dem Profil enthaltene EAP-Methode ist ungültig."
+ },
+ {
+  "kind": "str",
+  "id": "60514",
+  "low16": 60514,
+  "text": "Für den angeforderten Vorgang sind erhöhte Rechte erforderlich."
+ },
+ {
+  "kind": "str",
+  "id": "60601",
+  "low16": 60601,
+  "text": "\nZulassungsliste für das System (Benutzer)\n------------------------------------------\n"
+ },
+ {
+  "kind": "str",
+  "id": "60602",
+  "low16": 60602,
+  "text": "\nBlockierungsliste auf dem System (Benutzer)\n-------------------------------------------\n"
+ },
+ {
+  "kind": "str",
+  "id": "60603",
+  "low16": 60603,
+  "text": "    <Kein>\n"
+ },
+ {
+  "kind": "str",
+  "id": "60604",
+  "low16": 60604,
+  "text": "    SSID: \"%1!s!\", Typ: %2!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60605",
+  "low16": 60605,
+  "text": "\nZulassungsliste für das System (Gruppenrichtlinie)\n---------------------------------------------------\n"
+ },
+ {
+  "kind": "str",
+  "id": "60606",
+  "low16": 60606,
+  "text": "\nBlockierungsliste auf dem System (Gruppenrichtlinie)\n----------------------------------------------------\n"
+ },
+ {
+  "kind": "str",
+  "id": "60701",
+  "low16": 60701,
+  "text": "\nDrahtlos-LAN-Einstellungen\n---------------------\n"
+ },
+ {
+  "kind": "str",
+  "id": "60703",
+  "low16": 60703,
+  "text": "    Die Logik für die automatische Konfiguration ist an der Schnittstelle \"%2!s!\" aktiviert.\n"
+ },
+ {
+  "kind": "str",
+  "id": "60704",
+  "low16": 60704,
+  "text": "    Die Logik für die automatische Konfiguration ist an der Schnittstelle \"%2!s!\" deaktiviert.\n"
+ },
+ {
+  "kind": "str",
+  "id": "60705",
+  "low16": 60705,
+  "text": "    Blockierte Netzwerke in sichtbarer Netzwerkliste anzeigen: %1!s!"
+ },
+ {
+  "kind": "str",
+  "id": "60706",
+  "low16": 60706,
+  "text": "Ja\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60707",
+  "low16": 60707,
+  "text": "Nein\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60721",
+  "low16": 60721,
+  "text": "    Nur Gruppenrichtlinienprofile für Netzwerke verwenden, die mit Gruppenrichtlinien konfiguriert werden: %1!s!"
+ },
+ {
+  "kind": "str",
+  "id": "60722",
+  "low16": 60722,
+  "text": "Ja\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60723",
+  "low16": 60723,
+  "text": "Nein\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60737",
+  "low16": 60737,
+  "text": "    Freigegebene Benutzeranmeldeinformationen für die Netzwerkauthentifizierung zulassen: %1!s!"
+ },
+ {
+  "kind": "str",
+  "id": "60738",
+  "low16": 60738,
+  "text": "Ja\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60739",
+  "low16": 60739,
+  "text": "Nein\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60740",
+  "low16": 60740,
+  "text": "    Blockierungszeitraum: %1!d! Minuten.\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60741",
+  "low16": 60741,
+  "text": "    Blockierungszeitraum: Nicht konfiguriert.\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60753",
+  "low16": 60753,
+  "text": "    Zufällige MAC-Adressen auf Schnittstelle %1!s! nicht verfügbar\n"
+ },
+ {
+  "kind": "str",
+  "id": "60754",
+  "low16": 60754,
+  "text": "    Zufällige MAC-Adressen vom Administrator auf Schnittstelle %1!s! deaktiviert\n"
+ },
+ {
+  "kind": "str",
+  "id": "60755",
+  "low16": 60755,
+  "text": "    Zufällige MAC-Adressen auf Schnittstelle %1!s! deaktiviert\n"
+ },
+ {
+  "kind": "str",
+  "id": "60756",
+  "low16": 60756,
+  "text": "    Zufällige MAC-Adressen auf Schnittstelle %1!s! aktiviert\n"
+ },
+ {
+  "kind": "str",
+  "id": "60769",
+  "low16": 60769,
+  "text": "\nFunktionen des Drahtlossystems \n---------------------------- \n"
+ },
+ {
+  "kind": "str",
+  "id": "60770",
+  "low16": 60770,
+  "text": "    Die Anzahl der Antennen für die 802.11-Drahtlosverbindung: %1!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60771",
+  "low16": 60771,
+  "text": "    Die Anzahl der Antennen für die 802.11-Drahtlosverbindung (Wert nicht verfügbar)\n"
+ },
+ {
+  "kind": "str",
+  "id": "60772",
+  "low16": 60772,
+  "text": "    Zurücksetzen der Funktionsebene                     : Unterstützt\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60773",
+  "low16": 60773,
+  "text": "    Zurücksetzen der Funktionsebene                     : Nicht unterstützt\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60774",
+  "low16": 60774,
+  "text": "    FLDR-Unterstützung (kein Wert verfügbar)\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60775",
+  "low16": 60775,
+  "text": "    Koexistenzunterstützung                        : einander ausschließend\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60776",
+  "low16": 60776,
+  "text": "    Koexistenzunterstützung                        : WLAN-Leistung auf 1x1 herabgesetzt\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60777",
+  "low16": 60777,
+  "text": "    Koexistenzunterstützung                        : WLAN-Leistung wird beibehalten\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60778",
+  "low16": 60778,
+  "text": "    Koexistenzunterstützung                        : Bluetooth hat Priorität\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60779",
+  "low16": 60779,
+  "text": "    PLDR                                        : Unterstützt\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60780",
+  "low16": 60780,
+  "text": "    PLDR                                        : Nicht unterstützt\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60781",
+  "low16": 60781,
+  "text": "    PLDR-Unterstützung (kein Wert verfügbar)\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60782",
+  "low16": 60782,
+  "text": "    Max. Anzahl von Kanälen, die das Gerät gleichzeitig unterstützt     : %1!u!\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60783",
+  "low16": 60783,
+  "text": "    Max. Anzahl von Kanälen, die das Gerät gleichzeitig unterstützt (kein Wert verfügbar)\n"
+ },
+ {
+  "kind": "str",
+  "id": "60784",
+  "low16": 60784,
+  "text": "    Drahtlosfunktionen sind nicht verfügbar.\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60801",
+  "low16": 60801,
+  "text": " \nSchnittstellenname : %1!s! \n"
+ },
+ {
+  "kind": "str",
+  "id": "60802",
+  "low16": 60802,
+  "text": "Momentan sind %1!d! Netzwerke sichtbar.\n"
+ },
+ {
+  "kind": "str",
+  "id": "60803",
+  "low16": 60803,
+  "text": "\nSSID %1!d! : %2!s!\n    Netzwerktyp             : %3!s!\n    Authentifizierung       : %4!s!\n    Verschlüsselung         : %5!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60804",
+  "low16": 60804,
+  "text": "    BSSID %1!d!                 : %2!02x!:%3!02x!:%4!02x!:%5!02x!:%6!02x!:%7!02x!\n         Signal             : %8!d!%%  \n         Funktyp         : %9!s!\n         Band               : %10!s!\n         Kanal            : %11!d! \n"
+ },
+ {
+  "kind": "str",
+  "id": "60805",
+  "low16": 60805,
+  "text": "Sichtbare Netzwerke können nicht angezeigt werden, da die automatische\nKonfiguration in der Benutzeroberfläche auf \"%1!s!\" festgelegt ist.\n"
+ },
+ {
+  "kind": "str",
+  "id": "60806",
+  "low16": 60806,
+  "text": "         Basisraten (MBit/s)   :"
+ },
+ {
+  "kind": "str",
+  "id": "60807",
+  "low16": 60807,
+  "text": "         Andere Raten (MBit/s) :"
+ },
+ {
+  "kind": "str",
+  "id": "60808",
+  "low16": 60808,
+  "text": " %1!s!"
+ },
+ {
+  "kind": "str",
+  "id": "60810",
+  "low16": 60810,
+  "text": " (H2E nicht unterstützt) "
+ },
+ {
+  "kind": "str",
+  "id": "60811",
+  "low16": 60811,
+  "text": " (H2E unterstützt) "
+ },
+ {
+  "kind": "str",
+  "id": "60812",
+  "low16": 60812,
+  "text": " (H2E erforderlich) "
+ },
+ {
+  "kind": "str",
+  "id": "60813",
+  "low16": 60813,
+  "text": " (FT) "
+ },
+ {
+  "kind": "str",
+  "id": "60814",
+  "low16": 60814,
+  "text": " (OKC) "
+ },
+ {
+  "kind": "str",
+  "id": "60815",
+  "low16": 60815,
+  "text": " (Mit FT-Roaming) "
+ },
+ {
+  "kind": "str",
+  "id": "60833",
+  "low16": 60833,
+  "text": "         MFP erforderlich: %1!x!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60834",
+  "low16": 60834,
+  "text": "\nSSID %1!d! : %2!s!\n    HESSID : %3!s!\n    Netzwerktyp: %4!s!\n    Authentifizierung: %5!s!\n    Verschlüsselung: %6!s! \n"
+ },
+ {
+  "kind": "str",
+  "id": "60849",
+  "low16": 60849,
+  "text": "         Dmg-Rx-Raten (MBit/s):"
+ },
+ {
+  "kind": "str",
+  "id": "60850",
+  "low16": 60850,
+  "text": "         Dmg-Tx-Raten (MBit/s):"
+ },
+ {
+  "kind": "str",
+  "id": "60901",
+  "low16": 60901,
+  "text": "\nSchnittstellenname: %1!s!\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60902",
+  "low16": 60902,
+  "text": "    Treiberinformationen zu dieser Schnittstelle sind nicht verfügbar.\n"
+ },
+ {
+  "kind": "str",
+  "id": "60903",
+  "low16": 60903,
+  "text": "    Treiber                   : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60904",
+  "low16": 60904,
+  "text": "    Hersteller                : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60905",
+  "low16": 60905,
+  "text": "    Anbieter                  : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60906",
+  "low16": 60906,
+  "text": "    Version                   : %1!d!.%2!d!.%3!d!.%4!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60907",
+  "low16": 60907,
+  "text": "    Datum                     : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60908",
+  "low16": 60908,
+  "text": "    Dateien                   : %1!d! insgesamt\n"
+ },
+ {
+  "kind": "str",
+  "id": "60909",
+  "low16": 60909,
+  "text": "    INF-Datei                 : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60910",
+  "low16": 60910,
+  "text": "                                %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60911",
+  "low16": 60911,
+  "text": "    Typ                       : Wi-Fi-Treiber (Vorgängerversion)\n"
+ },
+ {
+  "kind": "str",
+  "id": "60912",
+  "low16": 60912,
+  "text": "    Typ                       : Wi-Fi-Treiber (Ursprungsversion)\n"
+ },
+ {
+  "kind": "str",
+  "id": "60913",
+  "low16": 60913,
+  "text": "    IHV-Dienst vorhanden      : Ja\n"
+ },
+ {
+  "kind": "str",
+  "id": "60914",
+  "low16": 60914,
+  "text": "    IHV-Adapter-OUI           : [%1!02x! %2!02x! %3!02x!], Typ: [%4!02x!]\n"
+ },
+ {
+  "kind": "str",
+  "id": "60915",
+  "low16": 60915,
+  "text": "    IHV-Erweiterbarkeits-DLL-Pfad: %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60916",
+  "low16": 60916,
+  "text": "    IHV UI-Erweiterbarkeits-ClSID: {%1!s!}\n"
+ },
+ {
+  "kind": "str",
+  "id": "60917",
+  "low16": 60917,
+  "text": "    IHV-Diagnose-CLSID     : {%1!s!}\n"
+ },
+ {
+  "kind": "str",
+  "id": "60918",
+  "low16": 60918,
+  "text": "    Unterstützte Funktypen    :"
+ },
+ {
+  "kind": "str",
+  "id": "60919",
+  "low16": 60919,
+  "text": " %1!s!"
+ },
+ {
+  "kind": "str",
+  "id": "60920",
+  "low16": 60920,
+  "text": "    Im Infrastrukturmodus unterstützte Authentifizierung und unterstütztes Verschlüsselungsverfahren:\n"
+ },
+ {
+  "kind": "str",
+  "id": "60921",
+  "low16": 60921,
+  "text": "                                %1!-16s! %2!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60922",
+  "low16": 60922,
+  "text": "    Im Ad-hoc-Modus unterstützte Authentifizierung und unterstütztes Verschlüsselungsverfahren:\n"
+ },
+ {
+  "kind": "str",
+  "id": "60929",
+  "low16": 60929,
+  "text": "    FIPS 140-Modus wird unterstützt: Ja\n"
+ },
+ {
+  "kind": "str",
+  "id": "60930",
+  "low16": 60930,
+  "text": "    FIPS 140-Modus wird unterstützt: Nein\n"
+ },
+ {
+  "kind": "str",
+  "id": "60931",
+  "low16": 60931,
+  "text": "    FIPS 140-Modus wird unterstützt: Ja [Treiber hat kompatible Hardware erkannt]\n"
+ },
+ {
+  "kind": "str",
+  "id": "60932",
+  "low16": 60932,
+  "text": "    Unterstützte drahtlose Anzeige: %1!s! (Grafiktreiber: %2!s!, Wi-Fi-Treiber: %3!s!)\n"
+ },
+ {
+  "kind": "str",
+  "id": "60933",
+  "low16": 60933,
+  "text": "Ja"
+ },
+ {
+  "kind": "str",
+  "id": "60934",
+  "low16": 60934,
+  "text": "Nein"
+ },
+ {
+  "kind": "str",
+  "id": "60945",
+  "low16": 60945,
+  "text": "    Unterstützte gehostete Netzwerke  : Ja\n"
+ },
+ {
+  "kind": "str",
+  "id": "60946",
+  "low16": 60946,
+  "text": "    Unterstützte gehostete Netzwerke  : Nein\n"
+ },
+ {
+  "kind": "str",
+  "id": "60951",
+  "low16": 60951,
+  "text": "Die Drahtlosablaufverfolgung ist im System nicht aktiviert."
+ },
+ {
+  "kind": "str",
+  "id": "60952",
+  "low16": 60952,
+  "text": "Die Drahtlosablaufverfolgung wird derzeit ausgeführt."
+ },
+ {
+  "kind": "str",
+  "id": "60953",
+  "low16": 60953,
+  "text": "Die Drahtlosablaufverfolgung ist derzeit beendet."
+ },
+ {
+  "kind": "str",
+  "id": "60954",
+  "low16": 60954,
+  "text": "\nDie Ablaufverfolgungsprotokolle werden unter \"%1!s!\" gespeichert."
+ },
+ {
+  "kind": "str",
+  "id": "60955",
+  "low16": 60955,
+  "text": "\nDie letzten Ablaufverfolgungsprotokolle sind unter \"%1!s!\" gespeichert."
+ },
+ {
+  "kind": "str",
+  "id": "60956",
+  "low16": 60956,
+  "text": "Die beständige Drahtlosablaufverfolgung ist im System nicht aktiviert."
+ },
+ {
+  "kind": "str",
+  "id": "60957",
+  "low16": 60957,
+  "text": "Die beständige Drahtlosablaufverfolgung wird derzeit ausgeführt."
+ },
+ {
+  "kind": "str",
+  "id": "60958",
+  "low16": 60958,
+  "text": "Die beständige Drahtlosablaufverfolgung ist derzeit beendet."
+ },
+ {
+  "kind": "str",
+  "id": "60959",
+  "low16": 60959,
+  "text": "    Anzahl unterstützter Bänder: %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "60960",
+  "low16": 60960,
+  "text": "                                %1!s! [ %2!d! MHz – %3!d! MHz]\n"
+ },
+ {
+  "kind": "str",
+  "id": "60961",
+  "low16": 60961,
+  "text": "    802.11w Management Frame Protection wird unterstützt: Ja\n"
+ },
+ {
+  "kind": "str",
+  "id": "60962",
+  "low16": 60962,
+  "text": "    802.11w Management Frame Protection wird unterstützt: Nein\n"
+ },
+ {
+  "kind": "str",
+  "id": "60990",
+  "low16": 60990,
+  "text": "\n\n======================================================================= \n======================= SCHNITTSTELLENFUNKTIONEN ANZEIGEN =================== \n=======================================================================\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60991",
+  "low16": 60991,
+  "text": "Zusammenfassung der Drahtlossysteminformationen\n(Zeit: %1!s! %2!s! %3!s!)\n"
+ },
+ {
+  "kind": "str",
+  "id": "60992",
+  "low16": 60992,
+  "text": "\n\n=======================================================================\n============================ TREIBER ANZEIGEN =========================\n=======================================================================\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60993",
+  "low16": 60993,
+  "text": "\n\n=======================================================================\n========================= SCHNITTSTELLEN ANZEIGEN =====================\n=======================================================================\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60994",
+  "low16": 60994,
+  "text": "\n\n=======================================================================\n========================== EINSTELLUNGEN ANZEIGEN =====================\n=======================================================================\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60995",
+  "low16": 60995,
+  "text": "\n\n=======================================================================\n============================= FILTER ANZEIGEN =========================\n=======================================================================\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60996",
+  "low16": 60996,
+  "text": "\n\n=======================================================================\n============================ PROFILE ANZEIGEN =========================\n=======================================================================\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60997",
+  "low16": 60997,
+  "text": "\n\n======================================================================= \n========================== PROFILNAMEN ANZEIGEN ======================== \n=======================================================================\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60998",
+  "low16": 60998,
+  "text": "\n\n=======================================================================\n===================== NETZEORKMODUS=BSSID ANZEIGEN ====================\n=======================================================================\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "60999",
+  "low16": 60999,
+  "text": "\n\n=======================================================================\n================== ERSTELLEN ALLER BENUTZER ANZEIGEN ==================\n=======================================================================\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "61000",
+  "low16": 61000,
+  "text": "\n\n======================================================================= \n=========================== SHOW HOSTED NETWORK ======================= \n=======================================================================\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "61001",
+  "low16": 61001,
+  "text": "\nProfilinformationen\n------------------- \n"
+ },
+ {
+  "kind": "str",
+  "id": "61002",
+  "low16": 61002,
+  "text": "    Name                   : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61003",
+  "low16": 61003,
+  "text": "    Version                : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61004",
+  "low16": 61004,
+  "text": "    Beschreibung           : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61005",
+  "low16": 61005,
+  "text": "    Typ                    : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61006",
+  "low16": 61006,
+  "text": "Drahtlos-LAN"
+ },
+ {
+  "kind": "str",
+  "id": "61007",
+  "low16": 61007,
+  "text": "Verkabeltes LAN"
+ },
+ {
+  "kind": "str",
+  "id": "61008",
+  "low16": 61008,
+  "text": "Unbekannter Typ"
+ },
+ {
+  "kind": "str",
+  "id": "61010",
+  "low16": 61010,
+  "text": "    Steuerungsoptionen     :\n"
+ },
+ {
+  "kind": "str",
+  "id": "61011",
+  "low16": 61011,
+  "text": "        Verbindungsmodus   : Automatisch verbinden\n"
+ },
+ {
+  "kind": "str",
+  "id": "61012",
+  "low16": 61012,
+  "text": "        Verbindungsmodus   : Manuell verbinden\n"
+ },
+ {
+  "kind": "str",
+  "id": "61013",
+  "low16": 61013,
+  "text": "        Netzwerkübertragung  : Verbinden, auch wenn dieses Netzwerk nicht überträgt\n"
+ },
+ {
+  "kind": "str",
+  "id": "61016",
+  "low16": 61016,
+  "text": "        Automatisch wechseln         : Wenn möglich zu einem bevorzugteren Netzwerk wechseln.\n"
+ },
+ {
+  "kind": "str",
+  "id": "61017",
+  "low16": 61017,
+  "text": "        Automatisch wechseln         : Nicht zu anderen Netzwerken wechseln.\n"
+ },
+ {
+  "kind": "str",
+  "id": "61018",
+  "low16": 61018,
+  "text": "\nKonnektivitätseinstellungen\n---------------------\n"
+ },
+ {
+  "kind": "str",
+  "id": "61020",
+  "low16": 61020,
+  "text": "    Netzwerktyp            : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61021",
+  "low16": 61021,
+  "text": "Infrastruktur"
+ },
+ {
+  "kind": "str",
+  "id": "61022",
+  "low16": 61022,
+  "text": "Ad-hoc"
+ },
+ {
+  "kind": "str",
+  "id": "61023",
+  "low16": 61023,
+  "text": "Beliebiger Netzwerktyp"
+ },
+ {
+  "kind": "str",
+  "id": "61024",
+  "low16": 61024,
+  "text": "Unbekannt"
+ },
+ {
+  "kind": "str",
+  "id": "61025",
+  "low16": 61025,
+  "text": "    Anzahl von SSIDs        : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61026",
+  "low16": 61026,
+  "text": "                             \"%1!s!\"\n"
+ },
+ {
+  "kind": "str",
+  "id": "61027",
+  "low16": 61027,
+  "text": "Gruppenrichtlinienprofil"
+ },
+ {
+  "kind": "str",
+  "id": "61028",
+  "low16": 61028,
+  "text": "Aktuelles Benutzerprofil"
+ },
+ {
+  "kind": "str",
+  "id": "61029",
+  "low16": 61029,
+  "text": "Profil für alle Benutzer"
+ },
+ {
+  "kind": "str",
+  "id": "61030",
+  "low16": 61030,
+  "text": "Angewendet: %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61031",
+  "low16": 61031,
+  "text": "    SSID-Name              : \"%1!s!\"\n"
+ },
+ {
+  "kind": "str",
+  "id": "61032",
+  "low16": 61032,
+  "text": "    SSID-Namen             : \"%1!s!\"\n"
+ },
+ {
+  "kind": "str",
+  "id": "61035",
+  "low16": 61035,
+  "text": "    Funktyp                : "
+ },
+ {
+  "kind": "str",
+  "id": "61036",
+  "low16": 61036,
+  "text": "%1!s!"
+ },
+ {
+  "kind": "str",
+  "id": "61037",
+  "low16": 61037,
+  "text": ", %1!s!"
+ },
+ {
+  "kind": "str",
+  "id": "61038",
+  "low16": 61038,
+  "text": "Beliebiger Funktyp"
+ },
+ {
+  "kind": "str",
+  "id": "61039",
+  "low16": 61039,
+  "text": "FHSS"
+ },
+ {
+  "kind": "str",
+  "id": "61040",
+  "low16": 61040,
+  "text": "DSSS"
+ },
+ {
+  "kind": "str",
+  "id": "61041",
+  "low16": 61041,
+  "text": "IR-Basisband"
+ },
+ {
+  "kind": "str",
+  "id": "61042",
+  "low16": 61042,
+  "text": "802.11a"
+ },
+ {
+  "kind": "str",
+  "id": "61043",
+  "low16": 61043,
+  "text": "802.11b"
+ },
+ {
+  "kind": "str",
+  "id": "61044",
+  "low16": 61044,
+  "text": "802.11g"
+ },
+ {
+  "kind": "str",
+  "id": "61045",
+  "low16": 61045,
+  "text": "Unbekannt"
+ },
+ {
+  "kind": "str",
+  "id": "61046",
+  "low16": 61046,
+  "text": "Herstellerdefiniert (0x%X)"
+ },
+ {
+  "kind": "str",
+  "id": "61047",
+  "low16": 61047,
+  "text": "    Herstellererweiterungs-ID       : "
+ },
+ {
+  "kind": "str",
+  "id": "61048",
+  "low16": 61048,
+  "text": "    Herstellererweiterung          : Nicht vorhanden\n"
+ },
+ {
+  "kind": "str",
+  "id": "61049",
+  "low16": 61049,
+  "text": "802.11n"
+ },
+ {
+  "kind": "str",
+  "id": "61050",
+  "low16": 61050,
+  "text": "802.11ac"
+ },
+ {
+  "kind": "str",
+  "id": "61051",
+  "low16": 61051,
+  "text": "802.11ad"
+ },
+ {
+  "kind": "str",
+  "id": "61052",
+  "low16": 61052,
+  "text": "802.11ax"
+ },
+ {
+  "kind": "str",
+  "id": "61053",
+  "low16": 61053,
+  "text": "802.11be"
+ },
+ {
+  "kind": "str",
+  "id": "61056",
+  "low16": 61056,
+  "text": "[ "
+ },
+ {
+  "kind": "str",
+  "id": "61057",
+  "low16": 61057,
+  "text": " ]\n"
+ },
+ {
+  "kind": "str",
+  "id": "61058",
+  "low16": 61058,
+  "text": "0x%1!02X! "
+ },
+ {
+  "kind": "str",
+  "id": "61059",
+  "low16": 61059,
+  "text": "\nSicherheitseinstellungen\n------------------------ \n"
+ },
+ {
+  "kind": "str",
+  "id": "61060",
+  "low16": 61060,
+  "text": "    Authentifizierung         : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61061",
+  "low16": 61061,
+  "text": "    Verschlüsselung                 : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61062",
+  "low16": 61062,
+  "text": "Offen"
+ },
+ {
+  "kind": "str",
+  "id": "61063",
+  "low16": 61063,
+  "text": "Gemeinsam verwendet"
+ },
+ {
+  "kind": "str",
+  "id": "61064",
+  "low16": 61064,
+  "text": "Firmenweiter WPA"
+ },
+ {
+  "kind": "str",
+  "id": "61065",
+  "low16": 61065,
+  "text": "WPA-Personal"
+ },
+ {
+  "kind": "str",
+  "id": "61066",
+  "low16": 61066,
+  "text": "WPA-None"
+ },
+ {
+  "kind": "str",
+  "id": "61067",
+  "low16": 61067,
+  "text": "WPA2-Enterprise"
+ },
+ {
+  "kind": "str",
+  "id": "61068",
+  "low16": 61068,
+  "text": "WPA2-Personal"
+ },
+ {
+  "kind": "str",
+  "id": "61069",
+  "low16": 61069,
+  "text": "Unbekannt"
+ },
+ {
+  "kind": "str",
+  "id": "61070",
+  "low16": 61070,
+  "text": "Keine"
+ },
+ {
+  "kind": "str",
+  "id": "61071",
+  "low16": 61071,
+  "text": "WEP"
+ },
+ {
+  "kind": "str",
+  "id": "61072",
+  "low16": 61072,
+  "text": "TKIP"
+ },
+ {
+  "kind": "str",
+  "id": "61073",
+  "low16": 61073,
+  "text": "CCMP"
+ },
+ {
+  "kind": "str",
+  "id": "61074",
+  "low16": 61074,
+  "text": "WEP-40bit"
+ },
+ {
+  "kind": "str",
+  "id": "61075",
+  "low16": 61075,
+  "text": "WEP-104bit"
+ },
+ {
+  "kind": "str",
+  "id": "61076",
+  "low16": 61076,
+  "text": "WPA-Use-Group"
+ },
+ {
+  "kind": "str",
+  "id": "61077",
+  "low16": 61077,
+  "text": "Unbekannt"
+ },
+ {
+  "kind": "str",
+  "id": "61078",
+  "low16": 61078,
+  "text": "    Sicherheitsschlüssel   : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61079",
+  "low16": 61079,
+  "text": "Vorhanden"
+ },
+ {
+  "kind": "str",
+  "id": "61080",
+  "low16": 61080,
+  "text": "Nicht vorhanden"
+ },
+ {
+  "kind": "str",
+  "id": "61081",
+  "low16": 61081,
+  "text": "    Schlüsselindex              : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61082",
+  "low16": 61082,
+  "text": "Herstellerdefiniert"
+ },
+ {
+  "kind": "str",
+  "id": "61083",
+  "low16": 61083,
+  "text": "Herstellerdefiniert"
+ },
+ {
+  "kind": "str",
+  "id": "61084",
+  "low16": 61084,
+  "text": "GCMP"
+ },
+ {
+  "kind": "str",
+  "id": "61085",
+  "low16": 61085,
+  "text": "WPA3-Enterprise 192 Bits"
+ },
+ {
+  "kind": "str",
+  "id": "61086",
+  "low16": 61086,
+  "text": "WPA3-Personal"
+ },
+ {
+  "kind": "str",
+  "id": "61087",
+  "low16": 61087,
+  "text": "GCMP-256"
+ },
+ {
+  "kind": "str",
+  "id": "61088",
+  "low16": 61088,
+  "text": "GMAC-256"
+ },
+ {
+  "kind": "str",
+  "id": "61089",
+  "low16": 61089,
+  "text": "OWE"
+ },
+ {
+  "kind": "str",
+  "id": "61090",
+  "low16": 61090,
+  "text": "WPA3-Enterprise"
+ },
+ {
+  "kind": "str",
+  "id": "61101",
+  "low16": 61101,
+  "text": "    802.1X                 : Aktiviert\n"
+ },
+ {
+  "kind": "str",
+  "id": "61102",
+  "low16": 61102,
+  "text": "    EAP-Typ                : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61103",
+  "low16": 61103,
+  "text": "    EAP-Typ               : Die dem Profil entsprechende EAP-Methode ist nicht vorhanden.\n"
+ },
+ {
+  "kind": "str",
+  "id": "61104",
+  "low16": 61104,
+  "text": "    Anmeldeinformationen konfiguriert : Ja\n"
+ },
+ {
+  "kind": "str",
+  "id": "61105",
+  "low16": 61105,
+  "text": "    Anmeldeinformationen konfiguriert : Nein\n"
+ },
+ {
+  "kind": "str",
+  "id": "61110",
+  "low16": 61110,
+  "text": "    802.1X Anmeldeinformationen zur Auth. : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61111",
+  "low16": 61111,
+  "text": "Computer- oder Benutzeranmeldeinformationen"
+ },
+ {
+  "kind": "str",
+  "id": "61112",
+  "low16": 61112,
+  "text": "Computeranmeldeinformationen"
+ },
+ {
+  "kind": "str",
+  "id": "61113",
+  "low16": 61113,
+  "text": "Benutzeranmeldeinformationen"
+ },
+ {
+  "kind": "str",
+  "id": "61114",
+  "low16": 61114,
+  "text": "Gastanmeldeinformationen"
+ },
+ {
+  "kind": "str",
+  "id": "61115",
+  "low16": 61115,
+  "text": "Nicht festgelegt"
+ },
+ {
+  "kind": "str",
+  "id": "61116",
+  "low16": 61116,
+  "text": "Nein"
+ },
+ {
+  "kind": "str",
+  "id": "61117",
+  "low16": 61117,
+  "text": "    Benutzerinformationen zwischenspeichern : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61118",
+  "low16": 61118,
+  "text": "Ja"
+ },
+ {
+  "kind": "str",
+  "id": "61119",
+  "low16": 61119,
+  "text": "Nicht festgelegt"
+ },
+ {
+  "kind": "str",
+  "id": "61120",
+  "low16": 61120,
+  "text": "        Typ                : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61121",
+  "low16": 61121,
+  "text": "        Max. Verzög. (Sek) : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61122",
+  "low16": 61122,
+  "text": "Vor der Anmeldung"
+ },
+ {
+  "kind": "str",
+  "id": "61123",
+  "low16": 61123,
+  "text": "Nach der Anmeldung"
+ },
+ {
+  "kind": "str",
+  "id": "61124",
+  "low16": 61124,
+  "text": "        Zusätzliche Dialoge: %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61125",
+  "low16": 61125,
+  "text": "        Dialogeingabe (Sek): %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61126",
+  "low16": 61126,
+  "text": "Aktiviert"
+ },
+ {
+  "kind": "str",
+  "id": "61127",
+  "low16": 61127,
+  "text": "Deaktiviert"
+ },
+ {
+  "kind": "str",
+  "id": "61128",
+  "low16": 61128,
+  "text": "        Netzwerkübertragung  : Verbinden, nur wenn dieses Netzwerk überträgt\n"
+ },
+ {
+  "kind": "str",
+  "id": "61129",
+  "low16": 61129,
+  "text": "    Einstellungen für einmaliges Anmelden:\n"
+ },
+ {
+  "kind": "str",
+  "id": "61130",
+  "low16": 61130,
+  "text": "    Länge der Herstellererweiterungsdaten: %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61131",
+  "low16": 61131,
+  "text": "    Schlüsselinhalt            : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61153",
+  "low16": 61153,
+  "text": "    FIPS-Modus              : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61154",
+  "low16": 61154,
+  "text": "Aktiviert"
+ },
+ {
+  "kind": "str",
+  "id": "61156",
+  "low16": 61156,
+  "text": "        Benutzerauthentifizierung VLAN     : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "61157",
+  "low16": 61157,
+  "text": "Aktiviert"
+ },
+ {
+  "kind": "str",
+  "id": "61158",
+  "low16": 61158,
+  "text": "Deaktiviert"
+ },
+ {
+  "kind": "str",
+  "id": "61185",
+  "low16": 61185,
+  "text": "        MAC-Randomisierung  : Aktiviert\n"
+ },
+ {
+  "kind": "str",
+  "id": "61186",
+  "low16": 61186,
+  "text": "        MAC-Randomisierung  : Deaktiviert\n"
+ },
+ {
+  "kind": "str",
+  "id": "61187",
+  "low16": 61187,
+  "text": "        MAC-Randomisierung  : Täglich\n"
+ },
+ {
+  "kind": "str",
+  "id": "61301",
+  "low16": 61301,
+  "text": "Dieser Filter ist bereits in der gleichen Liste auf dem System vorhanden."
+ },
+ {
+  "kind": "str",
+  "id": "61302",
+  "low16": 61302,
+  "text": "Dieser Filter ist bereits in der Zulassungsliste für das System vorhanden. "
+ },
+ {
+  "kind": "str",
+  "id": "61303",
+  "low16": 61303,
+  "text": "Dieser Filter ist bereits in der Blockierungsliste auf dem System vorhanden. "
+ },
+ {
+  "kind": "str",
+  "id": "61304",
+  "low16": 61304,
+  "text": "Warnung: Dieser Filter steht in Konflikt mit der Gruppenrichtlinie. Die Filtereinstellung tritt nicht in Kraft. "
+ },
+ {
+  "kind": "str",
+  "id": "61305",
+  "low16": 61305,
+  "text": "Der Filter wurde auf dem System erfolgreich hinzugefügt."
+ },
+ {
+  "kind": "str",
+  "id": "61401",
+  "low16": 61401,
+  "text": "Der Filter wurde erfolgreich aus dem System entfernt."
+ },
+ {
+  "kind": "str",
+  "id": "61402",
+  "low16": 61402,
+  "text": "Der Filter ist auf dem im System vorhanden."
+ },
+ {
+  "kind": "str",
+  "id": "61601",
+  "low16": 61601,
+  "text": "\n# ----------------------------------------\n# Drahtlos-LAN-Konfiguration\n# ----------------------------------------\npushd %1!s!"
+ },
+ {
+  "kind": "str",
+  "id": "61602",
+  "low16": 61602,
+  "text": "\n\npopd\n# Ende der Drahtlos-LAN-Konfiguration"
+ },
+ {
+  "kind": "str",
+  "id": "61603",
+  "low16": 61603,
+  "text": "\n\n# Liste der zulässigen Filter\n# ----------------------------------------\n"
+ },
+ {
+  "kind": "str",
+  "id": "61604",
+  "low16": 61604,
+  "text": "\n\n# Liste der blockierten Filter\n# ----------------------------------------\n"
+ },
+ {
+  "kind": "str",
+  "id": "61605",
+  "low16": 61605,
+  "text": "\n%1!s! %2!s! %3!s!=%4!s! %5!s!=\"%6!s!\" %7!s!=\"%8!s!\""
+ },
+ {
+  "kind": "str",
+  "id": "61606",
+  "low16": 61606,
+  "text": "\n%1!s! %2!s! %3!s!=%4!s! %5!s!=\"%6!s!\""
+ },
+ {
+  "kind": "str",
+  "id": "61701",
+  "low16": 61701,
+  "text": "Automatische Konfiguration war %1!s! auf Schnittstelle \"%2!s!\"."
+ },
+ {
+  "kind": "str",
+  "id": "61702",
+  "low16": 61702,
+  "text": "aktiviert"
+ },
+ {
+  "kind": "str",
+  "id": "61703",
+  "low16": 61703,
+  "text": "deaktiviert"
+ },
+ {
+  "kind": "str",
+  "id": "61704",
+  "low16": 61704,
+  "text": "Sie besitzen keine ausreichenden Rechte, oder es wurde eine Gruppenrichtlinie angewendet."
+ },
+ {
+  "kind": "str",
+  "id": "61711",
+  "low16": 61711,
+  "text": "Die Adressrandomisierung war %1!s! für Schnittstelle \"%2!s!\"."
+ },
+ {
+  "kind": "str",
+  "id": "61712",
+  "low16": 61712,
+  "text": "aktiviert"
+ },
+ {
+  "kind": "str",
+  "id": "61713",
+  "low16": 61713,
+  "text": "deaktiviert"
+ },
+ {
+  "kind": "str",
+  "id": "61714",
+  "low16": 61714,
+  "text": "Die Schnittstelle kann die zufällige Vergabe nicht unterstützen oder sie wurde vom Administrator blockiert."
+ },
+ {
+  "kind": "str",
+  "id": "61721",
+  "low16": 61721,
+  "text": "Das Anzeigen von blockierten Netzwerken in der sichtbaren Netzwerkliste wurde festgelegt auf: %1!s!."
+ },
+ {
+  "kind": "str",
+  "id": "61722",
+  "low16": 61722,
+  "text": "Sie besitzen keine ausreichenden Rechte, oder es wurde eine Gruppenrichtlinie angewendet."
+ },
+ {
+  "kind": "str",
+  "id": "61741",
+  "low16": 61741,
+  "text": "Die Drahtlosablaufverfolgung wurde gestartet."
+ },
+ {
+  "kind": "str",
+  "id": "61742",
+  "low16": 61742,
+  "text": "Die beständige Drahtlosablaufverfolgung wurde aktiviert."
+ },
+ {
+  "kind": "str",
+  "id": "61743",
+  "low16": 61743,
+  "text": "Die Drahtlosablaufverfolgung wurde beendet."
+ },
+ {
+  "kind": "str",
+  "id": "61744",
+  "low16": 61744,
+  "text": "Die beständige Drahtlosablaufverfolgung wurde beendet."
+ },
+ {
+  "kind": "str",
+  "id": "61745",
+  "low16": 61745,
+  "text": "Die Drahtlosablaufverfolgung wird bereits ausgeführt."
+ },
+ {
+  "kind": "str",
+  "id": "61746",
+  "low16": 61746,
+  "text": "Die beständige Drahtlosablaufverfolgung wird bereits ausgeführt."
+ },
+ {
+  "kind": "str",
+  "id": "61747",
+  "low16": 61747,
+  "text": "Die Drahtlosablaufverfolgung wird nicht ausgeführt."
+ },
+ {
+  "kind": "str",
+  "id": "61748",
+  "low16": 61748,
+  "text": "Die beständige Drahtlosablaufverfolgung wird nicht ausgeführt."
+ },
+ {
+  "kind": "str",
+  "id": "61749",
+  "low16": 61749,
+  "text": "Die Drahtlosablaufverfolgung ist im System nicht eingerichtet."
+ },
+ {
+  "kind": "str",
+  "id": "61750",
+  "low16": 61750,
+  "text": "Die beständige Drahtlosablaufverfolgung ist im System nicht eingerichtet."
+ },
+ {
+  "kind": "str",
+  "id": "61751",
+  "low16": 61751,
+  "text": "Der Ablaufverfolgungsprotokoll-Ausgabepfad \"%1!s!\" ist kein gültiges Verzeichnis."
+ },
+ {
+  "kind": "str",
+  "id": "61752",
+  "low16": 61752,
+  "text": "\nDie Ablaufverfolgungsprotokolle werden unter \"%1!s!\" gespeichert."
+ },
+ {
+  "kind": "str",
+  "id": "61753",
+  "low16": 61753,
+  "text": "\nDie Ablaufverfolgungsprotokolle sind unter \"%1!s!\" gespeichert."
+ },
+ {
+  "kind": "str",
+  "id": "61761",
+  "low16": 61761,
+  "text": "\nJeder Benutzer kann alle Benutzerprofile erstellen.\n"
+ },
+ {
+  "kind": "str",
+  "id": "61762",
+  "low16": 61762,
+  "text": "\nNicht jeder Benutzer kann alle Benutzerprofile erstellen.\n"
+ },
+ {
+  "kind": "str",
+  "id": "61763",
+  "low16": 61763,
+  "text": "Sie besitzen keine ausreichenden Rechte, oder es wurde eine Gruppenrichtlinie angewendet."
+ },
+ {
+  "kind": "str",
+  "id": "61801",
+  "low16": 61801,
+  "text": "Der angegebenen Schnittstelle ist kein Profil \"%1!s!\" zugewiesen."
+ },
+ {
+  "kind": "str",
+  "id": "61802",
+  "low16": 61802,
+  "text": "Die Verbindungsanforderung wurde erfolgreich abgeschlossen."
+ },
+ {
+  "kind": "str",
+  "id": "61803",
+  "low16": 61803,
+  "text": "Die Verbindungsanforderung ist fehlgeschlagen mit Fehler: 0x%1!X!."
+ },
+ {
+  "kind": "str",
+  "id": "61804",
+  "low16": 61804,
+  "text": "Mit dem von Profil \"%1!s!\" angegebenen Netzwerk kann keine Verbindung hergestellt werden."
+ },
+ {
+  "kind": "str",
+  "id": "61805",
+  "low16": 61805,
+  "text": "Mit dem von Profil \"%1!s!\" angegebenen Netzwerk kann keine Verbindung\nhergestellt werden. Ursache: %2!s!"
+ },
+ {
+  "kind": "str",
+  "id": "61806",
+  "low16": 61806,
+  "text": "Eine Verbindung kann nicht hergestellt werden. Die automatische WLAN-Konfiguration ist für Adapter \"%1!s!\" deaktiviert."
+ },
+ {
+  "kind": "str",
+  "id": "61807",
+  "low16": 61807,
+  "text": "Die SSID \"%1!s!\" ist im Profil \"%2!s!\" nicht vorhanden."
+ },
+ {
+  "kind": "str",
+  "id": "61901",
+  "low16": 61901,
+  "text": "Die Trennungsanforderung wurde für die Schnittstelle \"%1!s!\" erfolgreich abgeschlossen."
+ },
+ {
+  "kind": "str",
+  "id": "61902",
+  "low16": 61902,
+  "text": "Bei der Trennungsanforderung ist für die Schnittstelle \"%1!s!\" ein Fehler aufgetreten, Fehler: 0x%2!X!."
+ },
+ {
+  "kind": "str",
+  "id": "61903",
+  "low16": 61903,
+  "text": "Die Verbindung kann nicht getrennt werden. Die automatische WLAN-Konfiguration ist für Adapter \"%1!s!\" deaktiviert."
+ },
+ {
+  "kind": "str",
+  "id": "61951",
+  "low16": 61951,
+  "text": "Das Profil \"%1!s!\" an der Schnittstelle \"%2!s!\" wurde erfolgreich in ein Profil für alle Benutzer geändert.\n"
+ },
+ {
+  "kind": "str",
+  "id": "61952",
+  "low16": 61952,
+  "text": "Das Profil \"%1!s!\" an der Schnittstelle \"%2!s!\" wurde erfolgreich in ein aktuelles Benutzerprofil geändert.\n"
+ },
+ {
+  "kind": "str",
+  "id": "61954",
+  "low16": 61954,
+  "text": "Das Profil \"%1!s!\" an der Schnittstelle \"%2!s!\" ist ein Gruppenrichtlinienprofil.\nDer Typ des Gruppenrichtlinienprofils kann nicht geändert werden. \n"
+ },
+ {
+  "kind": "str",
+  "id": "61955",
+  "low16": 61955,
+  "text": "Sie verfügen nicht über genügend Rechte, um den Profiltyp für das Profil \"%1!s!\" an der Schnittstelle \"%2!s!\" zu ändern.\n"
+ },
+ {
+  "kind": "str",
+  "id": "61956",
+  "low16": 61956,
+  "text": "Das Profil \"%1!s!\" an der Schnittstelle \"%2!s!\" ist bereits ein Profil für alle Benutzer.\n"
+ },
+ {
+  "kind": "str",
+  "id": "61957",
+  "low16": 61957,
+  "text": "Das Profil \"%1!s!\" an der Schnittstelle \"%2!s!\" ist bereits ein aktuelles Benutzerprofil.\n"
+ },
+ {
+  "kind": "str",
+  "id": "62001",
+  "low16": 62001,
+  "text": "\nProfil \"%1!s!\" auf Schnittstelle \"%2!s!\" wurde erfolgreich aktualisiert.\n"
+ },
+ {
+  "kind": "str",
+  "id": "62002",
+  "low16": 62002,
+  "text": "\nFehler beim Ändern des Profils. Fehler 0x%1!X!: %2!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62003",
+  "low16": 62003,
+  "text": "\nSie verfügen nicht über die Berechtigung, das Profil \"%1!s!\" für den aktuellen Benutzer zu ändern.\n"
+ },
+ {
+  "kind": "str",
+  "id": "62004",
+  "low16": 62004,
+  "text": "\nSie verfügen nicht über die Berechtigung, das Profil \"%1!s!\" für alle Benutzer zu ändern.\n"
+ },
+ {
+  "kind": "str",
+  "id": "62005",
+  "low16": 62005,
+  "text": "\nDie Sicherheits- oder Konnektivitätseinstellung im Profil \"%1!s!\" wird vom Drahtlosadapter \"%2!s!\" nicht unterstützt.\n"
+ },
+ {
+  "kind": "str",
+  "id": "62006",
+  "low16": 62006,
+  "text": "\nDie OneX-Einstellung im Profil \"%1!s!\" an der Schnittstelle \"%2!s!\" ist nicht aktiviert. \n"
+ },
+ {
+  "kind": "str",
+  "id": "62007",
+  "low16": 62007,
+  "text": "\nDie IHV-Einstellung ist im Profil \"%1!s!\" an der Schnittstelle \"%2!s!\" aktiviert. Geben Sie den Microsoft-Authentifizierungstyp an. \n"
+ },
+ {
+  "kind": "str",
+  "id": "62008",
+  "low16": 62008,
+  "text": "\nDer eingegebene Parameter ist für die ursprüngliche Profileinstellung ungültig. \n"
+ },
+ {
+  "kind": "str",
+  "id": "62009",
+  "low16": 62009,
+  "text": "\nFehler beim Festlegen der Kosten für Profil \"%1!s!\" von Funknetzwerkadapter \"%2!s!\".\n"
+ },
+ {
+  "kind": "str",
+  "id": "62010",
+  "low16": 62010,
+  "text": "\nDas Festlegen von Kosten wird in diesem System nicht unterstützt.\n "
+ },
+ {
+  "kind": "str",
+  "id": "62113",
+  "low16": 62113,
+  "text": "Der Modus für das gehostete Netzwerk ist im WLAN-Dienst zugelassen."
+ },
+ {
+  "kind": "str",
+  "id": "62114",
+  "low16": 62114,
+  "text": "Der Modus für das gehostete Netzwerk ist im WLAN-Dienst nicht zugelassen."
+ },
+ {
+  "kind": "str",
+  "id": "62115",
+  "low16": 62115,
+  "text": "Die Unterstützung des Modus für das gehostete Netzwerk kann im WLAN-Dienst nicht geändert werden.\nEs wurde keine ausreichende Berechtigung oder Gruppenrichtlinie angewendet."
+ },
+ {
+  "kind": "str",
+  "id": "62116",
+  "low16": 62116,
+  "text": "Die SSID des gehosteten Netzwerks wurde erfolgreich geändert. \n"
+ },
+ {
+  "kind": "str",
+  "id": "62117",
+  "low16": 62117,
+  "text": "Der Modus für das gehostete Netzwerk ist so festgelegt, dass das gehostete Netzwerk zugelassen wird. \n"
+ },
+ {
+  "kind": "str",
+  "id": "62118",
+  "low16": 62118,
+  "text": "Der Modus für das gehostete Netzwerk ist so festgelegt, dass das gehostete Netzwerk nicht zugelassen wird. \n"
+ },
+ {
+  "kind": "str",
+  "id": "62119",
+  "low16": 62119,
+  "text": "Die Zulassung freigegebener Benutzeranmeldeinformationen wurde auf Folgendes festgelegt: %1!s!."
+ },
+ {
+  "kind": "str",
+  "id": "62120",
+  "low16": 62120,
+  "text": "Sie besitzen keine ausreichenden Rechte, oder es wurde eine Gruppenrichtlinie angewendet."
+ },
+ {
+  "kind": "str",
+  "id": "62121",
+  "low16": 62121,
+  "text": "Die Benutzerschlüsselpassphrase des gehosteten Netzwerks wurde erfolgreich geändert. \n"
+ },
+ {
+  "kind": "str",
+  "id": "62122",
+  "low16": 62122,
+  "text": "Der Blockierungszeitraum ist auf %1!d! Minuten festgelegt."
+ },
+ {
+  "kind": "str",
+  "id": "62123",
+  "low16": 62123,
+  "text": "Sie besitzen keine ausreichenden Rechte, oder es wurde eine Gruppenrichtlinie angewendet."
+ },
+ {
+  "kind": "str",
+  "id": "62145",
+  "low16": 62145,
+  "text": "    Modus für das gehostete Netzwerk im WLAN-Dienst zugelassen: Ja\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "62146",
+  "low16": 62146,
+  "text": "    Modus für das gehostete Netzwerk im WLAN-Dienst zugelassen: Nein\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "62147",
+  "low16": 62147,
+  "text": "\nEinstellungen für das gehostete Netzwerk \n----------------------- \n"
+ },
+ {
+  "kind": "str",
+  "id": "62148",
+  "low16": 62148,
+  "text": "    SSID-Name              : \"%1!s!\"\n"
+ },
+ {
+  "kind": "str",
+  "id": "62149",
+  "low16": 62149,
+  "text": "    Maximale Clientanzahl  : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62150",
+  "low16": 62150,
+  "text": "\nStatus des gehosteten Netzwerks \n--------------------- \n"
+ },
+ {
+  "kind": "str",
+  "id": "62151",
+  "low16": 62151,
+  "text": "    Status                 : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62152",
+  "low16": 62152,
+  "text": "Nicht verfügbar"
+ },
+ {
+  "kind": "str",
+  "id": "62153",
+  "low16": 62153,
+  "text": "Nicht gestartet"
+ },
+ {
+  "kind": "str",
+  "id": "62155",
+  "low16": 62155,
+  "text": "Gestartet"
+ },
+ {
+  "kind": "str",
+  "id": "62156",
+  "low16": 62156,
+  "text": "    BSSID                  : %1!02x!:%2!02x!:%3!02x!:%4!02x!:%5!02x!:%6!02x!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62157",
+  "low16": 62157,
+  "text": "    Funktyp             : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62158",
+  "low16": 62158,
+  "text": "    Kanal                : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62159",
+  "low16": 62159,
+  "text": "    Anzahl Clients      : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62160",
+  "low16": 62160,
+  "text": "        %1!02x!:%2!02x!:%3!02x!:%4!02x!:%5!02x!:%6!02x!        %7!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62162",
+  "low16": 62162,
+  "text": "Authentifiziert"
+ },
+ {
+  "kind": "str",
+  "id": "62163",
+  "low16": 62163,
+  "text": "Ungültig"
+ },
+ {
+  "kind": "str",
+  "id": "62164",
+  "low16": 62164,
+  "text": "\nSicherheitseinstellungen für das gehostete Netzwerk \n-------------------------------- \n"
+ },
+ {
+  "kind": "str",
+  "id": "62165",
+  "low16": 62165,
+  "text": "    Systemsicherheitsschlüssel    : <Verschlüsselt>\n"
+ },
+ {
+  "kind": "str",
+  "id": "62166",
+  "low16": 62166,
+  "text": "    Systemsicherheitsschlüssel    : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62167",
+  "low16": 62167,
+  "text": "    Modus                   : Zugelassen\n"
+ },
+ {
+  "kind": "str",
+  "id": "62168",
+  "low16": 62168,
+  "text": "    Modus                   : Nicht zugelassen\n"
+ },
+ {
+  "kind": "str",
+  "id": "62169",
+  "low16": 62169,
+  "text": "    Verwendung des Benutzersicherheitsschlüssels: Beständig\n"
+ },
+ {
+  "kind": "str",
+  "id": "62170",
+  "low16": 62170,
+  "text": "    Verwendung des Benutzersicherheitsschlüssels: Temporär\n"
+ },
+ {
+  "kind": "str",
+  "id": "62171",
+  "low16": 62171,
+  "text": "    Benutzersicherheitsschlüssel      : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62172",
+  "low16": 62172,
+  "text": "    Benutzersicherheitsschlüssel      : <Nicht angegeben>\n"
+ },
+ {
+  "kind": "str",
+  "id": "62173",
+  "low16": 62173,
+  "text": "    Einstellungen               : <Nicht konfiguriert>\n"
+ },
+ {
+  "kind": "str",
+  "id": "62174",
+  "low16": 62174,
+  "text": "    Band                   : %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62175",
+  "low16": 62175,
+  "text": "         Zusammengelegte APs:     : %1!d!"
+ },
+ {
+  "kind": "str",
+  "id": "62176",
+  "low16": 62176,
+  "text": "\n            BSSID: %1!02x!:%2!02x!:%3!02x!:%4!02x!:%5!02x!:%6!02x!,  Band: %7!s!,  Kanal: %8!d!"
+ },
+ {
+  "kind": "str",
+  "id": "62177",
+  "low16": 62177,
+  "text": "         BSS-Last:\n             Verbundene Stationen:         %1!d!\n             Kanalnutzung:        %2!d! (%3!d! %%)\n             Mittlere verfügbare Kapazität:  %4!d! (%5!d! us/s)\n"
+ },
+ {
+  "kind": "str",
+  "id": "62178",
+  "low16": 62178,
+  "text": "\n    Bereich                   : %1!s!\n    Kanal                : %2!d!"
+ },
+ {
+  "kind": "str",
+  "id": "62179",
+  "low16": 62179,
+  "text": "\n            MldID : %1!d!, LinkID: %2!d!, BSSID: %3!02x!:%4!02x!:%5!02x!:%6!02x!:%7!02x!:%8!02x!, Band: %9!s!, Kanal: %10!d!"
+ },
+ {
+  "kind": "str",
+  "id": "62180",
+  "low16": 62180,
+  "text": "\n        LinkID: %1!d!, Local: %2!02x!:%3!02x!:%4!02x!:%5!02x!:%6!02x!:%7!02x!, AP: %8!02x!:%9!02x!:%10!02x!:%11!02x!:%12!02x!:%13!02x!, RSSI: %14!d!, Channel: %15!d!, Band: %16!s!, BW: %17!d!"
+ },
+ {
+  "kind": "str",
+  "id": "62181",
+  "low16": 62181,
+  "text": "\n    SSID : %1!s!\n    MLD-AP-BSSID : %2!02x!:%3!02x!:%4!02x!:%5!02x!:%6!02x!:%7!02x!"
+ },
+ {
+  "kind": "str",
+  "id": "62182",
+  "low16": 62182,
+  "text": "         MLD-Adresse : %1!02x!:%2!02x!:%3!02x!:%4!02x!:%5!02x!:%6!02x!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62183",
+  "low16": 62183,
+  "text": "         Unterstützte QoS-MSCS: %1!d!\n         Unterstützte QoS-Zuordnung:  %2!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62193",
+  "low16": 62193,
+  "text": "Die Verbindung mit dem Profil \"%1!s!\" wird vom WLAN-Dienst nicht unterstützt."
+ },
+ {
+  "kind": "str",
+  "id": "62225",
+  "low16": 62225,
+  "text": "Gehostetes Netzwerk"
+ },
+ {
+  "kind": "str",
+  "id": "62226",
+  "low16": 62226,
+  "text": "    Maximale Anzahl von Clients des gehosteten Netzwerks: %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62227",
+  "low16": 62227,
+  "text": "    Maximale Anzahl von Clients des gehosteten Netzwerks: Uneingeschränkt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62257",
+  "low16": 62257,
+  "text": "Das gehostete Netzwerk wurde gestartet. \n"
+ },
+ {
+  "kind": "str",
+  "id": "62258",
+  "low16": 62258,
+  "text": "Das gehostete Netzwerk wurde nicht gestartet. \n"
+ },
+ {
+  "kind": "str",
+  "id": "62259",
+  "low16": 62259,
+  "text": "Das gehostete Netzwerk wurde beendet. \n"
+ },
+ {
+  "kind": "str",
+  "id": "62260",
+  "low16": 62260,
+  "text": "Das gehostete Netzwerk wurde nicht beendet. Ursachencode: %1!d!. \n"
+ },
+ {
+  "kind": "str",
+  "id": "62261",
+  "low16": 62261,
+  "text": "Der Sicherheitsschlüssel des gehosteten Netzwerks wurde erfolgreich aktualisiert. \n"
+ },
+ {
+  "kind": "str",
+  "id": "62262",
+  "low16": 62262,
+  "text": "Dieser Befehl muss an einer Eingabeaufforderung mit Administratorrechten ausgeführt werden. \n"
+ },
+ {
+  "kind": "str",
+  "id": "62321",
+  "low16": 62321,
+  "text": "Das Profil zum Herstellen der Verbindung mit dem gehosteten Netzwerk wird erfolgreich in der Datei \"%1!s!\" gespeichert. \n"
+ },
+ {
+  "kind": "str",
+  "id": "62322",
+  "low16": 62322,
+  "text": "Das Profil für das gehostete Netzwerk wurde nicht konfiguriert. \n"
+ },
+ {
+  "kind": "str",
+  "id": "62385",
+  "low16": 62385,
+  "text": "Intelligente WLAN-Ablaufverfolgungsprotokolle und Berichtsdateien sind jetzt unter \"%1!s!\" verfügbar.\n"
+ },
+ {
+  "kind": "str",
+  "id": "62386",
+  "low16": 62386,
+  "text": "Intelligente WLAN-Ablaufverfolgungsprotokolle sind in \"%1!s!\" immer noch verfügbar und können verwendet werden.\n"
+ },
+ {
+  "kind": "str",
+  "id": "62387",
+  "low16": 62387,
+  "text": "Bericht wird generiert ... \n"
+ },
+ {
+  "kind": "str",
+  "id": "62388",
+  "low16": 62388,
+  "text": "Protokolle werden generiert ... \n"
+ },
+ {
+  "kind": "str",
+  "id": "62389",
+  "low16": 62389,
+  "text": "fertig.\n"
+ },
+ {
+  "kind": "str",
+  "id": "62390",
+  "low16": 62390,
+  "text": "Fehler: 0x%1!X!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62391",
+  "low16": 62391,
+  "text": "Es ist keine intelligente Ablaufverfolgungsprotokoll-Datei verfügbar, die in \"%1!s!\" gemeldet werden kann.\n"
+ },
+ {
+  "kind": "str",
+  "id": "62392",
+  "low16": 62392,
+  "text": "WLAN-Ereignisse werden abgefragt ...\n"
+ },
+ {
+  "kind": "str",
+  "id": "62393",
+  "low16": 62393,
+  "text": "NCSI-Ereignisse werden abgefragt ...\n"
+ },
+ {
+  "kind": "str",
+  "id": "62394",
+  "low16": 62394,
+  "text": "NDIS-Ereignisse werden abgefragt ...\n"
+ },
+ {
+  "kind": "str",
+  "id": "62395",
+  "low16": 62395,
+  "text": "EAP-Ereignisse werden abgefragt ...\n"
+ },
+ {
+  "kind": "str",
+  "id": "62396",
+  "low16": 62396,
+  "text": "WCM-Ereignisse werden abgefragt ...\n"
+ },
+ {
+  "kind": "str",
+  "id": "62397",
+  "low16": 62397,
+  "text": "Kernelereignisse werden abgefragt ...\n"
+ },
+ {
+  "kind": "str",
+  "id": "62398",
+  "low16": 62398,
+  "text": "Systemereignisse werden abgefragt ...\n"
+ },
+ {
+  "kind": "str",
+  "id": "62399",
+  "low16": 62399,
+  "text": "ipconfig wird ausgeführt ...\n"
+ },
+ {
+  "kind": "str",
+  "id": "62400",
+  "low16": 62400,
+  "text": "\"netsh wlan show all\" wird ausgeführt ...\n"
+ },
+ {
+  "kind": "str",
+  "id": "62401",
+  "low16": 62401,
+  "text": "Funknetzwerkprofile werden abgefragt ...\n"
+ },
+ {
+  "kind": "str",
+  "id": "62402",
+  "low16": 62402,
+  "text": "System- und Benutzerzertifikate werden abgefragt ...\n"
+ },
+ {
+  "kind": "str",
+  "id": "62403",
+  "low16": 62403,
+  "text": "Benutzerinformationen werden abgefragt ...\n"
+ },
+ {
+  "kind": "str",
+  "id": "62404",
+  "low16": 62404,
+  "text": "Netzwerkgeräte werden abgefragt ...\n"
+ },
+ {
+  "kind": "str",
+  "id": "62405",
+  "low16": 62405,
+  "text": "\nBericht wurde geschrieben in: %1!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62449",
+  "low16": 62449,
+  "text": "\nKosteneinstellungen \n------------- \n"
+ },
+ {
+  "kind": "str",
+  "id": "62451",
+  "low16": 62451,
+  "text": "    Kosten                   : Uneingeschränkt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62452",
+  "low16": 62452,
+  "text": "    Kosten                   : Fest\n"
+ },
+ {
+  "kind": "str",
+  "id": "62453",
+  "low16": 62453,
+  "text": "    Kosten                   : Variabel\n"
+ },
+ {
+  "kind": "str",
+  "id": "62454",
+  "low16": 62454,
+  "text": "    Kosten                   : Unbekannt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62455",
+  "low16": 62455,
+  "text": "    Kosten                   : Nicht verfügbar\n"
+ },
+ {
+  "kind": "str",
+  "id": "62456",
+  "low16": 62456,
+  "text": "    Datenlimit bald erreicht: Ja\n"
+ },
+ {
+  "kind": "str",
+  "id": "62457",
+  "low16": 62457,
+  "text": "    Datenlimit bald erreicht: Nein\n"
+ },
+ {
+  "kind": "str",
+  "id": "62458",
+  "low16": 62458,
+  "text": "    Über Datenlimit        : Ja\n"
+ },
+ {
+  "kind": "str",
+  "id": "62459",
+  "low16": 62459,
+  "text": "    Über Datenlimit        : Nein\n"
+ },
+ {
+  "kind": "str",
+  "id": "62460",
+  "low16": 62460,
+  "text": "    Überlastet              : Ja\n"
+ },
+ {
+  "kind": "str",
+  "id": "62461",
+  "low16": 62461,
+  "text": "    Überlastet              : Nein\n"
+ },
+ {
+  "kind": "str",
+  "id": "62462",
+  "low16": 62462,
+  "text": "    Roaming                : Ja\n"
+ },
+ {
+  "kind": "str",
+  "id": "62463",
+  "low16": 62463,
+  "text": "    Roaming                : Nein\n"
+ },
+ {
+  "kind": "str",
+  "id": "62464",
+  "low16": 62464,
+  "text": "    Kostenquelle            : Standard\n"
+ },
+ {
+  "kind": "str",
+  "id": "62465",
+  "low16": 62465,
+  "text": "    Kostenquelle            : Gruppenrichtlinie\n"
+ },
+ {
+  "kind": "str",
+  "id": "62466",
+  "low16": 62466,
+  "text": "    Kostenquelle            : Benutzer\n"
+ },
+ {
+  "kind": "str",
+  "id": "62467",
+  "low16": 62467,
+  "text": "    Kostenquelle            : Betreiber\n"
+ },
+ {
+  "kind": "str",
+  "id": "62513",
+  "low16": 62513,
+  "text": "\nPlaneinstellungen \n----------------- \n"
+ },
+ {
+  "kind": "str",
+  "id": "62514",
+  "low16": 62514,
+  "text": "    Verwendung in Megabyte                      : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62515",
+  "low16": 62515,
+  "text": "    Verwendungssynchronisierungszeit                         : %1!s! %2!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62516",
+  "low16": 62516,
+  "text": "    Datenlimit in MB                 : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62517",
+  "low16": 62517,
+  "text": "    Eingehende Bandbreite in KBit/s               : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62518",
+  "low16": 62518,
+  "text": "    StartDate für Abrechnungszyklus                 : %1!s! %2!s!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62519",
+  "low16": 62519,
+  "text": "    Dauer des Abrechnungszyklus                  : \n"
+ },
+ {
+  "kind": "str",
+  "id": "62520",
+  "low16": 62520,
+  "text": "       Anzahl der Jahre                      : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62521",
+  "low16": 62521,
+  "text": "       Anzahl der Monate                     : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62522",
+  "low16": 62522,
+  "text": "       Anzahl der Tage                       : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62523",
+  "low16": 62523,
+  "text": "       Anzahl der Stunden                      : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62524",
+  "low16": 62524,
+  "text": "       Anzahl der Minuten                    : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62525",
+  "low16": 62525,
+  "text": "       Anzahl der Sekunden                    : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62526",
+  "low16": 62526,
+  "text": "       Anzahl der Millisekunden               : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62527",
+  "low16": 62527,
+  "text": "    Zurücksetzen des Abrechnungszyklus                     : Ja\n"
+ },
+ {
+  "kind": "str",
+  "id": "62528",
+  "low16": 62528,
+  "text": "    Zurücksetzen des Abrechnungszyklus                     : Nein\n"
+ },
+ {
+  "kind": "str",
+  "id": "62529",
+  "low16": 62529,
+  "text": "    Maximale Übertragungsgröße in Megabyte      : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62530",
+  "low16": 62530,
+  "text": "    Ausgehende Bandbreite in KBit/s              : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62609",
+  "low16": 62609,
+  "text": "\nEigenschaften von Drahtlosgeräten \n---------------------------- \n"
+ },
+ {
+  "kind": "str",
+  "id": "62610",
+  "low16": 62610,
+  "text": "    WDI-Version (Windows)                       : %1!u!.%2!u!.%3!u!.%4!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62611",
+  "low16": 62611,
+  "text": "    Firmwareversion                            : %1!S!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62612",
+  "low16": 62612,
+  "text": "    Station                                     : Unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62613",
+  "low16": 62613,
+  "text": "    Station                                     : Nicht unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62614",
+  "low16": 62614,
+  "text": "    Bedingter Zugriffspunkt                                     : Unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62615",
+  "low16": 62615,
+  "text": "    Bedingter Zugriffspunkt                                     : Nicht unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62616",
+  "low16": 62616,
+  "text": "    Netzwerküberwachungsmodus                        : Unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62617",
+  "low16": 62617,
+  "text": "    Netzwerküberwachungsmodus                        : Nicht unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62618",
+  "low16": 62618,
+  "text": "    Wi-Fi Direct-Gerät                         : Unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62619",
+  "low16": 62619,
+  "text": "    Wi-Fi Direct-Gerät                         : Nicht unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62620",
+  "low16": 62620,
+  "text": "    Wi-Fi Direct-GO                             : Unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62621",
+  "low16": 62621,
+  "text": "    Wi-Fi Direct-GO                             : Nicht unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62622",
+  "low16": 62622,
+  "text": "    Wi-Fi Direct-Client                         : Unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62623",
+  "low16": 62623,
+  "text": "    Wi-Fi Direct-Client                         : Nicht unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62624",
+  "low16": 62624,
+  "text": "Unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62625",
+  "low16": 62625,
+  "text": "Nicht unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62626",
+  "low16": 62626,
+  "text": "Unbekannt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62627",
+  "low16": 62627,
+  "text": "    Promiskuitiver Modus                            : "
+ },
+ {
+  "kind": "str",
+  "id": "62628",
+  "low16": 62628,
+  "text": "    IBSS                                        : "
+ },
+ {
+  "kind": "str",
+  "id": "62629",
+  "low16": 62629,
+  "text": "    Antennendiversität                           : "
+ },
+ {
+  "kind": "str",
+  "id": "62630",
+  "low16": 62630,
+  "text": "    Aktionsrahmen                                : "
+ },
+ {
+  "kind": "str",
+  "id": "62631",
+  "low16": 62631,
+  "text": "    Ermittlung von ANQP-Dienstinformationen          : "
+ },
+ {
+  "kind": "str",
+  "id": "62632",
+  "low16": 62632,
+  "text": "    DOT11k-Nachbarbericht                      : "
+ },
+ {
+  "kind": "str",
+  "id": "62634",
+  "low16": 62634,
+  "text": "    Geschützte Management Frames                 : "
+ },
+ {
+  "kind": "str",
+  "id": "62635",
+  "low16": 62635,
+  "text": "    Verfügbarkeit des P2P-Passivlisteners             : "
+ },
+ {
+  "kind": "str",
+  "id": "62636",
+  "low16": 62636,
+  "text": "    P2P-Geräteerkennung                        : "
+ },
+ {
+  "kind": "str",
+  "id": "62637",
+  "low16": 62637,
+  "text": "    Ermittlung von P2P-Dienstnamen                  : "
+ },
+ {
+  "kind": "str",
+  "id": "62638",
+  "low16": 62638,
+  "text": "    Ermittlung von P2P-Dienstinformationen                  : "
+ },
+ {
+  "kind": "str",
+  "id": "62639",
+  "low16": 62639,
+  "text": "    P2P-Hintergrundermittlung                    : "
+ },
+ {
+  "kind": "str",
+  "id": "62640",
+  "low16": 62640,
+  "text": "    Host-FIPS-Modus: "
+ },
+ {
+  "kind": "str",
+  "id": "62641",
+  "low16": 62641,
+  "text": "    Direktverbindung                             : "
+ },
+ {
+  "kind": "str",
+  "id": "62642",
+  "low16": 62642,
+  "text": "    Dx-Standby-NLO                              : "
+ },
+ {
+  "kind": "str",
+  "id": "62643",
+  "low16": 62643,
+  "text": "    D0-NLO                                      : "
+ },
+ {
+  "kind": "str",
+  "id": "62644",
+  "low16": 62644,
+  "text": "    Erweiterte Channel-Switch-Ankündigung        : "
+ },
+ {
+  "kind": "str",
+  "id": "62645",
+  "low16": 62645,
+  "text": "    Zurücksetzen der Funktionsebene                        : "
+ },
+ {
+  "kind": "str",
+  "id": "62646",
+  "low16": 62646,
+  "text": "    Zurücksetzung der Plattformebene                        : "
+ },
+ {
+  "kind": "str",
+  "id": "62647",
+  "low16": 62647,
+  "text": "    MAC-Randomisierung                           : "
+ },
+ {
+  "kind": "str",
+  "id": "62648",
+  "low16": 62648,
+  "text": "    IHV-Erweiterbarkeitsmodul konfiguriert         : "
+ },
+ {
+  "kind": "str",
+  "id": "62649",
+  "low16": 62649,
+  "text": "    Anzahl der Tx-Signalströme                : %1!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62650",
+  "low16": 62650,
+  "text": "    Anzahl der Rx-Signalströme                : %1!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62651",
+  "low16": 62651,
+  "text": "    Anzahl der gleichzeitig unterstützten Kanäle     : %1!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62652",
+  "low16": 62652,
+  "text": "    Anzahl der P2P-GO-Ports                          : %1!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62653",
+  "low16": 62653,
+  "text": "    Anzahl der P2P-Clientports                      : %1!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62654",
+  "low16": 62654,
+  "text": "    Maximale Anzahl an mobilen Zugriffspunkten für P2P-Clients                   : %1!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62655",
+  "low16": 62655,
+  "text": "    Maximal unterstützte ANQP-Dienstankündigungen   : %1!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62656",
+  "low16": 62656,
+  "text": "    WDI-Version (IHV)                           : %1!u!.%2!u!.%3!u!.%4!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62657",
+  "low16": 62657,
+  "text": "    Koexistenzunterstützung                        : Unbekannt\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "62658",
+  "low16": 62658,
+  "text": "    Koexistenzunterstützung                        : Ungültig\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "62659",
+  "low16": 62659,
+  "text": "    Schnellübergang                             : "
+ },
+ {
+  "kind": "str",
+  "id": "62660",
+  "low16": 62660,
+  "text": "    MU-MIMO                                     : "
+ },
+ {
+  "kind": "str",
+  "id": "62661",
+  "low16": 62661,
+  "text": "    Miracast-Senke                               : "
+ },
+ {
+  "kind": "str",
+  "id": "62662",
+  "low16": 62662,
+  "text": "    BSS-Übergang (802.11v)                    : "
+ },
+ {
+  "kind": "str",
+  "id": "62663",
+  "low16": 62663,
+  "text": "    P2P GO für 5 GHz                             : "
+ },
+ {
+  "kind": "str",
+  "id": "62664",
+  "low16": 62664,
+  "text": "    Zurücksetzen auf Busebene                             : "
+ },
+ {
+  "kind": "str",
+  "id": "62665",
+  "low16": 62665,
+  "text": "    Ermittlung von ASP 2.0-Dienstnamen              : "
+ },
+ {
+  "kind": "str",
+  "id": "62666",
+  "low16": 62666,
+  "text": "    Ermittlung von ASP 2.0-Dienstinformationen       : "
+ },
+ {
+  "kind": "str",
+  "id": "62667",
+  "low16": 62667,
+  "text": "    IP-dockingfähig                          : "
+ },
+ {
+  "kind": "str",
+  "id": "62668",
+  "low16": 62668,
+  "text": "    SAE-Authentifizierung                          : "
+ },
+ {
+  "kind": "str",
+  "id": "62669",
+  "low16": 62669,
+  "text": "    FTM als Initiator                            : "
+ },
+ {
+  "kind": "str",
+  "id": "62670",
+  "low16": 62670,
+  "text": "    MBO-Unterstützung                                 : "
+ },
+ {
+  "kind": "str",
+  "id": "62671",
+  "low16": 62671,
+  "text": "    WPA3 SUITE-B-Authentifizierung                 : "
+ },
+ {
+  "kind": "str",
+  "id": "62673",
+  "low16": 62673,
+  "text": "    OWE-Authentifizierung                          : "
+ },
+ {
+  "kind": "str",
+  "id": "62674",
+  "low16": 62674,
+  "text": "    SAE-Hash-zu-Element-Authentifizierung: "
+ },
+ {
+  "kind": "str",
+  "id": "62675",
+  "low16": 62675,
+  "text": "    WiFiCx-Version (IHV)                        : %1!u!.%2!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62676",
+  "low16": 62676,
+  "text": "    WDI-Version (IHV)                           : WDI-Schnittstelle nicht unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62677",
+  "low16": 62677,
+  "text": "    WiFiCx Version (IHV)                        : WiFiCx-Schnittstelle wird nicht unterstützt\n"
+ },
+ {
+  "kind": "str",
+  "id": "62678",
+  "low16": 62678,
+  "text": "    WiFiCx-Version (Windows)                    : %1!u!.%2!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62679",
+  "low16": 62679,
+  "text": "    Maximal unterstützte Anzahl von Sekundär-STAs  : %1!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62680",
+  "low16": 62680,
+  "text": "    Anzahl unterstützter MLO-Verbindungen:         : %1!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62681",
+  "low16": 62681,
+  "text": "    Wpa3-Sae mit 384-Bit-Pmk unterstützt         : "
+ },
+ {
+  "kind": "str",
+  "id": "62682",
+  "low16": 62682,
+  "text": "    P2P GO mit 6 GHz: "
+ },
+ {
+  "kind": "str",
+  "id": "62683",
+  "low16": 62683,
+  "text": "    P2P Sae auf GO : "
+ },
+ {
+  "kind": "str",
+  "id": "62684",
+  "low16": 62684,
+  "text": "    Unterstützte QoS MSCS                          : "
+ },
+ {
+  "kind": "str",
+  "id": "62685",
+  "low16": 62685,
+  "text": "    Unterstützte QoS-DSCP-zu-UP-Zuordnung            : "
+ },
+ {
+  "kind": "str",
+  "id": "62686",
+  "low16": 62686,
+  "text": "    Roaming zwischen Akm/Verschlüsselung                    : "
+ },
+ {
+  "kind": "str",
+  "id": "62687",
+  "low16": 62687,
+  "text": "    Anzahl der Funkgeräte                            : %1!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62688",
+  "low16": 62688,
+  "text": "    WLAN 7 Enterprise                          : "
+ },
+ {
+  "kind": "str",
+  "id": "62737",
+  "low16": 62737,
+  "text": "\n    Funkstatus           : Hardware %1!s!\n                             Software %2!s!"
+ },
+ {
+  "kind": "str",
+  "id": "62738",
+  "low16": 62738,
+  "text": "Aktiviert"
+ },
+ {
+  "kind": "str",
+  "id": "62739",
+  "low16": 62739,
+  "text": "Deaktiviert"
+ },
+ {
+  "kind": "str",
+  "id": "62740",
+  "low16": 62740,
+  "text": "Umschaltung"
+ },
+ {
+  "kind": "str",
+  "id": "62801",
+  "low16": 62801,
+  "text": "    Koexistenzunterstützung                        : WLAN-Leistung auf 1x1 herabgesetzt\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "62802",
+  "low16": 62802,
+  "text": "    Koexistenzunterstützung                        : WLAN-Leistung wird beibehalten\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "62803",
+  "low16": 62803,
+  "text": "    WFD-Gerät                                  : unterstützt\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "62804",
+  "low16": 62804,
+  "text": "    WFD-Gerät                                  : nicht unterstützt\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "62805",
+  "low16": 62805,
+  "text": "    WFD GO                                      : unterstützt\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "62806",
+  "low16": 62806,
+  "text": "    WFD GO                                      : nicht unterstützt\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "62807",
+  "low16": 62807,
+  "text": "    WFD-Client                                  : unterstützt\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "62808",
+  "low16": 62808,
+  "text": "    WFD-Client                                  : nicht unterstützt\n\n"
+ },
+ {
+  "kind": "str",
+  "id": "62809",
+  "low16": 62809,
+  "text": "    Typ                      : WLAN-Treiber (Vorgängerversion)\n"
+ },
+ {
+  "kind": "str",
+  "id": "62810",
+  "low16": 62810,
+  "text": "    Typ                      : WLAN-Treiber (Ursprungsversion)\n"
+ },
+ {
+  "kind": "str",
+  "id": "62811",
+  "low16": 62811,
+  "text": "    Unterstützte drahtlose Anzeige: %1!s! (Grafiktreiber: %2!s!, WLAN-Treiber: %3!s!)\n"
+ },
+ {
+  "kind": "str",
+  "id": "62833",
+  "low16": 62833,
+  "text": "Die CAB-Datei kann nicht erstellt werden. Fehlercode: %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62834",
+  "low16": 62834,
+  "text": "%1!s! kann der CAB-Datei nicht hinzugefügt werden. Fehlercode: %2!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62849",
+  "low16": 62849,
+  "text": "Unbekannt"
+ },
+ {
+  "kind": "str",
+  "id": "62850",
+  "low16": 62850,
+  "text": "900 MHz"
+ },
+ {
+  "kind": "str",
+  "id": "62851",
+  "low16": 62851,
+  "text": "2,4 GHz"
+ },
+ {
+  "kind": "str",
+  "id": "62852",
+  "low16": 62852,
+  "text": "5 GHz"
+ },
+ {
+  "kind": "str",
+  "id": "62853",
+  "low16": 62853,
+  "text": "6 GHz"
+ },
+ {
+  "kind": "str",
+  "id": "62854",
+  "low16": 62854,
+  "text": "60 GHz"
+ },
+ {
+  "kind": "str",
+  "id": "62855",
+  "low16": 62855,
+  "text": "IHV benutzerdefiniert"
+ },
+ {
+  "kind": "str",
+  "id": "62856",
+  "low16": 62856,
+  "text": "Ungültig"
+ },
+ {
+  "kind": "str",
+  "id": "62865",
+  "low16": 62865,
+  "text": " (MLD) "
+ },
+ {
+  "kind": "str",
+  "id": "62866",
+  "low16": 62866,
+  "text": "    RSSI                   : %1!d!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62867",
+  "low16": 62867,
+  "text": "         Authentifizierung     : %1!s!\n         Verschlüsselung         : %2!s!\n         AKM-Chiffre-Paare   : %3!d! \n"
+ },
+ {
+  "kind": "str",
+  "id": "62868",
+  "low16": 62868,
+  "text": "            [ akm = %1!02x!-%2!02x!-%3!02x!:%4!02d!, Cipher = %5!02x!-%6!02x!-%7!02x!:%8!02d! ]\n"
+ },
+ {
+  "kind": "str",
+  "id": "62869",
+  "low16": 62869,
+  "text": "\n    VerbundeneS Akm-Verschlüsselungsverfahren : [ akm = %1!02x!-%2!02x!-%3!02x!:%4!02d!, Chiffre = %5!02x!-%6!02x!-%7!02x!:%8!02d! ]"
+ },
+ {
+  "kind": "str",
+  "id": "62881",
+  "low16": 62881,
+  "text": "    Maximale Anzahl unterstützter Aktivierungsmuster für eingehende Aktionsrahmen: %1!u!\n"
+ },
+ {
+  "kind": "str",
+  "id": "62897",
+  "low16": 62897,
+  "text": "    WiFiCx Frameworktyp                       : UMDF\n"
+ },
+ {
+  "kind": "str",
+  "id": "62898",
+  "low16": 62898,
+  "text": "    WiFiCx Frameworktyp                       : KMDF\n"
+ },
+ {
+  "kind": "str",
+  "id": "62913",
+  "low16": 62913,
+  "text": "    WPA3-Kompatibilitätsmodus: "
+ },
+ {
+  "kind": "str",
+  "id": "62914",
+  "low16": 62914,
+  "text": " (Kompatibilitätsmodus) "
+ },
+ {
+  "kind": "str",
+  "id": "62929",
+  "low16": 62929,
+  "text": "802.11bn"
+ },
+ {
+  "kind": "str",
+  "id": "62930",
+  "low16": 62930,
+  "text": "PQC"
+ },
+ {
+  "kind": "str",
+  "id": "62931",
+  "low16": 62931,
+  "text": "    PQC-1X-Authentifizierung                       : "
+ },
+ {
+  "kind": "str",
+  "id": "62932",
+  "low16": 62932,
+  "text": "    WLAN 8                                     : "
+ },
+ {
+  "kind": "str",
+  "id": "62933",
+  "low16": 62933,
+  "text": "  (Sicherheitsprofilnummer = %1!02x!)"
+ }
+]

@@ -1,0 +1,284 @@
+[
+ {
+  "kind": "msg",
+  "id": "0x00002710",
+  "low16": 10000,
+  "text": "[%1] %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002711",
+  "low16": 10001,
+  "text": "%1!4lu! ms  %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002712",
+  "low16": 10002,
+  "text": "  <1 ms  %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002713",
+  "low16": 10003,
+  "text": "\r\nUsage: tracert [-d] [-h maximum_hops] [-j host-list] [-w timeout] \r\n               [-R] [-S srcaddr] [-4] [-6] target_name\r\n\r\nOptions:\r\n    -d                 Do not resolve addresses to hostnames.\r\n    -h maximum_hops    Maximum number of hops to search for target.\r\n    -j host-list       Loose source route along host-list (IPv4-only).\r\n    -w timeout         Wait timeout milliseconds for each reply.\r\n    -R                 Trace round-trip path (IPv6-only).\r\n    -S srcaddr         Source address to use (IPv6-only).\r\n    -4                 Force using IPv4.\r\n    -6                 Force using IPv6.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002714",
+  "low16": 10004,
+  "text": "Unable to resolve target system name %1.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002715",
+  "low16": 10005,
+  "text": "Unable to contact IP driver. Error code %1!d!.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002716",
+  "low16": 10006,
+  "text": "\r\nTracing route to %1 [%2]\r\nover a maximum of %3!u! hops:\r\n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002717",
+  "low16": 10007,
+  "text": "%1!3lu!  %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002718",
+  "low16": 10008,
+  "text": "No information available.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002719",
+  "low16": 10009,
+  "text": " reports: %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271A",
+  "low16": 10010,
+  "text": "Transmit error: code %1!lu!.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271B",
+  "low16": 10011,
+  "text": "\r\nTrace complete.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000271F",
+  "low16": 10015,
+  "text": "General failure.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002720",
+  "low16": 10016,
+  "text": "Destination net unreachable.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002721",
+  "low16": 10017,
+  "text": "Destination host unreachable.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002722",
+  "low16": 10018,
+  "text": "Destination protocol unreachable.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002723",
+  "low16": 10019,
+  "text": "Destination protocol unreachable.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002724",
+  "low16": 10020,
+  "text": "No resources.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002725",
+  "low16": 10021,
+  "text": "One of the IP options is invalid.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002726",
+  "low16": 10022,
+  "text": "Hardware error.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002727",
+  "low16": 10023,
+  "text": "Packet needs to be fragmented but DF flag is set.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002728",
+  "low16": 10024,
+  "text": "Request timed out.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002729",
+  "low16": 10025,
+  "text": "General failure.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272A",
+  "low16": 10026,
+  "text": "Invalid source route specified.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272B",
+  "low16": 10027,
+  "text": "TTL expired in transit.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272C",
+  "low16": 10028,
+  "text": "TTL expired during reassembly.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272D",
+  "low16": 10029,
+  "text": "IP parameter problem.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272E",
+  "low16": 10030,
+  "text": "Source quench received.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000272F",
+  "low16": 10031,
+  "text": "The specified option is too large.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002730",
+  "low16": 10032,
+  "text": "The destination specified is not valid.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002731",
+  "low16": 10033,
+  "text": "General failure.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002732",
+  "low16": 10034,
+  "text": "Unable to initialize the Windows Sockets interface, error code %1!d!.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002733",
+  "low16": 10035,
+  "text": "\r\nTracing route to %1 over a maximum of %2!u! hops\r\n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002734",
+  "low16": 10036,
+  "text": "A value must be supplied for option %1.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002735",
+  "low16": 10037,
+  "text": "Bad value for option %1.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002736",
+  "low16": 10038,
+  "text": "%1 is not a valid source route address.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002737",
+  "low16": 10039,
+  "text": "Too many options have been specified.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002738",
+  "low16": 10040,
+  "text": "%1 is not a valid command option.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002739",
+  "low16": 10041,
+  "text": "A target name or address must be specified.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273A",
+  "low16": 10042,
+  "text": "%1 %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273B",
+  "low16": 10043,
+  "text": "   *     %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273C",
+  "low16": 10044,
+  "text": "\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273D",
+  "low16": 10045,
+  "text": "%1 %0\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273E",
+  "low16": 10046,
+  "text": "Negotiating IP Security.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x0000273F",
+  "low16": 10047,
+  "text": "%1 is not a valid address.\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002740",
+  "low16": 10048,
+  "text": "\r\nThe option %1 is only supported for %2.\r\n\r\n"
+ },
+ {
+  "kind": "msg",
+  "id": "0x00002741",
+  "low16": 10049,
+  "text": "Unable to create socket, error code %1!d!.\r\n"
+ }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "LogName": "System",
+    "RecordCount": 7780,
+    "IsEnabled": true,
+    "MaximumSizeInBytes": 20971520,
+    "FileSize": 5312512,
+    "OldestRecordNumber": 1,
+    "LogMode": 0
+  }
+]

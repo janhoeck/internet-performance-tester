@@ -1,0 +1,193 @@
+{
+  "case": "arpfail_192.168.0.2",
+  "args": [
+    "-t",
+    "-w",
+    "1000",
+    "192.168.0.2"
+  ],
+  "tag": "fromPwsh65001",
+  "killAt": 16010.8,
+  "exit": {
+    "code": null,
+    "signal": "SIGTERM",
+    "t": 16011.9
+  },
+  "stderr": "",
+  "trailingUnterminated": null,
+  "chunkCount": 12,
+  "linesPerChunk": 1,
+  "chunks": [
+    {
+      "t": 16.7,
+      "len": 60,
+      "afterKill": false,
+      "hex": "0d 0a 50 69 6e 67 20 77 69 72 64 20 61 75 73 67 65 66 81 68 72 74 20 66 81 72 20 31 39 32 2e 31 36 38 2e 30 2e 32 20 6d 69 74 20 33 32 20 42 79 74 65 73 20 44 61 74 65 6e 3a 0d 0a"
+    },
+    {
+      "t": 949.1,
+      "len": 37,
+      "afterKill": false,
+      "hex": "5a 65 69 74 81 62 65 72 73 63 68 72 65 69 74 75 6e 67 20 64 65 72 20 41 6e 66 6f 72 64 65 72 75 6e 67 2e 0d 0a"
+    },
+    {
+      "t": 2947.1,
+      "len": 37,
+      "afterKill": false,
+      "hex": "5a 65 69 74 81 62 65 72 73 63 68 72 65 69 74 75 6e 67 20 64 65 72 20 41 6e 66 6f 72 64 65 72 75 6e 67 2e 0d 0a"
+    },
+    {
+      "t": 4935.5,
+      "len": 55,
+      "afterKill": false
+    },
+    {
+      "t": 5945.4,
+      "len": 37,
+      "afterKill": false,
+      "hex": "5a 65 69 74 81 62 65 72 73 63 68 72 65 69 74 75 6e 67 20 64 65 72 20 41 6e 66 6f 72 64 65 72 75 6e 67 2e 0d 0a"
+    },
+    {
+      "t": 7946.5,
+      "len": 27,
+      "afterKill": false
+    },
+    {
+      "t": 7946.5,
+      "len": 28,
+      "afterKill": false
+    },
+    {
+      "t": 8940.3,
+      "len": 37,
+      "afterKill": false,
+      "hex": "5a 65 69 74 81 62 65 72 73 63 68 72 65 69 74 75 6e 67 20 64 65 72 20 41 6e 66 6f 72 64 65 72 75 6e 67 2e 0d 0a"
+    },
+    {
+      "t": 10940.1,
+      "len": 55,
+      "afterKill": false
+    },
+    {
+      "t": 11946.2,
+      "len": 37,
+      "afterKill": false,
+      "hex": "5a 65 69 74 81 62 65 72 73 63 68 72 65 69 74 75 6e 67 20 64 65 72 20 41 6e 66 6f 72 64 65 72 75 6e 67 2e 0d 0a"
+    },
+    {
+      "t": 13935,
+      "len": 55,
+      "afterKill": false
+    },
+    {
+      "t": 14941.9,
+      "len": 37,
+      "afterKill": false,
+      "hex": "5a 65 69 74 81 62 65 72 73 63 68 72 65 69 74 75 6e 67 20 64 65 72 20 41 6e 66 6f 72 64 65 72 75 6e 67 2e 0d 0a"
+    }
+  ],
+  "lines": [
+    {
+      "t": 16.7,
+      "latin1": "",
+      "utf8Valid": true,
+      "cp850": "",
+      "utf8": ""
+    },
+    {
+      "t": 16.7,
+      "latin1": "Ping wird ausgefhrt fr 192.168.0.2 mit 32 Bytes Daten:",
+      "utf8Valid": false,
+      "cp850": "Ping wird ausgeführt für 192.168.0.2 mit 32 Bytes Daten:",
+      "utf8": "Ping wird ausgef�hrt f�r 192.168.0.2 mit 32 Bytes Daten:",
+      "highBytes": "81 81"
+    },
+    {
+      "t": 949.1,
+      "latin1": "Zeitberschreitung der Anforderung.",
+      "utf8Valid": false,
+      "cp850": "Zeitüberschreitung der Anforderung.",
+      "utf8": "Zeit�berschreitung der Anforderung.",
+      "highBytes": "81"
+    },
+    {
+      "t": 2947.1,
+      "latin1": "Zeitberschreitung der Anforderung.",
+      "utf8Valid": false,
+      "cp850": "Zeitüberschreitung der Anforderung.",
+      "utf8": "Zeit�berschreitung der Anforderung.",
+      "highBytes": "81"
+    },
+    {
+      "t": 4935.5,
+      "latin1": "Antwort von 192.168.0.192: Zielhost nicht erreichbar.",
+      "utf8Valid": true,
+      "cp850": "Antwort von 192.168.0.192: Zielhost nicht erreichbar.",
+      "utf8": "Antwort von 192.168.0.192: Zielhost nicht erreichbar."
+    },
+    {
+      "t": 5945.4,
+      "latin1": "Zeitberschreitung der Anforderung.",
+      "utf8Valid": false,
+      "cp850": "Zeitüberschreitung der Anforderung.",
+      "utf8": "Zeit�berschreitung der Anforderung.",
+      "highBytes": "81"
+    },
+    {
+      "t": 7946.5,
+      "latin1": "Antwort von 192.168.0.192: Zielhost nicht erreichbar.",
+      "utf8Valid": true,
+      "cp850": "Antwort von 192.168.0.192: Zielhost nicht erreichbar.",
+      "utf8": "Antwort von 192.168.0.192: Zielhost nicht erreichbar."
+    },
+    {
+      "t": 8940.3,
+      "latin1": "Zeitberschreitung der Anforderung.",
+      "utf8Valid": false,
+      "cp850": "Zeitüberschreitung der Anforderung.",
+      "utf8": "Zeit�berschreitung der Anforderung.",
+      "highBytes": "81"
+    },
+    {
+      "t": 10940.1,
+      "latin1": "Antwort von 192.168.0.192: Zielhost nicht erreichbar.",
+      "utf8Valid": true,
+      "cp850": "Antwort von 192.168.0.192: Zielhost nicht erreichbar.",
+      "utf8": "Antwort von 192.168.0.192: Zielhost nicht erreichbar."
+    },
+    {
+      "t": 11946.2,
+      "latin1": "Zeitberschreitung der Anforderung.",
+      "utf8Valid": false,
+      "cp850": "Zeitüberschreitung der Anforderung.",
+      "utf8": "Zeit�berschreitung der Anforderung.",
+      "highBytes": "81"
+    },
+    {
+      "t": 13935,
+      "latin1": "Antwort von 192.168.0.192: Zielhost nicht erreichbar.",
+      "utf8Valid": true,
+      "cp850": "Antwort von 192.168.0.192: Zielhost nicht erreichbar.",
+      "utf8": "Antwort von 192.168.0.192: Zielhost nicht erreichbar."
+    },
+    {
+      "t": 14941.9,
+      "latin1": "Zeitberschreitung der Anforderung.",
+      "utf8Valid": false,
+      "cp850": "Zeitüberschreitung der Anforderung.",
+      "utf8": "Zeit�berschreitung der Anforderung.",
+      "highBytes": "81"
+    }
+  ],
+  "replyLineDeltasMs": [
+    1998,
+    1988.4,
+    1009.9,
+    2001.1,
+    993.8,
+    1999.8,
+    1006.1,
+    1988.8,
+    1006.9
+  ]
+}

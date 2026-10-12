@@ -1,0 +1,12 @@
+[
+  {
+    "remote": "192.168.0.1",
+    "sourceAddress": "192.168.0.192",
+    "ifIndex": 4,
+    "interfaceAlias": "Ethernet",
+    "nextHop": "0.0.0.0",
+    "destinationPrefix": "192.168.0.0/24",
+    "routeMetric": 256,
+    "interfaceMetric": 35
+  }
+]

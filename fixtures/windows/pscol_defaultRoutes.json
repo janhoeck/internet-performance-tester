@@ -1,0 +1,38 @@
+[
+  {
+    "ifIndex": 6,
+    "alias": "WLAN",
+    "family": "IPv4",
+    "prefix": "0.0.0.0/0",
+    "nextHop": "192.168.0.1",
+    "routeMetric": 0,
+    "interfaceMetric": 35,
+    "ifConnectionState": "Disconnected",
+    "store": "ActiveStore",
+    "state": "Alive"
+  },
+  {
+    "ifIndex": 4,
+    "alias": "Ethernet",
+    "family": "IPv4",
+    "prefix": "0.0.0.0/0",
+    "nextHop": "192.168.0.1",
+    "routeMetric": 0,
+    "interfaceMetric": 35,
+    "ifConnectionState": "Connected",
+    "store": "ActiveStore",
+    "state": "Alive"
+  },
+  {
+    "ifIndex": 4,
+    "alias": "Ethernet",
+    "family": "IPv6",
+    "prefix": "::/0",
+    "nextHop": "fe80::de73:6ff:fe12:34df",
+    "routeMetric": 256,
+    "interfaceMetric": 35,
+    "ifConnectionState": "Connected",
+    "store": "ActiveStore",
+    "state": "Alive"
+  }
+]

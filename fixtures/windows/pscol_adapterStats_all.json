@@ -1,0 +1,50 @@
+[
+  {
+    "name": "CloudflareWARP",
+    "rxBytes": 4199,
+    "rxUnicastPkts": 8,
+    "rxMulticastPkts": 0,
+    "rxBroadcastPkts": 0,
+    "rxDiscarded": 0,
+    "rxErrors": 0,
+    "txBytes": 128184,
+    "txUnicastPkts": 838,
+    "txMulticastPkts": 0,
+    "txBroadcastPkts": 0,
+    "txDiscarded": 0,
+    "txErrors": 0,
+    "t": 1791550215106
+  },
+  {
+    "name": "WLAN",
+    "rxBytes": 653950,
+    "rxUnicastPkts": 806,
+    "rxMulticastPkts": 486,
+    "rxBroadcastPkts": 26,
+    "rxDiscarded": 0,
+    "rxErrors": 0,
+    "txBytes": 202952,
+    "txUnicastPkts": 672,
+    "txMulticastPkts": 324,
+    "txBroadcastPkts": 23,
+    "txDiscarded": 0,
+    "txErrors": 0,
+    "t": 1791550215106
+  },
+  {
+    "name": "Ethernet",
+    "rxBytes": 1535609892,
+    "rxUnicastPkts": 1172436,
+    "rxMulticastPkts": 19174,
+    "rxBroadcastPkts": 242,
+    "rxDiscarded": 0,
+    "rxErrors": 0,
+    "txBytes": 81927031,
+    "txUnicastPkts": 663392,
+    "txMulticastPkts": 1793,
+    "txBroadcastPkts": 214,
+    "txDiscarded": 0,
+    "txErrors": 0,
+    "t": 1791550215106
+  }
+]

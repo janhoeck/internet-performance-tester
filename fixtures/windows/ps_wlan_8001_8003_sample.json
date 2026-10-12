@@ -1,0 +1,76 @@
+[
+  {
+    "RecordId": 459,
+    "Id": 8003,
+    "t": "2026-10-09T13:38:31.7184060+02:00",
+    "Data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x4",
+      "ReasonCode": "5"
+    },
+    "Msg": "Der Dienst für die automatische WLAN-Konfiguration hat die Verbindung mit einem Funknetzwerk erfolgreich getrennt. Netzwerkadapter: Intel(R) Wi-Fi 6E AX211 160MHz Schnittstellen-GUID: {1cdb0ef5-cb64-4b03-9b8d-3de53ab40921} Verbindungsmodus: Automatische Verbindung mit einem Profil Profilname: Vodafone-43FE SSID: Vodafone-43FE BSS-Typ: Infrastructure Ursache: Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert."
+  },
+  {
+    "RecordId": 457,
+    "Id": 8001,
+    "t": "2026-10-09T13:37:55.0931808+02:00",
+    "Data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x4",
+      "NonBroadcast": "false"
+    },
+    "Msg": "Vom Dienst für die automatische WLAN-Konfiguration wurde erfolgreich eine Verbindung mit einem Funknetzwerk hergestellt. Netzwerkadapter: Intel(R) Wi-Fi 6E AX211 160MHz Schnittstellen-GUID: {1cdb0ef5-cb64-4b03-9b8d-3de53ab40921} Verbindungsmodus: Automatische Verbindung mit einem Profil Profilname: Vodafone-43FE SSID: Vodafone-43FE BSS-Typ: Infrastructure PHY-Typ: 802.11ax Authentifizierung: WPA2-Personal Verschlüsselung: AES-CCMP 802.1x-fähig: No Ausgeblendet: false"
+  },
+  {
+    "RecordId": 451,
+    "Id": 8003,
+    "t": "2026-10-08T18:43:38.2278137+02:00",
+    "Data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "Reason": "Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert.",
+      "ConnectionId": "0x3",
+      "ReasonCode": "5"
+    },
+    "Msg": "Der Dienst für die automatische WLAN-Konfiguration hat die Verbindung mit einem Funknetzwerk erfolgreich getrennt. Netzwerkadapter: Intel(R) Wi-Fi 6E AX211 160MHz Schnittstellen-GUID: {1cdb0ef5-cb64-4b03-9b8d-3de53ab40921} Verbindungsmodus: Automatische Verbindung mit einem Profil Profilname: Vodafone-43FE SSID: Vodafone-43FE BSS-Typ: Infrastructure Ursache: Das Netzwerk wird aufgrund einer Richtlinie getrennt, die die automatische Verbindungsherstellung auf dieser Schnittstelle deaktiviert."
+  },
+  {
+    "RecordId": 449,
+    "Id": 8001,
+    "t": "2026-10-08T18:42:02.7809830+02:00",
+    "Data": {
+      "InterfaceGuid": "{1cdb0ef5-cb64-4b03-9b8d-3de53ab40921}",
+      "InterfaceDescription": "Intel(R) Wi-Fi 6E AX211 160MHz",
+      "ConnectionMode": "Automatische Verbindung mit einem Profil",
+      "ProfileName": "Vodafone-43FE",
+      "SSID": "Vodafone-43FE",
+      "BSSType": "Infrastructure",
+      "PHYType": "802.11ax",
+      "AuthenticationAlgorithm": "WPA2-Personal",
+      "CipherAlgorithm": "AES-CCMP",
+      "OnexEnabled": "0",
+      "ConnectionId": "0x3",
+      "NonBroadcast": "false"
+    },
+    "Msg": "Vom Dienst für die automatische WLAN-Konfiguration wurde erfolgreich eine Verbindung mit einem Funknetzwerk hergestellt. Netzwerkadapter: Intel(R) Wi-Fi 6E AX211 160MHz Schnittstellen-GUID: {1cdb0ef5-cb64-4b03-9b8d-3de53ab40921} Verbindungsmodus: Automatische Verbindung mit einem Profil Profilname: Vodafone-43FE SSID: Vodafone-43FE BSS-Typ: Infrastructure PHY-Typ: 802.11ax Authentifizierung: WPA2-Personal Verschlüsselung: AES-CCMP 802.1x-fähig: No Ausgeblendet: false"
+  }
+]

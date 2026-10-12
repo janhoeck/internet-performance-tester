@@ -1,0 +1,218 @@
+{
+  "settings": {
+    "always_on": true,
+    "switch_locked": false,
+    "operation_mode": "tunnel_only",
+    "disable_for_wifi": false,
+    "disable_for_ethernet": false,
+    "doh_hostname": "<redacted>.cloudflare-gateway.com",
+    "doh_resolver_ips": [
+      "162.159.36.1",
+      "162.159.46.1",
+      "2606:4700:4700::1111",
+      "2606:4700:4700::1001"
+    ],
+    "onboarding": true,
+    "split_tunnel_mode": "include",
+    "split_tunnel_hosts": [
+      {
+        "value": "cloudflareaccess.com",
+        "description": ""
+      },
+      {
+        "value": "*.slne.local",
+        "description": ""
+      }
+    ],
+    "split_tunnel_ips": [
+      {
+        "value": "2606:4700:cf1:4000::/64",
+        "description": "CloudFlare HostRoutes"
+      },
+      {
+        "value": "100.96.0.0/12",
+        "description": "Mesh"
+      },
+      {
+        "value": "100.80.0.0/16",
+        "description": "CloudFlare Hostroutes"
+      },
+      {
+        "value": "10.0.0.0/12",
+        "description": ""
+      },
+      {
+        "value": "172.64.128.0/20",
+        "description": "Cloudflare One Token CIDR"
+      },
+      {
+        "value": "2606:4700:cf1::/48",
+        "description": "Cloudflare One CIDR"
+      }
+    ],
+    "fallback_domains": [
+      {
+        "domain": "home.arpa",
+        "description": "",
+        "dns_servers": []
+      },
+      {
+        "domain": "corp",
+        "description": "",
+        "dns_servers": []
+      },
+      {
+        "domain": "domain",
+        "description": "",
+        "dns_servers": []
+      },
+      {
+        "domain": "home",
+        "description": "",
+        "dns_servers": []
+      },
+      {
+        "domain": "host",
+        "description": "",
+        "dns_servers": []
+      },
+      {
+        "domain": "internal",
+        "description": "",
+        "dns_servers": []
+      },
+      {
+        "domain": "intranet",
+        "description": "",
+        "dns_servers": []
+      },
+      {
+        "domain": "invalid",
+        "description": "",
+        "dns_servers": []
+      },
+      {
+        "domain": "lan",
+        "description": "",
+        "dns_servers": []
+      },
+      {
+        "domain": "localdomain",
+        "description": "",
+        "dns_servers": []
+      },
+      {
+        "domain": "localhost",
+        "description": "",
+        "dns_servers": []
+      },
+      {
+        "domain": "private",
+        "description": "",
+        "dns_servers": []
+      },
+      {
+        "domain": "test",
+        "description": "",
+        "dns_servers": []
+      }
+    ],
+    "disable_auto_fallback": false,
+    "captive_portal_detection_enabled": true,
+    "captive_portal_firewall_off_secs": 180,
+    "support_url": "",
+    "organization": "<redacted-org>",
+    "allow_mode_switch": false,
+    "allow_updates": false,
+    "allowed_to_leave": true,
+    "profile_id": "default",
+    "lan_subnet_size": 24,
+    "warp_tunnel_protocol": "wireguard",
+    "emergency_disconnect": {
+      "disconnect": false,
+      "timestamp": "1970-01-01T00:00:00Z",
+      "poll_interval": {
+        "secs": 900,
+        "nanos": 0
+      },
+      "source": "Api"
+    },
+    "register_interface_ip_with_dns": true,
+    "anycast_split_ips": {
+      "always_exclude": [
+        "162.159.197.3",
+        "2606:4700:102::3"
+      ],
+      "always_include": [
+        "162.159.197.4",
+        "2606:4700:102::4"
+      ]
+    },
+    "sccm_vpn_boundary_support": false,
+    "post_quantum_config": "enabled_with_downgrades",
+    "speed_test_settings": {
+      "include_servers": {
+        "throughput_base_url": "https://custom-inside-tunnel.h3.speed.cloudflare.com",
+        "turn_server_host_with_port": "162.159.207.3:3478",
+        "turn_cred_request_url": null
+      },
+      "include_ips": [
+        "172.66.1.163",
+        "2a06:98c1:58::19f",
+        "162.159.207.3",
+        "2606:4700:49::3"
+      ],
+      "exclude_servers": {
+        "throughput_base_url": "https://custom-outside-tunnel.h3.speed.cloudflare.com",
+        "turn_server_host_with_port": "162.159.207.4:3478",
+        "turn_cred_request_url": null
+      },
+      "exclude_ips": [
+        "162.159.141.167",
+        "2606:4700:7::19f"
+      ]
+    },
+    "dns_policy": {
+      "doh_ips": [
+        "162.159.36.1",
+        "162.159.46.1",
+        "2606:4700:4700::1111",
+        "2606:4700:4700::1001"
+      ]
+    },
+    "net_b_t": false
+  },
+  "sources": {
+    "always_on": "user_set",
+    "switch_locked": "override",
+    "operation_mode": "network_policy",
+    "disable_for_wifi": "default",
+    "disable_for_ethernet": "default",
+    "doh_hostname": "<redacted>.cloudflare-gateway.com",
+    "doh_resolver_ips": "registration_defaults",
+    "onboarding": "default",
+    "split_tunnel_mode": "network_policy",
+    "split_tunnel_ips": "network_policy",
+    "split_tunnel_hosts": "network_policy",
+    "fallback_domains": "network_policy",
+    "disable_auto_fallback": "network_policy",
+    "captive_portal_detection_enabled": "network_policy",
+    "captive_portal_firewall_off_secs": "network_policy",
+    "support_url": "network_policy",
+    "organization": "<redacted-org>",
+    "allow_mode_switch": "network_policy",
+    "allow_updates": "network_policy",
+    "allowed_to_leave": "network_policy",
+    "profile_id": "network_policy",
+    "lan_subnet_size": "network_policy",
+    "warp_tunnel_protocol": "network_policy",
+    "emergency_disconnect": "override",
+    "register_interface_ip_with_dns": "network_policy",
+    "anycast_split_ips": "network_policy",
+    "sccm_vpn_boundary_support": "network_policy",
+    "post_quantum_config": "network_policy",
+    "speed_test_settings": "network_policy",
+    "dns_policy": "network_policy",
+    "net_b_t": "network_policy"
+  }
+}

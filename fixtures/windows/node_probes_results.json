@@ -1,0 +1,834 @@
+{
+  "tcp": {
+    "1.1.1.1:443": {
+      "runs": [
+        {
+          "ok": true,
+          "ms": 27.265,
+          "err": null,
+          "local": "192.168.0.192"
+        },
+        {
+          "ok": true,
+          "ms": 30.879,
+          "err": null,
+          "local": "192.168.0.192"
+        },
+        {
+          "ok": true,
+          "ms": 59.748,
+          "err": null,
+          "local": "192.168.0.192"
+        },
+        {
+          "ok": true,
+          "ms": 23.516,
+          "err": null,
+          "local": "192.168.0.192"
+        },
+        {
+          "ok": true,
+          "ms": 178.085,
+          "err": null,
+          "local": "192.168.0.192"
+        }
+      ],
+      "stats": {
+        "n": 5,
+        "min": 23.516,
+        "median": 30.879,
+        "max": 178.085
+      }
+    },
+    "8.8.8.8:443": {
+      "runs": [
+        {
+          "ok": true,
+          "ms": 30.77,
+          "err": null,
+          "local": "192.168.0.192"
+        },
+        {
+          "ok": true,
+          "ms": 38.697,
+          "err": null,
+          "local": "192.168.0.192"
+        },
+        {
+          "ok": true,
+          "ms": 60.234,
+          "err": null,
+          "local": "192.168.0.192"
+        },
+        {
+          "ok": true,
+          "ms": 95.755,
+          "err": null,
+          "local": "192.168.0.192"
+        },
+        {
+          "ok": true,
+          "ms": 23.85,
+          "err": null,
+          "local": "192.168.0.192"
+        }
+      ],
+      "stats": {
+        "n": 5,
+        "min": 23.85,
+        "median": 38.697,
+        "max": 95.755
+      }
+    },
+    "192.168.0.1:80": {
+      "runs": [
+        {
+          "ok": true,
+          "ms": 1.512,
+          "err": null,
+          "local": "192.168.0.192"
+        },
+        {
+          "ok": true,
+          "ms": 1.793,
+          "err": null,
+          "local": "192.168.0.192"
+        },
+        {
+          "ok": true,
+          "ms": 1.204,
+          "err": null,
+          "local": "192.168.0.192"
+        },
+        {
+          "ok": true,
+          "ms": 1.499,
+          "err": null,
+          "local": "192.168.0.192"
+        },
+        {
+          "ok": true,
+          "ms": 0.871,
+          "err": null,
+          "local": "192.168.0.192"
+        }
+      ],
+      "stats": {
+        "n": 5,
+        "min": 0.871,
+        "median": 1.499,
+        "max": 1.793
+      }
+    },
+    "2606:4700:4700::1111:443": {
+      "runs": [
+        {
+          "ok": true,
+          "ms": 66.202,
+          "err": null,
+          "local": "3fff:8071:7ca0:c980:d8de:c10f:adb:ac10"
+        },
+        {
+          "ok": true,
+          "ms": 50.877,
+          "err": null,
+          "local": "3fff:8071:7ca0:c980:d8de:c10f:adb:ac10"
+        },
+        {
+          "ok": true,
+          "ms": 55.453,
+          "err": null,
+          "local": "3fff:8071:7ca0:c980:d8de:c10f:adb:ac10"
+        },
+        {
+          "ok": true,
+          "ms": 31.729,
+          "err": null,
+          "local": "3fff:8071:7ca0:c980:d8de:c10f:adb:ac10"
+        },
+        {
+          "ok": true,
+          "ms": 106.573,
+          "err": null,
+          "local": "3fff:8071:7ca0:c980:d8de:c10f:adb:ac10"
+        }
+      ],
+      "stats": {
+        "n": 5,
+        "min": 31.729,
+        "median": 55.453,
+        "max": 106.573
+      }
+    },
+    "192.0.2.1:443": {
+      "runs": [
+        {
+          "ok": false,
+          "ms": 2014.743,
+          "err": "ETIMEDOUT",
+          "local": "0.0.0.0"
+        }
+      ],
+      "stats": {
+        "n": 0
+      }
+    }
+  },
+  "dns": {
+    "1.1.1.1": {
+      "runs": [
+        {
+          "server": "1.1.1.1",
+          "name": "example.com",
+          "ok": true,
+          "ms": 58.992,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 84,
+              "data": "104.20.23.154"
+            },
+            {
+              "type": "A",
+              "ttl": 84,
+              "data": "172.66.147.243"
+            }
+          ]
+        },
+        {
+          "server": "1.1.1.1",
+          "name": "example.com",
+          "ok": true,
+          "ms": 72.272,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 26,
+              "data": "172.66.147.243"
+            },
+            {
+              "type": "A",
+              "ttl": 26,
+              "data": "104.20.23.154"
+            }
+          ]
+        },
+        {
+          "server": "1.1.1.1",
+          "name": "example.com",
+          "ok": true,
+          "ms": 20.79,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 128,
+              "data": "104.20.23.154"
+            },
+            {
+              "type": "A",
+              "ttl": 128,
+              "data": "172.66.147.243"
+            }
+          ]
+        },
+        {
+          "server": "1.1.1.1",
+          "name": "example.com",
+          "ok": true,
+          "ms": 96.93,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 127,
+              "data": "172.66.147.243"
+            },
+            {
+              "type": "A",
+              "ttl": 127,
+              "data": "104.20.23.154"
+            }
+          ]
+        },
+        {
+          "server": "1.1.1.1",
+          "name": "example.com",
+          "ok": true,
+          "ms": 59.385,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 25,
+              "data": "172.66.147.243"
+            },
+            {
+              "type": "A",
+              "ttl": 25,
+              "data": "104.20.23.154"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "n": 5,
+        "min": 20.79,
+        "median": 59.385,
+        "max": 96.93
+      }
+    },
+    "8.8.8.8": {
+      "runs": [
+        {
+          "server": "8.8.8.8",
+          "name": "example.com",
+          "ok": true,
+          "ms": 28.573,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 300,
+              "data": "104.20.23.154"
+            },
+            {
+              "type": "A",
+              "ttl": 300,
+              "data": "172.66.147.243"
+            }
+          ]
+        },
+        {
+          "server": "8.8.8.8",
+          "name": "example.com",
+          "ok": true,
+          "ms": 59.026,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 227,
+              "data": "172.66.147.243"
+            },
+            {
+              "type": "A",
+              "ttl": 227,
+              "data": "104.20.23.154"
+            }
+          ]
+        },
+        {
+          "server": "8.8.8.8",
+          "name": "example.com",
+          "ok": true,
+          "ms": 31.658,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 10,
+              "data": "104.20.23.154"
+            },
+            {
+              "type": "A",
+              "ttl": 10,
+              "data": "172.66.147.243"
+            }
+          ]
+        },
+        {
+          "server": "8.8.8.8",
+          "name": "example.com",
+          "ok": true,
+          "ms": 56.077,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 10,
+              "data": "172.66.147.243"
+            },
+            {
+              "type": "A",
+              "ttl": 10,
+              "data": "104.20.23.154"
+            }
+          ]
+        },
+        {
+          "server": "8.8.8.8",
+          "name": "example.com",
+          "ok": true,
+          "ms": 26.344,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 226,
+              "data": "104.20.23.154"
+            },
+            {
+              "type": "A",
+              "ttl": 226,
+              "data": "172.66.147.243"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "n": 5,
+        "min": 26.344,
+        "median": 31.658,
+        "max": 59.026
+      }
+    },
+    "192.168.0.1": {
+      "runs": [
+        {
+          "server": "192.168.0.1",
+          "name": "example.com",
+          "ok": true,
+          "ms": 53.138,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 269,
+              "data": "172.66.147.243"
+            },
+            {
+              "type": "A",
+              "ttl": 269,
+              "data": "104.20.23.154"
+            }
+          ]
+        },
+        {
+          "server": "192.168.0.1",
+          "name": "example.com",
+          "ok": true,
+          "ms": 0.997,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 269,
+              "data": "104.20.23.154"
+            },
+            {
+              "type": "A",
+              "ttl": 269,
+              "data": "172.66.147.243"
+            }
+          ]
+        },
+        {
+          "server": "192.168.0.1",
+          "name": "example.com",
+          "ok": true,
+          "ms": 1.19,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 268,
+              "data": "172.66.147.243"
+            },
+            {
+              "type": "A",
+              "ttl": 268,
+              "data": "104.20.23.154"
+            }
+          ]
+        },
+        {
+          "server": "192.168.0.1",
+          "name": "example.com",
+          "ok": true,
+          "ms": 1.27,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 268,
+              "data": "104.20.23.154"
+            },
+            {
+              "type": "A",
+              "ttl": 268,
+              "data": "172.66.147.243"
+            }
+          ]
+        },
+        {
+          "server": "192.168.0.1",
+          "name": "example.com",
+          "ok": true,
+          "ms": 1.117,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 268,
+              "data": "172.66.147.243"
+            },
+            {
+              "type": "A",
+              "ttl": 268,
+              "data": "104.20.23.154"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "n": 5,
+        "min": 0.997,
+        "median": 1.19,
+        "max": 53.138
+      }
+    },
+    "2606:4700:4700::1111": {
+      "runs": [
+        {
+          "server": "2606:4700:4700::1111",
+          "name": "example.com",
+          "ok": true,
+          "ms": 20.98,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 21,
+              "data": "104.20.23.154"
+            },
+            {
+              "type": "A",
+              "ttl": 21,
+              "data": "172.66.147.243"
+            }
+          ]
+        },
+        {
+          "server": "2606:4700:4700::1111",
+          "name": "example.com",
+          "ok": true,
+          "ms": 70.255,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 21,
+              "data": "172.66.147.243"
+            },
+            {
+              "type": "A",
+              "ttl": 21,
+              "data": "104.20.23.154"
+            }
+          ]
+        },
+        {
+          "server": "2606:4700:4700::1111",
+          "name": "example.com",
+          "ok": true,
+          "ms": 63.664,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 20,
+              "data": "104.20.23.154"
+            },
+            {
+              "type": "A",
+              "ttl": 20,
+              "data": "172.66.147.243"
+            }
+          ]
+        },
+        {
+          "server": "2606:4700:4700::1111",
+          "name": "example.com",
+          "ok": true,
+          "ms": 49.447,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 20,
+              "data": "104.20.23.154"
+            },
+            {
+              "type": "A",
+              "ttl": 20,
+              "data": "172.66.147.243"
+            }
+          ]
+        },
+        {
+          "server": "2606:4700:4700::1111",
+          "name": "example.com",
+          "ok": true,
+          "ms": 23.654,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 19,
+              "data": "172.66.147.243"
+            },
+            {
+              "type": "A",
+              "ttl": 19,
+              "data": "104.20.23.154"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "n": 5,
+        "min": 20.98,
+        "median": 49.447,
+        "max": 70.255
+      }
+    },
+    "3fff:8071:7ca0:c980:de73:6ff:fe12:34df": {
+      "runs": [
+        {
+          "server": "3fff:8071:7ca0:c980:de73:6ff:fe12:34df",
+          "name": "example.com",
+          "ok": true,
+          "ms": 2.057,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 266,
+              "data": "104.20.23.154"
+            },
+            {
+              "type": "A",
+              "ttl": 266,
+              "data": "172.66.147.243"
+            }
+          ]
+        },
+        {
+          "server": "3fff:8071:7ca0:c980:de73:6ff:fe12:34df",
+          "name": "example.com",
+          "ok": true,
+          "ms": 1.461,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 265,
+              "data": "172.66.147.243"
+            },
+            {
+              "type": "A",
+              "ttl": 265,
+              "data": "104.20.23.154"
+            }
+          ]
+        },
+        {
+          "server": "3fff:8071:7ca0:c980:de73:6ff:fe12:34df",
+          "name": "example.com",
+          "ok": true,
+          "ms": 1.71,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 265,
+              "data": "104.20.23.154"
+            },
+            {
+              "type": "A",
+              "ttl": 265,
+              "data": "172.66.147.243"
+            }
+          ]
+        },
+        {
+          "server": "3fff:8071:7ca0:c980:de73:6ff:fe12:34df",
+          "name": "example.com",
+          "ok": true,
+          "ms": 1.608,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 265,
+              "data": "172.66.147.243"
+            },
+            {
+              "type": "A",
+              "ttl": 265,
+              "data": "104.20.23.154"
+            }
+          ]
+        },
+        {
+          "server": "3fff:8071:7ca0:c980:de73:6ff:fe12:34df",
+          "name": "example.com",
+          "ok": true,
+          "ms": 1.445,
+          "rcode": 0,
+          "tc": false,
+          "ra": true,
+          "answers": [
+            {
+              "type": "A",
+              "ttl": 264,
+              "data": "104.20.23.154"
+            },
+            {
+              "type": "A",
+              "ttl": 264,
+              "data": "172.66.147.243"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "n": 5,
+        "min": 1.445,
+        "median": 1.608,
+        "max": 2.057
+      }
+    }
+  },
+  "dns_extra": {
+    "router_v4_AAAA": {
+      "server": "192.168.0.1",
+      "name": "example.com",
+      "ok": true,
+      "ms": 80.503,
+      "rcode": 0,
+      "tc": false,
+      "ra": true,
+      "answers": [
+        {
+          "type": "AAAA",
+          "ttl": 102,
+          "data": "2606:4700:0010:0000:0000:0000:6814:179a"
+        },
+        {
+          "type": "AAAA",
+          "ttl": 102,
+          "data": "2606:4700:0010:0000:0000:0000:ac42:93f3"
+        }
+      ]
+    },
+    "cloudflare_nxdomain": {
+      "server": "1.1.1.1",
+      "name": "nonexistent-1791550499187.invalid",
+      "ok": false,
+      "ms": 38.662,
+      "rcode": 3,
+      "tc": false,
+      "ra": true,
+      "answers": []
+    },
+    "closed_port_udp_192_0_2_1": {
+      "server": "192.0.2.1",
+      "name": "example.com",
+      "ok": false,
+      "err": "ETIMEDOUT",
+      "ms": null
+    }
+  },
+  "ssdp_unbound": {
+    "bindAddress": "(any)",
+    "devices": []
+  },
+  "ssdp_bound": {
+    "bindAddress": "192.168.0.192",
+    "devices": [
+      {
+        "from": "192.168.0.228",
+        "location": "http://192.168.0.228:8091/efee5406-d3e9-f75a-c8cb-84622d6287a4.xml",
+        "server": "Linux/3.18.71+ UPnP/1.0 GUPnP/1.0.5",
+        "sts": [
+          "upnp:rootdevice",
+          "urn:schemas-upnp-org:service:AVTransport:1",
+          "urn:schemas-upnp-org:service:ConnectionManager:1",
+          "urn:schemas-upnp-org:service:RenderingControl:1",
+          "uuid:efee5406-d3e9-f75a-c8cb-84622d6287a4",
+          "urn:schemas-upnp-org:device:MediaRenderer:1"
+        ]
+      }
+    ]
+  },
+  "osNetworkInterfaces": {
+    "CloudflareWARP": [
+      "IPv6 2606:4700:cf1:1000::7/ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+      "IPv6 fe80::b2bf:7485:7bb9:66cb/ffff:ffff:ffff:ffff::",
+      "IPv4 100.96.0.7/255.255.255.255"
+    ],
+    "Ethernet": [
+      "IPv6 3fff:8071:7ca0:c980::b211/ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+      "IPv6 3fff:8071:7ca0:c980:b219:6c3e:eadc:4c15/ffff:ffff:ffff:ffff::",
+      "IPv6 3fff:8071:7ca0:c980:d8de:c10f:adb:ac10/ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+      "IPv6 fe80::374c:2a6a:2786:ee2e/ffff:ffff:ffff:ffff::",
+      "IPv4 192.168.0.192/255.255.255.0"
+    ],
+    "Loopback Pseudo-Interface 1": [
+      "IPv6 ::1/ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff internal",
+      "IPv4 127.0.0.1/255.0.0.0 internal"
+    ]
+  }
+}

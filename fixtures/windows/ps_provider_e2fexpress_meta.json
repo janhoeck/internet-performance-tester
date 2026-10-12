@@ -1,0 +1,8 @@
+[
+  {
+    "Name": "e2fexpress",
+    "MessageFilePath": "%SystemRoot%\\System32\\netevent.dll;%SystemRoot%\\System32\\DriverStore\\FileRepository\\e2f.inf_amd64_d0d0d2073f0fc12f\\e2fmsg.dll",
+    "ParameterFilePath": null,
+    "LogLinks": "System"
+  }
+]

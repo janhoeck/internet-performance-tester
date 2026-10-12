@@ -1,0 +1,136 @@
+{
+  "case": "unresponsive_192.0.2.1",
+  "args": [
+    "-t",
+    "-w",
+    "1000",
+    "192.0.2.1"
+  ],
+  "tag": "fromPwsh65001",
+  "killAt": 12011.7,
+  "exit": {
+    "code": null,
+    "signal": "SIGTERM",
+    "t": 12013.1
+  },
+  "stderr": "",
+  "trailingUnterminated": null,
+  "chunkCount": 7,
+  "linesPerChunk": 1.14,
+  "chunks": [
+    {
+      "t": 16.6,
+      "len": 58,
+      "afterKill": false,
+      "hex": "0d 0a 50 69 6e 67 20 77 69 72 64 20 61 75 73 67 65 66 81 68 72 74 20 66 81 72 20 31 39 32 2e 30 2e 32 2e 31 20 6d 69 74 20 33 32 20 42 79 74 65 73 20 44 61 74 65 6e 3a 0d 0a"
+    },
+    {
+      "t": 952.9,
+      "len": 37,
+      "afterKill": false,
+      "hex": "5a 65 69 74 81 62 65 72 73 63 68 72 65 69 74 75 6e 67 20 64 65 72 20 41 6e 66 6f 72 64 65 72 75 6e 67 2e 0d 0a"
+    },
+    {
+      "t": 2950.9,
+      "len": 37,
+      "afterKill": false,
+      "hex": "5a 65 69 74 81 62 65 72 73 63 68 72 65 69 74 75 6e 67 20 64 65 72 20 41 6e 66 6f 72 64 65 72 75 6e 67 2e 0d 0a"
+    },
+    {
+      "t": 4939.6,
+      "len": 37,
+      "afterKill": false,
+      "hex": "5a 65 69 74 81 62 65 72 73 63 68 72 65 69 74 75 6e 67 20 64 65 72 20 41 6e 66 6f 72 64 65 72 75 6e 67 2e 0d 0a"
+    },
+    {
+      "t": 6941.4,
+      "len": 37,
+      "afterKill": false,
+      "hex": "5a 65 69 74 81 62 65 72 73 63 68 72 65 69 74 75 6e 67 20 64 65 72 20 41 6e 66 6f 72 64 65 72 75 6e 67 2e 0d 0a"
+    },
+    {
+      "t": 8944.1,
+      "len": 37,
+      "afterKill": false,
+      "hex": "5a 65 69 74 81 62 65 72 73 63 68 72 65 69 74 75 6e 67 20 64 65 72 20 41 6e 66 6f 72 64 65 72 75 6e 67 2e 0d 0a"
+    },
+    {
+      "t": 10944,
+      "len": 37,
+      "afterKill": false,
+      "hex": "5a 65 69 74 81 62 65 72 73 63 68 72 65 69 74 75 6e 67 20 64 65 72 20 41 6e 66 6f 72 64 65 72 75 6e 67 2e 0d 0a"
+    }
+  ],
+  "lines": [
+    {
+      "t": 16.6,
+      "latin1": "",
+      "utf8Valid": true,
+      "cp850": "",
+      "utf8": ""
+    },
+    {
+      "t": 16.6,
+      "latin1": "Ping wird ausgefhrt fr 192.0.2.1 mit 32 Bytes Daten:",
+      "utf8Valid": false,
+      "cp850": "Ping wird ausgeführt für 192.0.2.1 mit 32 Bytes Daten:",
+      "utf8": "Ping wird ausgef�hrt f�r 192.0.2.1 mit 32 Bytes Daten:",
+      "highBytes": "81 81"
+    },
+    {
+      "t": 952.9,
+      "latin1": "Zeitberschreitung der Anforderung.",
+      "utf8Valid": false,
+      "cp850": "Zeitüberschreitung der Anforderung.",
+      "utf8": "Zeit�berschreitung der Anforderung.",
+      "highBytes": "81"
+    },
+    {
+      "t": 2950.9,
+      "latin1": "Zeitberschreitung der Anforderung.",
+      "utf8Valid": false,
+      "cp850": "Zeitüberschreitung der Anforderung.",
+      "utf8": "Zeit�berschreitung der Anforderung.",
+      "highBytes": "81"
+    },
+    {
+      "t": 4939.6,
+      "latin1": "Zeitberschreitung der Anforderung.",
+      "utf8Valid": false,
+      "cp850": "Zeitüberschreitung der Anforderung.",
+      "utf8": "Zeit�berschreitung der Anforderung.",
+      "highBytes": "81"
+    },
+    {
+      "t": 6941.4,
+      "latin1": "Zeitberschreitung der Anforderung.",
+      "utf8Valid": false,
+      "cp850": "Zeitüberschreitung der Anforderung.",
+      "utf8": "Zeit�berschreitung der Anforderung.",
+      "highBytes": "81"
+    },
+    {
+      "t": 8944.1,
+      "latin1": "Zeitberschreitung der Anforderung.",
+      "utf8Valid": false,
+      "cp850": "Zeitüberschreitung der Anforderung.",
+      "utf8": "Zeit�berschreitung der Anforderung.",
+      "highBytes": "81"
+    },
+    {
+      "t": 10944,
+      "latin1": "Zeitberschreitung der Anforderung.",
+      "utf8Valid": false,
+      "cp850": "Zeitüberschreitung der Anforderung.",
+      "utf8": "Zeit�berschreitung der Anforderung.",
+      "highBytes": "81"
+    }
+  ],
+  "replyLineDeltasMs": [
+    1998,
+    1988.7,
+    2001.8,
+    2002.7,
+    1999.9
+  ]
+}

@@ -1,0 +1,6 @@
+[
+  {
+    "Name": "Netwtw14",
+    "MessageFilePath": "%SystemRoot%\\System32\\netevent.dll;%13%\\Netwtw14.sys"
+  }
+]

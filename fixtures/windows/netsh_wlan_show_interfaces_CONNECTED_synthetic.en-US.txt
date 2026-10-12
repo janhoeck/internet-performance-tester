@@ -1,0 +1,40 @@
+
+
+There is 1 interface on the system: 
+
+
+    Name                   : WLAN
+    Description            : Intel(R) Wi-Fi 6E AX211 160MHz
+    GUID                   : 1cdb0ef5-cb64-4b03-9b8d-3de53ab40921
+    Physical address       : e4:60:17:12:34:01
+    Interface type         : Primary
+    State                  : connected
+
+    SSID                   : Vodafone-43FE
+    AP BSSID               : dc:73:06:12:34:e0
+
+    Band                   : 5 GHz
+    Channel                : 36
+
+    Connected Akm-cipher   : [ akm = 00-0f-ac:2, cipher =  00-0f-ac:4 ]
+
+    Network type           : Infrastructure
+    Radio type             : 802.11ax
+    Authentication         : WPA2-Personal
+
+    Cipher                 : CCMP
+    Connection mode        : Profile
+
+    Receive rate (Mbps)    : 1200.9
+    Transmit rate (Mbps)   : 1200.9
+    Signal                 : 96% 
+    Rssi                   : -48
+    Profile                : Vodafone-43FE 
+    QoS MSCS Configured         : 0
+    QoS Map Configured          : 0
+    QoS Map Allowed by Policy   : 0
+
+    Radio status           : Hardware On
+                             Software On
+
+    Hosted network status  : Not available

@@ -1,0 +1,147 @@
+{
+  "ping_n1": {
+    "runs": [
+      {
+        "wallMs": 60.6,
+        "rttMs": 40,
+        "overheadMs": 20.6,
+        "firstByteMs": 18.5,
+        "code": 0
+      },
+      {
+        "wallMs": 46.5,
+        "rttMs": 31,
+        "overheadMs": 15.5,
+        "firstByteMs": 13.9,
+        "code": 0
+      },
+      {
+        "wallMs": 38.1,
+        "rttMs": 20,
+        "overheadMs": 18.1,
+        "firstByteMs": 16,
+        "code": 0
+      },
+      {
+        "wallMs": 43.9,
+        "rttMs": 26,
+        "overheadMs": 17.9,
+        "firstByteMs": 15.6,
+        "code": 0
+      },
+      {
+        "wallMs": 33,
+        "rttMs": 17,
+        "overheadMs": 16,
+        "firstByteMs": 13.8,
+        "code": 0
+      },
+      {
+        "wallMs": 36.4,
+        "rttMs": 19,
+        "overheadMs": 17.4,
+        "firstByteMs": 15.8,
+        "code": 0
+      },
+      {
+        "wallMs": 35.1,
+        "rttMs": 19,
+        "overheadMs": 16.1,
+        "firstByteMs": 13.9,
+        "code": 0
+      },
+      {
+        "wallMs": 31.6,
+        "rttMs": 16,
+        "overheadMs": 15.6,
+        "firstByteMs": 13.7,
+        "code": 0
+      },
+      {
+        "wallMs": 52.1,
+        "rttMs": 37,
+        "overheadMs": 15.1,
+        "firstByteMs": 13.2,
+        "code": 0
+      },
+      {
+        "wallMs": 43.7,
+        "rttMs": 28,
+        "overheadMs": 15.7,
+        "firstByteMs": 13.9,
+        "code": 0
+      }
+    ],
+    "avgWallMs": 42.1,
+    "avgOverheadMs": 16.8
+  },
+  "powershell_trivial_Command": {
+    "runs": [
+      {
+        "wallMs": 153.8,
+        "code": 0,
+        "out": "2",
+        "err": ""
+      },
+      {
+        "wallMs": 146,
+        "code": 0,
+        "out": "2",
+        "err": ""
+      },
+      {
+        "wallMs": 143.7,
+        "code": 0,
+        "out": "2",
+        "err": ""
+      }
+    ],
+    "avgWallMs": 147.8
+  },
+  "powershell_getNetAdapter_Command": {
+    "runs": [
+      {
+        "wallMs": 642.5,
+        "code": 0,
+        "out": "{\"Name\":\"Ethernet\",\"Status\":\"Up\",\"ReceiveLinkSpeed\":100000000}",
+        "err": ""
+      },
+      {
+        "wallMs": 651.3,
+        "code": 0,
+        "out": "{\"Name\":\"Ethernet\",\"Status\":\"Up\",\"ReceiveLinkSpeed\":100000000}",
+        "err": ""
+      },
+      {
+        "wallMs": 633.7,
+        "code": 0,
+        "out": "{\"Name\":\"Ethernet\",\"Status\":\"Up\",\"ReceiveLinkSpeed\":100000000}",
+        "err": ""
+      }
+    ],
+    "avgWallMs": 642.5
+  },
+  "powershell_getNetAdapter_EncodedCommand": {
+    "runs": [
+      {
+        "wallMs": 651.7,
+        "code": 0,
+        "out": "{\"Name\":\"Ethernet\",\"Status\":\"Up\",\"ReceiveLinkSpeed\":100000000}",
+        "err": "#< CLIXML\r\n<Objs Version=\"1.1.0.1\" xmlns=\"http://schemas.microsoft.com/powershell/2004/04\"><Obj S=\"progress\" RefId=\"0\"><TN RefId=\"0\"><T>System.Management.Automation.PSCustomObject</T><T>System.Object<"
+      },
+      {
+        "wallMs": 654.9,
+        "code": 0,
+        "out": "{\"Name\":\"Ethernet\",\"Status\":\"Up\",\"ReceiveLinkSpeed\":100000000}",
+        "err": "#< CLIXML\r\n<Objs Version=\"1.1.0.1\" xmlns=\"http://schemas.microsoft.com/powershell/2004/04\"><Obj S=\"progress\" RefId=\"0\"><TN RefId=\"0\"><T>System.Management.Automation.PSCustomObject</T><T>System.Object<"
+      },
+      {
+        "wallMs": 651.6,
+        "code": 0,
+        "out": "{\"Name\":\"Ethernet\",\"Status\":\"Up\",\"ReceiveLinkSpeed\":100000000}",
+        "err": "#< CLIXML\r\n<Objs Version=\"1.1.0.1\" xmlns=\"http://schemas.microsoft.com/powershell/2004/04\"><Obj S=\"progress\" RefId=\"0\"><TN RefId=\"0\"><T>System.Management.Automation.PSCustomObject</T><T>System.Object<"
+      }
+    ],
+    "avgWallMs": 652.7
+  }
+}

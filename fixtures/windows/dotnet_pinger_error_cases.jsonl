@@ -1,0 +1,12 @@
+{"type":"hello","pid":34364,"epoch0":1791550928687}
+{"type":"echo","target":"nonexistent.invalid","seq":1,"tSend":1791550928700,"status":"Error","rtt":null,"ttl":null,"from":null,"elapsed":33,"err":{"code":-2146233079,"type":"PingException","msg":"Während einer Pinganforderung ist eine Ausnahme aufgetreten."}}
+{"type":"echo","target":"1.1.1.1","seq":1,"tSend":1791550928700,"status":"Success","rtt":26,"ttl":57,"from":"1.1.1.1","elapsed":65,"err":null}
+{"type":"echo","target":"224.0.0.1","seq":1,"tSend":1791550928700,"status":"TimedOut","rtt":null,"ttl":null,"from":"0.0.0.0","elapsed":822,"err":null}
+{"type":"echo","target":"nonexistent.invalid","seq":2,"tSend":1791550929708,"status":"Error","rtt":null,"ttl":null,"from":null,"elapsed":1,"err":{"code":-2146233079,"type":"PingException","msg":"Während einer Pinganforderung ist eine Ausnahme aufgetreten."}}
+{"type":"echo","target":"1.1.1.1","seq":2,"tSend":1791550929708,"status":"Success","rtt":25,"ttl":57,"from":"1.1.1.1","elapsed":26,"err":null}
+{"type":"echo","target":"224.0.0.1","seq":2,"tSend":1791550929708,"status":"TimedOut","rtt":null,"ttl":null,"from":"0.0.0.0","elapsed":824,"err":null}
+{"type":"echo","target":"nonexistent.invalid","seq":3,"tSend":1791550930689,"status":"Error","rtt":null,"ttl":null,"from":null,"elapsed":1,"err":{"code":-2146233079,"type":"PingException","msg":"Während einer Pinganforderung ist eine Ausnahme aufgetreten."}}
+{"type":"echo","target":"1.1.1.1","seq":3,"tSend":1791550930689,"status":"Success","rtt":17,"ttl":57,"from":"1.1.1.1","elapsed":18,"err":null}
+{"type":"echo","target":"224.0.0.1","seq":3,"tSend":1791550930689,"status":"TimedOut","rtt":null,"ttl":null,"from":"0.0.0.0","elapsed":840,"err":null}
+{"type":"echo","target":"nonexistent.invalid","seq":4,"tSend":1791550931701,"status":"Error","rtt":null,"ttl":null,"from":null,"elapsed":8,"err":{"code":-2146233079,"type":"PingException","msg":"Während einer Pinganforderung ist eine Ausnahme aufgetreten."}}
+{"type":"echo","target":"1.1.1.1","seq":4,"tSend":1791550931701,"status":"Success","rtt":18,"ttl":57,"from":"1.1.1.1","elapsed":19,"err":null}

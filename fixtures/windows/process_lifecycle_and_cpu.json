@@ -1,0 +1,22 @@
+{
+  "pids": {
+    "parent": 35400,
+    "ping": 39708,
+    "ps": 7228,
+    "detachedPing": 36388
+  },
+  "aliveBeforeKill": {
+    "parent": true,
+    "ping": true,
+    "ps": true,
+    "detachedPing": true
+  },
+  "aliveAfterParentHardKill": {
+    "parent": false,
+    "ping": false,
+    "ps": false,
+    "detachedPing": true
+  },
+  "pingerCpuPercentOfOneCore": 3.97,
+  "pingerWorkingSetMB": 103
+}

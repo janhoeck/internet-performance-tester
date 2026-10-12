@@ -1,0 +1,164 @@
+{
+  "case": "ipv6_cloudflare",
+  "args": [
+    "-t",
+    "-6",
+    "-w",
+    "1000",
+    "2606:4700:4700::1111"
+  ],
+  "tag": "fromBash",
+  "killAt": 9003.4,
+  "exit": {
+    "code": null,
+    "signal": "SIGTERM",
+    "t": 9005.5
+  },
+  "stderr": "",
+  "trailingUnterminated": null,
+  "chunkCount": 10,
+  "linesPerChunk": 1.1,
+  "chunks": [
+    {
+      "t": 15.6,
+      "len": 69,
+      "afterKill": false,
+      "hex": "0d 0a 50 69 6e 67 20 77 69 72 64 20 61 75 73 67 65 66 81 68 72 74 20 66 81 72 20 32 36 30 36 3a 34 37 30 30 3a 34 37 30 30 3a 3a 31 31 31 31 20 6d 69 74 20 33 32 20 42 79 74 65 73 20 44 61 74 65 6e 3a 0d 0a"
+    },
+    {
+      "t": 31.5,
+      "len": 46,
+      "afterKill": false
+    },
+    {
+      "t": 1043.8,
+      "len": 46,
+      "afterKill": false
+    },
+    {
+      "t": 2052.9,
+      "len": 46,
+      "afterKill": false
+    },
+    {
+      "t": 3071,
+      "len": 46,
+      "afterKill": false
+    },
+    {
+      "t": 4084.9,
+      "len": 46,
+      "afterKill": false
+    },
+    {
+      "t": 5076.4,
+      "len": 46,
+      "afterKill": false
+    },
+    {
+      "t": 6121.8,
+      "len": 46,
+      "afterKill": false
+    },
+    {
+      "t": 7115.2,
+      "len": 46,
+      "afterKill": false
+    },
+    {
+      "t": 8105.9,
+      "len": 46,
+      "afterKill": false
+    }
+  ],
+  "lines": [
+    {
+      "t": 15.6,
+      "latin1": "",
+      "utf8Valid": true,
+      "cp850": "",
+      "utf8": ""
+    },
+    {
+      "t": 15.6,
+      "latin1": "Ping wird ausgefhrt fr 2606:4700:4700::1111 mit 32 Bytes Daten:",
+      "utf8Valid": false,
+      "cp850": "Ping wird ausgeführt für 2606:4700:4700::1111 mit 32 Bytes Daten:",
+      "utf8": "Ping wird ausgef�hrt f�r 2606:4700:4700::1111 mit 32 Bytes Daten:",
+      "highBytes": "81 81"
+    },
+    {
+      "t": 31.5,
+      "latin1": "Antwort von 2606:4700:4700::1111: Zeit=15ms ",
+      "utf8Valid": true,
+      "cp850": "Antwort von 2606:4700:4700::1111: Zeit=15ms ",
+      "utf8": "Antwort von 2606:4700:4700::1111: Zeit=15ms "
+    },
+    {
+      "t": 1043.8,
+      "latin1": "Antwort von 2606:4700:4700::1111: Zeit=14ms ",
+      "utf8Valid": true,
+      "cp850": "Antwort von 2606:4700:4700::1111: Zeit=14ms ",
+      "utf8": "Antwort von 2606:4700:4700::1111: Zeit=14ms "
+    },
+    {
+      "t": 2052.9,
+      "latin1": "Antwort von 2606:4700:4700::1111: Zeit=14ms ",
+      "utf8Valid": true,
+      "cp850": "Antwort von 2606:4700:4700::1111: Zeit=14ms ",
+      "utf8": "Antwort von 2606:4700:4700::1111: Zeit=14ms "
+    },
+    {
+      "t": 3071,
+      "latin1": "Antwort von 2606:4700:4700::1111: Zeit=25ms ",
+      "utf8Valid": true,
+      "cp850": "Antwort von 2606:4700:4700::1111: Zeit=25ms ",
+      "utf8": "Antwort von 2606:4700:4700::1111: Zeit=25ms "
+    },
+    {
+      "t": 4084.9,
+      "latin1": "Antwort von 2606:4700:4700::1111: Zeit=33ms ",
+      "utf8Valid": true,
+      "cp850": "Antwort von 2606:4700:4700::1111: Zeit=33ms ",
+      "utf8": "Antwort von 2606:4700:4700::1111: Zeit=33ms "
+    },
+    {
+      "t": 5076.4,
+      "latin1": "Antwort von 2606:4700:4700::1111: Zeit=15ms ",
+      "utf8Valid": true,
+      "cp850": "Antwort von 2606:4700:4700::1111: Zeit=15ms ",
+      "utf8": "Antwort von 2606:4700:4700::1111: Zeit=15ms "
+    },
+    {
+      "t": 6121.8,
+      "latin1": "Antwort von 2606:4700:4700::1111: Zeit=54ms ",
+      "utf8Valid": true,
+      "cp850": "Antwort von 2606:4700:4700::1111: Zeit=54ms ",
+      "utf8": "Antwort von 2606:4700:4700::1111: Zeit=54ms "
+    },
+    {
+      "t": 7115.2,
+      "latin1": "Antwort von 2606:4700:4700::1111: Zeit=39ms ",
+      "utf8Valid": true,
+      "cp850": "Antwort von 2606:4700:4700::1111: Zeit=39ms ",
+      "utf8": "Antwort von 2606:4700:4700::1111: Zeit=39ms "
+    },
+    {
+      "t": 8105.9,
+      "latin1": "Antwort von 2606:4700:4700::1111: Zeit=21ms ",
+      "utf8Valid": true,
+      "cp850": "Antwort von 2606:4700:4700::1111: Zeit=21ms ",
+      "utf8": "Antwort von 2606:4700:4700::1111: Zeit=21ms "
+    }
+  ],
+  "replyLineDeltasMs": [
+    1012.3,
+    1009.1,
+    1018.1,
+    1013.9,
+    991.5,
+    1045.4,
+    993.4,
+    990.7
+  ]
+}

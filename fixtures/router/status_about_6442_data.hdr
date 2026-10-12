@@ -1,0 +1,10 @@
+HTTP/1.1 404 Not Found
+Content-Type: text/html
+X-Frame-Options: DENY
+X-XSS-Protection: 0
+Strict-Transport-Security: max-age=15552000; includeSubdomains
+Server: null
+X-Content-Type-Options: nosniff
+Content-Length: 341
+Date: Fri, 09 Oct 2026 12:39:23 GMT
+
